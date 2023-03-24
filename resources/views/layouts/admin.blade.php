@@ -38,7 +38,10 @@
                             <ul class="dropdown-menu ">
                               <li><a class="nav-link text-dark" href="{{ route('admin.destinations.index')}}">
                                 {{ __('Destinations') }}
-                            </a>
+                               </a></li>
+                               <li><a class="nav-link text-dark" href="{{ route('admin.imagedestinations.index')}}">
+                                {{ __('Image Destinations') }}
+                               </a></li>
 
                             </ul>
                         </li>

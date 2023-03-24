@@ -40,7 +40,7 @@
                     <tr>
 
                         <th class="text-center">Nombre</th>
-                        <th class="text-center">Imagen</th>
+
 
                         <th colspan="3" class="text-center">Acciones</th>
                     </tr>
@@ -49,7 +49,7 @@
                     @foreach ($destinations as $destination)
                         <tr>
                             <td>{{$destination->name}}</td>
-                            <td><img src="{{ Storage::url($destination->image)}}" width="100" alt=""></td>
+
                             <td>
                                 <a href="{{ route('admin.destinations.show',$destination)}}" class="btn btn-success btn-sm">
                                     <i class="bi bi-eye"></i>

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Destination extends Model
 {
@@ -13,5 +14,9 @@ class Destination extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+    public function imagedestination(): HasMany
+    {
+        return $this->hasMany(ImageDestination::class);
     }
 }

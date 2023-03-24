@@ -12,4 +12,9 @@ class PageController extends Controller
     $slug = Str::slug($request->name);
     return response()->json(['slug' => $slug]);
 }
+public function check_slug_title(Request $request)
+{
+    $slug = Str::slug($request->title);
+    return response()->json(['slug' => $slug]);
+}
 }

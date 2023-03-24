@@ -11,11 +11,11 @@
                     <div class="card-header">
                      <h2> {{$destination->name}}</h2>
                     </div>
-                    <figure class="figure">
+                    <figure class="figure mt-3">
                         <img src="{{Storage::url($destination->image)}}" class="w-50 figure-img img-fluid rounded d-block mx-auto" alt="...">
-                        <figcaption class="figure-caption">{{ $destination->caption}}</figcaption>
+                        <figcaption class="figure-caption ms-2">{{ $destination->caption}}</figcaption>
                       </figure>
-                    <div class="card-body">
+                    <div class="card-body p-3">
                       <h5 class="card-title">{{$destination->title}}</h5>
                       <h5 class="card-title">{{$destination->subtitle}}</h5>
                       <div>
