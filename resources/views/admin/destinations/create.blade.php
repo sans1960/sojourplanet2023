@@ -12,6 +12,7 @@
                    Create Destination
                 </div>
                 <div class="card-body">
+
                     <form action="{{ route('admin.destinations.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
