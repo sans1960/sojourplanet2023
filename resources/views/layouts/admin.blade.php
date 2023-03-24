@@ -42,6 +42,9 @@
                                <li><a class="nav-link text-dark" href="{{ route('admin.imagedestinations.index')}}">
                                 {{ __('Image Destinations') }}
                                </a></li>
+                               <li><a class="nav-link text-dark" href="{{ route('admin.subregions.index')}}">
+                                {{ __('Subregions') }}
+                               </a></li>
 
                             </ul>
                         </li>

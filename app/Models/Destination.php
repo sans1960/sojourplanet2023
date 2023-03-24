@@ -19,4 +19,8 @@ class Destination extends Model
     {
         return $this->hasMany(ImageDestination::class);
     }
+    public function subregion():HasMany
+    {
+        return $this->hasMany(SubRegion::class);
+    }
 }

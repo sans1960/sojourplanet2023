@@ -50,7 +50,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
-                            <button type="submit" class="btn btn-primary d-block mx-auto">
+                            <button type="submit" class="btn btn-success d-block mx-auto">
                               <i class="bi bi-check-circle"></i>
                               </button>
                         </div>
