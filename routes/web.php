@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\DestinationController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('admin/destinations',DestinationController::class)->middleware('auth')->names('admin.destinations');
+
+
+Route::get('pages/check_slug', [PageController::class,'check_slug'])
+  ->name('pages.check_slug');

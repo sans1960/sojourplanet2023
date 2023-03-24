@@ -10,12 +10,12 @@
             <div class="card">
                 <div class="card-header">{{ __('All Destinations') }}</div>
 
-                @if(session()->has('message'))
+                @if(Session::has('notif.success'))
                 <div class="alert alert-info alert-dismissible fade show" role="alert">
-                    <strong>{{ session('message') }}</strong>
+                    <strong>{{ Session::get('notif.success') }}</strong>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
-             @endif
+                @endif
 
 
 
@@ -32,4 +32,55 @@
     </div>
 
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Imagen</th>
+
+                        <th colspan="3" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($destinations as $destination)
+                        <tr>
+                            <td>{{$destination->name}}</td>
+                            <td><img src="{{ Storage::url($destination->image)}}" width="100" alt=""></td>
+                            <td>
+                                <a href="{{ route('admin.destinations.show',$destination)}}" class="btn btn-success btn-sm">
+                                    <i class="bi bi-eye"></i>
+                                    </a>
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.destinations.edit',$destination)}}" class="btn btn-warning btn-sm">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <form action="{{ route('admin.destinations.destroy',$destination)}}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger btn-sm show_confirm">
+                                        <i class="bi bi-trash3"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mx-auto d-flex justify-content-end">
+
+        </div>
+    </div>
+</div
 @endsection
