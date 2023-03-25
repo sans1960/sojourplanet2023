@@ -33,5 +33,7 @@ Route::resource('admin/countries',CountryController::class)->middleware('auth')-
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');
-  Route::get('pages/check_slug_title', [PageController::class,'check_slug_title'])
+Route::get('pages/check_slug_title', [PageController::class,'check_slug_title'])
   ->name('pages.check_slug_title');
+Route::get('get-subregions',[PageController::class,'getSubregions'])->name('getsubregions');
+
