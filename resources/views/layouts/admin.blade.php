@@ -53,6 +53,17 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              TravelBlog
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li><a class="nav-link text-dark" href="{{ route('admin.categoryblogs.index')}}">
+                                    {{ __('Categories Blog') }}
+                                   </a></li>
+
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
