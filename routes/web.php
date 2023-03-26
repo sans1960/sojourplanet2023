@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\SubRegionController;
 use App\Http\Controllers\Admin\CountryController;
 use App\Http\Controllers\Admin\CategoryBlogController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\PageController;
 
 
@@ -25,6 +26,7 @@ Route::resource('admin/subregions',SubRegionController::class)->middleware('auth
 Route::resource('admin/countries',CountryController::class)->middleware('auth')->names('admin.countries');
 Route::resource('admin/categoryblogs',CategoryBlogController::class)->middleware('auth')->names('admin.categoryblogs');
 Route::resource('admin/blogs',BlogController::class)->middleware('auth')->names('admin.blogs');
+Route::resource('admin/posts',PostController::class)->middleware('auth')->names('admin.posts');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');

@@ -64,6 +64,9 @@
                                    <li><a class="nav-link text-dark" href="{{ route('admin.blogs.index')}}">
                                     {{ __(' Blogs') }}
                                    </a></li>
+                                   <li><a class="nav-link text-dark" href="{{ route('admin.posts.index')}}">
+                                    {{ __(' Posts') }}
+                                   </a></li>
 
                             </ul>
                         </li>
