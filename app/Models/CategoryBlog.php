@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class CategoryBlog extends Model
 {
@@ -13,5 +14,9 @@ class CategoryBlog extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+    public function blog():HasMany
+    {
+        return $this->hasMany(Blog::class);
     }
 }
