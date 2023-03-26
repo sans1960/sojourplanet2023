@@ -68,24 +68,50 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Post $post):Response
     {
-        //
+        $blogs = Blog::all();
+        return response()->view('admin.posts.edit',compact('blogs','post'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRequest $request, Post $post):RedirectResponse
     {
-        //
+        $validated = $request->validated();
+
+        if ($request->hasFile('image')) {
+            // delete image
+            Storage::disk('public')->delete($post->image);
+
+            $filePath = Storage::disk('public')->put('images/posts/images', request()->file('image'),'public');
+            $validated['image'] = $filePath;
+        }
+
+        $update = $post->update($validated);
+
+        if($update) {
+            session()->flash('notif.success', 'Post updated successfully!');
+            return redirect()->route('admin.posts.index');
+        }
+
+        return abort(500);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Post $post):RedirectResponse
     {
-        //
+        Storage::disk('public')->delete($post->image);
+        $delete = $post->delete();
+
+        if($delete) {
+            session()->flash('notif.success', 'Post deleted successfully!');
+            return redirect()->route('admin.posts.index');
+        }
+
+        return abort(500);
     }
 }
