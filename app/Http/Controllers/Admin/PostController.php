@@ -60,9 +60,9 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Post $post):Response
     {
-        //
+        return response()->view('admin.posts.show',compact('post'));
     }
 
     /**
