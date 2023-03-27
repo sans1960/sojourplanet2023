@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\SubRegion;
+use App\Models\Country;
 
 class PageController extends Controller
 {
@@ -22,6 +23,12 @@ public function getSubRegions(Request $request){
     $subregions = Subregion::where('destination_id',$request->destination_id)->orderBy('name')->get();
     if (count($subregions) > 0) {
         return response()->json($subregions);
+    }
+}
+public function getCountries(Request $request){
+    $countries = Country::where('subregion_id',$request->subregion_id)->orderBy('name')->get();
+    if (count($countries) > 0) {
+        return response()->json($countries);
     }
 }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Country extends Model
 {
@@ -23,5 +24,9 @@ class Country extends Model
     public function subregion():BelongsTo
     {
         return $this->belongsTo(Subregion::class);
+    }
+    public function sight():HasMany
+    {
+        return $this->hasMany(Sight::class);
     }
 }

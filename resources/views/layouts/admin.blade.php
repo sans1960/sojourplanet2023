@@ -82,6 +82,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('admin.tags.index')}}">
                                     {{ __('Tags') }}
                                    </a></li>
+                                   <li><a class="nav-link text-dark" href="{{ route('admin.sights.index')}}">
+                                    {{ __('Sights') }}
+                                   </a></li>
 
 
                             </ul>

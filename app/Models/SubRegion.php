@@ -22,4 +22,8 @@ class SubRegion extends Model
     {
         return $this->hasMany(Country::class);
     }
+    public function sight():HasMany
+    {
+        return $this->hasMany(Sight::class);
+    }
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\CategorySightController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\SightController;
 use App\Http\Controllers\PageController;
 
 
@@ -31,10 +32,12 @@ Route::resource('admin/blogs',BlogController::class)->middleware('auth')->names(
 Route::resource('admin/posts',PostController::class)->middleware('auth')->names('admin.posts');
 Route::resource('admin/categorysights',CategorySightController::class)->middleware('auth')->names('admin.categorysights');
 Route::resource('admin/tags',TagController::class)->middleware('auth')->names('admin.tags');
+Route::resource('admin/sights',SightController::class)->middleware('auth')->names('admin.sights');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');
 Route::get('pages/check_slug_title', [PageController::class,'check_slug_title'])
   ->name('pages.check_slug_title');
 Route::get('get-subregions',[PageController::class,'getSubregions'])->name('getsubregions');
+Route::get('get-countries',[PageController::class,'getCountries'])->name('getcountries');
 
