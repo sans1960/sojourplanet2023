@@ -70,6 +70,18 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              TravelSights
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li><a class="nav-link text-dark" href="{{ route('admin.categorysights.index')}}">
+                                    {{ __('Categories Sight') }}
+                                   </a></li>
+
+
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
