@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\CategorySightController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\SightController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\PageController;
 
 
@@ -33,6 +34,7 @@ Route::resource('admin/posts',PostController::class)->middleware('auth')->names(
 Route::resource('admin/categorysights',CategorySightController::class)->middleware('auth')->names('admin.categorysights');
 Route::resource('admin/tags',TagController::class)->middleware('auth')->names('admin.tags');
 Route::resource('admin/sights',SightController::class)->middleware('auth')->names('admin.sights');
+Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');
