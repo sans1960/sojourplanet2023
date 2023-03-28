@@ -32,7 +32,61 @@
     </div>
 
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Acciones</th>
 
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($sights as $sight)
+                    <tr>
+                    <td>{{ $sight->id}}</td>
+                     <td>{{ $sight->title}}</td>
+                     <td>{{ $sight->date}}</td>
+
+                     <td>
+                         <a href="{{ route('admin.sights.show',$sight)}}" class="btn btn-success btn-sm">
+                             <i class="bi bi-eye"></i>
+                             </a>
+                     </td>
+                     <td>
+                         <a href="{{ route('admin.sights.edit',$sight)}}" class="btn btn-warning btn-sm">
+                             <i class="bi bi-pencil-square"></i>
+                         </a>
+                     </td>
+                     <td>
+                         <form action="{{ route('admin.sights.destroy',$sight)}}" method="post">
+                             @csrf
+                             @method('delete')
+                             <button type="submit" class="btn btn-danger btn-sm show_confirm">
+                                 <i class="bi bi-trash3"></i>
+                             </button>
+                         </form>
+                     </td>
+                    </tr>
+
+                    @endforeach
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mx-auto d-flex justify-content-end">
+
+        </div>
+    </div>
+</div
 @endsection
 @section('js')
 <script type="text/javascript">

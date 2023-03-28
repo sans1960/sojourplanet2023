@@ -18,7 +18,7 @@
 
                           <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="title" placeholder="Title" name="title"  required>
+                            <input type="text" class="form-control" id="title" placeholder="Title" name="title">
                           </div>
                           <div class="mb-3">
                             <label for="slug" class="form-label">Slug</label>
@@ -26,7 +26,7 @@
                           </div>
                            <div class="row mb-3">
                               <div class="col">
-                                <select class="form-select" name="destination_id" id="dest" required>
+                                <select class="form-select" name="destination_id" id="dest" >
                                     <option selected>Choose Destination</option>
                                     @foreach ($destinations as $destination)
                                         <option value="{{ $destination->id}}">{{ $destination->name}}</option>
@@ -47,7 +47,7 @@
                              </div>
                            </div>
                            <div class="mb-3">
-                            <select name="category_id"  class="form-select ">
+                            <select name="categorysight_id"  class="form-select ">
                                   <option value="">Choose Category Sight</option>
                                   @foreach ($categorysights as $categorysight)
                                       <option value="{{ $categorysight->id}}">{{ $categorysight->name}}</option>
@@ -71,22 +71,22 @@
                            <div class=" row mb-3">
                             <div class="col">
 
-                                <input type="text" class="form-control"  placeholder="Latitud" name="latitud"  required>
+                                <input type="text" class="form-control"  placeholder="Latitud" name="latitud" >
                             </div>
                             <div class="col">
 
-                                <input type="text" class="form-control"  placeholder="Longitud" name="longitud"  required>
+                                <input type="text" class="form-control"  placeholder="Longitud" name="longitud" >
                             </div>
 
                           </div>
                           <div class="row mb-3">
                             <div class="col">
 
-                                <input type="text" class="form-control"  placeholder="Caption" name="caption"  required>
+                                <input type="text" class="form-control"  placeholder="Caption" name="caption" >
                             </div>
                             <div class="col">
 
-                                <input type="date" class="form-control"  name="date"  required>
+                                <input type="date" class="form-control"  name="date" >
                             </div>
                             <div class="col">
 
@@ -105,11 +105,11 @@
                           </div>
                           <div class="mb-3">
                             <label for="extract" class="form-label">Extract</label>
-                            <textarea class="form-control" id="extract" rows="3" required name="extract"></textarea>
+                            <textarea class="form-control" id="extract" rows="3"  name="extract"></textarea>
                           </div>
                           <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
-                            <textarea class="form-control" id="body" rows="3" required name="body"></textarea>
+                            <textarea class="form-control" id="body" rows="3"  name="body"></textarea>
                           </div>
 
                         <div class="row mb-3">
