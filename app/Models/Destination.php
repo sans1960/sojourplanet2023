@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Destination extends Model
 {
@@ -30,5 +31,9 @@ class Destination extends Model
     public function sight():HasMany
     {
         return $this->hasMany(Sight::class);
+    }
+    public function tours():BelongsToMany
+    {
+        return $this->belongsToMany(Type::class);
     }
 }

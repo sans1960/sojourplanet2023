@@ -40,14 +40,40 @@
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
-                        <th>Date</th>
+
                         <th>Acciones</th>
 
 
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($tours as $tour)
+                    <tr>
+                     <td>{{ $tour->id}}</td>
+                     <td>{{ $tour->name}}</td>
 
+                     <td>
+                         <a href="{{ route('admin.tours.show',$tour)}}" class="btn btn-success btn-sm">
+                             <i class="bi bi-eye"></i>
+                             </a>
+                     </td>
+                     <td>
+                         <a href="{{ route('admin.tours.edit',$tour)}}" class="btn btn-warning btn-sm">
+                             <i class="bi bi-pencil-square"></i>
+                         </a>
+                     </td>
+                     <td>
+                         <form action="{{ route('admin.tours.destroy',$tour)}}" method="post">
+                             @csrf
+                             @method('delete')
+                             <button type="submit" class="btn btn-danger btn-sm show_confirm">
+                                 <i class="bi bi-trash3"></i>
+                             </button>
+                         </form>
+                     </td>
+                    </tr>
+
+                    @endforeach
                 </tbody>
             </table>
 

@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('image');
             $table->string('caption');
             $table->text('description');
+            $table->text('conclusion');
             $table->integer('duration')->nullable();
             $table->decimal('price',10,2)->nullable();
             $table->text('countries');
+            $table->date('date');
             $table->timestamps();
         });
     }

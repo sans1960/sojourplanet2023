@@ -30,7 +30,9 @@
                                     <div class="d-flex">
                                         <input type="text" name="countries[]" class="form-control mt-2">
                                     </div>
-                                    <button class="add_field_button btn btn-info mt-2">Add </button>
+                                    <button class="add_field_button btn btn-success btn-sm mt-2">
+                                        <i class="bi bi-plus-circle-dotted"></i>
+                                         </button>
                                 </div>
                              </div>
                            </div>
@@ -79,7 +81,7 @@
 
                             </div>
 
-                            <div class="col">
+                             <div class="col">
                                 <input type="date" class="form-control"  name="date" >
 
                             </div>
@@ -97,6 +99,10 @@
                           <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
                             <textarea class="form-control" id="description" rows="3"  name="description"></textarea>
+                          </div>
+                          <div class="mb-3">
+                            <label for="conclusion" class="form-label">Conclusion</label>
+                            <textarea class="form-control" id="conclusion" rows="3"  name="conclusion"></textarea>
                           </div>
 
 
@@ -133,6 +139,7 @@
  </script>
     <script>
       CKEDITOR.replace( 'description' );
+      CKEDITOR.replace( 'conclusion' );
 
     </script>
  <script>

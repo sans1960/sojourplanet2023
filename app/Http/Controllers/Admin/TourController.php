@@ -7,6 +7,10 @@ use App\Models\Destination;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\Tour\StoreRequest;
+use App\Models\Tour;
+use Illuminate\Http\RedirectResponse;
 
 class TourController extends Controller
 {
@@ -15,7 +19,8 @@ class TourController extends Controller
      */
     public function index():Response
     {
-        return response()->view('admin.tours.index');
+        $tours = Tour::all();
+        return response()->view('admin.tours.index',compact('tours'));
     }
 
     /**
@@ -31,17 +36,39 @@ class TourController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request):RedirectResponse
     {
-        dd($request->all());
+        $validated = $request->validated();
+
+        if ($request->hasFile('image')) {
+             // put image in the public storage
+            $filePath = Storage::disk('public')->put('images/tours/images', request()->file('image'));
+            $validated['image'] = $filePath;
+        }
+
+        // insert only requests that already validated in the StoreRequest
+        $create = Tour::create($validated);
+        if($request->types){
+            $create->types()->attach($request->types);
+        }
+        if($request->destinations){
+            $create->destinations()->attach($request->destinations);
+        }
+        if($create) {
+            // add flash for the success notification
+            session()->flash('notif.success', 'Tour created successfully!');
+            return redirect()->route('admin.tours.index');
+        }
+
+        return abort(500);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Tour $tour):Response
     {
-        //
+        return response()->view('admin.tours.show',compact('tour'));
     }
 
     /**

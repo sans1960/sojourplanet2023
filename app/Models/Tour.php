@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Tour extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','slug','description','image','caption','price','countries','duration','date'];
+    protected $fillable = ['name','slug','description','conclusion','image','caption','price','countries','duration','date'];
 
     public function getRouteKeyName()
     {
@@ -17,4 +18,12 @@ class Tour extends Model
     protected $casts = [
         'countries' => 'array',
     ];
+    public function destinations():BelongsToMany
+    {
+        return $this->belongsToMany(Destination::class);
+    }
+    public function types():BelongsToMany
+    {
+        return $this->belongsToMany(Type::class);
+    }
 }
