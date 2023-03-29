@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Edit {{ $post->name }}
+Edit {{ $day->name }}
 
 @endsection
 @section('content')
@@ -13,39 +13,39 @@ Edit {{ $post->name }}
                 </div>
                 <div class="card-body">
 
-                    <form action="{{ route('admin.posts.update',$post)}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.days.update',$day)}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name"  name="name" value="{{$post->name}}" >
+                            <input type="text" class="form-control" id="name"  name="name" value="{{$day->name}}" >
                           </div>
                           <div class="mb-3">
                             <label for="slug" class="form-label">Slug</label>
-                            <input type="text" class="form-control" id="slug"  name="slug" value="{{$post->slug}}">
+                            <input type="text" class="form-control" id="slug"  name="slug" value="{{$day->slug}}">
                           </div>
                           <div class="row mb-3">
                             <div class="col">
-                               <select class="form-select "  name="blog_id" id="dest">
-                                   <option selected>Choose Blog</option>
-                                    @foreach ($blogs as $blog)
-                                       <option value="{{ $blog->id}}"
-                                        @if ($post->blog_id == ($post->id)) selected
+                               <select class="form-select "  name="tour_id" id="dest">
+                                   <option selected>Choose Tour</option>
+                                    @foreach ($tours as $tour)
+                                       <option value="{{ $tour->id}}"
+                                        @if ($day->tour_id == ($tour->id)) selected
 
                                         @endif
-                                        >{{ $blog->name}}</option>
+                                        >{{ $tour->name}}</option>
                                    @endforeach
 
                                  </select>
                             </div>
                             <div class="col">
-                                <input id="order" class="form-control" type="number" name="order" value="{{$post->order}}"/>
+                                <input id="order" class="form-control" type="number" name="order" value="{{$day->order}}"/>
                             </div>
 
                          </div>
                           <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
-                                <img  id="preview-image-before-upload" class="img-fluid d-block mx-auto" src="{{Storage::url($post->image)}}" alt="">
+                                <img  id="preview-image-before-upload" class="img-fluid d-block mx-auto" src="{{Storage::url($day->image)}}" alt="">
                             </div>
                         </div>
                           <div class="mb-3">
@@ -54,23 +54,23 @@ Edit {{ $post->name }}
                           </div>
                           <div class="mb-3">
                             <label for="caption" class="form-label">Caption</label>
-                            <input type="text" class="form-control" id="caption" value="{{$post->caption}}" name="caption"  >
+                            <input type="text" class="form-control" id="caption" value="{{$day->caption}}" name="caption"  >
                           </div>
                           <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
                             <textarea class="form-control" id="body" rows="3"  name="body">
-                                {!! $post->body !!}
+                                {!! $day->body !!}
                             </textarea>
                           </div>
                            <div class="row mb-3">
                              <div class="col">
-                                <input type="text" class="form-control"  value="{{$post->latitud}}" name="latitud"  >
+                                <input type="text" class="form-control"  value="{{$day->latitud}}" name="latitud"  >
                              </div>
                              <div class="col">
-                                <input type="text" class="form-control" value="{{$post->longitud}}" name="longitud"  >
+                                <input type="text" class="form-control" value="{{$day->longitud}}" name="longitud"  >
                              </div>
                              <div class="col">
-                                <input type="number" class="form-control"  name="zoom" value="{{$post->zoom}}" >
+                                <input type="number" class="form-control"  name="zoom" value="{{$day->zoom}}" >
                              </div>
                            </div>
 

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\SightController;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\TourController;
+use App\Http\Controllers\Admin\DayController;
 use App\Http\Controllers\PageController;
 
 
@@ -37,6 +38,7 @@ Route::resource('admin/tags',TagController::class)->middleware('auth')->names('a
 Route::resource('admin/sights',SightController::class)->middleware('auth')->names('admin.sights');
 Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
 Route::resource('admin/tours',TourController::class)->middleware('auth')->names('admin.tours');
+Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');

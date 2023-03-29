@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Edit {{ $post->name }}
+{{ __('Create Day') }}
 
 @endsection
 @section('content')
@@ -9,43 +9,38 @@ Edit {{ $post->name }}
         <div class="col-md-10 mx-auto">
             <div class="card">
                 <div class="card-header bg-dark text-white text-center">
-                   Edit Post
+                   Create Day
                 </div>
                 <div class="card-body">
 
-                    <form action="{{ route('admin.posts.update',$post)}}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.days.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        @method('PUT')
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name"  name="name" value="{{$post->name}}" >
+                            <input type="text" class="form-control" id="name" placeholder="Name" name="name" autofocus required>
                           </div>
                           <div class="mb-3">
                             <label for="slug" class="form-label">Slug</label>
-                            <input type="text" class="form-control" id="slug"  name="slug" value="{{$post->slug}}">
+                            <input type="text" class="form-control" id="slug"  name="slug" >
                           </div>
                           <div class="row mb-3">
                             <div class="col">
-                               <select class="form-select "  name="blog_id" id="dest">
-                                   <option selected>Choose Blog</option>
-                                    @foreach ($blogs as $blog)
-                                       <option value="{{ $blog->id}}"
-                                        @if ($post->blog_id == ($post->id)) selected
-
-                                        @endif
-                                        >{{ $blog->name}}</option>
+                               <select class="form-select "  name="tour_id" id="dest">
+                                   <option selected>Choose Tour</option>
+                                    @foreach ($tours as $tour)
+                                       <option value="{{ $tour->id}}">{{ $tour->name}}</option>
                                    @endforeach
 
                                  </select>
                             </div>
                             <div class="col">
-                                <input id="order" class="form-control" type="number" name="order" value="{{$post->order}}"/>
+                                <input id="order" class="form-control" type="number" name="order" placeholder="Order"/>
                             </div>
 
                          </div>
                           <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
-                                <img  id="preview-image-before-upload" class="img-fluid d-block mx-auto" src="{{Storage::url($post->image)}}" alt="">
+                                <img  id="preview-image-before-upload" class="img-fluid d-block mx-auto" src="https://cdn.pixabay.com/photo/2022/02/22/17/25/stork-7029266_960_720.jpg" alt="">
                             </div>
                         </div>
                           <div class="mb-3">
@@ -54,30 +49,28 @@ Edit {{ $post->name }}
                           </div>
                           <div class="mb-3">
                             <label for="caption" class="form-label">Caption</label>
-                            <input type="text" class="form-control" id="caption" value="{{$post->caption}}" name="caption"  >
+                            <input type="text" class="form-control" id="caption" placeholder="Caption" name="caption"  required>
                           </div>
                           <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
-                            <textarea class="form-control" id="body" rows="3"  name="body">
-                                {!! $post->body !!}
-                            </textarea>
+                            <textarea class="form-control" id="body" rows="3"  name="body"></textarea>
                           </div>
                            <div class="row mb-3">
                              <div class="col">
-                                <input type="text" class="form-control"  value="{{$post->latitud}}" name="latitud"  >
+                                <input type="text" class="form-control"  placeholder="Latitud" name="latitud"  >
                              </div>
                              <div class="col">
-                                <input type="text" class="form-control" value="{{$post->longitud}}" name="longitud"  >
+                                <input type="text" class="form-control"  placeholder="Longitud" name="longitud"  >
                              </div>
                              <div class="col">
-                                <input type="number" class="form-control"  name="zoom" value="{{$post->zoom}}" >
+                                <input type="number" class="form-control"  name="zoom" placeholder="Zoom" >
                              </div>
                            </div>
 
                         <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
                             <button type="submit" class="btn btn-success d-block mx-auto">
-                                <i class="bi bi-upload"></i>
+                              <i class="bi bi-check-circle"></i>
                               </button>
                         </div>
                         </div>

@@ -38,7 +38,9 @@
                       <div>
                         {!! $tour->conclusion !!}
                       </div>
-
+                        @foreach ($tour->day as $day)
+                            <h4>{{ $day->name}}</h4>
+                        @endforeach
                     </div>
                   </div>
             </div>
