@@ -17,7 +17,7 @@ class CategorySightController extends Controller
      */
     public function index():Response
     {
-        $categorysights = CategorySight::all();
+        $categorysights = CategorySight::paginate(10);
         return response()->view('admin.categorysights.index',compact('categorysights'));
     }
 

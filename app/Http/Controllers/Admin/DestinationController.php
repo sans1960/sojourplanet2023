@@ -19,7 +19,8 @@ class DestinationController extends Controller
      */
     public function index():Response
     {
-        return response()->view('admin.destinations.index',['destinations' => Destination::orderBy('updated_at','desc')->get()]);
+        $destinations = Destination::paginate(10);
+        return response()->view('admin.destinations.index',compact('destinations'));
     }
 
     /**

@@ -62,6 +62,11 @@
 
         @endforeach
     </div>
+    <div class="row">
+        <div class="col-md-8 mx-auto d-flex justify-content-end">
+            {!! $imagedestinations->links() !!}
+        </div>
+    </div>
 </div>
 @endsection
 @section('js')

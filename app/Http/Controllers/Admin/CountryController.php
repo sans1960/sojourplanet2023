@@ -19,7 +19,7 @@ class CountryController extends Controller
      */
     public function index():Response
     {
-        $countries = Country::all();
+        $countries = Country::paginate(10);
         return response()->view('admin.countries.index',compact('countries'));
     }
 

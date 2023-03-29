@@ -19,7 +19,7 @@ class BlogController extends Controller
      */
     public function index():Response
     {
-        $blogs = Blog::all();
+        $blogs = Blog::orderBy('date','DESC')->paginate(10);
         return response()->view('admin.blogs.index',compact('blogs'));
     }
 

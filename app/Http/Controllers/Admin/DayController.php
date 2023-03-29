@@ -19,7 +19,7 @@ class DayController extends Controller
      */
     public function index():Response
     {
-        $days = Day::all();
+        $days = Day::paginate(10);
         return response()->view('admin.days.index',compact('days'));
     }
 

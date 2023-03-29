@@ -19,7 +19,7 @@ class ImageDestinationController extends Controller
      */
     public function index(): Response
     {
-        $imagedestinations = ImageDestination::all();
+        $imagedestinations = ImageDestination::paginate(12);
         return response()->view('admin.imagesdestinations.index',compact('imagedestinations'));
     }
 

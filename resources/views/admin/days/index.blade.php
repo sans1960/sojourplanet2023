@@ -80,7 +80,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto d-flex justify-content-end">
-
+            {!! $days->links() !!}
         </div>
     </div>
 </div

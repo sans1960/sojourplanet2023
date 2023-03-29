@@ -19,7 +19,7 @@ class CategoryBlogController extends Controller
      */
     public function index():Response
     {
-        $categoryblogs = CategoryBlog::all();
+        $categoryblogs = CategoryBlog::paginate(10);
         return response()->view('admin.categoryblogs.index',compact('categoryblogs'));
     }
 

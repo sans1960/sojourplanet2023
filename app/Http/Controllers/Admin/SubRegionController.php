@@ -18,7 +18,7 @@ class SubRegionController extends Controller
      */
     public function index():Response
     {
-        $subregions = SubRegion::all();
+        $subregions = SubRegion::paginate(10);
         return response()->view('admin.subregions.index',compact('subregions'));
     }
 

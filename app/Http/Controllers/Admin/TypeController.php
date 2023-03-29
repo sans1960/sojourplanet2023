@@ -14,7 +14,7 @@ class TypeController extends Controller
 {
     public function index():Response
     {
-        $types = Type::all();
+        $types = Type::paginate(10);
         return response()->view('admin.types.index',compact('types'));
     }
     public function create():Response
