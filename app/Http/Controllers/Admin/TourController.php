@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Tour\StoreRequest;
+use App\Http\Requests\Tour\UpdateRequest;
 use App\Models\Tour;
 use Illuminate\Http\RedirectResponse;
 
@@ -74,9 +75,15 @@ class TourController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Tour $tour):Response
     {
-        //
+        $destinations = Destination::all();
+        $types = Type::all();
+        $tourtypes = $tour->types;
+        $difftypes = $types->diff($tourtypes);
+        $tourdestinations = $tour->destinations;
+        $diffdestinations = $destinations->diff($tourdestinations);
+        return response()->view('admin.tours.edit',compact('tour','types','difftypes','destinations','diffdestinations'));
     }
 
     /**
