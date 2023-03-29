@@ -29,7 +29,7 @@
                       <h5 class="card-title">{{$tour->duration}}</h5>
                       <h5 class="card-title">{{$tour->date}}</h5>
 
-                      <h5 class="card-title">{{ implode(',',$tour->countries)}}</h5>
+                      <h5 class="card-title">{{ $tour->countries)}}</h5>
 
 
                       <div>

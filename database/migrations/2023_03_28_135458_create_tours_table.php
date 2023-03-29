@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('conclusion');
             $table->integer('duration')->nullable();
             $table->decimal('price',10,2)->nullable();
-            $table->text('countries');
+            $table->string('countries');
             $table->date('date');
             $table->timestamps();
         });

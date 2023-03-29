@@ -127,9 +127,21 @@ Edit {{ $sight->title }}
                             </textarea>
                           </div>
                           <div class="mb-3">
-                            <label for="body" class="form-label">Body</label>
-                            <textarea class="form-control" id="body" rows="3"  name="body">
-                                {!! $sight->body!!}
+                            <label for="introduction" class="form-label">Introduction</label>
+                            <textarea class="form-control" id="introduction" rows="3"  name="introduction">
+                                {!! $sight->introduction!!}
+                            </textarea>
+                          </div>
+                          <div class="mb-3">
+                            <label for="highlight" class="form-label">Highlight</label>
+                            <textarea class="form-control" id="highlight" rows="3"  name="highlight">
+                                {!! $sight->highlight !!}
+                            </textarea>
+                          </div>
+                          <div class="mb-3">
+                            <label for="final" class="form-label">Final</label>
+                            <textarea class="form-control" id="final" rows="3"  name="final">
+                                {!! $sight->final !!}
                             </textarea>
                           </div>
 
@@ -200,8 +212,10 @@ Edit {{ $sight->title }}
     });
  </script>
     <script>
-      CKEDITOR.replace( 'body' );
+      CKEDITOR.replace( 'introduction' );
           CKEDITOR.replace( 'extract' );
+          CKEDITOR.replace( 'highlight' );
+          CKEDITOR.replace( 'final' );
     </script>
 <script>
     $('#title').change(function(e) {

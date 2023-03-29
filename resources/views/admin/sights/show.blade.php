@@ -27,7 +27,13 @@
                         {!! $sight->extract!!}
                       </div>
                       <div>
-                        {!! $sight->body!!}
+                        {!! $sight->introduction!!}
+                      </div>
+                      <div>
+                        {!! $sight->highlight!!}
+                      </div>
+                      <div>
+                        {!! $sight->final !!}
                       </div>
                       <div id="map" class="" style="width:100%;height:400px">
                       </div>

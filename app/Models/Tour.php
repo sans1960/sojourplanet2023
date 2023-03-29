@@ -16,9 +16,7 @@ class Tour extends Model
     {
         return 'slug';
     }
-    protected $casts = [
-        'countries' => 'array',
-    ];
+
     public function destinations():BelongsToMany
     {
         return $this->belongsToMany(Destination::class);

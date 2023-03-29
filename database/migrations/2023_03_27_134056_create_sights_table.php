@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('extract');
-            $table->text('body');
+            $table->text('introduction');
+            $table->text('highlight');
+            $table->text('final');
             $table->string('image');
             $table->string('caption');
             $table->string('latitud');

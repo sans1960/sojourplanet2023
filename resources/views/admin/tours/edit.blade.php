@@ -25,17 +25,12 @@ Edit {{ $tour->name }}
                             <input type="text" class="form-control" id="slug" value="{{$tour->slug}}" name="slug" >
                           </div>
                            <div class="row mb-3">
-                             <div class="col-md-6 mx-auto">
-                                <div class="input_wrap">
-                                    <div class="d-flex">
-                                        <input type="text" value="{{ implode(',',$tour->countries)}}" name="countries[]" class="form-control mt-2">
-                                        <input type="text" name="countries[]" class="form-control mt-2">
-                                    </div>
-                                    <button class="add_field_button btn btn-success btn-sm mt-2">
-                                        <i class="bi bi-plus-circle-dotted"></i>
-                                         </button>
-                                </div>
-                             </div>
+                            <div class="row mb-3">
+
+                                <label for="countries" class="form-label">Countries</label>
+                            <input type="text" name="countries" class="form-control mt-2" id="countries" value="{{$tour->countries}}">
+
+                               </div>
                            </div>
                            <div class="row mb-3">
                             <h6>Destinations</h6>

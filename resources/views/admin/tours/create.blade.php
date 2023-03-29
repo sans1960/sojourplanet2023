@@ -24,17 +24,11 @@
                             <label for="slug" class="form-label">Slug</label>
                             <input type="text" class="form-control" id="slug"  name="slug" >
                           </div>
-                           <div class="row mb-3">
-                             <div class="col-md-6 mx-auto">
-                                <div class="input_wrap">
-                                    <div class="d-flex">
-                                        <input type="text" name="countries[]" class="form-control mt-2">
-                                    </div>
-                                    <button class="add_field_button btn btn-success btn-sm mt-2">
-                                        <i class="bi bi-plus-circle-dotted"></i>
-                                         </button>
-                                </div>
-                             </div>
+                           <div class=" mb-3">
+
+                            <label for="countries" class="form-label">Countries</label>
+                        <input type="text" name="countries" class="form-control mt-2" id="countries" placeholder="Countries">
+
                            </div>
                            <div class="row mb-3">
                             <h6>Destinations</h6>
@@ -152,23 +146,6 @@
       );
     });
   </script>
-  <script>
-    var wrapper = $(".input_wrap>div");
-    var add_button = $(".add_field_button");
 
-     var counter = 1;
-     $(add_button).click(function (e) {
-    e.preventDefault();
-
-    var newAdd = '<div id=div-'+counter+'><input type="text" name="countries[]" class="form-control mt-2"></div>';
-
-
-    var el = $('.input_wrap div:last');
-    $(el).after(newAdd);
-
-
-    counter++;
-}   );
-  </script>
 
 @endsection
