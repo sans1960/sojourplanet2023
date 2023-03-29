@@ -89,16 +89,49 @@ class TourController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRequest $request, Tour $tour):RedirectResponse
     {
-        //
+        $validated = $request->validated();
+
+        if ($request->hasFile('image')) {
+            // delete image
+            Storage::disk('public')->delete($tour->image);
+
+            $filePath = Storage::disk('public')->put('images/tours/images', request()->file('image'),'public');
+            $validated['image'] = $filePath;
+        }
+
+        $update = $tour->update($validated);
+        if($request->types){
+            $tour->types()->sync($request->types);
+        }
+        if($request->destinations){
+            $tour->destinations()->sync($request->destinations);
+        }
+        if($update) {
+            session()->flash('notif.success', 'Tour updated successfully!');
+            return redirect()->route('admin.tours.index');
+        }
+
+        return abort(500);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Tour $tour):RedirectResponse
     {
-        //
+        Storage::disk('public')->delete($tour->image);
+
+        $delete = $tour->delete();
+        $tour->types()->detach();
+        $tour->destinations()->detach();
+
+        if($delete) {
+            session()->flash('notif.success', 'Tour deleted successfully!');
+            return redirect()->route('admin.tours.index');
+        }
+
+        return abort(500);
     }
 }

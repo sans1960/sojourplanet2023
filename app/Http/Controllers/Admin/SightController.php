@@ -95,7 +95,7 @@ class SightController extends Controller
             // delete image
             Storage::disk('public')->delete($sight->image);
 
-            $filePath = Storage::disk('public')->put('images/sight/images', request()->file('image'),'public');
+            $filePath = Storage::disk('public')->put('images/sights/images', request()->file('image'),'public');
             $validated['image'] = $filePath;
         }
 

@@ -13,9 +13,9 @@ Edit {{ $tour->name }}
                    Edit Tour
                 </div>
                 <div class="card-body">
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.tours.update',$tour)}}" method="post" enctype="multipart/form-data">
                         @csrf
-
+                        @method('PUT')
                           <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" value="{{$tour->name}}" class="form-control" id="name" name="name">
