@@ -43,7 +43,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 }).addTo(map);
 
-L.marker([{{ $country->latitud }}, {{ $country->longitud }}]).addTo(map);
+// L.marker([{{ $country->latitud }}, {{ $country->longitud }}]).addTo(map);
     // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     // .openPopup();
 </script>

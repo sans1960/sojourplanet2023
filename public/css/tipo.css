@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+.open{
+    font-family: 'Open Sans', sans-serif;
+}
+.patua{
+    font-family: 'Patua One', cursive;
+}

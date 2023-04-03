@@ -7,39 +7,49 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <div class="card">
-                    <div class="card-header">
-                     <h4> {{$sight->title}}</h4>
-                    </div>
+
+
+
                     <figure class="figure mt-3">
-                        <img src="{{Storage::url($sight->image)}}" class="w-50 figure-img img-fluid rounded d-block mx-auto" alt="...">
-                        <figcaption class="figure-caption ms-2">{{ $sight->caption}}</figcaption>
+                        <img src="{{Storage::url($sight->image)}}" class="figure-img img-fluid rounded d-block mx-auto" alt="...">
+                        <figcaption class="figure-caption text-center">{{ $sight->caption}}</figcaption>
                       </figure>
-                    <div class="card-body p-3">
-                      <h5 class="card-title">{{$sight->destination->name}}</h5>
-                      <h5 class="card-title">{{$sight->subregion->name}}</h5>
-                      <h5 class="card-title">{{$sight->country->name}}</h5>
-                      <h5 class="card-title">{{$sight->categorysight->name}}</h5>
-                      @foreach ($sight->tags as $tag)
-                          <h6>{{$tag->name}}</h6>
-                      @endforeach
-                      <div>
+                      <h3 class="text-center patua"> {{$sight->title}}</h3>
+                    <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
+                      {{-- <h5 class="card-title">{{$sight->destination->name}}</h5>
+                      <h5 class="card-title">{{$sight->subregion->name}}</h5> --}}
+                      <h5 class="patua">{{$sight->country->name}}</h5>
+                      <p class="ms-4">|</p>
+                      <h5 class="ms-4 patua">{{$sight->categorysight->name}}</h5>
+                    </div>
+                    <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
+
+                        @foreach ($sight->tags as $tag)
+
+                        <a href="" class="me-4 nav-link text-dark patua">{{$tag->name}}</a>
+                    @endforeach
+                    </div>
+
+                      <div class=" mt-4 fw-light fs-5 open">
                         {!! $sight->extract!!}
                       </div>
-                      <div>
+                      <div class=" fs-5 open">
                         {!! $sight->introduction!!}
                       </div>
-                      <div>
-                        {!! $sight->highlight!!}
+                      <div class=" p-2 fs-3 fst-italic text-center ">
+
+                            {!! $sight->highlight!!}
+
+
                       </div>
-                      <div>
+                      <div class=" fs-5 open">
                         {!! $sight->final !!}
                       </div>
                       <div id="map" class="" style="width:100%;height:400px">
                       </div>
 
-                    </div>
-                  </div>
+
+
             </div>
         </div>
     </div>
