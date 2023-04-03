@@ -4,31 +4,26 @@
 
 @endsection
 @section('content')
+    <div class="container-fluid  d-flex justify-content-center align-items-center" style="background-image: url({{Storage::url($destination->image)}});height:300px; background-size:cover;background-position:center center;">
+        <h1 class="text-white">{{$destination->title}}</h1>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
-                <div class="card">
-                    <div class="card-header">
-                     <h2> {{$destination->name}}</h2>
-                    </div>
-                    <figure class="figure mt-3">
-                        <img src="{{Storage::url($destination->image)}}" class="w-50 figure-img img-fluid rounded d-block mx-auto" alt="...">
-                        <figcaption class="figure-caption ms-2">{{ $destination->caption}}</figcaption>
-                      </figure>
-                    <div class="card-body p-3">
-                      <h5 class="card-title">{{$destination->title}}</h5>
-                      <h5 class="card-title">{{$destination->subtitle}}</h5>
-                      <div>
-                                {!! $destination->body !!}
-                      </div>
-                      <div>
-                        {!! $destination->sidebody !!}
-                      </div>
-
-                    </div>
-                  </div>
+            <div class="col-md-10 mx-auto d-flex justify-content-center align-items-center p-5">
+                 <h3>{{$destination->subtitle}}</h3>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 p-3 open texto fs-5">
+            {!!$destination->body!!}
+        </div>
+        <div class="col-md-4 p-3 open texto fx-5">
+            {!!$destination->sidebody!!}
+        </div>
+        </div>
+    </div>
+
 
 @endsection

@@ -22,7 +22,7 @@
                       <p class="ms-4">|</p>
                       <h5 class="ms-4 patua">{{$sight->categorysight->name}}</h5>
                     </div>
-                    <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
+                    <div class=" mt-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
 
                         @foreach ($sight->tags as $tag)
 
@@ -30,19 +30,19 @@
                     @endforeach
                     </div>
 
-                      <div class=" mt-4 fw-light fs-5 open">
+                      <div class=" mt-4 texto fs-5 open">
                         {!! $sight->extract!!}
                       </div>
                       <div class=" fs-5 open">
                         {!! $sight->introduction!!}
                       </div>
-                      <div class=" p-2 fs-3 fst-italic text-center ">
+                      <div class=" p-2 fw-bold fs-3 fst-italic text-center texto">
 
                             {!! $sight->highlight!!}
 
 
                       </div>
-                      <div class=" fs-5 open">
+                      <div class=" fs-5 open texto">
                         {!! $sight->final !!}
                       </div>
                       <div id="map" class="" style="width:100%;height:400px">

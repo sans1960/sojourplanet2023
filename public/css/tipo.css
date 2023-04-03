@@ -7,3 +7,7 @@
 .patua{
     font-family: 'Patua One', cursive;
 }
+.texto{
+      text-align: justify;
+      text-justify: inter-word;
+}

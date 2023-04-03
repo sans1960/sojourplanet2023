@@ -25,7 +25,12 @@
                       </div>
 
                     </div>
-                  </div>
+                </div>
+                <div>
+                    @foreach ($country->sight as $sight)
+                        <h5>{{$sight->title}}</h5>
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>
