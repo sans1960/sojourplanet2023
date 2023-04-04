@@ -16,12 +16,11 @@ use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\FrontController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontController::class,'index'])->name('index');
 
 Auth::routes();
 
