@@ -21,6 +21,7 @@ use App\Http\Controllers\FrontController;
 
 
 Route::get('/', [FrontController::class,'index'])->name('index');
+Route::get('/destinations/{destination}', [FrontController::class,'destination'])->name('destination');
 
 Auth::routes();
 

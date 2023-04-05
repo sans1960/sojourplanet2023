@@ -5,7 +5,7 @@
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
             @foreach ($destinations as $destination)
-            <li><a class="dropdown-item " href="#">{{$destination->name}}</a></li>
+            <li><a class="dropdown-item " href="{{route('destination',$destination)}}">{{$destination->name}}</a></li>
             @endforeach
 
 

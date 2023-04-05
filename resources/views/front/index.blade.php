@@ -64,7 +64,7 @@
                 </button>
               </div>
         </div>
-        <div class="col-md-4 d-flex flex-column justify-content-start align-items-center patua">
+        <div class="col-md-4 d-flex  flex-column justify-content-start align-items-center patua">
             <div class="mb-4">
                 <h4>Lasts Travel Blog</h4>
                 <div class="d-flex flex-column justify-content-start align-items-center">
@@ -114,9 +114,46 @@
             <a href="" class="btn btn-outline-dark mb-5 patua">Tailor-made trips</a>
 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-5 d-flex flex-column justify-content-center align-items-center p-3">
+              <img src="{{asset('img/dream.png')}}" class="img-fluid" alt="">
+              <a href="">The trip of your dream</a>
+           </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row mt-5">
+        <h1 class="text-center mt-5">Our destinations</h1>
+                @foreach ($destinations as $destination)
+                <div class="col-md-3 d-flex justify-content-center align-items-center" style="background-image: url({{Storage::url($destination->image)}});background-size:cover;height:200px;">
+                    <a href="{{ route('destination',$destination)}}" class="btn btn-outline-dark">{{$destination->name}}</a>
+                  </div>
+                @endforeach
+
+
+                </div>
+
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1 class="text-center">Subscribe</h1>
+            <p class="text-center">Sign up to hear from us about specials, news and promotions.</p>
+            <form action="" method="post">
+             @csrf
+             <div class="form-floating mb-3">
+                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                    </div>
+                  <div class="d-flex justify-content-center">
+                     <button type="submit" class="btn btn-outline-dark">Sign up</button>
+                  </div>
+            </form>
+
+
 
         </div>
+
     </div>
 </div>
 @endsection
