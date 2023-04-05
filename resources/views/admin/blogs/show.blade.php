@@ -18,10 +18,15 @@
                     <div class="card-body p-3">
                       <h5 class="card-title">{{$blog->categoryblog->name}}</h5>
                       <h5 class="card-title">{{$blog->date}}</h5>
-                      <div>
+                      <div class="open texto">
                                 {!! $blog->description !!}
                       </div>
                       <div>
+                        @foreach ($blog->post as $post)
+                            <h5>{{$post->name}}</h5>
+                        @endforeach
+                      </div>
+                      <div class="open texto">
                         {!! $blog->conclusion !!}
                       </div>
 

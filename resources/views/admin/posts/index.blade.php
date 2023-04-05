@@ -34,11 +34,12 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mx-auto">
+        <div class="col-md-12 mx-auto">
             <table class="table table-stripped">
                 <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Blog</th>
 
                         <th>Acciones</th>
 
@@ -49,6 +50,7 @@
                     @foreach ($posts as $post)
                     <tr>
                       <td>{{ $post->name}}</td>
+                      <td>{{ $post->blog->name}}</td>
                       <td>
                           <a href="{{ route('admin.posts.show',$post)}}" class="btn btn-success btn-sm">
                               <i class="bi bi-eye"></i>

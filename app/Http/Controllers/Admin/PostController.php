@@ -19,7 +19,7 @@ class PostController extends Controller
      */
     public function index():Response
     {
-        $posts = Post::paginate(10);
+        $posts = Post::paginate(20);
         return response()->view('admin.posts.index',compact('posts'));
     }
 
