@@ -6,7 +6,7 @@
 
 @endsection
 @section('content')
-<div class="container">
+<div class="container mt-3">
     <div class="row">
         <div class="col-md-8">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">

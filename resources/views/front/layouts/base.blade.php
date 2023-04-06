@@ -30,26 +30,28 @@
           <a class="nav-link" href="#">Tailor-made-trips</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Travel Blog</a>
+            <a class="nav-link" href="#">The trip of your dreams</a>
           </li>
         <a class="navbar-brand d-none d-md-block" href="/">
             <img src="{{asset('img/ll.png')}}" alt="">
         </a>
-        <li class="nav-item">
-            <a class="nav-link" href="#">The trip of your dreams</a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Travel Blog</a>
           </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Travel Sight</a>
         </li>
-        <li class="nav-item">
+
+          @include('front.layouts.destinations',['destinations'=>$destinations=App\Models\Destination::all()]);
+          <li class="nav-item">
             <a class="nav-link" href="#">Travel Tour</a>
           </li>
-
       </ul>
     </div>
   </div>
 </nav>
-@include('front.layouts.destinations',['destinations'=>$destinations=App\Models\Destination::all()]);
+
 @yield('content')
 <footer class="bg-dark">
     <div class="container p-2">
