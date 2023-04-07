@@ -66,26 +66,33 @@
         </div>
         <div class="col-md-4 d-flex  flex-column justify-content-start align-items-center patua">
             <div class="mb-4">
-                <h4>Lasts Travel Blog</h4>
-                <div class="d-flex flex-column justify-content-start align-items-center">
-                    <a href="#" class=" ">
-                      The current link item
-                    </a>
-                    <a href="#" class="">A second link item</a>
-                    <a href="#" class="">A third link item</a>
-                    <a href="#" class="">A fourth link item</a>
+                <h3 class="text-center text-success">Lasts Travel Blog</h3>
+                <div class="d-flex flex-column justify-content-start align-items-start">
+                    @foreach ($blogs as $blog)
+                    <a href="{{route('blog',$blog)}}" class="nav-link open fw-bold ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill text-success" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                        {{$blog->name}}
+                      </a>
+                    @endforeach
+
 
                   </div>
             </div>
             <div class="mb-4">
-                <h4>Lasts Travel Sight</h4>
-                <div class="d-flex flex-column justify-content-start align-items-center">
-                    <a href="#" class=" ">
-                      The current link item
-                    </a>
-                    <a href="#" class="l">A second link item</a>
-                    <a href="#" class="">A third link item</a>
-                    <a href="#" class="">A fourth link item</a>
+                <h3 class="text-center text-success">Lasts Travel Sight</h3>
+                <div class="d-flex flex-column justify-content-start align-items-start">
+                    @foreach ($sights as $sight)
+                    <a href="#" class="nav-link open fw-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill text-success" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                          </svg>
+                        {{$sight->title}}
+                      </a>
+                    @endforeach
+
+
 
                   </div>
             </div>

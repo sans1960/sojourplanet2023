@@ -21,7 +21,11 @@ use App\Http\Controllers\FrontController;
 
 
 Route::get('/', [FrontController::class,'index'])->name('index');
+Route::get('/about-us', [FrontController::class,'about'])->name('about');
+Route::get('/taylor-made-tryps', [FrontController::class,'taylor'])->name('taylor');
+Route::get('/the-tryp-of-your-dreams', [FrontController::class,'dream'])->name('dream');
 Route::get('/destinations/{destination}', [FrontController::class,'destination'])->name('destination');
+Route::get('/blogs/{blog}', [FrontController::class,'blog'])->name('blog');
 
 Auth::routes();
 

@@ -9,7 +9,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="{{asset('css/tipo.css')}}">
         <link rel="stylesheet" href="{{asset('css/front.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/leaflet.css')}}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+        <script src="{{ asset('js/leaflet.js') }}"></script>
         @yield('css')
     </head>
     <body class="">
@@ -22,15 +24,15 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav align-items-center mx-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">About us</a>
+          <a class="nav-link"  href="{{route('about')}}">About us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tailor-made-trips</a>
+          <a class="nav-link" href="{{route('taylor')}}">Tailor-made-trips</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">The trip of your dreams</a>
+            <a class="nav-link" href="{{route('dream')}}">The trip of your dreams</a>
           </li>
         <a class="navbar-brand d-none d-md-block" href="/">
             <img src="{{asset('img/ll.png')}}" alt="">
@@ -94,6 +96,7 @@
 
 </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         @yield('js')
     </body>
 </html>
