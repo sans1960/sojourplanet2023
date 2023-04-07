@@ -26,6 +26,7 @@ Route::get('/taylor-made-tryps', [FrontController::class,'taylor'])->name('taylo
 Route::get('/the-tryp-of-your-dreams', [FrontController::class,'dream'])->name('dream');
 Route::get('/destinations/{destination}', [FrontController::class,'destination'])->name('destination');
 Route::get('/blogs/{blog}', [FrontController::class,'blog'])->name('blog');
+Route::get('/sights/{sight}', [FrontController::class,'sight'])->name('sight');
 
 Auth::routes();
 

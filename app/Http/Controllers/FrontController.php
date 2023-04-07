@@ -25,6 +25,10 @@ class FrontController extends Controller
     {
         return response()->view('front.blog',compact('blog'));
     }
+    public function sight(Sight $sight):Response
+    {
+        return response()->view('front.sight',compact('sight'));
+    }
     public function about():Response
     {
         return response()->view('front.about');

@@ -84,7 +84,7 @@
                 <h3 class="text-center text-success">Lasts Travel Sight</h3>
                 <div class="d-flex flex-column justify-content-start align-items-start">
                     @foreach ($sights as $sight)
-                    <a href="#" class="nav-link open fw-bold">
+                    <a href="{{route('sight',$sight)}}" class="nav-link open fw-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill text-success" viewBox="0 0 16 16">
                             <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                           </svg>
@@ -115,16 +115,16 @@
 </div>
 <div class="container">
     <div class="row mt-5">
-        <div class="col-md-8 text-center">
-            <h1 class="open">Welcome</h1>
-            <p class="open">We believe that trips should be as individual as you, where every detail counts for a unique experience. This is the essence of our business.</p>
-            <a href="" class="btn btn-outline-dark mb-5 patua">Tailor-made trips</a>
+        <div class="col-md-8 text-center p-3">
+            <h1 class="open mt-3">Welcome</h1>
+            <p class="open fs-5 mt-3">We believe that trips should be as individual as you, where every detail counts for a unique experience. This is the essence of our business.</p>
+            <a href="{{route('taylor')}}" class="btn btn-outline-dark mt-3 patua">Tailor-made trips</a>
 
         </div>
-        <div class="col-md-4 mb-5 d-flex flex-column justify-content-center align-items-center p-3">
-              <img src="{{asset('img/dream.png')}}" class="img-fluid" alt="">
-              <a href="">The trip of your dream</a>
-           </div>
+        <div class="col-md-4  d-flex flex-column justify-content-start align-items-center p-3">
+              <img src="{{asset('img/dream.png')}}" class="img-fluid" width="150" alt="">
+              <a href="{{route('dream')}}"  class="btn btn-outline-dark mt-3 patua">The trip of your dream</a>
+
         </div>
     </div>
 </div>
