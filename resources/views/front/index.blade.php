@@ -64,53 +64,39 @@
                 </button>
               </div>
         </div>
-        <div class="col-md-4 d-flex  flex-column justify-content-start align-items-center patua">
-            <div class="mb-4">
-                <h3 class="text-center text-success">Lasts Travel Blog</h3>
-                <div class="d-flex flex-column justify-content-start align-items-start">
+        <div class="col-md-4 d-flex flex-column align-items-center p-2">
+          
+                <h3 class="text-center text-success patua">Lasts Travel Blog</h3>
+                <div class="mx-auto owl-carousel owl-theme ms-2">
                     @foreach ($blogs as $blog)
-                    <a href="{{route('blog',$blog)}}" class="nav-link open fw-bold ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill text-success" viewBox="0 0 16 16">
-                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                          </svg>
-                        {{$blog->name}}
-                      </a>
+                    <a href="{{route('blog',$blog)}}" class="nav-link  ">
+                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($blog->image)}});background-size:cover; height:200px;">
+                      <h5 class="fs-5 open fw-bold text-white">{{$blog->name}}</h5>   
+                       
+                    </div>
+                  </a>
                     @endforeach
-
-
-                  </div>
-            </div>
-            <div class="mb-4">
-                <h3 class="text-center text-success">Lasts Travel Sight</h3>
-                <div class="d-flex flex-column justify-content-start align-items-start">
+                </div>
+                <h3 class="text-center text-success patua">Lasts Travel Sight</h3>
+                <div class="mx-auto owl-carousel owl-theme ms-2">
                     @foreach ($sights as $sight)
-                    <a href="{{route('sight',$sight)}}" class="nav-link open fw-bold">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill text-success" viewBox="0 0 16 16">
-                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                          </svg>
-                        {{$sight->title}}
-                      </a>
+                    <a href="{{route('sight',$sight)}}" class="nav-link  ">
+                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($sight->image)}});background-size:cover; height:200px;">
+                      <h5 class="fs-5 open fw-bold text-white">{{$sight->title}}</h5>   
+                       
+                    </div>
+                  </a>
                     @endforeach
+                </div>
+              
+
+            
 
 
-
-                  </div>
+                
             </div>
-            <div class="mb-4">
-                <h4>Lasts Travel Tour</h4>
-                <div class="d-flex flex-column justify-content-start align-items-center">
-                    <a href="#" class=" ">
-                      The current link item
-                    </a>
-                    <a href="#" class="">A second link item</a>
-                    <a href="#" class="">A third link item</a>
-                    <a href="#" class="">A fourth link item</a>
-
-                  </div>
-            </div>
-
-
-        </div>
+           
+      
     </div>
 </div>
 <div class="container">
@@ -165,5 +151,18 @@
 </div>
 @endsection
 @section('js')
-
+ <script>
+  $('.owl-carousel').owlCarousel({
+ loop:true,
+ margin:10,
+ responsiveClass:true,
+ responsive:{
+      0:{
+          items:1,
+          nav:true
+      },
+  
+ }
+})
+</script>
 @endsection
