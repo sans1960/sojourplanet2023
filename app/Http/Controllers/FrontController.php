@@ -7,6 +7,7 @@ use App\Models\Destination;
 use Illuminate\Http\Response;
 use App\Models\Blog;
 use App\Models\Sight;
+use App\Models\Tour;
 
 class FrontController extends Controller
 {
@@ -14,8 +15,9 @@ class FrontController extends Controller
     {
         $blogs = Blog::latest()->take(2)->get();
         $sights = Sight::latest()->take(2)->get();
+        $tours = Tour::latest()->take(2)->get();
         $destinations = Destination::all();
-        return response()->view('front.index',compact('destinations','blogs','sights'));
+        return response()->view('front.index',compact('destinations','blogs','sights','tours'));
     }
     public function destination(Destination $destination):Response
     {
@@ -28,6 +30,10 @@ class FrontController extends Controller
     public function sight(Sight $sight):Response
     {
         return response()->view('front.sight',compact('sight'));
+    }
+    public function tour(Tour $tour):Response
+    {
+        return response()->view('front.tour',compact('tour'));
     }
     public function about():Response
     {

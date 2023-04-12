@@ -27,6 +27,7 @@ Route::get('/the-tryp-of-your-dreams', [FrontController::class,'dream'])->name('
 Route::get('/destinations/{destination}', [FrontController::class,'destination'])->name('destination');
 Route::get('/blogs/{blog}', [FrontController::class,'blog'])->name('blog');
 Route::get('/sights/{sight}', [FrontController::class,'sight'])->name('sight');
+Route::get('/tours/{tour}', [FrontController::class,'tour'])->name('tour');
 
 Auth::routes();
 

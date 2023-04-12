@@ -8,7 +8,7 @@
 @section('content')
 <div class="container mt-3">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
 
                 <div class="carousel-inner">
@@ -64,13 +64,13 @@
                 </button>
               </div>
         </div>
-        <div class="col-md-4 d-flex flex-column align-items-center p-2">
+        <div class="col-md-3 d-flex flex-column align-items-center p-2">
           
                 <h3 class="text-center text-success patua">Lasts Travel Blog</h3>
                 <div class="mx-auto owl-carousel owl-theme ms-2">
                     @foreach ($blogs as $blog)
                     <a href="{{route('blog',$blog)}}" class="nav-link  ">
-                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($blog->image)}});background-size:cover; height:200px;">
+                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($blog->image)}});background-size:cover; height:150px;">
                       <h5 class="fs-5 open fw-bold text-white">{{$blog->name}}</h5>   
                        
                     </div>
@@ -81,8 +81,19 @@
                 <div class="mx-auto owl-carousel owl-theme ms-2">
                     @foreach ($sights as $sight)
                     <a href="{{route('sight',$sight)}}" class="nav-link  ">
-                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($sight->image)}});background-size:cover; height:200px;">
+                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($sight->image)}});background-size:cover; height:150px;">
                       <h5 class="fs-5 open fw-bold text-white">{{$sight->title}}</h5>   
+                       
+                    </div>
+                  </a>
+                    @endforeach
+                </div>
+                <h3 class="text-center text-success patua">Lasts Travel Tour</h3>
+                <div class="mx-auto owl-carousel owl-theme ms-2">
+                    @foreach ($tours as $tour)
+                    <a href="{{ route('tour',$tour)}}" class="nav-link  ">
+                    <div class="d-flex justify-content-center align-items-center p-2 " style="background-image: url({{Storage::url($tour->image)}});background-size:cover; height:150px;">
+                      <h5 class="fs-5 open fw-bold text-white">{{$tour->name}}</h5>   
                        
                     </div>
                   </a>
