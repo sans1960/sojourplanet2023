@@ -1,0 +1,38 @@
+
+
+.Slider {
+    /* color: white;
+    font-family: arial, san-serif;
+    width: 100%;
+    height: 100%; */
+    position: relative;
+  }
+  .Slider .Slider-content {
+    /* font-size: 48px;
+   
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .Slider .Slider-slide {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+  }
+  .Slider .Slider-slide.show {
+    opacity: 1;
+  }
+  
