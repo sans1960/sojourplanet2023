@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\SightController;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
+use App\Http\Controllers\Admin\ListContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\FrontController;
 
@@ -45,6 +46,7 @@ Route::resource('admin/sights',SightController::class)->middleware('auth')->name
 Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
 Route::resource('admin/tours',TourController::class)->middleware('auth')->names('admin.tours');
 Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');
+Route::resource('admin/contactos-list',ListContactController::class)->names('contactos.list');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');

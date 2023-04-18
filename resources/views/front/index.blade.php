@@ -166,7 +166,7 @@
             <div class="col-md-6 mx-auto">
                 <h1 class="text-center">Subscribe</h1>
                 <p class="text-center">Sign up to hear from us about specials, news and promotions.</p>
-                <form action="" method="post">
+                <form action="{{route('contactos.list.store')}}" method="post">
                     @csrf
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" name="email" id="floatingInput"
