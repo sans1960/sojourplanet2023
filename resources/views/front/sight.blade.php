@@ -46,6 +46,9 @@
                   </div>
                   <div id="map" class="mb-5" style="width:100%;height:400px">
                   </div>
+                  <div id="social-links" class="d-flex justify-content-center social-share" >
+                    <p>Share this Sight with:  {!! Share::currentPage('Share')->facebook()->twitter(); !!}</p>
+                  </div>
             </div>
             <div class="col-md-4">
 

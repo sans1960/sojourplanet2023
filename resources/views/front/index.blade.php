@@ -173,6 +173,9 @@
                             placeholder="name@example.com" required>
                         <label for="floatingInput">Email address</label>
                     </div>
+                    @error('email')
+                     <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-outline-dark">Sign up</button>
                     </div>

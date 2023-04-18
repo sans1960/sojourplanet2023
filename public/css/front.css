@@ -9,6 +9,16 @@
     font-size: 1.1em;
     padding: 0.5em 1em;
   }
+  .social-share{
+    font-size: 30px;
+}
+
+  .social-share ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 15px;
+}
+
 
   @media screen and (min-width: 768px) {
     .navbar-brand img {

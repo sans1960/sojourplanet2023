@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/slider.css')}}">
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="https://kit.fontawesome.com/c6438ec7a6.js" crossorigin="anonymous"></script>
         @yield('css')
     </head>
     <body class="">
@@ -104,6 +105,7 @@
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="{{asset('js/owl.carousel.min.js')}}"></script>
         <script src="{{asset('js/slider.js')}}"></script>
+        <script src="{{asset('js/share.js')}}"></script>
         @yield('js')
     </body>
 </html>
