@@ -8,6 +8,8 @@ use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Event;
 use App\Models\ListContact;
 use App\Observers\ListContactObserver;
+use App\Models\GeneralContact;
+use App\Observers\GeneralContactObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -28,6 +30,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot(): void
     {
         ListContact::observe(ListContactObserver::class);
+        GeneralContact::observe(GeneralContactObserver::class);
     }
 
     /**

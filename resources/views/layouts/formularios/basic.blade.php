@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-4">
     <select class="form-select form-select-lg mt-3 mb-3" name="trait" aria-label="Default select example">
-      <option selected>Choose your title</option>
+      <option >Choose your title</option>
+      <option value=""></option>
       <option value="Dr">Dr</option>
       <option value="Mr">Mr</option>
       <option value="Mrs">Mrs</option>

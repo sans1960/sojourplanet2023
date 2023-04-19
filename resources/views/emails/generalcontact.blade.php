@@ -1,17 +1,8 @@
 <x-mail::message>
 
+Thanks, {{$contact['name']}}
 
-
-Thanks you your email : {{$listcontact['email']}}
-
-has been added.
-
-
-
-
-
-
-
+We work to successfully organize your trip
 
 <x-mail::button :url="'https://sojournplanet.com/'">
 Web page
