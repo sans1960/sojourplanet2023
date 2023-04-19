@@ -1,14 +1,19 @@
 <x-mail::message>
-# Introduction
-
-{{$listcontact['email']}}
 
 
 
+Thanks you your email : {{$listcontact['email']}}
 
-The body of your message.
+has been added.
 
-<x-mail::button :url="''">
+
+
+
+
+
+
+
+<x-mail::button :url="'https://sojournplanet.com/'">
 Button Text
 </x-mail::button>
 

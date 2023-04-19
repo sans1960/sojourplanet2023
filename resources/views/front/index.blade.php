@@ -61,8 +61,16 @@
                 </div>
         
     </div>
-
+  
     <div class="container mt-3">
+        @if (Session::has('success'))
+        <div class="alert alert-warning" role="alert">
+            {{ Session::get('success') }}
+          </div>
+                
+          
+      
+        @endif
       <div class="row">
         <div class="col-md-4 mx-auto d-flex justify-content-center ">
           <a href="{{ route('taylor') }}" class="btn btn-outline-dark mt-3 patua p-2 ">Start to plan my trip</a>
@@ -163,6 +171,7 @@
     </div>
     <div class="container mt-5 mb-5">
         <div class="row">
+
             <div class="col-md-6 mx-auto">
                 <h1 class="text-center">Subscribe</h1>
                 <p class="text-center">Sign up to hear from us about specials, news and promotions.</p>

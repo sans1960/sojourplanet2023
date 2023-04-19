@@ -41,7 +41,8 @@ class ListContactController extends Controller
         ]);
         $listcontact = ListContact::create($request->all());
         // Mail::to($contact->email)->send(new ListMail($contact));
-        return view('front.listcontact.respuesta',compact('listcontact'));
+        // return view('front.listcontact.respuesta',compact('listcontact'));
+        return redirect()->back()->with('success', 'Your email has been added satisfactory');
     }
 
     /**
