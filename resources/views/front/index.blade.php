@@ -73,7 +73,7 @@
         @endif
       <div class="row">
         <div class="col-md-4 mx-auto d-flex justify-content-center ">
-          <a href="{{ route('taylor') }}" class="btn btn-outline-dark mt-3 patua p-2 ">Start to plan my trip</a>
+          <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark mt-3 patua p-2 ">Start to plan my trip</a>
         </div>
       </div>
     </div>

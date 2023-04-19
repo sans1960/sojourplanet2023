@@ -47,4 +47,7 @@ class FrontController extends Controller
     {
         return response()->view('front.dream');
     }
+    public function contactgeneral(){
+        return view('forms.general');
+    }
 }
