@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class GeneralContact extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+    protected $fillable = ['trait','name','surname','phone','email'
+    ,'city','legal','state','zipcode','duration','season','travelers',
+    'children','type','romantic','mobility','message'];
 }

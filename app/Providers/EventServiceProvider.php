@@ -10,6 +10,8 @@ use App\Models\ListContact;
 use App\Observers\ListContactObserver;
 use App\Models\GeneralContact;
 use App\Observers\GeneralContactObserver;
+use App\Models\SightContact;
+use App\Observers\SightContactObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -31,6 +33,7 @@ class EventServiceProvider extends ServiceProvider
     {
         ListContact::observe(ListContactObserver::class);
         GeneralContact::observe(GeneralContactObserver::class);
+        SightContact::observe(SightContactObserver::class);
     }
 
     /**
