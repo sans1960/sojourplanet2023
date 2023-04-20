@@ -62,7 +62,12 @@
                 <div class="open texto fs-5">
                   {!! $tour->conclusion!!}
                 </div>
-               
+                <div class=" d-flex justify-content-center mt-5 mb-5">
+                  <a href="" class="btn btn-dark patua p-2">Plan this trip</a>
+                 </div>
+                 <div id="social-links" class="d-flex justify-content-center social-share" >
+                  <p>Share this Tour with:  {!! Share::currentPage('Share')->facebook()->twitter(); !!}</p>
+                </div>
             </div>
            
         </div>

@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
 use App\Http\Controllers\Admin\ListContactController;
 use App\Http\Controllers\Admin\GeneralContactController;
+use App\Http\Controllers\Admin\SightContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\FrontController;
 
@@ -31,6 +32,7 @@ Route::get('/blogs/{blog}', [FrontController::class,'blog'])->name('blog');
 Route::get('/sights/{sight}', [FrontController::class,'sight'])->name('sight');
 Route::get('/tours/{tour}', [FrontController::class,'tour'])->name('tour');
 Route::get('taylor-made-trips/contact', [FrontController::class , 'contactgeneral'])->name('contactgeneral');
+Route::get('contact/sight/{sight}', [FrontController::class , 'contactSight'])->name('contactsight');
 
 Auth::routes();
 
@@ -50,6 +52,7 @@ Route::resource('admin/tours',TourController::class)->middleware('auth')->names(
 Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');
 Route::resource('admin/contactos-list',ListContactController::class)->names('contactos.list');
 Route::resource('admin/contactos-general',GeneralContactController::class)->names('contactos.general');
+Route::resource('admin/contactos-sight',SightContactController::class)->names('contactos.sight');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');

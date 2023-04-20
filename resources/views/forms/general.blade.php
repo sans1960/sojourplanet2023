@@ -11,6 +11,7 @@ Start to plan my trip
 <div class="container">
     <h4 class="text-center mt-4">Inquire about a tailor-made trip with us</h4>
 <form action="{{ route('contactos.general.store')}}" method="post">
+    <x-honeypot />
   @csrf
     <h3>Your details</h3>
  @include('layouts.formularios.basic')

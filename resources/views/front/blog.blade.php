@@ -51,6 +51,9 @@
           <div class="open texto fs-5">
             {!! $blog->conclusion!!}
           </div>
+          <div id="social-links" class="d-flex justify-content-center social-share" >
+            <p>Share this Blog with:  {!! Share::currentPage('Share')->facebook()->twitter(); !!}</p>
+          </div>
         </div>
         <div class="col-md-4">
 

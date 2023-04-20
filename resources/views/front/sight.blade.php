@@ -49,6 +49,9 @@
                   <div id="social-links" class="d-flex justify-content-center social-share" >
                     <p>Share this Sight with:  {!! Share::currentPage('Share')->facebook()->twitter(); !!}</p>
                   </div>
+                  <div class=" d-flex justify-content-center mt-5 mb-5">
+                    <a href="{{route('contactsight',$sight)}}" class="btn btn-dark patua p-2">Plan a trip here</a>
+                   </div>
             </div>
             <div class="col-md-4">
 

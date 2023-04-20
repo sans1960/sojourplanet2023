@@ -176,6 +176,7 @@
                 <h1 class="text-center">Subscribe</h1>
                 <p class="text-center">Sign up to hear from us about specials, news and promotions.</p>
                 <form action="{{route('contactos.list.store')}}" method="post">
+                    <x-honeypot />
                     @csrf
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" name="email" id="floatingInput"
