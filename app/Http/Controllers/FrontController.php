@@ -28,6 +28,14 @@ class FrontController extends Controller
     {
         return response()->view('front.blog',compact('blog'));
     }
+    public function allblogs(){
+        $blogs = Blog::orderBy('date','desc')->paginate(12);
+        return view('front.travelblog',compact('blogs'));
+    }
+    public function allsights(){
+        $sights = Sight::orderBy('date','desc')->paginate(12);
+        return view('front.travelsight',compact('sights'));
+    }
     public function sight(Sight $sight):Response
     {
         return response()->view('front.sight',compact('sight'));

@@ -45,10 +45,10 @@
         </a>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Travel Blog</a>
+            <a class="nav-link" href="{{route('blogs')}}">Travel Blog</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Travel Sight</a>
+          <a class="nav-link" href="{{route('sights')}}">Travel Sight</a>
         </li>
 
           @include('front.layouts.destinations',['destinations'=>$destinations=App\Models\Destination::all()]);
