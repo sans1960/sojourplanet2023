@@ -33,7 +33,7 @@ class FrontController extends Controller
         return view('front.travelblog',compact('blogs'));
     }
     public function allsights(){
-        $sights = Sight::orderBy('date','desc')->paginate(12);
+        $sights = Sight::orderBy('date','desc')->paginate(16);
         return view('front.travelsight',compact('sights'));
     }
     public function sight(Sight $sight):Response
