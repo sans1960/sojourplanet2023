@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
         <link rel="stylesheet" href="{{asset('css/slider.css')}}">
+      
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 <script src="https://kit.fontawesome.com/c6438ec7a6.js" crossorigin="anonymous"></script>
         @yield('css')
