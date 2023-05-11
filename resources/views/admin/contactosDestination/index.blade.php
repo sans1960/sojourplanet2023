@@ -7,7 +7,7 @@
         <div class="row ">
             <div class="col-md-8 mx-auto">
                 <div class="card">
-                    <div class="card-header">{{ __('All Contactos Sight') }}</div>
+                    <div class="card-header">{{ __('All Contactos Destination') }}</div>
 
 
 
@@ -28,9 +28,10 @@
                         <tr>
 
                             <th class="">Fecha</th>
-                            <th class="">Sight</th>
-                            <th class="">Country</th>
-                            <th class="">Email</th>
+                            <th class="">Name</th>
+                            <th class="">Surname</th>
+                            <th class="">Destination</th>
+
 
 
 
@@ -39,22 +40,23 @@
                     </thead>
                     <tbody>
 
-                        @foreach ($contacts as $contact)
+                        @foreach ($destinationcontacts as $destinationcontact)
                             <tr>
-                                <td>{{ $contact->created_at }}</td>
-                                <td>{{ $contact->sight->title }}</td>
-                                <td>{{ $contact->sight->country->name }}</td>
-                                <td>{{ $contact->email }}</td>
+                                <td>{{ $destinationcontact->created_at }}</td>
+                                <td>{{ $destinationcontact->name }}</td>
+                                <td>{{ $destinationcontact->surname }}</td>
+                                <td>{{ $destinationcontact->destination->name }}</td>
 
                                 <td>
-                                    <a href="{{ route('contactos.sight.show', $contact->id) }}"
+                                    <a href="{{ route('contactos.destination.show', $destinationcontact) }}"
                                         class="btn btn-success btn-sm">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
 
                                 <td>
-                                    <form action="{{ route('contactos.sight.destroy', $contact->id) }}" method="post">
+                                    <form action="{{ route('contactos.destination.destroy', $destinationcontact) }}"
+                                        method="post">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-danger btn-sm show_confirm">

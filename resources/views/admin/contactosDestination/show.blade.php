@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    {{ $contact->name }} {{ $contact->surname }}
+    {{ $destinationcontact->name }} {{ $destinationcontact->surname }}
 @endsection
 @section('content')
     <div class="container">
@@ -9,73 +9,71 @@
 
                 <div class="card">
                     <div class="card-header">
-                        {{ $contact->trait }} {{ $contact->name }} {{ $contact->surname }}
+                        {{ $destinationcontact->trait }} {{ $destinationcontact->name }} {{ $destinationcontact->surname }}
                     </div>
                     <div class="card-body">
                         <div>
 
-                            {{ $contact->sight->title }}
+                            {{ $destinationcontact->destination->name }}
 
 
 
                         </div>
                         <div class="row">
                             <div class="col">
-                                {{ $contact->email }}
+                                {{ $destinationcontact->email }}
                             </div>
                             <div class="col">
-                                {{ $contact->phone }}
+                                {{ $destinationcontact->phone }}
                             </div>
                             <div class="col">
-                                {{ $contact->created_at }}
+                                {{ $destinationcontact->created_at }}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                {{ $contact->city }}
+                                {{ $destinationcontact->city }}
                             </div>
                             <div class="col">
-                                {{ $contact->state }}
+                                {{ $destinationcontact->state }}
                             </div>
                             <div class="col">
-                                {{ $contact->zipcode }}
+                                {{ $destinationcontact->zipcode }}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                {{ $contact->duration }}
+                                {{ $destinationcontact->duration }}
                             </div>
                             <div class="col">
-                                {{ $contact->season }}
+                                {{ $destinationcontact->season }}
                             </div>
                             <div class="col">
-                                {{ $contact->travelers }}
+                                {{ $destinationcontact->travelers }}
                             </div>
                             <div class="col">
-                                {{ $contact->type }}
+                                {{ $destinationcontact->type }}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                {{ $contact->children }}
+                                {{ $destinationcontact->children }}
                             </div>
                             <div class="col">
-                                {{ $contact->romantic }}
+                                {{ $destinationcontact->romantic }}
                             </div>
                             <div class="col">
-                                {{ $contact->mobility }}
+                                {{ $destinationcontact->mobility }}
                             </div>
                         </div>
-                        <div class="">
-                            {{ $contact->sight->country->name }}
+
+                        <div>
+                            {{ $destinationcontact->message }}
                         </div>
                         <div>
-                            {{ $contact->message }}
-                        </div>
-                        <div>
-                            @if ($contact->countries)
+                            @if ($destinationcontact->countries)
                                 <ul>
-                                    @foreach ($contact->countries as $item)
+                                    @foreach ($destinationcontact->countries as $item)
                                         <li>{{ $item }}</li>
                                     @endforeach
                                 </ul>
@@ -84,13 +82,7 @@
 
                         </div>
                         <div>
-                            @if ($contact->sights)
-                                <ul>
-                                    @foreach ($contact->sights as $item)
-                                        <li>{{ $item }}</li>
-                                    @endforeach
-                                </ul>
-                            @endif
+
 
 
 

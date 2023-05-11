@@ -61,7 +61,7 @@
         <div class="col-md-4 p-3">
             {!! $destination->sidebody!!}
             <div class="d-flex justify-content-center mt-5">
-                <a href="" class="btn  btn-outline-dark">Start to plan my trip</a>
+                <a href="{{route('contactdestination',$destination)}}" class="btn  btn-outline-dark">Start to plan my trip</a>
             </div>
         </div>
     </div>

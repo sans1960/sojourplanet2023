@@ -22,7 +22,7 @@ class Destination extends Model
     }
     public function subregion():HasMany
     {
-        return $this->hasMany(SubRegion::class);
+        return $this->hasMany(SubRegion::class,'subregion_id');
     }
     public function country():HasMany
     {
@@ -35,5 +35,9 @@ class Destination extends Model
     public function tours():BelongsToMany
     {
         return $this->belongsToMany(Type::class);
+    }
+    public function destinationcontact():HasMany
+    {
+        return $this->hasMany(DestinationContact::class);
     }
 }

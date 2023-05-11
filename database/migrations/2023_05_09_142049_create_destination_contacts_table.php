@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sight_contacts', function (Blueprint $table) {
+        Schema::create('destination_contacts', function (Blueprint $table) {
             $table->id();
             $table->string('trait')->nullable();
             $table->string('name');
-            $table->foreignId('sight_id')->constrained('sights')->onUpdate('cascade')
+            $table->foreignId('destination_id')->constrained('destinations')->onUpdate('cascade')
             ->onDelete('cascade');
-          
+         
             $table->string('surname');
             $table->string('phone');
             $table->string('email');
@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string('romantic')->nullable();
             $table->string('mobility')->nullable();
             $table->text('countries')->nullable();
-            $table->text('sights')->nullable();
+       
             $table->text('message')->nullable();
             $table->timestamps();
         });
@@ -44,6 +44,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sight_contacts');
+        Schema::dropIfExists('destination_contacts');
     }
 };

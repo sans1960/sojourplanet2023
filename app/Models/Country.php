@@ -23,7 +23,7 @@ class Country extends Model
 
     public function subregion():BelongsTo
     {
-        return $this->belongsTo(SubRegion::class);
+        return $this->belongsTo(SubRegion::class,'subregion_id');
     }
     public function sight():HasMany
     {

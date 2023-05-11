@@ -36,5 +36,9 @@ class Sight extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+    public function sightncontact():HasMany
+    {
+        return $this->hasMany(SightContact::class);
+    }
 
 }

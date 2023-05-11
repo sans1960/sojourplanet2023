@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\Sight;
 use App\Models\Tour;
 use App\Models\Country;
+use App\Models\SubRegion;
 
 class FrontController extends Controller
 {
@@ -64,5 +65,9 @@ class FrontController extends Controller
         $countries = Country::where('subregion_id',$sight->subregion_id)->where('id','<>',$sight->country_id)->get();
         $items = Sight::where('country_id',$sight->country_id)->where('id','<>',$sight->id)->get();
         return view('forms.sight',compact('sight','countries','items'));
+    }
+    public function contactDestination(Destination $destination){
+
+        return view('forms.destination',compact('destination'));
     }
 }

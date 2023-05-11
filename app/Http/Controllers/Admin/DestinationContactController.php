@@ -3,14 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\DestinationContact;
+use App\Models\Destination;
+use App\Models\SubRegion;
 use Illuminate\Http\Request;
-use App\Models\SightContact;
 
-class SightContactController extends Controller
+class DestinationContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function __construct()
     {
         $this->middleware('auth')->except('store');
@@ -19,10 +18,14 @@ class SightContactController extends Controller
     }
 
 
+
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $contacts = SightContact::all();
-        return view('admin.contactosSight.index',compact('contacts'));
+        $destinationcontacts=DestinationContact::all();
+        return view('admin.contactosDestination.index',compact('destinationcontacts'));
     }
 
     /**
@@ -38,10 +41,9 @@ class SightContactController extends Controller
      */
     public function store(Request $request)
     {
-       $validated = $request->validate([
+      $validated =  $request->validate([
             'name'=>'required|max:20',
-            'trait' => 'max:10',
-            'sight_id'=>'required',
+            'destination_id'=>'required',
             'legal'=>'required',
             'surname'=>'required|max:20',
             'phone'=>'required|max:20',
@@ -58,11 +60,10 @@ class SightContactController extends Controller
             'romantic'=>'max:20',
             'mobility'=>'max:20',
             'countries'=>'max:255',
-            'sights'=>'max:255',
-            
         ]);
-        $contact = SightContact::create($validated);
-        return view('forms.respuestasight',compact('contact'));
+        $contact =  DestinationContact::create($validated);
+      
+        return view('forms.respuestadestination')->with('contact',$contact);
     }
 
     /**
@@ -70,8 +71,8 @@ class SightContactController extends Controller
      */
     public function show(string $id)
     {
-        $contact = SightContact::find($id);
-        return view('admin.contactosSight.show',compact('contact'));
+        $destinationcontact = DestinationContact::find($id);
+        return view('admin.contactosDestination.show',compact('destinationcontact'));
     }
 
     /**
@@ -95,9 +96,8 @@ class SightContactController extends Controller
      */
     public function destroy(string $id)
     {
-        $contact = SightContact::find($id);
-        $contact->delete();
-
-        return redirect()->route('contactos.sight.index');
+        $destinationcontact = DestinationContact::find($id);
+        $destinationcontact->delete();
+        return redirect()->route('contactos.destination.index');
     }
 }
