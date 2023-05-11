@@ -24,16 +24,19 @@
 
     </div>
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-end">
+        <div class="col-md-12 d-flex justify-content-around">
             <a href="{{ route('admin.countries.create')}}" class="btn btn-success mt-5">
              <i class="bi bi-plus-square"></i>
             </a>
+            <a href="{{route('findcountry')}}" class="btn btn-success mt-5">
+                <i class="bi bi-search"></i>
+               </a>
          </div>
     </div>
 
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-8 mx-auto">
             <table class="table table-stripped">
                 <thead>

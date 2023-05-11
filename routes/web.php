@@ -60,6 +60,8 @@ Route::resource('admin/contactos-destinations',DestinationContactController::cla
 Route::resource('admin/contactos-sight',SightContactController::class)->names('contactos.sight');
 Route::get('admin/findsight',[SightController::class,'findSight'])->name('findsight');
 Route::post('admin/searchsight',[SightController::class,'searchSight'])->name('searchsight');
+Route::get('admin/findcontry',[CountryController::class,'findCountry'])->name('findcountry');
+Route::post('admin/searchcountry',[CountryController::class,'searchCountry'])->name('searchcountry');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');

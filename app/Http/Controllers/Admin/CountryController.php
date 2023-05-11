@@ -19,7 +19,7 @@ class CountryController extends Controller
      */
     public function index():Response
     {
-        $countries = Country::paginate(10);
+        $countries = Country::orderBy('name')->paginate(10);
         return response()->view('admin.countries.index',compact('countries'));
     }
 
@@ -114,4 +114,12 @@ class CountryController extends Controller
 
         return abort(500);
     }
+    public function findCountry(){
+        return view('admin.countries.search');
+   }
+   public function searchCountry(Request $request){
+       $search = $request->input('search');
+       $countries = Country::where('name','LIKE',"%{$search}%")->get();
+       return view('admin.countries.search', compact('countries','search'));
+   }
 }

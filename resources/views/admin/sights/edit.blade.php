@@ -63,26 +63,30 @@ Edit {{ $sight->title }}
                            </div>
                            <div class="row mb-3  ">
                                 <h6>Tags</h6>
-                                @foreach ($sight->tags as $tag)
-                                <div class="col-md-4 mt-2">
-                                    <div class="form-check">
+                                <div class="col-md-12 mt-2 d-flex flex-wrap">
+                                @foreach ($sight->tags->sortBy('name') as $tag)
+                                
+                                    <div class="form-check me-4">
                                         <input class="form-check-input" checked name="tags[]" type="checkbox" value="{{$tag->id}}" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                           {{$tag->name}}
                                         </label>
                                       </div>
-                                   </div>
+                                   
                                 @endforeach
-                                @foreach ($difftags as $tag)
-                                <div class="col-md-4 mt-2">
-                                    <div class="form-check">
+                              </div>
+                              <div class="col-md-12 d-flex flex-wrap mt-2">
+                                @foreach ($difftags->sortBy('name') as $tag)
+                                
+                                    <div class="form-check me-3">
                                         <input class="form-check-input" name="tags[]" type="checkbox" value="{{$tag->id}}" id="flexCheckDefault">
                                         <label class="form-check-label" for="flexCheckDefault">
                                           {{$tag->name}}
                                         </label>
                                       </div>
-                                   </div>
+                               
                                 @endforeach
+                              </div>
 
                            </div>
                            <div class=" row mb-3">
