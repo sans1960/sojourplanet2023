@@ -1,43 +1,33 @@
 @extends('layouts.admin')
 @section('title')
-{{ __(' Sights') }}
+{{ __(' Search Sights') }}
 
 @endsection
 @section('content')
 <div class="container">
-    <div class="row ">
-        <div class="col-md-8 mx-auto">
-            <div class="card">
-                <div class="card-header">{{ __('All Sights') }}</div>
-
-                @if(Session::has('notif.success'))
-                <div class="alert alert-info alert-dismissible fade show" role="alert">
-                    <strong>{{ Session::get('notif.success') }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                @endif
-
-
-
-            </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+           <form action="{{route('searchsight')}}" method="post">
+            @csrf
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">
+                    <i class="bi bi-search"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Enter text" name="search" aria-describedby="basic-addon1">
+                
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    
+                
+              </div>
+           </form>
         </div>
-
     </div>
-    <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
-            <a href="{{ route('admin.sights.create')}}" class="btn btn-success mt-5">
-             <i class="bi bi-plus-square"></i>
-            </a>
-            <a href="{{ route('findsight')}}" class="btn btn-success mt-5">
-                <i class="bi bi-search"></i>
-               </a>
-         </div>
-    </div>
-
 </div>
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-8 mx-auto">
+    <div class="row mt-4">
+        <div class="col-md-12">
             <table class="table table-stripped">
                 <thead>
                     <tr>
@@ -50,6 +40,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @if (isset($sights))
                     @foreach ($sights as $sight)
                     <tr>
                     <td>{{ $sight->id}}</td>
@@ -78,18 +69,16 @@
                     </tr>
 
                     @endforeach
+                    @endif
                 </tbody>
             </table>
 
 
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 mx-auto d-flex justify-content-end">
-            {!! $sights->links() !!}
-        </div>
     </div>
-</div
+</div>
+    
 @endsection
 @section('js')
 <script type="text/javascript">
@@ -110,5 +99,5 @@
            }
          });
      });
-</script>
+</script>  
 @endsection

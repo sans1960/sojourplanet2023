@@ -128,4 +128,12 @@ class SightController extends Controller
 
         return abort(500);
     }
+    public function findSight(){
+         return view('admin.sights.search');
+    }
+    public function searchSight(Request $request){
+        $search = $request->input('search');
+        $sights = Sight::where('title','LIKE',"%{$search}%")->get();
+        return view('admin.sights.search', compact('sights'));
+    }
 }

@@ -58,6 +58,8 @@ Route::resource('admin/contactos-list',ListContactController::class)->names('con
 Route::resource('admin/contactos-general',GeneralContactController::class)->names('contactos.general');
 Route::resource('admin/contactos-destinations',DestinationContactController::class)->names('contactos.destination');
 Route::resource('admin/contactos-sight',SightContactController::class)->names('contactos.sight');
+Route::get('admin/findsight',[SightController::class,'findSight'])->name('findsight');
+Route::post('admin/searchsight',[SightController::class,'searchSight'])->name('searchsight');
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');
