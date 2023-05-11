@@ -44,7 +44,7 @@ class GeneralContactController extends Controller
             'message'=>'max:255',
         ]);
         $contact = GeneralContact::create($request->all());
-        return view('forms.respuesta',compact('contact'));
+        return view('forms.respuestageneral',compact('contact'));
     }
 
     /**
