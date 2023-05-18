@@ -69,6 +69,11 @@ class FrontController extends Controller
         $sights = $tag->sights()->paginate(20);
         return view('front.tagsights',compact('sights','tag'));
         }
+      public function allTour():Response
+    {
+        $tours = Tour::orderBy('date','desc')->paginate(20);
+        return response()->view('front.traveltour',compact('tours'));
+    }
     public function tour(Tour $tour):Response
     {
         return response()->view('front.tour',compact('tour'));

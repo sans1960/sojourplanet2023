@@ -34,6 +34,7 @@ Route::get('/sights', [FrontController::class,'allsights'])->name('sights');
 Route::get('/blogs/{blog}', [FrontController::class,'blog'])->name('blog');
 Route::get('/sights/{sight}', [FrontController::class,'sight'])->name('sight');
 Route::get('/tours/{tour}', [FrontController::class,'tour'])->name('tour');
+Route::get('/tours', [FrontController::class,'allTour'])->name('alltours');
 Route::get('sights/country/{country}', [FrontController::class,'countrySights'])->name('countrysights');
 Route::get('sights/destinations/{destination}', [FrontController::class,'destinationSights'])->name('destinationsights');
 Route::get('/categorysight/{categorysight}', [FrontController::class,'categorySights'])->name('categorysights');
