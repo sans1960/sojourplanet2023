@@ -65,7 +65,7 @@
                     {!! $tour->conclusion !!}
                 </div>
                 <div class=" d-flex justify-content-center mt-5 mb-5">
-                    <a href="" class="btn btn-dark patua p-2">Plan this tour</a>
+                    <a href="{{ route('contacttour', $tour) }}" class="btn btn-dark patua p-2">Plan this tour</a>
                 </div>
                 <div id="social-links" class="d-flex justify-content-center social-share">
                     <p>Share this Tour with: {!! Share::currentPage('Share')->facebook()->twitter() !!}</p>

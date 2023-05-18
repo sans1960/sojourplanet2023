@@ -9,18 +9,17 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class SightMail extends Mailable
+class TourMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-
     public $contact;
     public function __construct($contact)
     {
-        $this->contact = $contact;
+        $this->contact = $contact; 
     }
 
     /**
@@ -29,7 +28,7 @@ class SightMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Sight Mail',
+            subject: 'Tour Mail',
         );
     }
 
@@ -39,7 +38,7 @@ class SightMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.sightcontact',
+            markdown: 'emails.tourcontact',
             with:[
                 'contact' => $this->contact
             ]

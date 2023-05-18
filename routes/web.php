@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\ListContactController;
 use App\Http\Controllers\Admin\GeneralContactController;
 use App\Http\Controllers\Admin\SightContactController;
 use App\Http\Controllers\Admin\DestinationContactController;
+use App\Http\Controllers\Admin\TourContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\FrontController;
 
@@ -42,6 +43,7 @@ Route::get('tag/{tag}',[FrontController::class,'tag'])->name('tagsights');
 Route::get('taylor-made-trips/contact', [FrontController::class , 'contactgeneral'])->name('contactgeneral');
 Route::get('contact/sight/{sight}', [FrontController::class , 'contactSight'])->name('contactsight');
 Route::get('contact/destination/{destination}', [FrontController::class , 'contactDestination'])->name('contactdestination');
+Route::get('contact/tour/{tour}', [FrontController::class , 'contactTour'])->name('contacttour');
 
 Auth::routes();
 
@@ -63,6 +65,7 @@ Route::resource('admin/contactos-list',ListContactController::class)->names('con
 Route::resource('admin/contactos-general',GeneralContactController::class)->names('contactos.general');
 Route::resource('admin/contactos-destinations',DestinationContactController::class)->names('contactos.destination');
 Route::resource('admin/contactos-sight',SightContactController::class)->names('contactos.sight');
+Route::resource('admin/contactos-tour',TourContactController::class)->names('contactos.tour');
 Route::get('admin/findsight',[SightController::class,'findSight'])->name('findsight');
 Route::post('admin/searchsight',[SightController::class,'searchSight'])->name('searchsight');
 Route::get('admin/findcontry',[CountryController::class,'findCountry'])->name('findcountry');

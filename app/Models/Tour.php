@@ -29,4 +29,9 @@ class Tour extends Model
     {
         return $this->hasMany(Day::class);
     }
+     public function tourcontact():HasMany
+    {
+        return $this->hasMany(TourContact::class);
+    }
+  
 }

@@ -14,6 +14,8 @@ use App\Models\SightContact;
 use App\Observers\SightContactObserver;
 use App\Models\DestinationContact;
 use App\Observers\DestinationContactObserver;
+use App\Models\TourContact;
+use App\Observers\TourContactObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -37,6 +39,7 @@ class EventServiceProvider extends ServiceProvider
         GeneralContact::observe(GeneralContactObserver::class);
         SightContact::observe(SightContactObserver::class);
         DestinationContact::observe(DestinationContactObserver::class);
+        TourContact::observe(TourContactObserver::class);
     }
 
     /**

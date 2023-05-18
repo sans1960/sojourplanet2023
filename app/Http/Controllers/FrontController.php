@@ -102,4 +102,8 @@ class FrontController extends Controller
 
         return view('forms.destination',compact('destination'));
     }
+      public function contactTour(Tour $tour){
+
+        return view('forms.tour',compact('tour'));
+    }
 }

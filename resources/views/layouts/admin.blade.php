@@ -137,6 +137,11 @@
                                         {{ __('Destination Contacts') }}
                                     </a>
                                 </li>
+                                <li>
+                                    <a class="nav-link text-dark" href="{{ route('contactos.tour.index') }}">
+                                        {{ __('Tour Contacts') }}
+                                    </a>
+                                </li>
 
 
 
