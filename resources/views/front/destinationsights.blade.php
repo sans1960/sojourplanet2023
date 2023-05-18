@@ -1,16 +1,23 @@
 @extends('front.layouts.base')
+
+
 @section('title')
-    All Sights
-@endsection
-@section('css')
+    {{ $destination->name }}
 @endsection
 @section('content')
     <div class="container">
-        <h1 class="text-center patua mt-4">Travel Sight</h1>
         @include('front.layouts.navbardestinations', [
             'destinations' => ($destinations = App\Models\Destination::all()),
         ]);
-        <div class="row mt-4">
+        <h1 class="text-center patua mt-2">Countries of {{ $destination->name }}</h1>
+        <div class="row">
+            <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
+                @foreach ($countries->sortBy('name') as $country)
+                    <a href="{{ route('countrysights', $country) }}" class="nav-link me-3">{{ $country->name }}</a>
+                @endforeach
+            </div>
+        </div>
+        <div class="row mt-3">
             @foreach ($sights as $sight)
                 <div class="col-md-3 mb-4">
                     <a href="{{ route('sight', $sight) }}" class="nav-link  ">
@@ -36,6 +43,4 @@
             </div>
         </div>
     </div>
-@endsection
-@section('js')
 @endsection

@@ -8,8 +8,10 @@ use Illuminate\Http\Response;
 use App\Models\Blog;
 use App\Models\Sight;
 use App\Models\Tour;
+use App\Models\Tag;
 use App\Models\Country;
 use App\Models\SubRegion;
+use App\Models\CategorySight;
 
 class FrontController extends Controller
 {
@@ -35,13 +37,38 @@ class FrontController extends Controller
         return view('front.travelblog',compact('blogs'));
     }
     public function allsights(){
-        $sights = Sight::orderBy('date','desc')->paginate(16);
-        return view('front.travelsight',compact('sights'));
+        $destinations = Destination::all();
+        $sights = Sight::orderBy('date','desc')->paginate(20);
+        return view('front.travelsight',compact('sights','destinations'));
     }
     public function sight(Sight $sight):Response
     {
+        
         return response()->view('front.sight',compact('sight'));
     }
+      public function destinationSights(Destination $destination):Response
+    {
+        $sights = Sight::where('destination_id',$destination->id)->orderBy('date','DESC')->paginate(20);
+        $countries = Country::where('destination_id',$destination->id)->get();
+       
+        return response()->view('front.destinationsights',compact('sights','destination','countries'));
+    }
+    public function countrySights(Country $country):Response
+    {
+        $sights = Sight::where('country_id',$country->id)->orderBy('date','DESC')->paginate(20);
+       
+        return response()->view('front.countrysights',compact('sights','country'));
+    }
+       public function categorySights(CategorySight $categorysight):Response
+    {
+        $sights = Sight::where('categorysight_id',$categorysight->id)->orderBy('date','DESC')->paginate(20);
+       
+        return response()->view('front.categorysights',compact('sights','categorysight'));
+    }
+         public function tag(Tag $tag){
+        $sights = $tag->sights()->paginate(20);
+        return view('front.tagsights',compact('sights','tag'));
+        }
     public function tour(Tour $tour):Response
     {
         return response()->view('front.tour',compact('tour'));
