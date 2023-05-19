@@ -13,7 +13,8 @@ class ListContactController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('store');
+        // $this->middleware('auth')->except('store');
+        $this->middleware('admin')->except('store');
     }
     public function index()
     {

@@ -9,7 +9,7 @@ use App\Models\GeneralContact;
 class GeneralContactController extends Controller
 {
         public function __construct() {
-        $this->middleware('auth')->except('store');
+            $this->middleware('admin')->except('store');
         }
 
 

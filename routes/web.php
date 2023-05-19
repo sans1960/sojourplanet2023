@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\DestinationContactController;
 use App\Http\Controllers\Admin\TourContactController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -45,10 +46,13 @@ Route::get('contact/sight/{sight}', [FrontController::class , 'contactSight'])->
 Route::get('contact/destination/{destination}', [FrontController::class , 'contactDestination'])->name('contactdestination');
 Route::get('contact/tour/{tour}', [FrontController::class , 'contactTour'])->name('contacttour');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('admin/destinations',DestinationController::class)->middleware('auth')->names('admin.destinations');
+
+Route::get('/home', [UserController::class,'index'])->middleware('auth','verified')->name('home');
+Route::group(['middleware' => 'admin'], function () {
+  Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('admin');
+  Route::resource('admin/destinations',DestinationController::class)->middleware('auth')->names('admin.destinations');
 Route::resource('admin/imagedestinations',ImageDestinationController::class)->middleware('auth')->names('admin.imagedestinations');
 Route::resource('admin/subregions',SubRegionController::class)->middleware('auth')->names('admin.subregions');
 Route::resource('admin/countries',CountryController::class)->middleware('auth')->names('admin.countries');
@@ -61,15 +65,29 @@ Route::resource('admin/sights',SightController::class)->middleware('auth')->name
 Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
 Route::resource('admin/tours',TourController::class)->middleware('auth')->names('admin.tours');
 Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');
+Route::get('admin/findsight',[SightController::class,'findSight'])->name('findsight');
+Route::post('admin/searchsight',[SightController::class,'searchSight'])->name('searchsight');
+Route::get('admin/findcontry',[CountryController::class,'findCountry'])->name('findcountry');
+Route::post('admin/searchcountry',[CountryController::class,'searchCountry'])->name('searchcountry');
 Route::resource('admin/contactos-list',ListContactController::class)->names('contactos.list');
 Route::resource('admin/contactos-general',GeneralContactController::class)->names('contactos.general');
 Route::resource('admin/contactos-destinations',DestinationContactController::class)->names('contactos.destination');
 Route::resource('admin/contactos-sight',SightContactController::class)->names('contactos.sight');
 Route::resource('admin/contactos-tour',TourContactController::class)->names('contactos.tour');
-Route::get('admin/findsight',[SightController::class,'findSight'])->name('findsight');
-Route::post('admin/searchsight',[SightController::class,'searchSight'])->name('searchsight');
-Route::get('admin/findcontry',[CountryController::class,'findCountry'])->name('findcountry');
-Route::post('admin/searchcountry',[CountryController::class,'searchCountry'])->name('searchcountry');
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
 
 Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');
