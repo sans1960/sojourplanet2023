@@ -52,6 +52,7 @@ Auth::routes(['verify' => true]);
 Route::get('/home', [UserController::class,'index'])->middleware('auth','verified')->name('home');
 Route::group(['middleware' => 'admin'], function () {
   Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('admin');
+    Route::get('/admin/users', [UserController::class, 'allUsers'])->middleware('auth')->name('allusers');
   Route::resource('admin/destinations',DestinationController::class)->middleware('auth')->names('admin.destinations');
 Route::resource('admin/imagedestinations',ImageDestinationController::class)->middleware('auth')->names('admin.imagedestinations');
 Route::resource('admin/subregions',SubRegionController::class)->middleware('auth')->names('admin.subregions');

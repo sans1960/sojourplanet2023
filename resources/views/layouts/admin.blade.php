@@ -147,6 +147,11 @@
 
                             </ul>
                         </li>
+                        <li>
+                            <a class="nav-link " href="{{ route('allusers') }}">
+                                {{ __('Users') }}
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
