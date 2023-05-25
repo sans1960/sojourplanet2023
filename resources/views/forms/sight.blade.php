@@ -11,7 +11,7 @@
 
     </div>
     <div class="container">
-        <h4 class="text-center mt-4">Prepare a tailor-made trip with us visiting {{ $sight->title }} </h4>
+        <h4 class="text-center mt-4">Prepare a tailor-made trip with us visiting {{ $sight->site }} </h4>
         <form action="{{ route('contactos.sight.store') }}" method="post">
             <x-honeypot />
             @csrf
@@ -48,10 +48,10 @@
                         <h4>More sites related</h4>
                         @foreach ($items as $item)
                             <div class="form-check mt-3">
-                                <input class="form-check-input" name="sights[]" type="checkbox" value="{{ $item->title }}"
+                                <input class="form-check-input" name="sights[]" type="checkbox" value="{{ $item->site }}"
                                     id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
-                                    {{ $item->title }}
+                                    {{ $item->site }}
                                 </label>
                             </div>
                         @endforeach
