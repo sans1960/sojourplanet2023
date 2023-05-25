@@ -42,7 +42,7 @@
                         <a class="nav-link" href="{{ route('about') }}">About us</a>
                     </li>
                        <li class="nav-item">
-                                <a class="nav-link" href="{{ route('taylor') }}">Tailor-made-trips</a>
+                                <a class="nav-link" href="{{ route('taylor') }}">Tailor-made trips</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('dream') }}">The trip of your dreams</a>
