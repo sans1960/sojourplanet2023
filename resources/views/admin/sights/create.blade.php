@@ -24,6 +24,10 @@
                             <label for="slug" class="form-label">Slug</label>
                             <input type="text" class="form-control" id="slug"  name="slug" >
                           </div>
+                          <div class="mb-3">
+                            <label for="site" class="form-label">Site</label>
+                            <input type="text" class="form-control" id="site"  name="site" >
+                          </div>
                            <div class="row mb-3">
                               <div class="col">
                                 <select class="form-select" name="destination_id" id="dest" >

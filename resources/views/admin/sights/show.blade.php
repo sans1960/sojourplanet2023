@@ -15,6 +15,7 @@
                         <figcaption class="figure-caption text-center">{{ $sight->caption}}</figcaption>
                       </figure>
                       <h3 class="text-center patua"> {{$sight->title}}</h3>
+                      <h5 class="text-center patua"> {{$sight->site}}</h5>
                     <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
                       {{-- <h5 class="card-title">{{$sight->destination->name}}</h5>
                       <h5 class="card-title">{{$sight->subregion->name}}</h5> --}}

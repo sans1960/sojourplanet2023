@@ -38,6 +38,7 @@ class UpdateRequest extends FormRequest
             'country_id' => 'required',
             'categorysight_id' => 'required',
             'date' => 'required|date',
+            'site' => 'required|string',
         ];
     }
 }
