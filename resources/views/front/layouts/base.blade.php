@@ -52,8 +52,8 @@
                         <img src="{{ asset('img/ll.png') }}" alt="">
                     </a>
                     @include('front.layouts.destinations', [
-                        'destinations' => ($destinations = App\Models\Destination::all()),
-                    ]);
+                        'destinations' => ($destinations = App\Models\Destination::all())
+                    ])
                   
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('sights') }}"> Sights</a>

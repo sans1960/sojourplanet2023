@@ -7,8 +7,8 @@
 @section('content')
     <div class="container">
         @include('front.layouts.navbardestinations', [
-            'destinations' => ($destinations = App\Models\Destination::all()),
-        ]);
+            'destinations' => ($destinations = App\Models\Destination::all())
+        ])
         <h1 class="text-center patua mt-4">Travel Sight of {{ $country->name }}</h1>
         <div class="row mt-5">
             @foreach ($sights as $sight)

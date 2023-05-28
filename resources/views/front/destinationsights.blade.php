@@ -7,8 +7,8 @@
 @section('content')
     <div class="container">
         @include('front.layouts.navbardestinations', [
-            'destinations' => ($destinations = App\Models\Destination::all()),
-        ]);
+            'destinations' => ($destinations = App\Models\Destination::all())
+        ])
         <h1 class="text-center patua mt-2">Countries of {{ $destination->name }}</h1>
         <div class="row">
             <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">

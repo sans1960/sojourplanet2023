@@ -15,22 +15,24 @@
 
         </div>
     </div>
-        <div class="row mt-4">
+        <div class="row mt-5">
         <div class="col-md-8  texto open">
-            <p class="mb-4"> We specialize in creating tailor-made travel experiences designed to fulfill your desires and exceed your expectations. We offer personalized attention and exceptional service so you can enjoy unforgettable moments in exclusive destinations around the world.</p>
+            <p class="mb-4 fw-bold"> We specialize in creating tailor-made travel experiences designed to fulfill your desires and exceed your expectations.</p>
             <p class="mb-3">At Sojournplanet we understand that each traveler is unique and has their own needs and preferences. We focus on offering a fully personalized service, tailoring every detail of the trip to your tastes and interests. Our travel consultants are always available to listen to your ideas and suggestions, and will work with you to design the perfect itinerary.We partner with the best service providers in each destination, guaranteeing luxury accommodations, exclusive activities and first-class culinary experiences. Our network of contacts around the world allows us to offer access to events and venues that are often not available to the general public. We work tirelessly to discover and select the most extraordinary destinations and authentic experiences for our clients.</p>
-            <p>Sustainability and responsible tourism are core values at Sojournplanet. We strive to minimize our impact on the environment and promote the well-being of local communities. That is why we collaborate with organizations and projects that work to protect ecosystems and promote sustainable development in the places we visit.</p>
+            <p>Sustainability and responsible tourism are core values at Sojournplanet. We strive to minimize our impact on the environment and promote the well-being of local communities. That is why we collaborate with organizations and projects that work to protect ecosystems and promote sustainable development in the places we visit. We offer personalized attention and exceptional service so you can enjoy unforgettable moments in exclusive destinations around the world.</p>
           
          
 
         </div>
-        <div class="col-md-4 d-flex justify-content-star align-items-center flex-column px-5 ">
+        <div class="col-md-4 d-flex justify-content-start align-items-start flex-column px-5 ">
             <p class="patua  mb-3">With Sojorunplanet, traveling is living unique and memorable experiences. We invite you to explore the world with us and embark on the adventure of a lifetime.</p>
             <p class="patua">
                 What's the trip of your dreams?
             </p>
-            <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
+                <div class="d-flex justify-content-end align-items-end ms-auto">
+                    <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
                 trip</a>
+                </div>
         </div>
     </div>
   
