@@ -63,17 +63,39 @@ Tailor-made trips
             <div class="col-md-8 mx-auto open texto">
               <p>Our process involves the use of a clear, practical and direct questionnaire, which allows us to know in detail your interests and preferences.</p>
               <p>Once completed and shipped back to us, we have a two-week commitment to meticulously review and carefully craft a unique travel itinerary and provide you with the following items:</p>
-              <ul class="list-group mb-5 patua">
-                <li class="list-group-item">Detailed itinerary day by day, hour by hour.</li>
-                <li class="list-group-item">Addresses of the attractions to visit.</li>
-                <li class="list-group-item">Admission costs and links for booking tickets.</li>
-                <li class="list-group-item">Opening and closing hours.</li>
-                <li class="list-group-item">General information about the specific attraction to be visited, as well as the general location.</li>
-                <li class="list-group-item">Transportation and location tips.</li>
-                <li class="list-group-item">Suggestions for lunches and dinners.</li>
-                <li class="list-group-item">Map and directions for each day of the itinerary.</li>
-              </ul>
-               <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
+              <div class="d-flex justify-content-start align-items-center mt-3">
+                <img src="{{asset('iconos/tailor-made trips/detailed-itinerary.svg')}}"  alt="">
+                <h6 class="ms-4 patua">Detailed itinerary day by day, hour by hour.</h6>
+             </div>
+             <div class="d-flex justify-content-start align-items-center mt-3">
+              <img src="{{asset('iconos/tailor-made trips/adresses-atractions.svg')}}"  alt="">
+              <h6 class="ms-4 patua">Addresses of the attractions to visit.</h6>
+           </div>
+           <div class="d-flex justify-content-start align-items-center mt-3">
+            <img src="{{asset('iconos/tailor-made trips/admission-tickets.svg')}}"  alt="">
+            <h6 class="ms-4 patua">Admission costs and links for booking tickets.</h6>
+         </div>
+         <div class="d-flex justify-content-start align-items-center mt-3">
+          <img src="{{asset('iconos/tailor-made trips/opening-closing.svg')}}"  alt="">
+          <h6 class="ms-4 patua">Opening and closing hours.</h6>
+       </div>
+       <div class="d-flex justify-content-start align-items-center mt-3">
+        <img src="{{asset('iconos/tailor-made trips/general-information.svg')}}"  alt="">
+        <h6 class="ms-4 patua">General information about the specific attraction to be visited, as well as the general location.</h6>
+     </div>
+     <div class="d-flex justify-content-start align-items-center mt-3">
+      <img src="{{asset('iconos/tailor-made trips/transportation-location.svg')}}"  alt="">
+      <h6 class="ms-4 patua">Transportation and location tips.</h6>
+   </div>
+   <div class="d-flex justify-content-start align-items-center mt-3 ">
+    <img src="{{asset('iconos/tailor-made trips/lunches-dinners.svg')}}"  alt="">
+    <h6 class="ms-4 patua">Suggestions for lunches and dinners.</h6>
+   </div>
+   <div class="d-flex justify-content-start align-items-center mt-3 mb-5">
+    <img src="{{asset('iconos/tailor-made trips/map-directions.svg')}}"  alt="">
+    <h6 class="ms-4 patua">Map and directions for each day of the itinerary.</h6>
+   </div>
+               <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">Start to plan my
                 trip</a>
             </div>
         </div>

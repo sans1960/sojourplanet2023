@@ -21,37 +21,39 @@
     </div>
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col">
                 <a href="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg"
                     data-lightbox="example-set" data-title="accusamus beatae ad facilis cum similique qui sun">
                     <img src="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg" class="img-fluid">
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col">
                 <a href="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg"
                     data-lightbox="example-set" data-title="accusamus beatae ad facilis cum similique qui sun">
                     <img src="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg" class="img-fluid">
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col">
                 <a href="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg"
                     data-lightbox="example-set" data-title="accusamus beatae ad facilis cum similique qui sun">
                     <img src="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg" class="img-fluid">
                 </a>
             </div>
-            <div class="col-md-4">
+        </div>
+        <div class="row">
+            <div class="col">
                 <a href="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg"
                     data-lightbox="example-set" data-title="accusamus beatae ad facilis cum similique qui sun">
                     <img src="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg" class="img-fluid">
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col">
                 <a href="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg"
                     data-lightbox="example-set" data-title="accusamus beatae ad facilis cum similique qui sun">
                     <img src="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg" class="img-fluid">
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col">
                 <a href="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg"
                     data-lightbox="example-set" data-title="accusamus beatae ad facilis cum similique qui sun">
                     <img src="https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg" class="img-fluid">
