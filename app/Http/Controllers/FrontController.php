@@ -25,7 +25,7 @@ class FrontController extends Controller
     }
     public function destination(Destination $destination):Response
     {
-        $sights = Sight::where('destination_id',$destination->id)->orderBy('date','desc')->take(8)->get();
+        $sights = Sight::where('destination_id',$destination->id)->orderBy('date','desc')->take(6)->get();
         return response()->view('front.destination',compact('destination','sights'));
     }
     public function blog(Blog $blog):Response
