@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Tour extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','slug','description','conclusion','image','caption','price','countries','duration','date'];
+    protected $fillable = ['name','title','subtitle','slug','description','conclusion','accommodation','meals','image','caption','city_first','city_last','price','countries','duration','date'];
 
     public function getRouteKeyName()
     {
@@ -32,6 +32,14 @@ class Tour extends Model
      public function tourcontact():HasMany
     {
         return $this->hasMany(TourContact::class);
+    }
+      public function locationtour():HasMany
+    {
+        return $this->hasMany(LocationTour::class);
+    }
+       public function imagetour():HasMany
+    {
+        return $this->hasMany(ImageTour::class);
     }
   
 }

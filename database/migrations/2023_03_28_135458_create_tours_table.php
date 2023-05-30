@@ -14,11 +14,17 @@ return new class extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('title');
+            $table->string('subtitle');
             $table->string('slug');
             $table->string('image');
             $table->string('caption');
             $table->text('description');
             $table->text('conclusion');
+            $table->text('accommodation');
+            $table->text('meals');
+            $table->string('city_first');
+            $table->string('city_last');
             $table->integer('duration')->nullable();
             $table->decimal('price',10,2)->nullable();
             $table->string('countries');

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Type extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','slug','color'];
+    protected $fillable = ['name','slug','icon'];
 
     public function getRouteKeyName()
     {
@@ -18,5 +18,9 @@ class Type extends Model
     public function tours():BelongsToMany
     {
         return $this->belongsToMany(Type::class);
+    }
+      public function ratio():BelongsToMany
+    {
+        return $this->belongsToMany(Ratio::class);
     }
 }
