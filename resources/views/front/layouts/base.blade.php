@@ -55,16 +55,16 @@
                         'destinations' => ($destinations = App\Models\Destination::all())
                     ])
                   
-                    <li class="nav-item">
+                    <li class="nav-item ms-5">
                         <a class="nav-link" href="{{ route('sights') }}"> Sights</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item ms-5">
                         <a class="nav-link" href="{{ route('alltours') }}">Tours</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blogs') }}">Travel Blog</a>
-                    </li>
+                    </li> --}}
 
         
                 </ul>

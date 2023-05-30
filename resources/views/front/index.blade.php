@@ -61,10 +61,21 @@
     <div class="container mt-3">
         <div class="row">
 
-            <div class="col-md-4 d-flex flex-column align-items-center">
+            <div class="col-md-4 ">
+                <div class="mx-auto mb-3">
+           
+                    <a href="{{route('taylor')}}" class="nav-link">
+                        <div class="d-flex justify-content-center align-items-center p-2" style="background-size:cover; height:250px;background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/mexico.jpg')}})">
+                         <h4 class="patua text-white text-center">Taylor-made trips</h4>
+                        </div>
+                    </a>
+                </div>
+       
 
+                
+            </div>
                
-                <div class="mx-auto owl-carousel owl-theme">
+                {{-- <div class="mx-auto owl-carousel owl-theme">
                     @foreach ($blogs as $blog)
                         <a href="{{ route('blog', $blog) }}" class="nav-link  ">
                             <div class="d-flex flex-column justify-content-between align-items-center p-2 "
@@ -75,8 +86,8 @@
                             </div>
                         </a>
                     @endforeach
-                </div>
-            </div>
+                </div> --}}
+            
             <div class="col-md-4 d-flex flex-column align-items-center">
                
                 <div class="mx-auto owl-carousel owl-theme">
