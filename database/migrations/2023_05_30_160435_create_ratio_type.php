@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_ratio_type', function (Blueprint $table) {
+        Schema::create('ratio_type', function (Blueprint $table) {
             $table->id();
              $table->foreignId('ratio_id')->constrained('ratios')->onUpdate('cascade')
             ->onDelete('cascade');

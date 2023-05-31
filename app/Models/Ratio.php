@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Ratio extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','icon'];
+    protected $fillable = ['ratio','icon'];
 
        public function types():BelongsToMany
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Type;
+namespace App\Http\Requests\Ratio;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,8 +22,8 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:250',
-            'slug' => 'required|string|max:250',
+            'ratio' => 'required|numeric',
+            
             'icon' => 'required|image|mimes:png',
         ];
     }

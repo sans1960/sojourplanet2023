@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use App\Http\Requests\Type\StoreRequest;
 use App\Http\Requests\Type\UpdateRequest;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
 
 class TypeController extends Controller
 {
@@ -24,6 +25,13 @@ class TypeController extends Controller
     public function store(StoreRequest $request):RedirectResponse
     {
         $validated = $request->validated();
+        
+
+        if ($request->hasFile('icon')) {
+             // put image in the public storage
+            $filePath = Storage::disk('public')->put('images/types/images', request()->file('icon'));
+            $validated['icon'] = $filePath;
+        }
         $create = Type::create($validated);
 
         if($create) {
@@ -45,6 +53,13 @@ class TypeController extends Controller
     public function update(UpdateRequest $request, Type $type):RedirectResponse
     {
         $validated = $request->validated();
+        if ($request->hasFile('icon')) {
+            // delete image
+            Storage::disk('public')->delete($type->icon);
+
+            $filePath = Storage::disk('public')->put('images/types/images', request()->file('icon'),'public');
+            $validated['icon'] = $filePath;
+        }
         $update = $type->update($validated);
 
         if($update) {
@@ -56,8 +71,9 @@ class TypeController extends Controller
     }
     public function destroy(Type $type):RedirectResponse
     {
-
+        Storage::disk('public')->delete($type->icon);
         $delete = $type->delete();
+
 
         if($delete) {
             session()->flash('notif.success', 'Type deleted successfully!');

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    {{ __('Create Type') }}
+    {{ __('Edit Ratio') }}
 @endsection
 @section('content')
     <div class="container">
@@ -8,20 +8,18 @@
             <div class="col-md-8 mx-auto">
                 <div class="card">
                     <div class="card-header bg-dark text-center text-white">
-                        Create Type
+                        Edit Ratio
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.types.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.ratios.update',$ratio) }}" method="post" enctype="multipart/form-data">
+                            @method('PUT')
                             @csrf
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name" name="name"
-                                    autofocus required>
+                                <label for="ratio" class="form-label">Ratio</label>
+                                <input type="number" class="form-control" id="ratio" value="{{$ratio->ratio}}" name="ratio"
+                                    required>
                             </div>
-                            <div class="mb-3">
-                                <label for="slug" class="form-label">Slug</label>
-                                <input type="text" class="form-control" id="slug" name="slug">
-                            </div>
+                         
                             <div class="row mb-3">
                                 <div class="col-sm-8">
                                     <label for="formFile" class="form-label">Icon</label>
@@ -29,7 +27,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <img id="preview-image-before-upload" class="img-fluid d-block mx-auto"
-                                        src="{{ asset('img/emoji.png') }}" alt="">
+                                        src="{{ Storage::url($ratio->icon) }}" alt="">
                                 </div>
                             </div>
 
@@ -60,15 +58,5 @@
             });
         });
     </script>
-    <script>
-        $('#name').change(function(e) {
-            $.get('{{ route('pages.check_slug') }}', {
-                    'name': $(this).val()
-                },
-                function(data) {
-                    $('#slug').val(data.slug);
-                }
-            );
-        });
-    </script>
+
 @endsection

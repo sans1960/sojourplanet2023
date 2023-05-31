@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 @section('title')
-    {{ __('Types') }}
+    {{ __('Ratios') }}
 @endsection
 @section('content')
     <div class="container">
         <div class="row ">
             <div class="col-md-8 mx-auto">
                 <div class="card">
-                    <div class="card-header">{{ __('All Types') }}</div>
+                    <div class="card-header">{{ __('All Ratios') }}</div>
 
                     @if (Session::has('notif.success'))
                         <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 d-flex justify-content-end">
-                <a href="{{ route('admin.types.create') }}" class="btn btn-success mt-5">
+                <a href="{{ route('admin.ratios.create') }}" class="btn btn-success mt-5">
                     <i class="bi bi-plus-square"></i>
                 </a>
             </div>
@@ -37,7 +37,8 @@
                 <table class="table table-stripped">
                     <thead>
                         <tr>
-                            <th>Type</th>
+                            <th>Id</th>
+                            <th>Ratio</th>
                             <th>Icon</th>
 
                             <th class="text-center">Acciones</th>
@@ -46,26 +47,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($types as $type)
+                         @foreach ($ratios as $ratio)
                             <tr>
                                 <td>
-                                    {{ $type->name }}
+                                    {{ $ratio->id }}
                                 </td>
                                 <td>
-                                    <img src="{{ Storage::url($type->icon) }}" alt="" width="50">
+                                    {{ $ratio->ratio }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.types.show', $type) }}" class="btn btn-success btn-sm">
+                                    <img src="{{ Storage::url($ratio->icon) }}" alt="" width="50">
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.ratios.show', $ratio) }}" class="btn btn-success btn-sm">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.types.edit', $type) }}" class="btn btn-warning btn-sm">
+                                    <a href="{{ route('admin.ratios.edit', $ratio) }}" class="btn btn-warning btn-sm">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('admin.types.destroy', $type) }}" method="post">
+                                    <form action="{{ route('admin.ratios.destroy', $ratio) }}" method="post">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-danger btn-sm show_confirm">
@@ -74,7 +78,7 @@
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach
+                        @endforeach 
                     </tbody>
                 </table>
 
@@ -83,10 +87,13 @@
         </div>
         <div class="row">
             <div class="col-md-8 mx-auto d-flex justify-content-end">
-                {!! $types->links() !!}
+                
             </div>
         </div>
-    </div @endsection @section('js') <script type="text/javascript">
+    </div>
+     @endsection
+     @section('js') 
+     <script type="text/javascript">
         $('.show_confirm').click(function(event) {
             var form = $(this).closest("form");
             var name = $(this).data("name");
