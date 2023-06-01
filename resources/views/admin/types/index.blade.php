@@ -39,6 +39,7 @@
                         <tr>
                             <th>Type</th>
                             <th>Icon</th>
+                            <th>Ratio</th>
 
                             <th class="text-center">Acciones</th>
 
@@ -53,6 +54,9 @@
                                 </td>
                                 <td>
                                     <img src="{{ Storage::url($type->icon) }}" alt="" width="50">
+                                </td>
+                                <td>
+                                    <img src="{{ Storage::url($type->ratio) }}" alt="" width="50">
                                 </td>
                                 <td>
                                     <a href="{{ route('admin.types.show', $type) }}" class="btn btn-success btn-sm">

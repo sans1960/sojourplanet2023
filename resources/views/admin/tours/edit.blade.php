@@ -24,14 +24,34 @@ Edit {{ $tour->name }}
                             <label for="slug" class="form-label">Slug</label>
                             <input type="text" class="form-control" id="slug" value="{{$tour->slug}}" name="slug" >
                           </div>
-                           <div class="row mb-3">
+                          <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" value="{{$tour->title}}"
+                                name="title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subtitle" class="form-label">Subtitle</label>
+                            <input type="text" class="form-control" id="subtitle" value="{{$tour->subtitle}}"
+                                name="subtitle">
+                        </div>
+
                             <div class="row mb-3">
 
                                 <label for="countries" class="form-label">Countries</label>
                             <input type="text" name="countries" class="form-control mt-2" id="countries" value="{{$tour->countries}}">
 
                                </div>
-                           </div>
+                               <div class=" row mb-3">
+                                <div class="col">
+
+                                    <input type="text" class="form-control" value="{{$tour->city_first}}" name="city_first">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" value="{{$tour->city_last}}" name="city_last">
+
+                                </div>
+
+                            </div>
                            <div class="row mb-3">
                             <h6>Destinations</h6>
 
@@ -93,7 +113,18 @@ Edit {{ $tour->name }}
                                 <input type="text" class="form-control"  value="{{$tour->caption}}" name="caption" >
 
                             </div>
-
+                            <div class="mb-3">
+                              <label for="acomodation" class="form-label">Acomodation</label>
+                              <textarea class="form-control" id="acomodation" rows="3" name="accommodation">
+                                {!! $tour->accommodation!!}
+                              </textarea>
+                          </div>
+                          <div class="mb-3">
+                              <label for="meals" class="form-label">Meals</label>
+                              <textarea class="form-control" id="meals" rows="3" name="meals">
+                                {!! $tour->meals!!}
+                              </textarea>
+                          </div>
                           </div>
                           <div class="row mb-3">
                             <div class="col">

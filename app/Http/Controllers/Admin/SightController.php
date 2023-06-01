@@ -21,7 +21,7 @@ class SightController extends Controller
      */
     public function index():Response
     {
-        $sights = Sight::orderBy('date','DESC')->paginate(10);;
+        $sights = Sight::orderBy('date','DESC')->paginate(20);;
         return response()->view('admin.sights.index',compact('sights'));
     }
 

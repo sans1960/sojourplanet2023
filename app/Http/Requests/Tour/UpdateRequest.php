@@ -22,7 +22,13 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:250',
+           'name' => 'required|string|max:250',
+            'title' => 'required|string|max:250',
+            'subtitle' => 'required|string|max:250',
+            'accommodation' => 'required|string',
+            'meals' => 'required|string',
+            'city_first' => 'required|string|max:250',
+            'city_last' => 'required|string|max:250',
             'slug' => 'required|string|max:250',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
             'caption' => 'required|string|max:250',

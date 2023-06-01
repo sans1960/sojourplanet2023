@@ -25,6 +25,7 @@ class StoreRequest extends FormRequest
             'name' => 'required|string|max:250',
             'slug' => 'required|string|max:250',
             'icon' => 'required|image|mimes:png',
+            'ratio' => 'required|image|mimes:png',
         ];
     }
 }

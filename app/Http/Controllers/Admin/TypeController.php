@@ -27,10 +27,13 @@ class TypeController extends Controller
         $validated = $request->validated();
         
 
-        if ($request->hasFile('icon')) {
+        if ($request->hasFile('icon')  && $request->hasFile('ratio')) {
              // put image in the public storage
-            $filePath = Storage::disk('public')->put('images/types/images', request()->file('icon'));
-            $validated['icon'] = $filePath;
+            $filePathIcon = Storage::disk('public')->put('images/types/images', request()->file('icon'));
+              $filePathRatio = Storage::disk('public')->put('images/ratios/images', request()->file('ratio'));
+
+            $validated['icon'] = $filePathIcon;
+            $validated['ratio'] = $filePathRatio;
         }
         $create = Type::create($validated);
 
@@ -59,6 +62,14 @@ class TypeController extends Controller
 
             $filePath = Storage::disk('public')->put('images/types/images', request()->file('icon'),'public');
             $validated['icon'] = $filePath;
+        }
+         if ($request->hasFile('ratio')) {
+            // delete image
+            Storage::disk('public')->delete($type->ratio);
+            
+
+            $filePath = Storage::disk('public')->put('images/ratios/images', request()->file('icon'),'public');
+            $validated['ratio'] = $filePath;
         }
         $update = $type->update($validated);
 

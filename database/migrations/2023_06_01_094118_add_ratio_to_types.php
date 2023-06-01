@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ratios', function (Blueprint $table) {
-            $table->id();
-            $table->integer('ratio');
-            $table->string('icon');
-            $table->timestamps();
+        Schema::table('types', function (Blueprint $table) {
+            $table->string('ratio');
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ratios');
+        Schema::table('types', function (Blueprint $table) {
+             $table->dropColumn('ratio');
+        });
     }
 };

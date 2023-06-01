@@ -3,6 +3,11 @@
     Edit {{ $type->name }}
 @endsection
 @section('content')
+    @if ($errors->has('name'))
+        @foreach ($errors->all() as $error)
+            <div>{{ $error }}</div>
+        @endforeach
+    @endif
     <div class="container">
         <div class="row ">
             <div class="col-md-8 mx-auto">
@@ -34,6 +39,16 @@
                                         src="{{ Storage::url($type->icon) }}" alt="">
                                 </div>
                             </div>
+                            <div class=" row mb-3">
+                                <div class="col-sm-8">
+                                    <label for="formFile2" class="form-label">Icon</label>
+                                    <input class="form-control" name="icon" type="file" id="formFile2">
+                                </div>
+                                <div class="col-sm-4">
+                                    <img id="preview-image-before-upload2" class="img-fluid d-block mx-auto"
+                                        src="{{ Storage::url($type->ratio) }}" alt="">
+                                </div>
+                            </div>
 
                             <div class="mb-3 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-success">
@@ -59,6 +74,13 @@
                     $('#preview-image-before-upload').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(this.files[0]);
+            });
+            $('#formFile2').change(function() {
+                let readero = new FileReader();
+                readero.onload = (e) => {
+                    $('#preview-image-before-upload2').attr('src', e.target.result);
+                }
+                readero.readAsDataURL(this.files[0]);
             });
         });
     </script>

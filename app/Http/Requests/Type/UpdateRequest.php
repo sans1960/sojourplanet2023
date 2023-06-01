@@ -23,8 +23,9 @@ class UpdateRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:250',
-            'slug' => 'required|string|max:250',
-            'icon' => 'required|image|mimes:png',
+            'slug' => 'string|max:250',
+            'icon' => 'image|mimes:png',
+            'ratio' => 'image|mimes:png',
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Destination;
 use App\Models\Type;
+use App\Models\Ratio;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
@@ -31,6 +32,7 @@ class TourController extends Controller
     {
         $destinations = Destination::all();
         $types = Type::all();
+      
         return response()->view('admin.tours.create',compact('destinations','types'));
     }
 
@@ -39,15 +41,16 @@ class TourController extends Controller
      */
     public function store(StoreRequest $request):RedirectResponse
     {
+       
         $validated = $request->validated();
 
         if ($request->hasFile('image')) {
-             // put image in the public storage
-            $filePath = Storage::disk('public')->put('images/tours/images', request()->file('image'));
-            $validated['image'] = $filePath;
-        }
+         // put image in the public storage
+        $filePath = Storage::disk('public')->put('images/tours/images', request()->file('image'));
+           $validated['image'] = $filePath;
+         }
 
-        // insert only requests that already validated in the StoreRequest
+        // // insert only requests that already validated in the StoreRequest
         $create = Tour::create($validated);
         if($request->types){
             $create->types()->attach($request->types);
