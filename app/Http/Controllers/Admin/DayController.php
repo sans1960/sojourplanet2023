@@ -40,11 +40,7 @@ class DayController extends Controller
     {
         $validated = $request->validated();
 
-        if ($request->hasFile('image')) {
-             // put image in the public storage
-            $filePath = Storage::disk('public')->put('images/days/images', request()->file('image'));
-            $validated['image'] = $filePath;
-        }
+      
 
         // insert only requests that already validated in the StoreRequest
         $create = Day::create($validated);
@@ -82,13 +78,7 @@ class DayController extends Controller
     {
         $validated = $request->validated();
 
-        if ($request->hasFile('image')) {
-            // delete image
-            Storage::disk('public')->delete($day->image);
-
-            $filePath = Storage::disk('public')->put('images/days/images', request()->file('image'),'public');
-            $validated['image'] = $filePath;
-        }
+     
 
         $update = $day->update($validated);
 
@@ -105,7 +95,7 @@ class DayController extends Controller
      */
     public function destroy(Day $day):RedirectResponse
     {
-        Storage::disk('public')->delete($day->image);
+        
         $delete = $day->delete();
 
         if($delete) {

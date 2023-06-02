@@ -24,14 +24,12 @@ class StoreRequest extends FormRequest
         return [
             'name' => 'required|string|max:250',
             'slug' => 'required|string|max:250',
+            'introduction'=>'required|string|max:250',
             'tour_id' => 'required',
             'order' => 'required|integer',
             'body' => 'nullable|string',
-            'longitud' => 'required|string',
-            'latitud' => 'required|string',
-            'zoom' => 'required|integer',
-            'image' => 'required|image|mimes:jpg,jpeg,png,webp',
-            'caption' => 'required|string|max:250',
+          
+            
         ];
     }
 }
