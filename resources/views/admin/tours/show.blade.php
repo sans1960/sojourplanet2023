@@ -49,9 +49,23 @@
                         @foreach ($tour->day as $day)
                             <h4>{{ $day->name }}</h4>
                         @endforeach
+
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            @foreach ($tour->imagetour as $item)
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ Storage::url($item->image) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $item->title }}</h5>
+
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

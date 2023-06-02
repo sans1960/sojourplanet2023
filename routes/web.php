@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\CategorySightController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\SightController;
 use App\Http\Controllers\Admin\TypeController;
-
+use App\Http\Controllers\Admin\ImageTourController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
 use App\Http\Controllers\Admin\ListContactController;
@@ -65,6 +65,7 @@ Route::resource('admin/categorysights',CategorySightController::class)->middlewa
 Route::resource('admin/tags',TagController::class)->middleware('auth')->names('admin.tags');
 Route::resource('admin/sights',SightController::class)->middleware('auth')->names('admin.sights');
 Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
+Route::resource('admin/imagestours',ImageTourController::class)->middleware('auth')->names('admin.imagestours');
 
 Route::resource('admin/tours',TourController::class)->middleware('auth')->names('admin.tours');
 Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');

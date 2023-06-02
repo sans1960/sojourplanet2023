@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Day;
+namespace App\Http\Requests\ImageTour;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -22,14 +22,11 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:250',
+            'title' => 'required|string|max:250',
             'slug' => 'required|string|max:250',
-            'introduction'=>'required|string|max:250',
             'tour_id' => 'nullable',
-            'order' => 'required|integer',
-            'body' => 'nullable|string',
-          
-            
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
+            'caption' => 'required|string|max:250',
         ];
     }
 }

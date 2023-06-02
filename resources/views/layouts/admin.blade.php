@@ -112,6 +112,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('admin.days.index') }}">
                                         {{ __('Days') }}
                                     </a></li>
+                                <li><a class="nav-link text-dark" href="{{ route('admin.imagestours.index') }}">
+                                        {{ __('Images Tours') }}
+                                    </a></li>
 
 
                             </ul>

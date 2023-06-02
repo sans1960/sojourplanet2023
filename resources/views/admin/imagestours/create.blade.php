@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ __('Image Destinations-create') }}
+    {{ __('Image Tours-create') }}
 @endsection
 @section('content')
     <div class="container">
@@ -9,11 +9,10 @@
             <div class="col-md-10 mx-auto">
                 <div class="card">
                     <div class="card-header bg-dark text-white text-center">
-                        Create Image Destination
+                        Create Image Tour
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.imagedestinations.store') }}" method="post"
-                            enctype="multipart/form-data">
+                        <form action="{{ route('admin.imagestours.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="mb-3">
@@ -26,11 +25,10 @@
                                 <input type="text" class="form-control" id="slug" name="slug" required>
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" required name="destination_id"
-                                    aria-label=".form-select-lg example">
-                                    <option selected>Escoje Destino</option>
-                                    @foreach ($destinations as $destination)
-                                        <option value="{{ $destination->id }}">{{ $destination->name }}</option>
+                                <select class="form-select" required name="tour_id" aria-label=".form-select-lg example">
+                                    <option selected>Escoje Tour</option>
+                                    @foreach ($tours as $tour)
+                                        <option value="{{ $tour->id }}">{{ $tour->name }}</option>
                                     @endforeach
 
 
