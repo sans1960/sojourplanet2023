@@ -115,13 +115,16 @@
                                 <li><a class="nav-link text-dark" href="{{ route('admin.imagestours.index') }}">
                                         {{ __('Images Tours') }}
                                     </a></li>
+                                <li><a class="nav-link text-dark" href="{{ route('admin.locationtours.index') }}">
+                                        {{ __('Location Tours') }}
+                                    </a></li>
 
 
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Contacts
                             </a>
                             <ul class="dropdown-menu ">

@@ -26,9 +26,9 @@
                                     value="{{ $imagestour->slug }}">
                             </div>
                             <div class="mb-3">
-                                <select class="form-select" required name="destination_id"
+                                <select class="form-select" required name="tour_id"
                                     aria-label=".form-select-lg example">
-                                    <option selected>Escoje Destino</option>
+                                    <option selected>Escoje Tour</option>
                                     @foreach ($tours as $tour)
                                         <option value="{{ $tour->id }}"
                                             @if ($imagestour->tour_id == $tour->id) selected @endif>

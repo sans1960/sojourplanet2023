@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\ImageTourController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
+use App\Http\Controllers\Admin\LocationTourController;
 use App\Http\Controllers\Admin\ListContactController;
 use App\Http\Controllers\Admin\GeneralContactController;
 use App\Http\Controllers\Admin\SightContactController;
@@ -66,7 +67,7 @@ Route::resource('admin/tags',TagController::class)->middleware('auth')->names('a
 Route::resource('admin/sights',SightController::class)->middleware('auth')->names('admin.sights');
 Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
 Route::resource('admin/imagestours',ImageTourController::class)->middleware('auth')->names('admin.imagestours');
-
+Route::resource('admin/locationtours',LocationTourController::class)->middleware('auth')->names('admin.locationtours');
 Route::resource('admin/tours',TourController::class)->middleware('auth')->names('admin.tours');
 Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');
 Route::get('admin/findsight',[SightController::class,'findSight'])->name('findsight');
@@ -97,6 +98,8 @@ Route::get('pages/check_slug', [PageController::class,'check_slug'])
   ->name('pages.check_slug');
 Route::get('pages/check_slug_title', [PageController::class,'check_slug_title'])
   ->name('pages.check_slug_title');
+Route::get('pages/check_slug_site', [PageController::class,'check_slug_site'])
+  ->name('pages.check_slug_site');
 Route::get('get-subregions',[PageController::class,'getSubregions'])->name('getsubregions');
 Route::get('get-countries',[PageController::class,'getCountries'])->name('getcountries');
 

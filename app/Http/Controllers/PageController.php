@@ -19,6 +19,11 @@ public function check_slug_title(Request $request)
     $slug = Str::slug($request->title);
     return response()->json(['slug' => $slug]);
 }
+    public function check_slug_site(Request $request)
+{
+    $slug = Str::slug($request->site);
+    return response()->json(['slug' => $slug]);
+}
 public function getSubRegions(Request $request){
     $subregions = Subregion::where('destination_id',$request->destination_id)->orderBy('name')->get();
     if (count($subregions) > 0) {
