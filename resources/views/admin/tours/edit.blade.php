@@ -79,31 +79,7 @@ Edit {{ $tour->name }}
                             @endforeach
 
                            </div>
-                           <div class="row mb-3  ">
-                                <h6>Types</h6>
-                               @foreach ($tour->types as $type)
-                               <div class="col-md-4 mt-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" checked name="types[]" type="checkbox" value="{{$type->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      {{$type->name}}
-                                    </label>
-                                  </div>
-                               </div>
-
-                               @endforeach
-                               @foreach ($difftypes as $type)
-                               <div class="col-md-4 mt-2">
-                                <div class="form-check">
-                                    <input class="form-check-input"  name="types[]" type="checkbox" value="{{$type->id}}" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      {{$type->name}}
-                                    </label>
-                                  </div>
-                               </div>
-
-                               @endforeach
-                           </div>
+                          
                            <div class=" row mb-3">
                             <div class="col">
 

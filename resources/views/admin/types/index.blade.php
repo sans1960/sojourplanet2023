@@ -39,7 +39,7 @@
                         <tr>
                             <th>Type</th>
                             <th>Icon</th>
-                            <th>Ratio</th>
+                            
 
                             <th class="text-center">Acciones</th>
 
@@ -55,9 +55,7 @@
                                 <td>
                                     <img src="{{ Storage::url($type->icon) }}" alt="" width="50">
                                 </td>
-                                <td>
-                                    <img src="{{ Storage::url($type->ratio) }}" alt="" width="50">
-                                </td>
+                            
                                 <td>
                                     <a href="{{ route('admin.types.show', $type) }}" class="btn btn-success btn-sm">
                                         <i class="bi bi-eye"></i>
@@ -90,7 +88,10 @@
                 {!! $types->links() !!}
             </div>
         </div>
-    </div @endsection @section('js') <script type="text/javascript">
+    </div>
+     @endsection 
+     @section('js')
+      <script type="text/javascript">
         $('.show_confirm').click(function(event) {
             var form = $(this).closest("form");
             var name = $(this).data("name");

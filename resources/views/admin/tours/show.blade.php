@@ -4,57 +4,80 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                <div class="card">
-                    <div class="card-header">
-                        <h2> {{ $tour->name }}</h2>
-                        <h2> {{ $tour->title }}</h2>
-                        <h2> {{ $tour->subtitle }}</h2>
-                    </div>
-                    <figure class="figure mt-3">
-                        <img src="{{ Storage::url($tour->image) }}" class="w-50 figure-img img-fluid rounded d-block mx-auto"
-                            alt="...">
-                        <figcaption class="figure-caption ms-2">{{ $tour->caption }}</figcaption>
-                    </figure>
-                    <div class="card-body p-3">
-                        @foreach ($tour->destinations as $destination)
-                            <h5 class="card-title">{{ $destination->name }}</h5>
-                        @endforeach
-
-                        @foreach ($tour->types as $type)
-                            <div class="d-flex justify-content-around mb-2">
-                                <p>{{ $type->name }}</p>
-                                <img src="{{ Storage::url($type->icon) }}" width="40" alt="">
-                                <img src="{{ Storage::url($type->ratio) }}" width="80" alt="">
-                            </div>
-                        @endforeach
-                        <p>{{ $tour->accommodation }}</p>
-                        <p>{{ $tour->meals }}</p>
-
-                        <h5 class="card-title">{{ $tour->price }}</h5>
-                        <h5 class="card-title">{{ $tour->duration }}</h5>
-                        <h5 class="card-title">{{ $tour->date }}</h5>
-
-                        <h5 class="card-title">{{ $tour->countries }}</h5>
-                        <h5 class="card-title">{{ $tour->city_first }}</h5>
-                        <h5 class="card-title">{{ $tour->city_last }}</h5>
-
-                        <div>
-                            {!! $tour->description !!}
-                        </div>
-                        <div>
-                            {!! $tour->conclusion !!}
-                        </div>
-                        @foreach ($tour->day as $day)
-                            <h4>{{ $day->name }}</h4>
-                        @endforeach
-
-                    </div>
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                  {{$tour->name}}
                 </div>
-            </div>
+                <div class="card-body">
+                    <h5>{{$tour->title}}</h5>
+                    <h6>{{$tour->subtitle}}</h6>
+                    <div class="row">
+                        <div class="col">
+                            <figure class="figure">
+                                <img width="200" src="{{Storage::url($tour->image)}}" class="figure-img img-fluid rounded" alt="...">
+                                <figcaption class="figure-caption">{{$tour->caption}}</figcaption>
+                              </figure>
+                        </div>
+                        <div class="col">
+                            <h5>{{$tour->accommodation}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>{{$tour->meals}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>{{$tour->duration}}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>{{$tour->description}}</p>
+                        </div>
+                        <div class="col">
+                            <p>{{$tour->conclusion}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>{{$tour->city_first}}</p>
+                        </div>
+                        <div class="col">
+                            <p>{{$tour->city_last}}</p>
+                        </div>
+                        <div class="col">
+                            <p>{{$tour->price}}</p>
+                        </div>
+                        <div class="col">
+                            <p>{{$tour->date}}</p>
+                        </div>
+                        <div class="col">
+                            <p>{{$tour->countries}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            @foreach ($tour->destinations as $item)
+                                <p>{{$item->name}}</p>
+                            @endforeach
+                        </div>
+                        <div class="col">
+                            @foreach ($type as $item)
+                                <img width="100" src="{{Storage::url($item->icon)}}" alt="">
+                            @endforeach
+                        </div>
+                        <div class="col">
+                            @foreach ($tour->ratios as $item)
+                             <p>{{$item->name}} <img width="100" src="{{Storage::url($item->icon)}}" alt=""></p>   
+                            @endforeach
+                        </div>
+                    </div>
+                
+                </div>
+              </div>
         </div>
-        <div class="row">
+      </div>
+        {{-- <div class="row">
             @foreach ($tour->imagetour as $item)
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
@@ -66,19 +89,19 @@
                     </div>
                 </div>
             @endforeach
-        </div>
-        <div class="row">
+        </div> --}}
+        {{-- <div class="row">
             <div class="col-md-10 mx-auto">
                 <div id="map" class="mb-5 mt-5" style="width:100%;height:400px">
 
                 </div>
             </div>
             
-        </div>
+        </div> --}}
     </div>
 @endsection
 @section('js')
-<script>
+{{-- <script>
     var map = L.map('map').setView([{{ $tour->locationtour()->first()->latitud }}, {{ $tour->locationtour()->first()->longitud }}],
                           12);
 
@@ -104,5 +127,5 @@
         
            
           
-</script>
+</script> --}}
 @endsection

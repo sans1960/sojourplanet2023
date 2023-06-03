@@ -24,11 +24,7 @@
                                 <input type="text" class="form-control" id="name" name="name"
                                     value="{{ $type->name }}">
                             </div>
-                            <div class="mb-3">
-                                <label for="slug" class="form-label">Slug</label>
-                                <input type="text" class="form-control" id="slug" value="{{ $type->slug }}"
-                                    name="slug">
-                            </div>
+                      
                             <div class=" row mb-3">
                                 <div class="col-sm-8">
                                     <label for="formFile" class="form-label">Icon</label>
@@ -39,16 +35,7 @@
                                         src="{{ Storage::url($type->icon) }}" alt="">
                                 </div>
                             </div>
-                            <div class=" row mb-3">
-                                <div class="col-sm-8">
-                                    <label for="formFile2" class="form-label">Icon</label>
-                                    <input class="form-control" name="icon" type="file" id="formFile2">
-                                </div>
-                                <div class="col-sm-4">
-                                    <img id="preview-image-before-upload2" class="img-fluid d-block mx-auto"
-                                        src="{{ Storage::url($type->ratio) }}" alt="">
-                                </div>
-                            </div>
+                     
 
                             <div class="mb-3 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-success">
@@ -75,24 +62,8 @@
                 }
                 reader.readAsDataURL(this.files[0]);
             });
-            $('#formFile2').change(function() {
-                let readero = new FileReader();
-                readero.onload = (e) => {
-                    $('#preview-image-before-upload2').attr('src', e.target.result);
-                }
-                readero.readAsDataURL(this.files[0]);
-            });
+        
         });
     </script>
-    <script>
-        $('#name').change(function(e) {
-            $.get('{{ route('pages.check_slug') }}', {
-                    'name': $(this).val()
-                },
-                function(data) {
-                    $('#slug').val(data.slug);
-                }
-            );
-        });
-    </script>
+  
 @endsection

@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Tour extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','title','subtitle','slug','description','conclusion','accommodation','meals','image','caption','city_first','city_last','price','countries','duration','date'];
+    protected $fillable = ['name','title','subtitle','slug','description','conclusion','accommodation','meals','image','caption','city_first','city_last','price','countries','duration','date','type_id'];
 
     public function getRouteKeyName()
     {
@@ -21,9 +22,9 @@ class Tour extends Model
     {
         return $this->belongsToMany(Destination::class);
     }
-    public function types():BelongsToMany
+    public function types():BelongsTo
     {
-        return $this->belongsToMany(Type::class);
+        return $this->belongsTo(Type::class);
     }
     public function day():HasMany
     {
@@ -40,6 +41,10 @@ class Tour extends Model
        public function imagetour():HasMany
     {
         return $this->hasMany(ImageTour::class);
+    }
+    public function ratios():BelongsToMany
+    {
+        return $this->belongsToMany(Ratio::class);
     }
   
 }

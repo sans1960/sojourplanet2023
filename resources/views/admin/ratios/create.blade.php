@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-    {{ __('Create Type') }}
+    {{ __('Create Ratio') }}
 @endsection
 @section('content')
     <div class="container">
@@ -13,15 +13,20 @@
             <div class="col-md-8 mx-auto">
                 <div class="card">
                     <div class="card-header bg-dark text-center text-white">
-                        Create Type
+                        Create Ratio
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.types.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.ratios.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Name" name="name"
                                     autofocus required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="value" class="form-label">Value</label>
+                                <input type="text" class="form-control" id="value" placeholder="Value" name="value"
+                                     required>
                             </div>
                       
                             <div class="row mb-3">

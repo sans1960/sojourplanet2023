@@ -32,8 +32,9 @@ class TourController extends Controller
     {
         $destinations = Destination::all();
         $types = Type::all();
+        $ratios = Ratio::all();
       
-        return response()->view('admin.tours.create',compact('destinations','types'));
+        return response()->view('admin.tours.create',compact('destinations','types','ratios'));
     }
 
     /**
@@ -52,9 +53,9 @@ class TourController extends Controller
 
         // // insert only requests that already validated in the StoreRequest
         $create = Tour::create($validated);
-        if($request->types){
-            $create->types()->attach($request->types);
-        }
+            if($request->ratios){
+                $create->ratios()->attach($request->ratios);
+            }
         if($request->destinations){
             $create->destinations()->attach($request->destinations);
         }
@@ -72,7 +73,8 @@ class TourController extends Controller
      */
     public function show(Tour $tour):Response
     {
-        return response()->view('admin.tours.show',compact('tour'));
+        $type = Type::where('id',$tour->type_id)->get();
+        return response()->view('admin.tours.show',compact('tour','type'));
     }
 
     /**
@@ -82,10 +84,10 @@ class TourController extends Controller
     {
         $destinations = Destination::all();
         $types = Type::all();
-        $tourtypes = $tour->types;
-        $difftypes = $types->diff($tourtypes);
-        $tourdestinations = $tour->destinations;
-        $diffdestinations = $destinations->diff($tourdestinations);
+        // $tourtypes = $tour->types;
+        // $difftypes = $types->diff($tourtypes);
+        // $tourdestinations = $tour->destinations;
+        // $diffdestinations = $destinations->diff($tourdestinations);
         return response()->view('admin.tours.edit',compact('tour','types','difftypes','destinations','diffdestinations'));
     }
 
@@ -105,9 +107,9 @@ class TourController extends Controller
         }
 
         $update = $tour->update($validated);
-        if($request->types){
-            $tour->types()->sync($request->types);
-        }
+        // if($request->types){
+        //     $tour->types()->sync($request->types);
+        // }
         if($request->destinations){
             $tour->destinations()->sync($request->destinations);
         }
@@ -127,7 +129,7 @@ class TourController extends Controller
         Storage::disk('public')->delete($tour->image);
 
         $delete = $tour->delete();
-        $tour->types()->detach();
+        // $tour->types()->detach();
         $tour->destinations()->detach();
 
         if($delete) {

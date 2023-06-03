@@ -85,7 +85,7 @@
             {!! $tours->links() !!}
         </div>
     </div>
-</div
+</div>
 @endsection
 @section('js')
 <script type="text/javascript">

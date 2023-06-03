@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Type;
+namespace App\Http\Requests\Ratio;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,8 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:250',
-            
-            'icon' => 'required|image|mimes:png',
-            
+            'value' => 'required|string',
+            'icon' => 'image|mimes:png',
         ];
     }
 }

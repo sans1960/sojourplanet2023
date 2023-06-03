@@ -38,6 +38,7 @@ class UpdateRequest extends FormRequest
             'price' => 'nullable',
             'countries'=> 'required',
             'date' => 'required|date',
+            'type_id'=>'required',
         ];
     }
 }

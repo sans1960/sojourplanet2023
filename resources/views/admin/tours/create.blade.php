@@ -55,24 +55,21 @@
                                     </div>
                                 @endforeach
                             </div>
-                            <div class="row mb-3  ">
-                                <h6>Types</h6>
-                                @foreach ($types as $type)
+                            <div class="row mb-3">
+                                <h6>Ratios</h6>
+                                @foreach ($ratios as $ratio)
                                     <div class="col-md-3 mt-2">
                                         <div class="form-check">
-                                            <input class="form-check-input" name="types[]" type="checkbox"
-                                                value="{{ $type->id }}" id="flexCheckDefault">
+                                            <input class="form-check-input" name="ratios[]" type="checkbox"
+                                                value="{{ $ratio->id }}" id="flexCheckDefault">
                                             <label class="form-check-label" for="flexCheckDefault">
-                                                {{ $type->name }}
-
+                                                {{ $ratio->name }} {{$ratio->value}}
                                             </label>
-
-
                                         </div>
-
                                     </div>
                                 @endforeach
                             </div>
+                          
                             <div class=" row mb-3">
                                 <div class="col">
 
@@ -81,6 +78,15 @@
                                 <div class="col">
                                     <input type="text" class="form-control" placeholder="City Last" name="city_last">
 
+                                </div>
+                                <div class="col">
+                                    <select class="form-select " name="type_id" id="dest">
+                                        <option selected>Choose Type</option>
+                                        @foreach ($types as $type)
+                                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                        @endforeach
+
+                                    </select>
                                 </div>
 
                             </div>

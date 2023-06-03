@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Type;
+namespace App\Http\Requests\Ratio;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -23,9 +23,8 @@ class StoreRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:250',
-            
+            'value' => 'required|string',
             'icon' => 'required|image|mimes:png',
-            
         ];
     }
 }

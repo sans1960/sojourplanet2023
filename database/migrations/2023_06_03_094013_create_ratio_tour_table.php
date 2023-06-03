@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('ratio_tour', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('icon');
+            $table->foreignId('ratio_id')->constrained('ratios')->onUpdate('cascade')
+            ->onDelete('cascade');
+            $table->foreignId('tour_id')->constrained('tours')->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('ratio_tour');
     }
 };
