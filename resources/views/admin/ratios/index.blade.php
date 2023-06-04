@@ -37,9 +37,9 @@
             <table class="table table-stripped">
                 <thead>
                     <tr>
-                        <th>Ratio</th>
+                        <th>Name</th>
                         <th>Value</th>
-                        <th>Icon</th>
+                        <th>Ratio</th>
                         
 
                         <th class="text-center">Acciones</th>
@@ -57,7 +57,7 @@
                                 {{ $ratio->value }}
                             </td>
                             <td>
-                                <img src="{{ Storage::url($ratio->icon) }}" alt="" width="50">
+                                {{ $ratio->ratio }}
                             </td>
                         
                             <td>

@@ -9,7 +9,7 @@ use Illuminate\Http\Response;
 use App\Http\Requests\Ratio\StoreRequest;
 use App\Http\Requests\Ratio\UpdateRequest;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Storage;
+
 
 class RatioController extends Controller
 {
@@ -38,14 +38,7 @@ class RatioController extends Controller
         $validated = $request->validated();
         
 
-        if ($request->hasFile('icon')) {
-             // put image in the public storage
-            $filePathIcon = Storage::disk('public')->put('images/ratios/images', request()->file('icon'));
-           
-
-            $validated['icon'] = $filePathIcon;
-            
-        }
+   
         $create = Ratio::create($validated);
 
         if($create) {
@@ -79,13 +72,7 @@ class RatioController extends Controller
     public function update(UpdateRequest $request, Ratio $ratio):RedirectResponse
     {
         $validated = $request->validated();
-        if ($request->hasFile('icon')) {
-            // delete image
-            Storage::disk('public')->delete($ratio->icon);
-
-            $filePath = Storage::disk('public')->put('images/ratios/images', request()->file('icon'),'public');
-            $validated['icon'] = $filePath;
-        }
+  
    
         $update = $ratio->update($validated);
 
@@ -100,8 +87,17 @@ class RatioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Ratio $ratio):RedirectResponse
     {
-        //
+        
+        $delete = $ratio->delete();
+
+
+        if($delete) {
+            session()->flash('notif.success', 'Ratio deleted successfully!');
+            return redirect()->route('admin.ratios.index');
+        }
+
+        return abort(500);
     }
 }

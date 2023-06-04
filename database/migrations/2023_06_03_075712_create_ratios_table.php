@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('value');
-            $table->string('icon');
+            $table->integer('ratio');
             $table->timestamps();
         });
     }

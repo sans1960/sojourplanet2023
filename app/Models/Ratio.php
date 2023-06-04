@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Ratio extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','value','icon'];
+    protected $fillable = ['name','value','ratio'];
     public function tours():BelongsToMany
     {
         return $this->belongsToMany(Tour::class);

@@ -50,6 +50,15 @@ Edit {{ $tour->name }}
                                     <input type="text" class="form-control" value="{{$tour->city_last}}" name="city_last">
 
                                 </div>
+                                <div class="col">
+                                  <select class="form-select " name="type_id" id="dest">
+                                      <option selected>Choose Type</option>
+                                      @foreach ($types as $type)
+                                          <option value="{{ $type->id }}" @if ($tour->type_id == ($type->id)) selected @endif>{{ $type->name }}</option>
+                                      @endforeach
+
+                                  </select>
+                              </div>
 
                             </div>
                            <div class="row mb-3">
@@ -79,7 +88,29 @@ Edit {{ $tour->name }}
                             @endforeach
 
                            </div>
-                          
+                          <div class="mb-3 row">
+                                  @foreach ($tour->ratios as $ratio)
+                                  <div class="col-md-3 mt-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked name="ratios[]" type="checkbox" value="{{$ratio->id}}" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                          {{$ratio->name}} {{$ratio->value}}
+                                        </label>
+                                      </div>
+                                   </div>
+                                  @endforeach
+                                  @foreach ($diffratios as $ratio)
+                                  <div class="col-md-4 mt-2">
+                                   <div class="form-check">
+                                       <input class="form-check-input"  name="ratios[]" type="checkbox" value="{{$ratio->id}}" id="flexCheckDefault">
+                                       <label class="form-check-label" for="flexCheckDefault">
+                                         {{$ratio->name}} {{$ratio->value}}
+                                       </label>
+                                     </div>
+                                  </div>
+      
+                                  @endforeach
+                          </div>
                            <div class=" row mb-3">
                             <div class="col">
 

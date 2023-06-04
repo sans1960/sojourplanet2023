@@ -20,22 +20,33 @@
                                 <figcaption class="figure-caption">{{$tour->caption}}</figcaption>
                               </figure>
                         </div>
+                    
+                        <div class="col">
+                            <h5>{{$tour->duration}}</h5>
+                        </div>
+                        <div class="col">
+                            @foreach ($tour->destinations as $item)
+                                <p>{{$item->name}}</p>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <h5>{{$tour->accommodation}}</h5>
                         </div>
                         <div class="col">
                             <h5>{{$tour->meals}}</h5>
                         </div>
-                        <div class="col">
-                            <h5>{{$tour->duration}}</h5>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>{{$tour->description}}</p>
+                            <p>{!!$tour->description!!}</p>
                         </div>
+                     
+                    </div>
+                    <div class="row">
                         <div class="col">
-                            <p>{{$tour->conclusion}}</p>
+                            <p>{!!$tour->conclusion!!}</p>
                         </div>
                     </div>
                     <div class="row">
@@ -48,6 +59,9 @@
                         <div class="col">
                             <p>{{$tour->price}}</p>
                         </div>
+                   
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <p>{{$tour->date}}</p>
                         </div>
@@ -56,20 +70,94 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            @foreach ($tour->destinations as $item)
-                                <p>{{$item->name}}</p>
-                            @endforeach
-                        </div>
+                    
                         <div class="col">
                             @foreach ($type as $item)
                                 <img width="100" src="{{Storage::url($item->icon)}}" alt="">
                             @endforeach
                         </div>
-                        <div class="col">
+                        <div class="col-md-4">
+                            
+
+                            
                             @foreach ($tour->ratios as $item)
-                             <p>{{$item->name}} <img width="100" src="{{Storage::url($item->icon)}}" alt=""></p>   
+                            <ul class="list-group  ">
+                                <li class="list-group-item d-flex justify-content-around align-items-center border-0">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">{{$item->name}}</div>
+                                        
+                                      </div>
+                                      <span class="">
+                                        @if ($item->ratio == 5)
+                                        <span class="me-3">
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            
+                                        </span>  
+                                        @elseif($item->ratio == 4)
+                                        <span class="me-3">
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            
+                                        </span>
+                                        @elseif ($item->ratio == 3)
+                                        <span class="me-3">
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            
+                                        </span>
+                                        @elseif ($item->ratio == 2)
+                                        <span class="me-3">
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            
+                                        </span>
+                                        @elseif ($item->ratio == 1)
+                                        <span class="me-3">
+                                            <i class="bi bi-star-fill" style="color: yellow;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            
+                                        </span>
+                                        @elseif ($item->ratio == 0)
+                                        <span class="me-3">
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            <i class="bi bi-star" style="color: grey;font-size:1.3rem;"></i>
+                                            
+                                        </span>
+                                        @endif
+                                      </span>
+                                    </li>
+                              
+                               
+                              </ul>
+                             
+                                  
+                                
+                          
+                              
+                                
+                           
+                             
                             @endforeach
+                       
                         </div>
                     </div>
                 
@@ -77,32 +165,46 @@
               </div>
         </div>
       </div>
-        {{-- <div class="row">
-            @foreach ($tour->imagetour as $item)
-                <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{ Storage::url($item->image) }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $item->title }}</h5>
+      @if ($tour->day)
+      @foreach ($tour->day as $item)
+          <h4>{{$item->name}}</h4>
+      @endforeach
+          
+      @endif
+      @if ($tour->imagetour)
+      <div class="row">
+        @foreach ($tour->imagetour as $item)
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ Storage::url($item->image) }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $item->title }}</h5>
 
-                        </div>
                     </div>
                 </div>
-            @endforeach
-        </div> --}}
-        {{-- <div class="row">
-            <div class="col-md-10 mx-auto">
-                <div id="map" class="mb-5 mt-5" style="width:100%;height:400px">
-
-                </div>
             </div>
-            
-        </div> --}}
+        @endforeach
+    </div>
+      @endif
+      @foreach ($tour->locationtour as $item)
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div id="map" class="mb-5 mt-5" style="width:100%;height:400px">
+
+            </div>
+        </div>
+        
+    </div>
+      @endforeach
+    
+   
+     
+      
     </div>
 @endsection
 @section('js')
-{{-- <script>
-    var map = L.map('map').setView([{{ $tour->locationtour()->first()->latitud }}, {{ $tour->locationtour()->first()->longitud }}],
+<script>
+    var map = L.map('map').setView([{{ $item->latitud }}, {{ $item->longitud }}],
                           12);
 
                       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={{ env('MAP_KEY') }}', {
@@ -127,5 +229,5 @@
         
            
           
-</script> --}}
+</script>
 @endsection

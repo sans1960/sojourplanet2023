@@ -16,28 +16,24 @@
                         Edit Ratio
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.ratios.update',$ratio) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('admin.ratios.update',$ratio) }}" method="post" >
                             @csrf
                             @method('PUT')
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" value="{{$ratio->name}}" name="name"
-                                     required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="value" class="form-label">Value</label>
-                                <input type="text" class="form-control" id="value" value="{{$ratio->value}}" name="value"
-                                     required>
-                            </div>
-                      
                             <div class="row mb-3">
-                                <div class="col-sm-8">
-                                    <label for="formFile" class="form-label">Icon</label>
-                                    <input class="form-control" name="icon" type="file" id="formFile">
+                                <div class="col">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" value="{{$ratio->name}}" name="name"
+                                         required>
                                 </div>
-                                <div class="col-sm-4">
-                                    <img id="preview-image-before-upload" class="img-fluid d-block mx-auto"
-                                        src="{{ Storage::url($ratio->icon) }}" alt="">
+                                <div class="col">
+                                    <label for="value" class="form-label">Value</label>
+                                    <input type="text" class="form-control" id="value" value="{{$ratio->value}}" name="value"
+                                         required>
+                                </div>
+                                <div class="col">
+                                    <label for="ratio" class="form-label">Value</label>
+                                    <input type="number" class="form-control" id="ratio" value="{{$ratio->ratio}}" name="ratio"
+                                         required min="0" max="5">
                                 </div>
                             </div>
                      
@@ -58,17 +54,6 @@
     </div>
 @endsection
 @section('js')
-    <script>
-        $(document).ready(function(e) {
-            $('#formFile').change(function() {
-                let reader = new FileReader();
-                reader.onload = (e) => {
-                    $('#preview-image-before-upload').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(this.files[0]);
-            });
-     
-        });
-    </script>
+
 
 @endsection

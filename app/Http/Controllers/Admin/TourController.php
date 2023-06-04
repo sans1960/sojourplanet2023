@@ -84,11 +84,12 @@ class TourController extends Controller
     {
         $destinations = Destination::all();
         $types = Type::all();
-        // $tourtypes = $tour->types;
-        // $difftypes = $types->diff($tourtypes);
-        // $tourdestinations = $tour->destinations;
-        // $diffdestinations = $destinations->diff($tourdestinations);
-        return response()->view('admin.tours.edit',compact('tour','types','difftypes','destinations','diffdestinations'));
+        $ratios = Ratio::all();
+        $tourratios = $tour->ratios;
+        $diffratios = $ratios->diff($tourratios);
+        $tourdestinations = $tour->destinations;
+        $diffdestinations = $destinations->diff($tourdestinations);
+        return response()->view('admin.tours.edit',compact('tour','ratios','diffratios','destinations','diffdestinations','types'));
     }
 
     /**
@@ -107,9 +108,9 @@ class TourController extends Controller
         }
 
         $update = $tour->update($validated);
-        // if($request->types){
-        //     $tour->types()->sync($request->types);
-        // }
+        if($request->ratios){
+            $tour->ratios()->sync($request->ratios);
+         }
         if($request->destinations){
             $tour->destinations()->sync($request->destinations);
         }
@@ -129,7 +130,7 @@ class TourController extends Controller
         Storage::disk('public')->delete($tour->image);
 
         $delete = $tour->delete();
-        // $tour->types()->detach();
+        $tour->ratios()->detach();
         $tour->destinations()->detach();
 
         if($delete) {
