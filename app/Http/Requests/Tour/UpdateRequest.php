@@ -39,6 +39,9 @@ class UpdateRequest extends FormRequest
             'countries'=> 'required',
             'date' => 'required|date',
             'type_id'=>'required',
+            'maplatitud' => 'string',
+            'longitud' => 'string',
+            'mapzoom' => 'integer',
         ];
     }
 }

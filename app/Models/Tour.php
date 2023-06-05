@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Tour extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','title','subtitle','slug','description','conclusion','accommodation','meals','image','caption','city_first','city_last','price','countries','duration','date','type_id'];
+    protected $fillable = ['name','title','subtitle','slug','description','conclusion','accommodation','meals','image','caption','city_first','city_last','price','countries','duration','date','type_id','maplatitud','maplongitud','mapzoom'];
 
     public function getRouteKeyName()
     {

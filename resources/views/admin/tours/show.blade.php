@@ -186,7 +186,7 @@
         @endforeach
     </div>
       @endif
-      @foreach ($tour->locationtour as $item)
+    
       <div class="row">
         <div class="col-md-10 mx-auto">
             <div id="map" class="mb-5 mt-5" style="width:100%;height:400px">
@@ -195,7 +195,7 @@
         </div>
         
     </div>
-      @endforeach
+      
     
    
      
@@ -204,8 +204,8 @@
 @endsection
 @section('js')
 <script>
-    var map = L.map('map').setView([{{ $item->latitud }}, {{ $item->longitud }}],
-                          12);
+    var map = L.map('map').setView([{{ $tour->maplatitud }}, {{ $tour->maplongitud }}],
+                          {{$tour->mapzoom}});
 
                       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={{ env('MAP_KEY') }}', {
                           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -215,9 +215,10 @@
 
                       }).addTo(map);
                       var datos = <?= json_encode($tour->locationtour);?>;
-              for(var i=0;i<datos.length;i++){
-                  var marker = L.marker([datos[i].latitud,datos[i].longitud]).addTo(map).bindPopup(datos[i].site); 
-              }
+               for(var i=0;i<datos.length;i++){
+                   var marker = L.marker([datos[i].latitud,datos[i].longitud]).addTo(map).bindPopup(datos[i].site); 
+               }
+           
        
             
           

@@ -39,6 +39,10 @@ class StoreRequest extends FormRequest
             'countries'=> 'required',
             'date' => 'required|date',
             'type_id'=>'required',
+            'maplatitud' => 'string',
+            'maplongitud' => 'string',
+            'mapzoom' => 'integer',
+
 
 
 

@@ -143,8 +143,24 @@ Edit {{ $tour->name }}
                                 <input type="date" class="form-control"  name="date" value="{{$tour->date}}" >
 
                             </div>
+                            <div class="col">
+                              <input type="number" class="form-control" name="mapzoom" placeholder="Zoom Map Tour" value="{{$tour->mapzoom}}">
 
                           </div>
+                          </div>
+                          <div class="row mb-3">
+                            <div class="col">
+                             
+                                
+                                <input type="text"
+                                  class="form-control" name="maplatitud" id="" placeholder="Center Latitud Map Tour" value="{{$tour->maplatitud}}">
+                            </div>
+                            
+                            <div class="col">
+                               <input type="text"
+                               class="form-control" name="maplongitud" id="" placeholder="Center Longitud Map Tour" value="{{$tour->maplongitud}}">
+                            </div>
+                       </div>
                           <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
                                 <img  id="preview-image-before-upload" class="img-fluid d-block mx-auto" src="{{Storage::url($tour->image)}}" alt="">

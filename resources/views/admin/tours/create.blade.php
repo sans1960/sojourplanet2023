@@ -120,7 +120,24 @@
                                     <input type="date" class="form-control" name="date">
 
                                 </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" name="mapzoom" placeholder="Zoom Map Tour">
 
+                                </div>
+
+                            </div>
+                            <div class="row mb-3">
+                                 <div class="col">
+                                  
+                                     
+                                     <input type="text"
+                                       class="form-control" name="maplatitud" id="" placeholder="Center Latitud Map Tour">
+                                 </div>
+
+                                 <div class="col">
+                                    <input type="text"
+                                    class="form-control" name="maplongitud" id="" placeholder="Center Longitud Map Tour">
+                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-4 mx-auto">

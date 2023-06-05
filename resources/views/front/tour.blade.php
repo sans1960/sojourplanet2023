@@ -19,12 +19,7 @@
                     <h3 class="text-white patua">{{ $tour->name }}</h3>
 
                 </div>
-                <div class="d-flex flex-row justify-content-start mt-3">
-                    @foreach ($tour->types as $type)
-                        <h4>{{ $type->name }}</h4>
-                    @endforeach
-
-                </div>
+           
                 <div class="d-flex flex-row justify-content-start mt-3">
                     @foreach ($tour->destinations as $destination)
                         <h4>{{ $destination->name }}</h4>
@@ -87,8 +82,8 @@
 @endsection
 @section('js')
 <script>
-          var map = L.map('map').setView([{{ $tour->day()->first()->latitud }}, {{ $tour->day()->first()->longitud }}],
-                                4);
+          var map = L.map('map').setView([{{ $tour->maplatitud }}, {{ $tour->maplongitud }}],
+                                {{$tour->mapzoom}});
 
                             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={{ env('MAP_KEY') }}', {
                                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -97,9 +92,9 @@
                                 zoomOffset: -1,
 
                             }).addTo(map);
-                            var datos = <?= json_encode($tour->day);?>;
+                            var datos = <?= json_encode($tour->locationtour);?>;
                     for(var i=0;i<datos.length;i++){
-                        var marker = L.marker([datos[i].latitud,datos[i].longitud]).addTo(map).bindPopup(datos[i].name); 
+                        var marker = L.marker([datos[i].latitud,datos[i].longitud]).addTo(map).bindPopup(datos[i].site); 
                     }
              
                   
