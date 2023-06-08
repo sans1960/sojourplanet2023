@@ -34,7 +34,7 @@ class Destination extends Model
     }
     public function tours():BelongsToMany
     {
-        return $this->belongsToMany(Type::class);
+        return $this->belongsToMany(Tour::class);
     }
     public function destinationcontact():HasMany
     {

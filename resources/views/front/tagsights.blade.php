@@ -9,28 +9,21 @@
         <h1 class="text-center patua mt-4">Travel Sight of {{ $tag->name }}</h1>
         <div class="row mt-5">
             @foreach ($sights as $sight)
-                <div class="col-md-3 mb-4">
-                    <a href="{{ route('sight', $sight) }}" class="nav-link  ">
-                        <div class="card p-2 ">
-                            <img src="{{ Storage::url($sight->image) }}" class="img-fluid" alt="">
-                            <div class="d-flex flex-column justify-content-start align-items-start p-2">
-                                <h6 class="card-text text-secondary open">{{ $sight->country->name }}</h6>
-                                <h5 class="patua">{{ $sight->title }}</h5>
-                                <h6 class="card-text text-secondary open">{{ $sight->categorysight->name }}</h6>
-                            </div>
+            <div class="col-md-4 mb-4">
+                <a href="{{ route('sight', $sight) }}" class="nav-link  ">
+                    <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:200px;">
+                    <p class="text-white open">{{$sight->country->name}}</p>
+                    <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
 
-
-
-                        </div>
-                    </a>
                 </div>
-            @endforeach
+                </a>
+            </div>
+        @endforeach
 
         </div>
-        <div class="row">
-            <div class="col-md-8 mx-auto d-flex justify-content-end">
+     
                 {!! $sights->links() !!}
-            </div>
-        </div>
+       
     </div>
 @endsection

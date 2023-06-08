@@ -39,7 +39,7 @@ class FrontController extends Controller
     }
     public function allsights(){
         $destinations = Destination::all();
-        $sights = Sight::orderBy('date','desc')->paginate(20);
+        $sights = Sight::orderBy('date','desc')->paginate(15);
         return view('front.travelsight',compact('sights','destinations'));
     }
     public function sight(Sight $sight):Response
@@ -53,6 +53,13 @@ class FrontController extends Controller
         $countries = Country::where('destination_id',$destination->id)->get();
        
         return response()->view('front.destinationsights',compact('sights','destination','countries'));
+    }
+    public function destinationTours(Destination $destination):Response
+    {
+        $tours = $destination->tours()->paginate(15);
+        
+       
+        return response()->view('front.destinationtours',compact('tours','destination'));
     }
     public function countrySights(Country $country):Response
     {
@@ -72,13 +79,19 @@ class FrontController extends Controller
         }
       public function allTour():Response
     {
-        $tours = Tour::orderBy('date','desc')->paginate(20);
-        return response()->view('front.traveltour',compact('tours'));
+        
+       
+         $tours = Tour::orderBy('date','desc')->paginate(15);
+         return response()->view('front.traveltour',compact('tours'));
     }
     public function tour(Tour $tour):Response
     {
          $type = Type::where('id',$tour->type_id)->get();
          return response()->view('front.tour',compact('tour','type'));
+    }
+    public function imagesTour(Tour $tour):Response
+    {
+        return response()->view('front.imagestour',compact('tour'));
     }
     public function about():Response
     {

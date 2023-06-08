@@ -128,13 +128,20 @@
 
 
                 <div class="col-md-6 mx-auto">
-
+                    
                     <div class="d-flex justify-content-center align-items-center"
+                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{ Storage::url($tour->image) }}); height:300px;background-size:cover">
+                        <a href="{{route('imagestour',$tour)}}" target="_blank" class="btn btn-outline-dark border border-whire mt-3 patua px-3 py-2 rounded-pill text-white"
+                             >Image
+                            Gallery</a>
+                    </div>
+
+                    {{-- <div class="d-flex justify-content-center align-items-center"
                         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{ Storage::url($tour->image) }}); height:300px;background-size:cover">
                         <a class="btn btn-outline-dark border border-whire mt-3 patua px-3 py-2 rounded-pill text-white"
                             data-bs-toggle="modal" data-bs-target="#exampleModal">Image
                             Gallery</a>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
