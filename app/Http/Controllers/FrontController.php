@@ -12,6 +12,7 @@ use App\Models\Tag;
 use App\Models\Country;
 use App\Models\SubRegion;
 use App\Models\CategorySight;
+use App\Models\Type;
 
 class FrontController extends Controller
 {
@@ -19,7 +20,7 @@ class FrontController extends Controller
     {
         $blogs = Blog::latest()->take(3)->get();
         $sights = Sight::latest()->take(5)->get();
-        $tours = Tour::latest()->take(2)->get();
+        $tours = Tour::latest()->take(3)->get();
         $destinations = Destination::all();
         return response()->view('front.index',compact('destinations','blogs','sights','tours'));
     }
@@ -76,7 +77,8 @@ class FrontController extends Controller
     }
     public function tour(Tour $tour):Response
     {
-        return response()->view('front.tour',compact('tour'));
+         $type = Type::where('id',$tour->type_id)->get();
+         return response()->view('front.tour',compact('tour','type'));
     }
     public function about():Response
     {
