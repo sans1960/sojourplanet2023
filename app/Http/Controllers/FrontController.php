@@ -13,20 +13,29 @@ use App\Models\Country;
 use App\Models\SubRegion;
 use App\Models\CategorySight;
 use App\Models\Type;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 class FrontController extends Controller
 {
     public function index():Response
     {
         $blogs = Blog::latest()->take(3)->get();
-        $sights = Sight::latest()->take(5)->get();
+        $sights = Sight::latest()->take(10)->get();
         $tours = Tour::latest()->take(3)->get();
         $destinations = Destination::all();
+        
         return response()->view('front.index',compact('destinations','blogs','sights','tours'));
     }
     public function destination(Destination $destination):Response
     {
-        $sights = Sight::where('destination_id',$destination->id)->orderBy('date','desc')->take(6)->get();
+         $sights = Sight::where('destination_id',$destination->id)->orderBy('date','desc')->get();
+       
+       
+           
+           
+     
+
         return response()->view('front.destination',compact('destination','sights'));
     }
     public function blog(Blog $blog):Response
@@ -73,10 +82,11 @@ class FrontController extends Controller
        
         return response()->view('front.categorysights',compact('sights','categorysight'));
     }
-         public function tag(Tag $tag){
+        public function tag(Tag $tag){
         $sights = $tag->sights()->paginate(20);
         return view('front.tagsights',compact('sights','tag'));
         }
+      
       public function allTour():Response
     {
         

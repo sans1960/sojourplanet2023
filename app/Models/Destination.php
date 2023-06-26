@@ -40,4 +40,5 @@ class Destination extends Model
     {
         return $this->hasMany(DestinationContact::class);
     }
+ 
 }

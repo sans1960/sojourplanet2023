@@ -103,6 +103,7 @@ class SightController extends Controller
         if($request->tags){
             $sight->tags()->sync($request->tags);
         }
+   
         if($update) {
             session()->flash('notif.success', 'Sight updated successfully!');
             return redirect()->route('admin.sights.index');

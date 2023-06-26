@@ -72,7 +72,7 @@
             <div class="col-md-8 open texto">
                 {!! $destination->body !!}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 patua">
                 {!! $destination->sidebody !!}
                 <div class="d-flex justify-content-center mt-5">
                     <a href="{{ route('contactdestination', $destination) }}"
@@ -87,7 +87,7 @@
             Sights from {{ $destination->name }} published</a>
 
         <div class="row mt-5 mb-5">
-            @foreach ($sights as $sight)
+            @foreach ($sights->take(6) as $sight)
                 <div class="col-md-4 mb-2">
                     <a href="{{ route('sight', $sight) }}" class="nav-link ">
                         <div class="d-flex flex-column justify-content-between text-white p-2 img-responsive"
@@ -104,6 +104,11 @@
                 </div>
             @endforeach
 
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-12 d-flex flex-wrap">
+             
+            </div>
         </div>
 
 
