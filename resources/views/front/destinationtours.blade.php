@@ -5,7 +5,7 @@
     {{ $destination->name }}
 @endsection
 @section('content')
-<div class="container">
+<div class="container vh-100">
     <h1 class="patua text-center mt-4">{{$destination->name}}</h1>
     <div class="row">
         <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">

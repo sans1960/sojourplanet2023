@@ -4,9 +4,27 @@
 @section('title')
     {{ $categorysight->name }}
 @endsection
+@section('css')
+<style>
+    .pagination > li > a,
+.pagination > li > span {
+    color: darkslategrey; // use your own color here
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color:#212529;
+    /* border-color: green; */
+}
+</style>    
+@endsection
 @section('content')
     <div class="container">
-        <h1 class="text-center patua mt-4">Travel Sight of {{ $categorysight->name }}</h1>
+        <h1 class="text-center patua mt-4"> {{ $categorysight->name }} around the world</h1>
         <div class="row mt-5">
             @foreach ($sights as $sight)
             <div class="col-md-4 mb-4">
