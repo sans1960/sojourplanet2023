@@ -21,7 +21,7 @@
                         <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                             style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover; height:200px;">
                         
-                            <p class="text-white open">{{$tour->duration}} days</p>
+                            <p class="text-white open fw-bold">{{$tour->duration}} days</p>
                           
                             
                             <h5 class="fs-4 patua text-center  text-white">{{ $tour->name }}</h5>

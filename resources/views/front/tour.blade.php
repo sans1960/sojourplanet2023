@@ -13,32 +13,34 @@
 <div class="container-fluid d-flex justify-content-center align-items-end"  style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover;height:300px; background-position:center;">
     <h3 class="text-white patua text-center">{{ $tour->name }}</h3>
 </div>
-<div class="container-fluid" style="background-color: #D8D8D8;">
-<div class="row">
-    <div class="col-md-2 d-flex">
-        <div class="me-5">
-            <p class="patua">Days</p>
+<div class="container" >
+<div class="row " >
+    
+        <div class="d-flex p-2 col-md-4 justify-content-center align-items-end" style="background-color: #D8D8D8;">
+            <p class="patua me-3">Days</p>
             <p>{{ $tour->duration }}</p>
         </div>
-        <div>
-            <p class="patua">Countries</p>
+        <div class="d-flex p-2 col-md-4 justify-content-center align-items-end" style="background-color: #D8D8D8;">
+            <p class="patua me-3">Countries</p>
             <p>{{ $tour->countries }}</p>
         </div>
-    </div>
-    <div class="col-md-2 d-flex flex-column">
-        <div class="me-5 p-2">
+        <div class="d-flex p-2 col-md-4 justify-content-center align-items-end"style="background-color: #D8D8D8;">
             @foreach ($type as $item)
             <img src="{{ Storage::url($item->icon) }}" alt="" width="50">
         @endforeach
-        </div>
-        <div>
-            <p class="patua">Trip type</p>
+      
+            <p class="patua ms-3">Trip type </p>
             @foreach ($type as $item)
-            <p>Mostly {{$item->name}}</p>
+            <p class="ms-3">Mostly   {{$item->name}}</p>
         @endforeach
         </div>
-    </div>
-    <div class="col-md-8 ">
+    
+</div>
+    
+    <div class="row" style="background-color: #D8D8D8;">
+
+    <div class="col-md-6 mx-auto">
+      
       
        
         @foreach ($tour->ratios->chunk(3) as $chunk)
@@ -267,9 +269,10 @@
 
         }).addTo(map);
         var datos = <?= json_encode($tour->locationtour) ?>;
-        for (var i = 0; i < datos.length; i++) {
-            var marker = L.marker([datos[i].latitud, datos[i].longitud]).addTo(map).bindPopup(datos[i].site);
-        }
+         for (var i = 0; i < datos.length; i++) {
+             var marker = L.marker([datos[i].latitud, datos[i].longitud]).addTo(map).bindPopup(datos[i].site).openPopup();
+         }
+        // console.log(datos);
     </script>
   
 @endsection

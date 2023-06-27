@@ -17,8 +17,11 @@
                 </figure>
                 <h3 class="text-center patua"> {{ $sight->title }}</h3>
                 <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
-
-                    <a class="nav-link " href="{{ route('countrysights', $sight->country) }}">
+                    <a class="nav-link " href="{{ route('destinationsights', $sight->destination) }}">
+                        <h4 class="patua ">{{ $sight->destination->name }}</h4>
+                    </a>
+                    <p class="ms-2">|</p>
+                    <a class="nav-link ms-2" href="{{ route('countrysights', $sight->country) }}">
                         <h4 class="patua ">{{ $sight->country->name }}</h4>
                     </a>
                     <p class="ms-2">|</p>
