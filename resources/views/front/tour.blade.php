@@ -25,9 +25,9 @@
             <p>{{ $tour->countries }}</p>
         </div>
         <div class="d-flex p-2 col-md-4 justify-content-center align-items-end">
-            @foreach ($type as $item)
+            {{-- @foreach ($type as $item)
             <img src="{{ Storage::url($item->icon) }}" alt="" width="50">
-        @endforeach
+        @endforeach --}}
       
             <p class="patua ms-3">Trip type </p>
             @foreach ($type as $item)
@@ -41,7 +41,7 @@
 
     <div class="col-md-6 mx-auto p-1">
       
-         <h5 class="patua text-center">Trip type ratio</h5>
+         <p class="patua text-center">Trip type ratio</p>
        
         @foreach ($tour->ratios->chunk(3) as $chunk)
             
@@ -50,11 +50,11 @@
           @foreach ($chunk as $item)
              <div class="col mb-2">
               <div class="d-flex justify-content-center align-items-center">
-               <p class="open text-uppercase">{{ $item->name }}</p> 
+               <p class="open text-uppercase" style="font-size: 12px;">{{ $item->name }}</p> 
               </div>
               <div class="d-flex justify-content-center align-items-center pls">
                 @if ($item->ratio == 5)
-                <span class="me-3  ">
+                <span class="me-3  d-flex justify-content-start align-items-center">
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
@@ -63,12 +63,12 @@
 
                 </span>
             @elseif($item->ratio == 4)
-                <span class="me-3 d-flex justify-content-start align-items-center">
+                <span class="me-3 ">
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
 
                 </span>
             @elseif ($item->ratio == 3)
@@ -76,35 +76,35 @@
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
 
                 </span>
             @elseif ($item->ratio == 2)
                 <span class="me-3 d-flex justify-content-start align-items-center">
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
 
                 </span>
             @elseif ($item->ratio == 1)
                 <span class="me-3 d-flex justify-content-start align-items-center">
                     <i class="bi bi-star-fill" style="color: yellow;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
 
                 </span>
             @elseif ($item->ratio == 0)
                 <span class="me-3 d-flex justify-content-start align-items-center">
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
-                    <i class="bi bi-star" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
+                    <i class="bi bi-star-fill" style="color: grey;"></i>
 
                 </span>
             @endif
@@ -140,7 +140,7 @@
                     </div>
                     <div class="col d-flex flex-column">
                         <div>
-                            <p class="patua">Acomodation</p>
+                            <p class="patua">Acommodation</p>
                             <p>{{ $tour->accommodation }}</p>
                         </div>
                         <div>

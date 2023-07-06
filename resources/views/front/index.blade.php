@@ -66,7 +66,7 @@
            
                     <a href="{{route('taylor')}}" class="nav-link">
                         <div class="d-flex justify-content-center align-items-center p-2" style="background-size:cover; height:250px;background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/mexico.jpg')}})">
-                         <h4 class="patua text-white text-center">Taylor-made trips</h4>
+                         <h4 class="patua text-white text-center">Tailor-made trips</h4>
                         </div>
                     </a>
                 </div>
