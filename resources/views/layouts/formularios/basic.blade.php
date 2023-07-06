@@ -99,14 +99,14 @@
         <div class="form-check mt-5 d-flex justify-content-start align-items-center">
             <input class="form-check-input ms-3 " type="radio" name="type" value="Leisure" id="flexRadioDefault1">
             <label class="form-check-label ms-5" for="flexRadioDefault1">
-               <h5> Mostly leisure</h5>
+               <h4> Mostly leisure</h4>
                <p>A leisure attractions trip with some cultural and gourmet attractions</p>
             </label>
           </div>
           <div class="form-check d-flex justify-content-start align-items-center">
-            <input class="form-check-input ms-3" type="radio" name="type" value="Cultural"  id="flexRadioDefault2" >
+            <input class="form-check-input ms-3" type="radio" name="type" value="Patrimonial"  id="flexRadioDefault2" >
             <label class="form-check-label ms-5" for="flexRadioDefault2">
-               <h4> Mostly cultural</h4>
+               <h4> Mostly patrimonial</h4>
                <p>A cultural attractions trip with some leisure and gourmet attractions</p>
             </label>
           </div>
@@ -120,7 +120,21 @@
           <div class="form-check d-flex justify-content-start align-items-center">
             <input class="form-check-input ms-3" type="radio" name="type" value="Adventure"  id="flexRadioDefault2" >
             <label class="form-check-label ms-5" for="flexRadioDefault2">
-              <h4>Adventure trip</h4> 
+              <h4>Mostly adventure</h4> 
+              <p>With some cultural and gourmet attractions</p>
+            </label> 
+          </div>
+          <div class="form-check d-flex justify-content-start align-items-center">
+            <input class="form-check-input ms-3" type="radio" name="type" value="Wellness"  id="flexRadioDefault2" >
+            <label class="form-check-label ms-5" for="flexRadioDefault2">
+              <h4>Wellness trip</h4> 
+              <p>With some cultural and gourmet attractions</p>
+            </label> 
+          </div>
+          <div class="form-check d-flex justify-content-start align-items-center">
+            <input class="form-check-input ms-3" type="radio" name="type" value="Traditional"  id="flexRadioDefault2" >
+            <label class="form-check-label ms-5" for="flexRadioDefault2">
+              <h4>Traditional trip</h4> 
               <p>With some cultural and gourmet attractions</p>
             </label> 
           </div>
