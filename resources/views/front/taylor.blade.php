@@ -3,7 +3,7 @@
 Tailor-made trips
 @endsection
 @section('content')
-    <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2018/10/01/11/45/landscape-3715977_1280.jpg);background-size:cover;height:300px;background-position:center;">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/barca.jpg')}});background-size:cover;height:300px;background-position:center;">
       <h1 class="text-white patua">Our tailor-made trips</h1>
     </div>
     <div class="container mt-5 mb-5">
@@ -36,7 +36,7 @@ Tailor-made trips
               
         </div>
     </div>
-    <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(https://cdn.pixabay.com/photo/2021/08/02/16/22/beach-6517214_1280.jpg);background-size:cover;height:300px;background-position:center;">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/bosque.jpg')}});background-size:cover;height:300px;background-position:center;">
         <h1 class="text-white patua">Do you want to know more?</h1>
       </div>
       <div class="container mt-5 mb-5">
@@ -55,7 +55,7 @@ Tailor-made trips
               </div>
         </div>
     </div>
-    <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2019/07/30/08/44/mosque-4372296_1280.jpg);background-size:cover;height:300px;background-position:center;">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/edificios.jpg')}});background-size:cover;height:300px;background-position:center;">
         <h1 class="text-white patua">Our goal is to offer you the perfect trip for you.</h1>
       </div>
       <div class="container mt-5 mb-5">

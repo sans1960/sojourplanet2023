@@ -3,7 +3,7 @@
 What’s the trip of your dreams?
 @endsection
 @section('content')
-<div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/06/07/17/07/holiday-1442020_1280.jpg);background-size:cover;height:300px;background-position:center;">
+<div class="container-fluid d-flex justify-content-center align-items-center" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/safari-jeep.jpg')}});background-size:cover;height:300px;background-position:center;">
     <h1 class="text-white">Discovering the world with us</h1>
   </div>
 <div class="container mt-5 mb-5">
@@ -44,27 +44,33 @@ What’s the trip of your dreams?
         <div class="col-md-8 open ">
             <p class="texto">As part of the methodology to provide you with the best possible trips, exclusively designed and adapted to your tastes and interests, we have divided the type of trip possible into five different typologies; patrimonial, leisure, gourmet, adventure and wellness. Each of these typologies aims to explore the personalized concept of the trip of your dreams, based on what satisfies you the most. Of course, any classification will always be subject to your rhythms, tastes and interests, whose limit is imposed by you. </p>
             <div class="d-flex justify-content-start align-items-center mt-3">
-               <img src="{{asset('iconos/the trip of your dreams/mostly-patrimonial.svg')}}"  alt="">
+             
                <p class="ms-4 texto"><strong>A mostly patrimonial trip</strong>  focuses on the historical and cultural tour of your favorite destination, with an emphasis on its heritage. Tour the World Heritage Sites of Spain, Portugal, Greece or Italy and be dazzled by their architectural wonders, for example.</p>
             </div>
             <div class="d-flex justify-content-start align-items-center mt-3">
-                <img src="{{asset('iconos/the trip of your dreams/mostly-leisure.svg')}}"  alt="">
+               
                 <p class="ms-4 texto"><strong>A mostly leisure trip</strong> is focused on experiences of a recreational nature, be they shows, performances, theaters or city life. This may include tickets to see a Champions League match, be surprised by the fascinating Carnival of Oruro in Bolivia or simply enjoying time with the little ones at Santa Claus Village in Finland. </p>
              </div>
              <div class="d-flex justify-content-start align-items-center mt-3">
-                <img src="{{asset('iconos/the trip of your dreams/mostly-gourmet.svg')}}"  alt="">
+              
                 <p class="ms-4 texto"><strong>A mostly gourmet trip</strong> will seek to explore the gastronomies and taste for local delicacies, whether it's discovering the vineyards of French Champagne, appreciating in the Kaffa Mountains the nuances of Ethiopian coffee or learning about the breeding of the famous Kobe beef. </p>
              </div>
              <div class="d-flex justify-content-start align-items-center mt-3">
-                <img src="{{asset('iconos/the trip of your dreams/mostly-adventure.svg')}}"  alt="">
+             
                 <p class="ms-4 texto"><strong>A mostly adventure trip</strong> will include all those attractions where adrenaline is the protagonist, enjoying experiences mainly outdoors and in contact with nature, such as practicing your favorite sport, hiking at your own pace or a paragliding trip over a beautiful valley.
                 </p>
              </div>
              <div class="d-flex justify-content-start align-items-center mt-3">
-                <img src="{{asset('iconos/the trip of your dreams/mostly-wellness.svg')}}"  alt="">
+            
                 <p class="ms-4 texto"><strong>A mostly wellness trip</strong>  trip will prioritize those experiences focused on your physical, mental and spiritual well-being that help you disconnect from any type of stress. Imagine pampering your body in one of the traditional Japanese onsen, relaxing in one of the villas in the Maldives, or doing a spiritual retreat at the Ermita del Silencio in Puebla.
                 </p>
              </div>
+             <div class="d-flex justify-content-start align-items-center mt-3">
+             
+              <p class="ms-4 texto"><strong>A mostly traditions trip</strong>  will be a journey focused on experiences based on the customs and traditions of our favorite destination. From ancestral rituals, local customs or typical cultural manifestations, we will enjoy the immense richness and diversity of the different human groups that populate the planet.
+
+              </p>
+           </div>
         
         </div>
           <div class="col-md-4 patua d-flex justify-content-start align-items-start flex-column px-5">

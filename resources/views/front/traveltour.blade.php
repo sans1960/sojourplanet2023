@@ -5,7 +5,7 @@
 @section('css')
 @endsection
 @section('content')
-    <div class="container vh-100">
+    <div class="container mb-5">
         <h1 class="patua text-center mt-4">Tours around the world</h1>
         <div class="row">
             <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">

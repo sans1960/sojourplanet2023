@@ -185,13 +185,14 @@
 
 
         <div class="col-md-8 mx-auto">
-            
+            <a href="{{route('imagestour',$tour)}}" target="external" class=" nav-link fs-5  patua  text-white"
+            >
             <div class="d-flex justify-content-center align-items-center"
                 style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{ Storage::url($tour->image) }}); height:300px;background-size:cover">
-                <a href="{{route('imagestour',$tour)}}" target="external" class=" nav-link fs-5  patua  text-white"
-                     >
-                    Gallery</a>
+             
+                   <h2>Gallery</h2> 
             </div>
+        </a>
 
      
 
