@@ -5,6 +5,7 @@ use App\Models\TourContact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TourMail;
 
+
 class TourContactObserver
 {
     public function created(TourContact $contact): void

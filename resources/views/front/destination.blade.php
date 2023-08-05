@@ -55,7 +55,7 @@
     <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-3">Lasts
         Sights from {{ $destination->name }} published</a>
 
-    <div class="row mt-5 mb-5">
+    <div class="row mt-5 ">
         @foreach ($sights->take(6) as $sight)
         <div class="col-md-4 mb-2">
             <a href="{{ route('sight', $sight) }}" class="nav-link ">
@@ -73,10 +73,12 @@
         </div>
         @endforeach
 
+
     </div>
     <div class="row mb-5">
-        <div class="col-md-12 d-flex flex-wrap">
-
+        <div class="d-flex justify-content-center mt-3">
+            <a href="{{ route('destinationsights', $destination) }}"
+                class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">View more</a>
         </div>
     </div>
 

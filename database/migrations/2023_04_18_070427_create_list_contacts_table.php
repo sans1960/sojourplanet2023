@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('list_contacts', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
+            $table->string('ipadress');
             $table->timestamps();
         });
     }

@@ -30,6 +30,7 @@
                         <th class="">Fecha</th>
                        
                         <th class="">Email</th>
+                        <th class="">IP</th>
                         
                        
                         <th  class="text-center">Acciones</th>
@@ -41,6 +42,7 @@
                         <td>{{ $listcontact->created_at}}</td>
                       
                         <td>{{ $listcontact->email}}</td>
+                        <td>{{ $listcontact->ipadress}}</td>
                      
                       
                         <td>

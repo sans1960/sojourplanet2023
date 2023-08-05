@@ -37,10 +37,16 @@ class ListContactController extends Controller
     {
         $request->validate([
            
-            'email'=>'required|email|unique:list_contacts',
+            'email'=>'required|email:dns,rfc,spoof|unique:list_contacts',
+            
            
         ]);
-        $listcontact = ListContact::create($request->all());
+        $listcontact = new ListContact;
+        $listcontact->email = $request->email;
+        $ipadress = request()->ip();
+        $listcontact->ipadress = $ipadress;
+        $listcontact->save();
+
         // Mail::to($contact->email)->send(new ListMail($contact));
         // return view('front.listcontact.respuesta',compact('listcontact'));
         return redirect()->back()->with('success', 'Your email has been added satisfactory');
