@@ -115,9 +115,9 @@ class FrontController extends Controller
     {
         return response()->view('front.dream');
     }
-    public function contactgeneral(){
-        return view('forms.general');
-    }
+    // public function contactgeneral(){
+    //     return view('forms.general');
+    // }
     public function contactSight(Sight $sight){
         $countries = Country::where('subregion_id',$sight->subregion_id)->where('id','<>',$sight->country_id)->get();
         $items = Sight::where('country_id',$sight->country_id)->where('id','<>',$sight->id)->get();

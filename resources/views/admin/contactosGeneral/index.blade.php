@@ -31,6 +31,8 @@
                         <th class="">Nombre</th>
                         <th class="">Apellido</th>
                         <th class="">Email</th>
+                        <th>Phone</th>
+                        <th>IP</th>
                         
                        
                         <th colspan="2" class="text-center">Acciones</th>
@@ -43,6 +45,8 @@
                         <td>{{ $contact->name}}</td>
                         <td>{{ $contact->surname}}</td>
                         <td>{{ $contact->email}}</td>
+                        <td>+{{$contact->country_code->phone_code.$contact->phone}}</td>
+                        <td>{{$contact->ipAdress}}</td>
                         <td>
                             <a href="{{route('contactos.general.show',$contact->id)}}" class="btn btn-success btn-sm">
                                 <i class="bi bi-eye"></i>

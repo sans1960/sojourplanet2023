@@ -30,7 +30,7 @@
                 What's the trip of your dreams?
             </p>
                 <div class="d-flex justify-content-end align-items-end ms-auto">
-                    <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
+                    <a href="{{ route('contactos.general.create') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
                 trip</a>
                 </div>
         </div>

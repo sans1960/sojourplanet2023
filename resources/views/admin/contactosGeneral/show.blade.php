@@ -17,24 +17,27 @@
                 <div class="card-body">
                    <div class="row">
                     <div class="col">
-                        {{$item->email}}
+                      <p>Email : {{$item->email}} </p>  
                     </div>
                     <div class="col">
-                        {{$item->phone}}
+                      <p>Phone : +{{$item->country_code->phone_code.$item->phone}} </p>  
                     </div>
                     <div class="col">
-                        {{$item->created_at}}
+                      <p>Data : {{$item->created_at}}</p>  
                     </div>
                    </div>
                    <div class="row">
                     <div class="col">
-                        {{$item->city}}
+                      <p>Country : {{$item->country_code->country}} </p>  
                     </div>
                     <div class="col">
-                        {{$item->state}}
+                        <p>City : {{$item->city}}</p>
                     </div>
                     <div class="col">
-                        {{$item->zipcode}}
+                      <p>Zipcode : {{$item->zipcode}}</p>  
+                    </div>
+                    <div class="col">
+                     <p>IP : {{$item->ipAdress}}</p>  
                     </div>
                    </div>
                    <div class="row">

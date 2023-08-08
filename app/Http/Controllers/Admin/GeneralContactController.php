@@ -5,11 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\GeneralContact;
+use App\Models\CountryCode;
 
 class GeneralContactController extends Controller
 {
         public function __construct() {
-            $this->middleware('admin')->except('store');
+            $this->middleware('admin')->except('create','store');
         }
 
 
@@ -25,7 +26,8 @@ class GeneralContactController extends Controller
      */
     public function create()
     {
-        //
+        $countrycodes = CountryCode::all();
+        return view('admin.contactosGeneral.create',compact('countrycodes'));
     }
 
     /**
@@ -33,17 +35,40 @@ class GeneralContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+         $request->validate([
             'name'=>'required|max:20',
-            'surname'=>'required|max:20',
-            'phone'=>'required|max:20',
-            'email'=>'required|email',
-            'city'=>'required|max:20',
-            'state'=>'required|max:20',
-            'zipcode'=>'max:20',
-            'message'=>'max:255',
-        ]);
-        $contact = GeneralContact::create($request->all());
+             'surname'=>'required|max:20',
+             'legal' =>'required',
+
+             'phone'=>'required|max:12',
+             'email'=>'required|email:dns,rfc,spoof',
+            
+             'country_code_id'=>'required',
+          
+         ]);
+        
+        $contact = new GeneralContact;
+        $contact->name = $request->name;
+        $contact->surname = $request->surname;
+        $contact->legal = $request->legal;
+        $contact->phone = $request->phone;
+        $contact->email = $request->email;
+        $contact->city = $request->city;
+        $contact->zipcode = $request->zipcode;
+        $contact->country_code_id = $request->country_code_id;
+        $contact->duration = $request->duration;
+        $contact->season = $request->season;
+        $contact->travelers = $request->travelers;
+        $contact->children = $request->children;
+        $contact->mobility = $request->mobility;
+        $contact->romantic = $request->romantic;
+        $contact->type = $request->type;
+        $contact->message = $request->message;
+        $ipAdress = request()->ip();
+        $contact->ipAdress = $ipAdress;
+        $contact->save();
+        
+
         return view('forms.respuestageneral',compact('contact'));
     }
 

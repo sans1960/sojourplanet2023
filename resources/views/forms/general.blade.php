@@ -2,6 +2,9 @@
 @section('title')
 Start to plan my trip
 @endsection
+@section('css')
+
+@endsection
 @section('content')
 <div class="container-fluid  d-flex justify-content-center align-items-center"  style="background-image: url({{ asset('img/beach.jpg')}});height:300px; background-size:cover;background-position:center center;" >
        
@@ -42,4 +45,5 @@ Start to plan my trip
  }); 
 }); 
 </script>
+
 @endsection

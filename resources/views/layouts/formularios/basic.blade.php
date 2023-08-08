@@ -18,12 +18,15 @@
     <div class="col-md-6">
         
       
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" required id="name" placeholder="Name">
+        @if ($errors->has('name'))
+        <span class="text-danger">{{ $errors->first('name') }}</span>
+        @endif
+      </div>
      
-     
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingname" placeholder="Name*" name="name" required>
-                <label for="floatingname">Name*</label>
-              </div>
+      
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingsurname" placeholder="Surname*" name="surname" required>
                 <label for="floatingsurname">Surname*</label>

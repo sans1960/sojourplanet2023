@@ -10,31 +10,31 @@
                 <div class="d-flex flex-column justify-content-center align-items-center p-2" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/estatuas.jpg')}});height: 500px;background-position:center;">
                        <h1 class="patua text-white display-2">The world is yours.</h1>
                        <h3 class="open text-white p-3">We are specialists in tailor-made trips around the world.</h3>
-                       <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
+                       <a href="{{route('contactos.general.create')}}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
                            trip</a>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center p-2" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/flamencos.jpg')}});height: 500px;background-position:center;">
                             <h1 class="patua text-white display-2">We create unique trips.</h1>
                             <h3 class="open text-white p-3">We design travel experiences that provide you with special moments that generate fond memories for life.</h3>
-                              <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
+                              <a href="{{route('contactos.general.create')}}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
                            trip</a>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center p-2" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/moais.jpg')}});height: 500px;background-position:center;">
                         <h1 class="patua text-white display-2">Local knowledge.</h1>
                         <h3 class="open text-white p-3">Our experts will create unique, authentic and engaging itineraries specifically for you. In any destination in the world.</h3>
-                       <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
+                       <a href="{{route('contactos.general.create')}}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
                            trip</a>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center p-2" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/pariss.jpg')}});height: 500px;background-position:center;">
                             <h1 class="patua text-white display-2">Planning is our business.</h1>
                             <h3 class="open text-white p-3">We create unique itineraries for demanding clients who want advice and guidance in planning their vacations.</h3>
-                              <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
+                              <a href="{{route('contactos.general.create')}}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
                            trip</a>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center p-2" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/salar-uyuni.jpg')}});height: 500px;background-position:center;">
                          <h1 class="patua text-white display-2">PREMIUM experience.</h1>
                          <h3 class="open text-white p-3">Our specialists guarantee all services with a PREMIUM and quality standard.</h3>
-                          <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
+                          <a href="{{route('contactos.general.create')}}" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan my
                            trip</a>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                 <h1 class="patua mt-3">Welcome to Sojournplanet</h1>
                 <p class="open fs-5 mt-3">We believe that trips should be as individual as you, where every detail counts
                     for a unique experience. This is the essence of our business.</p>
-                   <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2  rounded-pill">Start to plan my
+                   <a href="{{route('contactos.general.create')}}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2  rounded-pill">Start to plan my
                            trip</a>
 
             </div>

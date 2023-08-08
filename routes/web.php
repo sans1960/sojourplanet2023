@@ -47,7 +47,7 @@ Route::get('sights/destinations/{destination}', [FrontController::class,'destina
 Route::get('/categorysight/{categorysight}', [FrontController::class,'categorySights'])->name('categorysights');
 Route::get('tag/{tag}',[FrontController::class,'tag'])->name('tagsights');
 
-Route::get('taylor-made-trips/contact', [FrontController::class , 'contactgeneral'])->name('contactgeneral');
+// Route::get('taylor-made-trips/contact', [FrontController::class , 'contactgeneral'])->name('contactgeneral');
 Route::get('contact/sight/{sight}', [FrontController::class , 'contactSight'])->name('contactsight');
 Route::get('contact/destination/{destination}', [FrontController::class , 'contactDestination'])->name('contactdestination');
 Route::get('contact/tour/{tour}', [FrontController::class , 'contactTour'])->name('contacttour');

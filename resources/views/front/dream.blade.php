@@ -27,7 +27,7 @@ What’s the trip of your dreams?
             <p>Sojournplanet is not satisfied with just offering an ordinary trip. Our mission is to bring you extraordinary experiences that connect with your emotions and allow you to create memories that will last forever.</p>
             <p>Whether it's witnessing an aurora borealis in the solitude of a frozen lake, enjoying a private dinner on a paradisiacal beach or experiencing the living traditions of ancient cultures, we are committed to taking your trip to the next level.</p>
               <div class="d-flex justify-content-end align-items-end ms-auto">
-                <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
+                <a href="{{ route('contactos.general.create') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
             trip</a>
             </div>
           
@@ -78,7 +78,7 @@ What’s the trip of your dreams?
             <p>What’s the trip of your dreams?</p>
            
                    <div class="d-flex justify-content-end align-items-end ms-auto">
-                <a href="{{ route('contactgeneral') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
+                <a href="{{ route('contactos.general.create') }}" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Start to plan my
             trip</a>
             </div>
           </div>

@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('general_contacts', function (Blueprint $table) {
             $table->id();
-                     $table->string('trait')->nullable();
+            $table->string('trait')->nullable();
             $table->string('name');
             $table->string('surname');
             $table->string('phone');
             $table->string('email');
-            $table->string('city');
+            $table->string('city')->nullable();
             $table->string('legal');
-            $table->string('state');
+            $table->foreignId('country_code_id')->constrained('country_codes');
+            $table->string('ipAdress');
             $table->string('zipcode')->nullable();
             $table->string('duration')->nullable();
             $table->string('season')->nullable();
