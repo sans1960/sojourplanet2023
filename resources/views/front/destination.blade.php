@@ -44,7 +44,7 @@
         <div class="col-md-4 patua">
             {!! $destination->sidebody !!}
             <div class="d-flex justify-content-center mt-5">
-                <a href="{{ route('contactdestination', $destination) }}"
+                <a href="{{ route('contactdestination',$destination) }}"
                     class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">Start to plan my
                     trip</a>
             </div>
@@ -60,7 +60,7 @@
         <div class="col-md-4 mb-2">
             <a href="{{ route('sight', $sight) }}" class="nav-link ">
                 <div class="d-flex flex-column justify-content-between text-white p-2 img-responsive"
-                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover;height:200px; ">
+                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover;height:250px; ">
                     <div class="d-flex justify-content-center align-items-center">
                         <p class="open">{{ $sight->country->name }}</p>
                         {{-- <p class="open">{{$sight->categorysight->name}}</p> --}}

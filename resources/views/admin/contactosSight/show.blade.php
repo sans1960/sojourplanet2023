@@ -24,7 +24,10 @@
                                 {{ $contact->email }}
                             </div>
                             <div class="col">
-                                {{ $contact->phone }}
+                                +{{ $contact->country_code->phone_code.$contact->phone}}
+                            </div>
+                            <div class="col">
+                                {{ $contact->ipAdress }}
                             </div>
                             <div class="col">
                                 {{ $contact->created_at }}
@@ -35,7 +38,7 @@
                                 {{ $contact->city }}
                             </div>
                             <div class="col">
-                                {{ $contact->state }}
+                                {{ $contact->country_code->country }}
                             </div>
                             <div class="col">
                                 {{ $contact->zipcode }}

@@ -29,8 +29,9 @@
 
                             <th class="">Fecha</th>
                             <th class="">Sight</th>
-                            <th class="">Country</th>
+                            <th class="">Phone</th>
                             <th class="">Email</th>
+                            <th class="">IP</th>
 
 
 
@@ -41,10 +42,11 @@
 
                         @foreach ($contacts as $contact)
                             <tr>
-                                <td>{{ $contact->created_at }}</td>
-                                <td>{{ $contact->sight->title }}</td>
-                                <td>{{ $contact->sight->country->name }}</td>
+                                <td>{{ \Carbon\Carbon::parse($contact->created_at)->format('d/m/Y')}}</td>
+                                <td>{{ $contact->sight->site }}</td>
+                                <td>+{{ $contact->country_code->phone_code.$contact->phone}}</td>
                                 <td>{{ $contact->email }}</td>
+                                <td>{{$contact->ipAdress}}</td>
 
                                 <td>
                                     <a href="{{ route('contactos.sight.show', $contact->id) }}"

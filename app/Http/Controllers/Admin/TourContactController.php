@@ -41,27 +41,33 @@ class TourContactController extends Controller
     {
         $validated = $request->validate([
             'name'=>'required|max:20',
-            'trait' => 'max:10',
             'tour_id'=>'required',
             'legal'=>'required',
             'surname'=>'required|max:20',
-            'phone'=>'required|max:20',
-            'email'=>'required|email',
-            'city'=>'required|max:20',
-            'state'=>'required|max:20',
-            'zipcode'=>'max:20',
-            'message'=>'max:2000',
-           
-            'season'=>'max:20',
-            'travelers'=>'max:50',
-            'children'=>'max:50',
-            
-            'romantic'=>'max:20',
-            'mobility'=>'max:20',
-            
-            
+            'phone'=>'required|max:12',
+            'email'=>'required|email:dns,rfc,spoof',
+            'country_code_id' => 'required',        
         ]);
-        $contact = TourContact::create($validated);
+        $contact = new TourContact;
+        $contact->trait = $request->trait;
+        $contact->name = $request->name;
+        $contact->surname = $request->surname;
+        $contact->legal = $request->legal;
+        $contact->phone = $request->phone;
+        $contact->email = $request->email;
+        $contact->city = $request->city;
+        $contact->zipcode = $request->zipcode;
+        $contact->country_code_id = $request->country_code_id;
+        $contact->season = $request->season;
+        $contact->travelers = $request->travelers;
+        $contact->children = $request->children;
+        $contact->mobility = $request->mobility;
+        $contact->romantic = $request->romantic;
+        $contact->message = $request->message;     
+        $contact->tour_id = $request->tour_id;
+        $ipAdress = request()->ip();
+        $contact->ipAdress = $ipAdress;
+        $contact->save();
         return view('forms.respuestatour',compact('contact'));
     }
 

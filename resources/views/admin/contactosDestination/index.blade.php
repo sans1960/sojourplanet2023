@@ -31,6 +31,9 @@
                             <th class="">Name</th>
                             <th class="">Surname</th>
                             <th class="">Destination</th>
+                            <th class="">Email</th>
+                            <th class="">Phone</th>
+                            <th class="">IP</th>
 
 
 
@@ -40,22 +43,25 @@
                     </thead>
                     <tbody>
 
-                        @foreach ($destinationcontacts as $destinationcontact)
+                        @foreach ($contacts as $contact)
                             <tr>
-                                <td>{{ $destinationcontact->created_at }}</td>
-                                <td>{{ $destinationcontact->name }}</td>
-                                <td>{{ $destinationcontact->surname }}</td>
-                                <td>{{ $destinationcontact->destination->name }}</td>
+                                <td>{{ $contact->created_at }}</td>
+                                <td>{{ $contact->name }}</td>
+                                <td>{{ $contact->surname }}</td>
+                                <td>{{ $contact->destination->name }}</td>
+                                <td>{{ $contact->email}}</td>
+                                <td>+{{$contact->country_code->phone_code.$contact->phone}}</td>
+                                <td>{{$contact->ipAdress}}</td>
 
                                 <td>
-                                    <a href="{{ route('contactos.destination.show', $destinationcontact) }}"
+                                    <a href="{{ route('contactos.destination.show', $contact->id) }}"
                                         class="btn btn-success btn-sm">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
 
                                 <td>
-                                    <form action="{{ route('contactos.destination.destroy', $destinationcontact) }}"
+                                    <form action="{{ route('contactos.destination.destroy', $contact->id) }}"
                                         method="post">
                                         @csrf
                                         @method('delete')

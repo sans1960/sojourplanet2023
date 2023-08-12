@@ -15,14 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('trait')->nullable();
             $table->string('name');
-            $table->foreignId('tour_id')->constrained('tours')->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->foreignId('tour_id')->constrained('tours');
             $table->string('surname');
             $table->string('phone');
             $table->string('email');
-            $table->string('city');
+            $table->string('city')->nullable();
             $table->string('legal');
-            $table->string('state');
+            $table->foreignId('country_code_id')->constrained('country_codes');
+            $table->string('ipAdress');
             $table->string('zipcode')->nullable();
             $table->string('season')->nullable();
             $table->string('travelers')->nullable();

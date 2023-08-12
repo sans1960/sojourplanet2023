@@ -14,7 +14,7 @@ Tailor-made trips
     </style>     
 @endsection
 @section('content')
-<div class="container-fluid  d-flex justify-content-center align-items-center"  style="background-image: url({{ asset('img/beach.jpg')}});height:300px; background-size:cover;background-position:center center;" >
+<div class="container-fluid  d-flex justify-content-center align-items-center"  style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/beach.jpg')}});height:300px; background-size:cover;background-position:center center;" >
        
     <h1 class="text-white">Planning your trip</h1>
 
@@ -34,11 +34,11 @@ Tailor-made trips
                             <select class="form-select form-select" name="trait" aria-label="Default select example">
                               <option ></option>
                               <option value=""></option>
-                              <option value="Dr">Dr</option>
-                              <option value="Mr">Mr</option>
-                              <option value="Mrs">Mrs</option>
-                              <option value="Ms">Ms</option>
-                              <option value="Mss">Mss</option>
+                              <option value="Dr" {{ "Dr" === old('trait') ? 'selected' : '' }}>Dr</option>
+                              <option value="Mr" {{ "Mr" === old('trait') ? 'selected' : '' }}>Mr</option>
+                              <option value="Mrs" {{ "Mrs" === old('trait') ? 'selected' : '' }}>Mrs</option>
+                              <option value="Ms" {{ "Ms" === old('trait') ? 'selected' : '' }}>Ms</option>
+                              <option value="Mss" {{ "Mss" === old('trait') ? 'selected' : '' }}>Mss</option>
                             </select>
                           </div>
                           <div class="col-md-4 mb-2 open">
@@ -83,7 +83,7 @@ Tailor-made trips
                         <select class="form-select " name="country_code_id" aria-label="Default select example">
                           <option ></option>
                           @foreach ($countrycodes as $countrycode)
-                          <option value="{{$countrycode->id}}" {{ $countrycode->id === old('country_code_id') ? 'selected' : '' }} >{{$countrycode->country}}</option>
+                          <option value="{{$countrycode->id}}" {{ old('country_code_id') == $countrycode->id ? 'selected' : '' }} >{{$countrycode->country}}</option>
                       @endforeach
                         </select>
                         @if ($errors->has('country_code_id'))

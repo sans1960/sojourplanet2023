@@ -39,29 +39,39 @@ class SightContactController extends Controller
     public function store(Request $request)
     {
        $validated = $request->validate([
-            'name'=>'required|max:20',
-            'trait' => 'max:10',
-            'sight_id'=>'required',
-            'legal'=>'required',
-            'surname'=>'required|max:20',
-            'phone'=>'required|max:20',
-            'email'=>'required|email',
-            'city'=>'required|max:20',
-            'state'=>'required|max:20',
-            'zipcode'=>'max:20',
-            'message'=>'max:255',
-            'duration'=>'max:50',
-            'season'=>'max:20',
-            'travelers'=>'max:50',
-            'children'=>'max:50',
-            'type'=>'max:20',
-            'romantic'=>'max:20',
-            'mobility'=>'max:20',
-            'countries'=>'max:255',
-            'sights'=>'max:255',
-            
-        ]);
-        $contact = SightContact::create($validated);
+        'name'=>'required|max:20',
+        'sight_id'=>'required',
+        'legal'=>'required',
+        'surname'=>'required|max:20',
+        'phone'=>'required|max:12',
+        'email'=>'required|email:dns,rfc,spoof',
+        'country_code_id' => 'required',  
+             ]);
+        
+        $contact = new SightContact;
+        $contact->trait = $request->trait;
+        $contact->name = $request->name;
+        $contact->surname = $request->surname;
+        $contact->legal = $request->legal;
+        $contact->phone = $request->phone;
+        $contact->email = $request->email;
+        $contact->city = $request->city;
+        $contact->zipcode = $request->zipcode;
+        $contact->country_code_id = $request->country_code_id;
+        $contact->duration = $request->duration;
+        $contact->season = $request->season;
+        $contact->travelers = $request->travelers;
+        $contact->children = $request->children;
+        $contact->mobility = $request->mobility;
+        $contact->romantic = $request->romantic;
+        $contact->type = $request->type;
+        $contact->message = $request->message;
+        $contact->countries = $request->countries;
+        $contact->sights = $request->sights;
+        $contact->sight_id = $request->sight_id;
+        $ipAdress = request()->ip();
+        $contact->ipAdress = $ipAdress;
+        $contact->save();
         return view('forms.respuestasight',compact('contact'));
     }
 

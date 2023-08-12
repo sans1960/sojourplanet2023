@@ -15,15 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('trait')->nullable();
             $table->string('name');
-            $table->foreignId('sight_id')->constrained('sights')->onUpdate('cascade')
-            ->onDelete('cascade');
-          
             $table->string('surname');
             $table->string('phone');
             $table->string('email');
-            $table->string('city');
+            $table->string('city')->nullable();
             $table->string('legal');
-            $table->string('state');
+            $table->foreignId('country_code_id')->constrained('country_codes');
+            $table->string('ipAdress');
             $table->string('zipcode')->nullable();
             $table->string('duration')->nullable();
             $table->string('season')->nullable();
@@ -32,9 +30,10 @@ return new class extends Migration
             $table->string('type')->nullable();
             $table->string('romantic')->nullable();
             $table->string('mobility')->nullable();
+            $table->text('message')->nullable();
+            $table->foreignId('sight_id')->constrained('sights');
             $table->text('countries')->nullable();
             $table->text('sights')->nullable();
-            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

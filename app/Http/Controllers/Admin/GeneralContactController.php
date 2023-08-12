@@ -48,6 +48,7 @@ class GeneralContactController extends Controller
          ]);
         
         $contact = new GeneralContact;
+        $contact->trait = $request->trait;
         $contact->name = $request->name;
         $contact->surname = $request->surname;
         $contact->legal = $request->legal;

@@ -29,8 +29,9 @@
 
                             <th class="">Fecha</th>
                             <th class="">Tour</th>
-                          
+                            <th class="">Phone</th>
                             <th class="">Email</th>
+                            <th class="">IP</th>
 
 
 
@@ -41,10 +42,11 @@
 
                         @foreach ($contacts as $contact)
                             <tr>
-                                <td>{{ $contact->created_at }}</td>
-                                <td>{{ $contact->tour->name }}</td>
-                                
+                                <td>{{ \Carbon\Carbon::parse($contact->created_at)->format('d/m/Y')}}</td>
+                                <td>{{ $contact->tour->name}}</td>
+                                <td>+{{ $contact->country_code->phone_code.$contact->phone}}</td>
                                 <td>{{ $contact->email }}</td>
+                                <td>{{$contact->ipAdress}}</td>
 
                                 <td>
                                     <a href="{{ route('contactos.tour.show', $contact->id) }}"

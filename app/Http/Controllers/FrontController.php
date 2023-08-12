@@ -13,6 +13,7 @@ use App\Models\Country;
 use App\Models\SubRegion;
 use App\Models\CategorySight;
 use App\Models\Type;
+use App\Models\CountryCode;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 
@@ -119,16 +120,18 @@ class FrontController extends Controller
     //     return view('forms.general');
     // }
     public function contactSight(Sight $sight){
+        $countrycodes = CountryCode::all();
         $countries = Country::where('subregion_id',$sight->subregion_id)->where('id','<>',$sight->country_id)->get();
         $items = Sight::where('country_id',$sight->country_id)->where('id','<>',$sight->id)->get();
-        return view('forms.sight',compact('sight','countries','items'));
+        return view('forms.sight',compact('sight','countries','items','countrycodes'));
     }
     public function contactDestination(Destination $destination){
 
-        return view('forms.destination',compact('destination'));
+        $countrycodes = CountryCode::all();
+         return view('forms.destination',compact('destination','countrycodes'));
     }
       public function contactTour(Tour $tour){
-
-        return view('forms.tour',compact('tour'));
+        $countrycodes = CountryCode::all();
+        return view('forms.tour',compact('tour','countrycodes'));
     }
 }
