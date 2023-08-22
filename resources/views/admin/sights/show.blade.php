@@ -34,6 +34,15 @@
                       <div class=" mt-4 texto fs-5 open">
                         {!! $sight->extract!!}
                       </div>
+                      @if ($sight->imagesight)
+                         @foreach ($sight->imagesight as $item)
+                         <h5 class="patua">{{$item->title}}</h5>
+                         <figure class="figure mt-3">
+                          <img src="{{Storage::url($item->image)}}" class="figure-img img-fluid rounded d-block mx-auto" alt="...">
+                          <figcaption class="figure-caption text-center">{{ $item->caption}}</figcaption>
+                        </figure>
+                         @endforeach 
+                      @endif
                       <div class=" fs-5 open">
                         {!! $sight->introduction!!}
                       </div>

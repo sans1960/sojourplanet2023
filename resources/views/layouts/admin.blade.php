@@ -92,6 +92,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('admin.sights.index') }}">
                                         {{ __('Sights') }}
                                     </a></li>
+                                    <li><a class="nav-link text-dark" href="{{ route('admin.imagesights.index') }}">
+                                        {{ __('Image Sights') }}
+                                    </a></li>
 
 
                             </ul>

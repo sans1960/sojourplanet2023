@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Sight extends Model
 {
@@ -39,6 +40,10 @@ class Sight extends Model
     public function sightncontact():HasMany
     {
         return $this->hasMany(SightContact::class);
+    }
+    public function imagesight():HasMany
+    {
+        return $this->hasMany(ImageSight::class);
     }
 
 }

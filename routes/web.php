@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\SightController;
 use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\RatioController;
 use App\Http\Controllers\Admin\ImageTourController;
+use App\Http\Controllers\Admin\ImageSightController;
 use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
 use App\Http\Controllers\Admin\LocationTourController;
@@ -72,6 +73,7 @@ Route::resource('admin/sights',SightController::class)->middleware('auth')->name
 Route::resource('admin/types',TypeController::class)->middleware('auth')->names('admin.types');
 Route::resource('admin/ratios',RatioController::class)->middleware('auth')->names('admin.ratios');
 Route::resource('admin/imagestours',ImageTourController::class)->middleware('auth')->names('admin.imagestours');
+Route::resource('admin/imagesights',ImageSightController::class)->middleware('auth')->names('admin.imagesights');
 Route::resource('admin/locationtours',LocationTourController::class)->middleware('auth')->names('admin.locationtours');
 Route::resource('admin/tours',TourController::class)->middleware('auth')->names('admin.tours');
 Route::resource('admin/days',DayController::class)->middleware('auth')->names('admin.days');
