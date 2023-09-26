@@ -1,4 +1,17 @@
-@extends('front.layouts.base')
+@extends('front.layouts.sights')
+@section('meta_title')
+{{ $sight->title }}
+@endsection
+@section('meta_description')
+{!! $sight->extract !!}
+
+@endsection
+@section('meta_url')
+{{url('sights/'.$sight->slug)}}
+@endsection
+@section('meta_image')
+{{url(Storage::url($sight->image))}}
+@endsection
 @section('title')
 {{ $sight->title }}
 @endsection
