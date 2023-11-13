@@ -55,10 +55,16 @@ Edit {{ $country->name }}
               <label for="image" class="form-label">Image</label>
               <input class="form-control" type="file" id="image" name="image">
             </div>
-            <div class="mb-3">
-              <label for="caption" class="form-label">Caption</label>
-              <input type="text" class="form-control" id="caption" value="{{$country->caption}}" name="caption"
-                required>
+            <div class=" row mb-3">
+              <div class="col">
+                <label for="caption" class="form-label">Caption</label>
+                <input type="text" class="form-control" id="caption" value="{{$country->caption}}" name="caption"
+                  required>
+              </div>
+              <div class="col">
+                <label for="intro" class="form-label">Intro</label>
+                <input type="text" class="form-control" id="intro" value="{{$country->intro}}" name="intro">
+              </div>
             </div>
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>

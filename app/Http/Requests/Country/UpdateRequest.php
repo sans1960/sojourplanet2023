@@ -41,6 +41,7 @@ class UpdateRequest extends FormRequest
             'sidebody' => 'nullable|string',
             'information' => 'nullable|string',
             'nearby' => 'nullable',
+            'intro' => 'nullable|string',
         ];
     }
 }

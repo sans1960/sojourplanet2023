@@ -7,7 +7,7 @@
 <div class="container-fluid  d-flex justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:300px; background-size:cover;background-position:center center;">
 
-    <h1 class="text-white patua">{{ $country->name }}</h1>
+    <h1 class="text-white patua">{{$country->intro}} {{ $country->name }}</h1>
 
 </div>
 <div class="container">
@@ -71,6 +71,48 @@
 </div>
 <div class="container mt-3">
     <h3 class="patua mt-3">Insteresting locations in {{$country->name}}</h3>
+    <div class="row">
+        @if ($country->location)
+        @foreach ($country->location as $item)
+        <div class="col-md-3">
+            <a href="" class="nav-link  " data-bs-toggle="modal" data-bs-target="#Modal{{$item->id}}">
+                <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($item->image) }});background-size:cover; height:250px;">
+
+                    <h5 class="fs-4 patua text-center text-white">{{ $item->name }}</h5>
+
+                </div>
+            </a>
+            <div class="modal fade" id="Modal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <figure class="figure">
+                                <img src="{{Storage::url($item->image)}}" class="figure-img img-fluid rounded"
+                                    alt="...">
+                                <figcaption class="figure-caption">{{$item->caption}}.</figcaption>
+                            </figure>
+                            <div>
+                                {!!$item->body!!}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
+        @endif
+    </div>
+
 </div>
 <div class="container mt-3">
     <h3 class="patua mt-3">Experiences and atractions in {{$country->name}}</h3>
