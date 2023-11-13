@@ -11,4 +11,10 @@
       text-align: justify;
       text-justify: inter-word;
 }
+.mini{
+    font-size: 0.7rem;
+}
+.topy{
+    margin-top: -15px;
+}
 

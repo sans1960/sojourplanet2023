@@ -17,19 +17,20 @@ class CountryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index():Response
+    public function index(): Response
     {
         $countries = Country::orderBy('name')->paginate(10);
-        return response()->view('admin.countries.index',compact('countries'));
+        return response()->view('admin.countries.index', compact('countries'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create():Response
+    public function create(): Response
     {
         $destinations = Destination::all();
-        return response()->view('admin.countries.create',compact('destinations'));
+        $countries = Country::all();
+        return response()->view('admin.countries.create', compact('destinations', 'countries'));
     }
 
     /**
@@ -40,7 +41,7 @@ class CountryController extends Controller
         $validated = $request->validated();
 
         if ($request->hasFile('image')) {
-             // put image in the public storage
+            // put image in the public storage
             $filePath = Storage::disk('public')->put('images/countries/images', request()->file('image'));
             $validated['image'] = $filePath;
         }
@@ -48,36 +49,40 @@ class CountryController extends Controller
         // insert only requests that already validated in the StoreRequest
         $create = Country::create($validated);
 
-        if($create) {
+        if ($create) {
             // add flash for the success notification
             session()->flash('notif.success', 'Country created successfully!');
             return redirect()->route('admin.countries.index');
         }
 
-        return abort(500);
+        // return abort(500);
+        if ($validated->fails()) {
+            return back()->withErrors($validated);
+        }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Country $country):Response
+    public function show(Country $country): Response
     {
-        return response()->view('admin.countries.show',compact('country'));
+        return response()->view('admin.countries.show', compact('country'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Country $country):Response
+    public function edit(Country $country): Response
     {
         $destinations = Destination::all();
-        return response()->view('admin.countries.edit',compact('destinations','country'));
+        $countries = Country::all();
+        return response()->view('admin.countries.edit', compact('destinations', 'country', 'countries'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Country $country):RedirectResponse
+    public function update(UpdateRequest $request, Country $country): RedirectResponse
     {
         $validated = $request->validated();
 
@@ -85,18 +90,21 @@ class CountryController extends Controller
             // delete image
             Storage::disk('public')->delete($country->image);
 
-            $filePath = Storage::disk('public')->put('images/countries/images', request()->file('image'),'public');
+            $filePath = Storage::disk('public')->put('images/countries/images', request()->file('image'), 'public');
             $validated['image'] = $filePath;
         }
 
         $update = $country->update($validated);
 
-        if($update) {
+        if ($update) {
             session()->flash('notif.success', 'Country updated successfully!');
             return redirect()->route('admin.countries.index');
         }
 
-        return abort(500);
+        // return abort(500);
+        if ($validated->fails()) {
+            return back()->withErrors($validated);
+        }
     }
 
     /**
@@ -107,19 +115,21 @@ class CountryController extends Controller
         Storage::disk('public')->delete($country->image);
         $delete = $country->delete();
 
-        if($delete) {
+        if ($delete) {
             session()->flash('notif.success', 'Country deleted successfully!');
             return redirect()->route('admin.countries.index');
         }
 
         return abort(500);
     }
-    public function findCountry(){
+    public function findCountry()
+    {
         return view('admin.countries.search');
-   }
-   public function searchCountry(Request $request){
-       $search = $request->input('search');
-       $countries = Country::where('name','LIKE',"%{$search}%")->get();
-       return view('admin.countries.search', compact('countries','search'));
-   }
+    }
+    public function searchCountry(Request $request)
+    {
+        $search = $request->input('search');
+        $countries = Country::where('name', 'LIKE', "%{$search}%")->get();
+        return view('admin.countries.search', compact('countries', 'search'));
+    }
 }

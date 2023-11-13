@@ -32,6 +32,15 @@ class UpdateRequest extends FormRequest
             'zoom' => 'nullable|integer',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
             'caption' => 'required|string|max:250',
+            'population' => 'nullable|string',
+            'capital' => 'nullable|string',
+            'language' => 'nullable|string',
+            'currency' => 'nullable|string',
+            'time_difference' => 'nullable|string',
+            'best_times' => 'nullable|string',
+            'sidebody' => 'nullable|string',
+            'information' => 'nullable|string',
+            'nearby' => 'nullable',
         ];
     }
 }

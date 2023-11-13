@@ -10,23 +10,26 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Country extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','slug','destination_id','image','subregion_id','description','caption','latitud','longitud','zoom'];
+    protected $fillable = ['name', 'slug', 'destination_id', 'image', 'subregion_id', 'description', 'caption', 'latitud', 'longitud', 'zoom', 'population', 'capital', 'language', 'currency', 'time_difference', 'best_times', 'sidebody', 'information', 'nearby'];
 
     public function getRouteKeyName()
     {
         return 'slug';
     }
-    public function destination():BelongsTo
+    public function destination(): BelongsTo
     {
         return $this->belongsTo(Destination::class);
     }
 
-    public function subregion():BelongsTo
+    public function subregion(): BelongsTo
     {
-        return $this->belongsTo(SubRegion::class,'subregion_id');
+        return $this->belongsTo(SubRegion::class, 'subregion_id');
     }
-    public function sight():HasMany
+    public function sight(): HasMany
     {
         return $this->hasMany(Sight::class);
     }
+    protected $casts = [
+        'nearby' => 'array'
+    ];
 }

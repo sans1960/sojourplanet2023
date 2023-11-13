@@ -5,99 +5,170 @@ Edit {{ $country->name }}
 @endsection
 @section('content')
 <div class="container">
-    <div class="row ">
-        <div class="col-md-10 mx-auto">
-            <div class="card">
-                <div class="card-header bg-dark text-white text-center">
-                   Edit Country
-                </div>
-                <div class="card-body">
+  <div class="row ">
+    <div class="col-md-10 mx-auto">
+      <div class="card">
+        <div class="card-header bg-dark text-white text-center">
+          Edit Country
+        </div>
+        <div class="card-body">
 
-                    <form action="{{ route('admin.countries.update',$country)}}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" value="{{ $country->name}}"  name="name"  required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="slug" class="form-label">Slug</label>
-                            <input type="text" class="form-control" id="slug"  name="slug" value="{{$country->slug}}" >
-                          </div>
-                          <div class="row mb-3">
-                            <div class="col">
-                               <select class="form-select "  name="destination_id" id="dest">
-                                   <option selected>Choose Destination</option>
-                                   @foreach ($destinations as $destination)
-                                   <option value="{{ $destination->id}}"  @if ($country->destination_id == ($destination->id)) selected
+          <form action="{{ route('admin.countries.update',$country)}}" method="post" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            @if($errors->any())
+            {{ implode('', $errors->all('<div>:message</div>')) }}
+            @endif
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" value="{{ $country->name}}" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="slug" class="form-label">Slug</label>
+              <input type="text" class="form-control" id="slug" name="slug" value="{{$country->slug}}">
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <select class="form-select " name="destination_id" id="dest">
+                  <option selected>Choose Destination</option>
+                  @foreach ($destinations as $destination)
+                  <option value="{{ $destination->id}}" @if ($country->destination_id == ($destination->id)) selected
 
-                                       @endif >{{ $destination->name}}</option>
-                               @endforeach
+                    @endif >{{ $destination->name}}</option>
+                  @endforeach
 
-                                 </select>
-                            </div>
-                            <div class="col">
-                               <select name="subregion_id" id="subre" class="form-select ">
-                                   <option selected value="{{$country->subregion_id}}">{{ $country->subregion->name}}</option>
-                               </select>
-                            </div>
-                         </div>
-                          <div class="row mb-3">
-                            <div class="col-md-4 mx-auto">
-                                <img  id="preview-image-before-upload" class="img-fluid d-block mx-auto" src="{{ Storage::url($country->image)}}" alt="">
-                            </div>
-                        </div>
-                          <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
-                            <input class="form-control" type="file" id="image" name="image">
-                          </div>
-                          <div class="mb-3">
-                            <label for="caption" class="form-label">Caption</label>
-                            <input type="text" class="form-control" id="caption" value="{{$country->caption}}" name="caption"  required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea class="form-control" id="description" rows="3"  name="description">
+                </select>
+              </div>
+              <div class="col">
+                <select name="subregion_id" id="subre" class="form-select ">
+                  <option selected value="{{$country->subregion_id}}">{{ $country->subregion->name}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-4 mx-auto">
+                <img id="preview-image-before-upload" class="img-fluid d-block mx-auto"
+                  src="{{ Storage::url($country->image)}}" alt="">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input class="form-control" type="file" id="image" name="image">
+            </div>
+            <div class="mb-3">
+              <label for="caption" class="form-label">Caption</label>
+              <input type="text" class="form-control" id="caption" value="{{$country->caption}}" name="caption"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" rows="3" name="description">
                                 {!! $country->description!!}
                             </textarea>
-                          </div>
-                           <div class="row mb-3">
-                             <div class="col">
-                                <input type="text" class="form-control"  value="{{$country->latitud}}"  name="latitud"  >
-                             </div>
-                             <div class="col">
-                                <input type="text" class="form-control"  value="{{$country->longitud}}"  name="longitud"  >
-                             </div>
-                             <div class="col">
-                                <input type="number" class="form-control" value="{{$country->zoom}}"  name="zoom"  >
-                             </div>
-                           </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" class="form-control" value="{{$country->latitud}}" name="latitud">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" value="{{$country->longitud}}" name="longitud">
+              </div>
+              <div class="col">
+                <input type="number" class="form-control" value="{{$country->zoom}}" name="zoom">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" class="form-control" value="{{$country->population}}" placeholder="Population"
+                  name="population">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" value="{{$country->capital}}" placeholder="Capital"
+                  name="capital">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="language" value="{{$country->language}}"
+                  placeholder="Language">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Currency" name="currency"
+                  value="{{$country->currency}}">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Time Difference" name="time_difference"
+                  value="{{$country->time_difference}}">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="best_times" placeholder="Best Time"
+                  value="{{$country->best_times}}">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="sidebody" class="form-label">Sidebody</label>
+              <textarea class="form-control" id="sidebody" rows="3" name="sidebody">
+                {!! $country->sidebody!!}
+              </textarea>
+            </div>
+            <div class="mb-3">
+              <label for="information" class="form-label">Information</label>
+              <textarea class="form-control" id="information" rows="3" name="information">
+                {!! $country->information!!}
+              </textarea>
+            </div>
+            <div class="mb-3">
+              <h6>Countries</h6>
 
-                        <div class="row mb-3">
-                            <div class="col-md-4 mx-auto">
-                            <button type="submit" class="btn btn-success d-block mx-auto">
-                                <i class="bi bi-upload"></i>
-                              </button>
-                        </div>
-                        </div>
-                    </form>
 
+
+              <div class="col-md-12 d-flex flex-wrap mt-2">
+                @foreach ($countries->sortBy('name') as $count)
+
+
+                <div class="form-check me-3">
+                  <input class="form-check-input" name="nearby[]" type="checkbox" value="{{$count->name}}"
+                    id="flexCheckDefault" @if ($country->nearby) @foreach ($country->nearby as $item)
+                  @if ($item == $count->name)
+                  @checked(true)
+                  @endif
+                  @endforeach>
+                  @endif
+
+
+
+                  <label class="form-check-label" for="flexCheckDefault">
+                    {{$count->name}}
+                  </label>
                 </div>
+
+
+                @endforeach
+              </div>
             </div>
 
+            <div class="row mb-3">
+              <div class="col-md-4 mx-auto">
+                <button type="submit" class="btn btn-success d-block mx-auto">
+                  <i class="bi bi-upload"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
         </div>
+      </div>
 
     </div>
 
-</div
-@endsection
-@section('js')
-   <script>
-    CKEDITOR.replace( 'description' );
+  </div>
 
-  </script>
-  <script>
-    $(document).ready(function(){
+</div @endsection @section('js') <script>
+CKEDITOR.replace( 'description' );
+
+</script>
+<script>
+  $(document).ready(function(){
          $('#dest').on('change',function(){
              var destId = this.value;
              $('#subre').html('');
@@ -116,9 +187,9 @@ Edit {{ $country->name }}
 
      });
 
-  </script>
-  <script>
-    $(document).ready(function (e) {
+</script>
+<script>
+  $(document).ready(function (e) {
        $('#image').change(function(){
         let reader = new FileReader();
         reader.onload = (e) => {
@@ -127,9 +198,9 @@ Edit {{ $country->name }}
         reader.readAsDataURL(this.files[0]);
        });
     });
- </script>
- <script>
-    $('#name').change(function(e) {
+</script>
+<script>
+  $('#name').change(function(e) {
       $.get('{{ route('pages.check_slug') }}',
         { 'name': $(this).val() },
         function( data ) {
@@ -137,5 +208,5 @@ Edit {{ $country->name }}
         }
       );
     });
-  </script>
+</script>
 @endsection
