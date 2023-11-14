@@ -62,6 +62,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('admin.experiences.index') }}">
                                         {{ __('Experiences') }}
                                     </a></li>
+                                <li><a class="nav-link text-dark" href="{{ route('admin.acomodations.index') }}">
+                                        {{ __('Acomodations') }}
+                                    </a></li>
 
                             </ul>
                         </li>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-{{ __('Experience-create') }}
+{{ __('Acommodation-create') }}
 @endsection
 @section('content')
 <div class="container">
@@ -9,10 +9,10 @@
         <div class="col-md-10 mx-auto">
             <div class="card">
                 <div class="card-header bg-dark text-white text-center">
-                    Create experience
+                    Create acommodation
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.experiences.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.acomodations.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @if($errors->any())
                         {{ implode('', $errors->all('<div>:message</div>')) }}

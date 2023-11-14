@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-{{ __('Experience-create') }}
+Edit {{ $acomodation->name }}
 @endsection
 @section('content')
 <div class="container">
@@ -9,21 +9,25 @@
         <div class="col-md-10 mx-auto">
             <div class="card">
                 <div class="card-header bg-dark text-white text-center">
-                    Create experience
+                    Edit acomodation
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('admin.experiences.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.acomodations.update',$acomodation) }}" method="post"
+                        enctype="multipart/form-data">
                         @csrf
+                        @method('put')
                         @if($errors->any())
                         {{ implode('', $errors->all('<div>:message</div>')) }}
                         @endif
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
+                            <input type="text" class="form-control" id="name" value="{{$acomodation->name}}"
+                                name="name">
                         </div>
                         <div class="mb-3">
                             <label for="slug" class="form-label">Slug</label>
-                            <input type="text" class="form-control" id="slug" name="slug" required>
+                            <input type="text" class="form-control" id="slug" name="slug"
+                                value="{{$acomodation->slug}}">
                         </div>
                         <div class=" row mb-3">
                             <div class="col">
@@ -43,15 +47,16 @@
                             </div>
                             <div class="col">
                                 <select name="country_id" id="country" class="form-select ">
-
+                                    <option selected value="{{$acomodation->country_id}}">{{
+                                        $acomodation->country->name}}
+                                    </option>
                                 </select>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
                                 <img id="preview-image-before-upload" class="img-fluid d-block mx-auto"
-                                    src="https://cdn.pixabay.com/photo/2022/02/22/17/25/stork-7029266_960_720.jpg"
-                                    alt="">
+                                    src="{{Storage::url($acomodation->image)}}" alt="">
                             </div>
                         </div>
                         <div class="mb-3">
@@ -60,11 +65,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="caption" class="form-label">Caption</label>
-                            <input type="text" class="form-control" id="caption" placeholder="Caption" name="caption">
+                            <input type="text" class="form-control" id="caption" value="{{$acomodation->caption}}"
+                                name="caption">
                         </div>
                         <div class="mb-3">
                             <label for="body" class="form-label">Body</label>
-                            <textarea class="form-control" id="body" rows="3" name="body"></textarea>
+                            <textarea class="form-control" id="body" rows="3" name="body">
+                                {!! $acomodation->body!!}
+                            </textarea>
                         </div>
                         <div class="row mb-3">
                             <div class="col-md-4 mx-auto">

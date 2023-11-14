@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Experience\StoreRequest as ExperienceStoreRequest;
-use App\Http\Requests\Location\StoreRequest;
-use App\Http\Requests\Location\UpdateRequest;
+use App\Http\Requests\Experience\StoreRequest;
+use App\Http\Requests\Experience\UpdateRequest;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Destination;
