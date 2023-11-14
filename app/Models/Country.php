@@ -33,6 +33,10 @@ class Country extends Model
     {
         return $this->hasMany(Location::class);
     }
+    public function experience(): HasMany
+    {
+        return $this->hasMany(Experience::class);
+    }
     protected $casts = [
         'nearby' => 'array'
     ];

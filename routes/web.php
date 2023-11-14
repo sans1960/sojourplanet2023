@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\SightContactController;
 use App\Http\Controllers\Admin\DestinationContactController;
 use App\Http\Controllers\Admin\TourContactController;
 use App\Http\Controllers\Admin\LocationController;
+use App\Http\Controllers\Admin\ExperienceController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\UserController;
@@ -66,6 +67,7 @@ Route::group(['middleware' => 'admin'], function () {
   Route::resource('admin/subregions', SubRegionController::class)->middleware('auth')->names('admin.subregions');
   Route::resource('admin/countries', CountryController::class)->middleware('auth')->names('admin.countries');
   Route::resource('admin/locations', LocationController::class)->middleware('auth')->names('admin.locations');
+  Route::resource('admin/experiences', ExperienceController::class)->middleware('auth')->names('admin.experiences');
   Route::resource('admin/categoryblogs', CategoryBlogController::class)->middleware('auth')->names('admin.categoryblogs');
   Route::resource('admin/blogs', BlogController::class)->middleware('auth')->names('admin.blogs');
   Route::resource('admin/posts', PostController::class)->middleware('auth')->names('admin.posts');
