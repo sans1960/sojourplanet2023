@@ -52,6 +52,18 @@
     </div>
 </div>
 <div class="container mt-5">
+    <h4 class="text-center patua mt-2"> Countries of {{ $destination->name }}</h4>
+    <div class="row">
+        <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
+            @foreach ($destination->country as $country)
+            <a href="{{route('country',$country)}}" class="nav-link me-3">{{ $country->name }}</a>
+
+            @endforeach
+        </div>
+    </div>
+
+</div>
+<div class="container mt-5">
     <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-3">Lasts
         Sights from {{ $destination->name }} published</a>
 

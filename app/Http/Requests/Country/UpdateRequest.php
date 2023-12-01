@@ -42,6 +42,8 @@ class UpdateRequest extends FormRequest
             'information' => 'nullable|string',
             'nearby' => 'nullable',
             'intro' => 'nullable|string',
+            'advisory_id' => 'nullable',
+            'state' => 'nullable|string',
         ];
     }
 }

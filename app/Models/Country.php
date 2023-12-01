@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Country extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'slug', 'destination_id', 'image', 'subregion_id', 'description', 'caption', 'latitud', 'longitud', 'zoom', 'population', 'capital', 'language', 'currency', 'time_difference', 'best_times', 'sidebody', 'information', 'nearby', 'intro'];
+    protected $fillable = ['name', 'slug', 'destination_id', 'image', 'subregion_id', 'description', 'caption', 'latitud', 'longitud', 'zoom', 'population', 'capital', 'language', 'currency', 'time_difference', 'best_times', 'sidebody', 'information', 'nearby', 'intro', 'advisory_id', 'state'];
 
     public function getRouteKeyName()
     {
@@ -19,6 +19,10 @@ class Country extends Model
     public function destination(): BelongsTo
     {
         return $this->belongsTo(Destination::class);
+    }
+    public function advisory(): BelongsTo
+    {
+        return $this->belongsTo(Advisory::class);
     }
 
     public function subregion(): BelongsTo

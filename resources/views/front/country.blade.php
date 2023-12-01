@@ -1,7 +1,6 @@
-@extends('layouts.admin')
+@extends('front.layouts.base')
 @section('title')
 {{ $country->name }}
-
 @endsection
 @section('content')
 <div class="container-fluid  d-flex justify-content-center align-items-center"
@@ -54,25 +53,6 @@
                     <p class="topy">{{$country->best_times}}</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-flag" style="font-size: 1.5em;"></i>
-                    <p class="mini">STATE</p>
-                    <p class="topy">{{$country->state}}</p>
-                </div>
-            </div>
-            @if ($country->advisory)
-            <div class="d-flex justify-content-center align-items-center">
-                <div
-                    style="background-color: {{$country->advisory->color}};width:50px;height:50px;border-radius:50%;line-height:50px;text-align:center;color:white;font-size:1.5em;font-weight:bold">
-                    {{$country->advisory->level}}
-                </div>
-                <div style="background-color:{{$country->advisory->color}};padding:5px; color:white;margin-left:-5px;">
-                    {{$country->advisory->legend}}
-                </div>
-            </div>
-            @endif
-
             <div class="patua p-3">
                 {!!$country->sidebody!!}
             </div>
@@ -183,7 +163,7 @@
         @if ($country->sight)
         @foreach ($country->sight as $sight)
         <div class="col-md-4 mb-3">
-            <a href="" class="nav-link  ">
+            <a href="{{route('sight',$sight)}}" class="nav-link  ">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
 
@@ -280,7 +260,7 @@
         @endphp
         @foreach ($ito as $it)
         <div class="col-md-3">
-            <a href="">
+            <a href="{{route('country',$it)}}">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($it->image) }});background-size:cover; height:250px;">
 

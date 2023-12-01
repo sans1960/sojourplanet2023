@@ -6,7 +6,7 @@ Edit {{ $country->name }}
 @section('content')
 <div class="container">
   <div class="row ">
-    <div class="col-md-10 mx-auto">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-header bg-dark text-white text-center">
           Edit Country
@@ -65,6 +65,18 @@ Edit {{ $country->name }}
                 <label for="intro" class="form-label">Intro</label>
                 <input type="text" class="form-control" id="intro" value="{{$country->intro}}" name="intro">
               </div>
+              <div class="col">
+                <label for="advisory" class="form-label">Advisory</label>
+                <select class="form-select " name="advisory_id" id="advisory">
+                  <option></option>
+                  @foreach ($advisories as $advisory)
+                  <option value="{{ $advisory->id}}" @if ($country->advisory_id == ($advisory->id)) selected
+
+                    @endif>{{ $advisory->legend}}</option>
+                  @endforeach
+
+                </select>
+              </div>
             </div>
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
@@ -91,6 +103,11 @@ Edit {{ $country->name }}
               <div class="col">
                 <input type="text" class="form-control" value="{{$country->capital}}" placeholder="Capital"
                   name="capital">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <input type="text" class="form-control" name="state" value="{{$country->state}}" placeholder="State">
               </div>
               <div class="col">
                 <input type="text" class="form-control" name="language" value="{{$country->language}}"
@@ -169,8 +186,12 @@ Edit {{ $country->name }}
 
   </div>
 
-</div @endsection @section('js') <script>
-CKEDITOR.replace( 'description' );
+</div> @endsection
+@section('js')
+<script>
+  CKEDITOR.replace( 'description' );
+CKEDITOR.replace( 'sidebody' );
+CKEDITOR.replace( 'information' );
 
 </script>
 <script>

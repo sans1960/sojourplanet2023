@@ -6,7 +6,7 @@
 @section('content')
 <div class="container">
   <div class="row ">
-    <div class="col-md-10 mx-auto">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-header bg-dark text-white text-center">
           Create Country
@@ -61,6 +61,16 @@
                 <label for="intro" class="form-label">Intro</label>
                 <input type="text" class="form-control" id="intro" placeholder="Intro" name="intro">
               </div>
+              <div class="col">
+                <label for="advisory" class="form-label">Advisory</label>
+                <select class="form-select " name="advisory_id" id="advisory">
+                  <option></option>
+                  @foreach ($advisories as $advisory)
+                  <option value="{{ $advisory->id}}">{{ $advisory->legend}}</option>
+                  @endforeach
+
+                </select>
+              </div>
             </div>
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
@@ -84,6 +94,13 @@
               <div class="col">
                 <input type="text" class="form-control" placeholder="Capital" name="capital">
               </div>
+            </div>
+            <div class="row mb-3">
+
+              <div class="col">
+                <input type="text" class="form-control" name="state" placeholder="State">
+              </div>
+
               <div class="col">
                 <input type="text" class="form-control" name="language" placeholder="Language">
               </div>
@@ -107,6 +124,7 @@
               <label for="information" class="form-label">Information</label>
               <textarea class="form-control" id="information" rows="3" name="information"></textarea>
             </div>
+
             <div class="mb-3">
               <h6>Countries</h6>
               <div class="col-md-12 d-flex flex-wrap mt-2">

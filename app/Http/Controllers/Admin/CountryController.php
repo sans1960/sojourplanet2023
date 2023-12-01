@@ -9,6 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Country\StoreRequest;
 use App\Http\Requests\Country\UpdateRequest;
+use App\Models\Advisory;
 use App\Models\Country;
 use App\Models\Destination;
 
@@ -30,7 +31,8 @@ class CountryController extends Controller
     {
         $destinations = Destination::all();
         $countries = Country::all();
-        return response()->view('admin.countries.create', compact('destinations', 'countries'));
+        $advisories = Advisory::all();
+        return response()->view('admin.countries.create', compact('destinations', 'countries', 'advisories'));
     }
 
     /**
@@ -76,7 +78,8 @@ class CountryController extends Controller
     {
         $destinations = Destination::all();
         $countries = Country::all();
-        return response()->view('admin.countries.edit', compact('destinations', 'country', 'countries'));
+        $advisories = Advisory::all();
+        return response()->view('admin.countries.edit', compact('destinations', 'country', 'countries', 'advisories'));
     }
 
     /**

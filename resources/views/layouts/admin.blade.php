@@ -65,6 +65,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('admin.acomodations.index') }}">
                                         {{ __('Acomodations') }}
                                     </a></li>
+                                <li><a class="nav-link text-dark" href="{{ route('admin.advisories.index') }}">
+                                        {{ __('Advisories') }}
+                                    </a></li>
 
                             </ul>
                         </li>
