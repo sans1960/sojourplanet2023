@@ -152,6 +152,6 @@ class FrontController extends Controller
     {
 
         $countries = Country::where('name', 'like', $q . '%')->get();
-        return view('front.countries', compact('countries'));
+        return view('front.countries', compact('countries', 'q'));
     }
 }

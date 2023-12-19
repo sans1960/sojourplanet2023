@@ -187,6 +187,7 @@ Home
     <div class="row mt-5">
 
         @foreach ($destinations as $destination)
+        @if ($destination->name != 'Antarctica')
         <div class="col-md-4 mb-3">
             <a href="{{ route('destination', $destination) }}" class="nav-link">
                 <div class=" d-flex flex-column justify-content-between align-items-center w-full p-2"
@@ -197,6 +198,7 @@ Home
                 </div>
             </a>
         </div>
+        @endif
         @endforeach
 
 
