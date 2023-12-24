@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Advisory extends Model
 {
     use HasFactory;
-    protected $fillable = ['level', 'legend', 'color'];
+    protected $fillable = ['level', 'legend', 'color', 'coment'];
     public function country(): HasMany
     {
         return $this->hasMany(Country::class);

@@ -45,6 +45,10 @@
                             <input class="form-check-input" type="radio" id="inlineRadio4" value="red" name="color">
                             <label class="form-check-label" for="inlineRadio4">Red</label>
                         </div>
+                        <div class="mb-3 mt-3">
+                            <label for="coment" class="form-label">Coment</label>
+                            <textarea class="form-control" id="coment" name="coment" rows="3"></textarea>
+                        </div>
 
 
 
@@ -68,5 +72,10 @@
 @endsection
 @section('js')
 
+<script>
+    CKEDITOR.replace( 'coment' );
 
+
+
+</script>
 @endsection

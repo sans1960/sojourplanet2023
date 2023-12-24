@@ -34,6 +34,7 @@ class AdvisoryController extends Controller
         $advisory->level = $request->level;
         $advisory->legend = $request->legend;
         $advisory->color = $request->color;
+        $advisory->coment = $request->coment;
         $advisory->save();
         session()->flash('notif.success', 'Advisory created successfully!');
         return redirect()->route('admin.advisories.index');
@@ -63,6 +64,7 @@ class AdvisoryController extends Controller
         $advisory->level = $request->level;
         $advisory->legend = $request->legend;
         $advisory->color = $request->color;
+        $advisory->coment = $request->coment;
         $advisory->update();
         session()->flash('notif.success', 'Advisory updated successfully!');
         return redirect()->route('admin.advisories.index');

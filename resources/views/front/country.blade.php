@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-8">
             <h3 class="patua mt-3">Overview</h3>
-            <div>
+            <div class="texto open fs-5">
                 {!! $country->description!!}
             </div>
         </div>
@@ -44,13 +44,15 @@
                     <p class="mini">LANGUAGE</p>
                     <p class="topy">{{$country->language}}</p>
                 </div>
+
             </div>
             <div class="row">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-currency-dollar" style="font-size: 1.5em;"></i>
                     <p class="mini">CURRENCY</p>
-                    <p class="topy">{{$country->currency}}</p>
+                    <p class="topy mini">{{$country->currency}}</p>
                 </div>
+
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-clock" style="font-size: 1.5em;"></i>
                     <p class="mini">TIME DIFFERENCE</p>
@@ -61,6 +63,7 @@
                     <p class="mini">BEST TIME</p>
                     <p class="topy">{{$country->best_times}}</p>
                 </div>
+
             </div>
             <div class="row">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
@@ -70,15 +73,31 @@
                 </div>
             </div>
             @if ($country->advisory)
-            <div class="d-flex justify-content-center align-items-center">
-                <div
-                    style="background-color: {{$country->advisory->color}};width:50px;height:50px;border-radius:50%;line-height:50px;text-align:center;color:white;font-size:1.5em;font-weight:bold">
-                    {{$country->advisory->level}}
+            <div class="accordion mt-3 mb-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed patua" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Advisories
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h5>{{$country->advisory->level}}</h5>
+                            <p>{{$country->advisory->legend}}</p>
+                            <div>
+                                {!!$country->advisory->coment!!}
+                            </div>
+                            <div>
+                                {!!$country->information!!}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="background-color:{{$country->advisory->color}};padding:5px; color:white;margin-left:-5px;">
-                    {{$country->advisory->legend}}
-                </div>
+
             </div>
+
+
             @endif
 
             <div class="patua p-3">
@@ -262,7 +281,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+{{-- <div class="container">
     <h3 class="patua mt-3">Travel information {{$country->name}}</h3>
     <div class="row">
         <div class="col-md-10 mx-auto">
@@ -276,7 +295,7 @@
                 trip</a>
         </div>
     </div>
-</div>
+</div> --}}
 <div class="container">
     <h3 class="patua mt-3">Other nearby destinations</h3>
     <div class="row mb-3">
@@ -325,4 +344,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     // .openPopup();
 </script>
+
 @endsection

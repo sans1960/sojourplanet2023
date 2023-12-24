@@ -49,6 +49,12 @@
                                 $advisory->color == 'red' ? 'checked' : ''}}>
                             <label class="form-check-label" for="inlineRadio4">Red</label>
                         </div>
+                        <div class="mb-3 mt-3">
+                            <label for="coment" class="form-label">Coment</label>
+                            <textarea class="form-control" id="coment" name="coment" rows="3">
+                                    {!!$advisory->coment!!}
+                                </textarea>
+                        </div>
 
 
 
@@ -71,6 +77,11 @@
 </div>
 @endsection
 @section('js')
+<script>
+    CKEDITOR.replace( 'coment' );
 
+
+
+</script>
 
 @endsection
