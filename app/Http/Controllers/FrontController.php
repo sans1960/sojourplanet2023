@@ -47,6 +47,11 @@ class FrontController extends Controller
     {
         return view('front.countries');
     }
+    public function travelState()
+    {
+        $countries1 = Country::where('advisory_id', 1)->get();
+        return view('front.travelState', compact('countries1'));
+    }
     public function blog(Blog $blog): Response
     {
         return response()->view('front.blog', compact('blog'));

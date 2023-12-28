@@ -5,86 +5,139 @@
 
 @endsection
 @section('content')
-<div class="container-fluid  d-flex justify-content-center align-items-center"
-    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:300px; background-size:cover;background-position:center center;">
+<div class="container-fluid  d-flex flex-column justify-content-center align-items-center"
+    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:400px; background-size:cover;background-position:center center;">
 
     <h1 class="text-white patua">{{$country->intro}} {{ $country->name }}</h1>
+    <a href="" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to
+        plan
+        my
+        trip</a>
 
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <a href="{{url('countries')}}">All countries</a>
-        </div>
-    </div>
+<div class="d-flex justify-content-end ">
+    <p class="mini me-2">{{$country->caption}}</p>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6 p-5">
             <h3 class="patua mt-3">Overview</h3>
-            <div class="texto open fs-5">
-                {!! $country->description!!}
+            <div class="texto fs-5 open">
+                {!! \Illuminate\Support\Str::limit( $country->description, 1000 );!!}
+                <a href="" class="nav-link fw-bold text-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Read more</a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">{{$country->name}}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                {!!$country->description!!}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 p-5">
             <h3 class="patua mt-3">Key facts</h3>
-            <div class="row">
-                <div class="col d-flex flex-column justify-content-center align-items-center">
+            <div class="row d-flex justify-content-center align-items-center">
+                @if ($country->population !=null)
+                <div class="col d-flex flex-column justify-content-center align-items-center p-2">
                     <i class="bi bi-people" style="font-size: 1.5em;"></i>
-                    <p class="mini">POPULATION</p>
-                    <p class="topy">{{$country->population}}</p>
+                    <p class="mini fw-bold">POPULATION</p>
+                    <p class="topy mini text-center">{{$country->population}}</p>
                 </div>
+                @endif
+                @if ($country->capital !=null)
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-buildings-fill" style="font-size: 1.5em;"></i>
-                    <p class="mini">CAPITAL</p>
-                    <p class="topy">{{$country->capital}}</p>
+                    <p class="mini fw-bold">CAPITAL</p>
+                    <p class="topy mini text-center">{{$country->capital}}</p>
                 </div>
+                @endif
+                @if ($country->language !=null)
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-chat-text" style="font-size: 1.5em;"></i>
-                    <p class="mini">LANGUAGE</p>
-                    <p class="topy">{{$country->language}}</p>
+                    <p class="mini fw-bold">LANGUAGE</p>
+                    <p class="topy mini text-center">{{$country->language}}</p>
                 </div>
-
-            </div>
-            <div class="row">
+                @endif
+                @if ($country->currency !=null)
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-currency-dollar" style="font-size: 1.5em;"></i>
-                    <p class="mini">CURRENCY</p>
-                    <p class="topy mini">{{$country->currency}}</p>
+                    <p class="mini fw-bold">CURRENCY</p>
+                    <p class="topy mini text-center">{{$country->currency}}</p>
                 </div>
-
-                <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-clock" style="font-size: 1.5em;"></i>
-                    <p class="mini">TIME DIFFERENCE</p>
-                    <p class="topy">{{$country->time_difference}}</p>
-                </div>
-                <div class="col d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-calendar2-check" style="font-size: 1.5em;"></i>
-                    <p class="mini">BEST TIME</p>
-                    <p class="topy">{{$country->best_times}}</p>
-                </div>
-
+                @endif
             </div>
             <div class="row">
+                @if ($country->time_difference !=null)
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-clock" style="font-size: 1.5em;"></i>
+                    <p class="mini fw-bold">TIME DIFFERENCE</p>
+                    <p class="topy mini text-center">{{$country->time_difference}}</p>
+                </div>
+                @endif
+                @if ($country->best_times !=null)
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-calendar2-check" style="font-size: 1.5em;"></i>
+                    <p class="mini fw-bold">BEST TIME</p>
+                    <p class="topy mini text-center">{{$country->best_times}}</p>
+                </div>
+                @endif
+                @if($country->state !=null)
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <i class="bi bi-flag" style="font-size: 1.5em;"></i>
-                    <p class="mini">STATE</p>
-                    <p class="topy">{{$country->state}}</p>
+                    <p class="mini fw-bold">COUNTRY</p>
+                    <p class="topy mini text-center">{{$country->state}}</p>
                 </div>
+                @endif
+            </div>
+            <div id="map" class="" style="width:100%;height:400px">
+            </div>
+            <div class="row">
+
             </div>
             @if ($country->advisory)
+
             <div class="accordion mt-3 mb-3" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed patua" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Advisories
+                            Travel recomendations
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <h5>{{$country->advisory->level}}</h5>
-                            <p>{{$country->advisory->legend}}</p>
+                            @if ($country->advisory->level == 1)
+                            <div style="background-color:#003875;" class="p-2">
+                                <p class="text-white fw-bold">{{$country->advisory->legend}}</p>
+                            </div>
+                            @elseif ($country->advisory->level == 2)
+                            <div style="background-color:#FFCC66;" class="p-2">
+                                <p class=" fw-bold">{{$country->advisory->legend}}</p>
+                            </div>
+                            @elseif ($country->advisory->level == 3)
+                            <div style="background-color:#FF9900;" class="p-2">
+                                <p class=" text-white fw-bold">{{$country->advisory->legend}}</p>
+                            </div>
+                            @elseif ($country->advisory->level == 4)
+                            <div style="background-color:#FF0000;" class="p-2">
+                                <p class=" text-white fw-bold">{{$country->advisory->legend}}</p>
+                            </div>
+                            @endif
                             <div>
                                 {!!$country->advisory->coment!!}
                             </div>
@@ -96,10 +149,25 @@
                 </div>
 
             </div>
-
-
             @endif
+            <!--@if ($country->information !=null)-->
+            <!--<div class="accordion mt-3 mb-3" id="accordionExample1">-->
+            <!--    <div class="accordion-item">-->
+            <!--        <h2 class="accordion-header">-->
+            <!--            <button class="accordion-button collapsed patua" type="button" data-bs-toggle="collapse"-->
+            <!--                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">-->
+            <!--                Travel information {{$country->name}}-->
+            <!--            </button>-->
+            <!--        </h2>-->
+            <!--        <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionExample1">-->
+            <!--            <div class="accordion-body">-->
+            <!--                {!!$country->information!!}-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
 
+            <!--</div>-->
+            <!--@endif-->
             <div class="patua p-3">
                 {!!$country->sidebody!!}
             </div>
@@ -113,12 +181,16 @@
 </div>
 
 <div class="container mt-3">
+    @if($country->tour)
     <h3 class="patua mt-3">Inspiring itineraris in {{$country->name}}</h3>
+    @endif
 </div>
 <div class="container mt-3">
-    <h3 class="patua mt-3">Insteresting locations in {{$country->name}}</h3>
+
     <div class="row">
-        @if ($country->location)
+        @if(count($country->location))
+        <h3 class="patua mt-3">Insteresting locations in {{$country->name}}</h3>
+
         @foreach ($country->location as $item)
         <div class="col-md-3">
             <a href="" class="nav-link  " data-bs-toggle="modal" data-bs-target="#Modal{{$item->id}}">
@@ -161,9 +233,10 @@
 
 </div>
 <div class="container mt-3">
-    <h3 class="patua mt-3">Experiences and atractions in {{$country->name}}</h3>
+
     <div class="row">
-        @if ($country->experience)
+        @if (count($country->experience))
+        <h3 class="patua mt-3">Experiences and atractions in {{$country->name}}</h3>
         @foreach ($country->experience as $item)
         <div class="col-md-3">
             <a href="" class="nav-link  " data-bs-toggle="modal" data-bs-target="#Modalo{{$item->id}}">
@@ -205,11 +278,13 @@
     </div>
 </div>
 <div class="container mt-3">
+    @if (count($country->sight))
     <h3 class="patua mt-3">Essential sights in {{$country->name}}</h3>
-    <div class="row">
-        @if ($country->sight)
+
+
+    @if (count($country->sight) <= 4) <div class="row">
         @foreach ($country->sight as $sight)
-        <div class="col-md-4 mb-3">
+        <div class="col-md-3 mb-3">
             <a href="{{route('sight',$sight)}}" class="nav-link  ">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
@@ -221,13 +296,35 @@
 
         </div>
         @endforeach
-        @endif
+</div>
+
+@else
+<div class="container">
+    <div class="owl-carousel owl-theme mb-3">
+        @foreach ($country->sight as $sight)
+
+        <a href="{{route('sight',$sight)}}" class="nav-link  ">
+            <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
+
+                <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
+
+            </div>
+        </a>
+
+
+        @endforeach
     </div>
+    @endif
+
+    @endif
+
 </div>
 <div class="container mt-3">
-    <h3 class="patua mt-3">Luxury acomodations in {{$country->name}}</h3>
+
     <div class="row mb-3">
-        @if ($country->acommodation)
+        @if (count($country->acommodation))
+        <h3 class="patua mt-3">Luxury acomodations in {{$country->name}}</h3>
         @foreach ($country->acommodation as $item)
         <div class="col-md-3">
             <a href="" class="nav-link  " data-bs-toggle="modal" data-bs-target="#Modale{{$item->id}}">
@@ -267,47 +364,37 @@
         @endforeach
         @endif
     </div>
+
+
+
 </div>
-
-
-
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mx-auto">
-
-            <div id="map" class="" style="width:100%;height:400px">
-            </div>
-
-        </div>
-    </div>
-</div>
-{{-- <div class="container">
-    <h3 class="patua mt-3">Travel information {{$country->name}}</h3>
-    <div class="row">
-        <div class="col-md-10 mx-auto">
-            <div>
-                {!!$country->information!!}
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <a href="" class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">Start to
+        <div class="col-md-8 mx-auto d-flex justify-content-center">
+            <a href="" class="btn btn-outline-dark border border-dark mt-5 mb-5 patua px-3 py-2 rounded-pill">Start to
                 plan my
                 trip</a>
-        </div>
-    </div>
-</div> --}}
-<div class="container">
-    <h3 class="patua mt-3">Other nearby destinations</h3>
-    <div class="row mb-3">
 
-        @if ($country->nearby)
+
+
+        </div>
+        <hr>
+    </div>
+</div>
+
+<div class="container">
+    @if ($country->nearby)
+    <h3 class="patua mt-3">Other nearby destinations</h3>
+    @if (count($country->nearby)<=4) <div class="row mb-3">
+
+
         @foreach ($country->nearby as $item)
         @php
         $ito = \App\Models\Country::where('name',$item)->get();
         @endphp
         @foreach ($ito as $it)
-        <div class="col-md-3">
-            <a href="{{route('country',$it)}}">
+        <div class="col-md-3 mb-2">
+            <a href="{{route('country',$it)}}" class="nav-link ">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($it->image) }});background-size:cover; height:250px;">
 
@@ -319,14 +406,44 @@
         @endforeach
 
         @endforeach
-        @endif
 
 
-    </div>
 
+</div>
+@else
+
+<div class="mb-3 owl-carousel owl-theme">
+
+
+    @foreach ($country->nearby as $item)
+    @php
+    $ito = \App\Models\Country::where('name',$item)->get();
+    @endphp
+    @foreach ($ito as $it)
+
+    <a href="{{route('country',$it)}}" class="nav-link">
+        <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+            style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($it->image) }});background-size:cover; height:250px;">
+
+            <h5 class="fs-4 patua text-center text-white">{{$it->name}}</h5>
+        </div>
+    </a>
+
+
+    @endforeach
+
+    @endforeach
+
+
+
+</div>
+@endif
+
+@endif
 </div>
 
 
+</div>
 @endsection
 @section('js')
 <script>
@@ -344,5 +461,27 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
     // .openPopup();
 </script>
+<script>
+    $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay:true,
+            responsive: {
+             
+                900: {
+                items: 4,
+                nav: false
+                },
+                0: {
+                items: 1,
+                nav: false
+                },
 
+
+            }
+        });
+   
+
+</script>
 @endsection

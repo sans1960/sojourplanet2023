@@ -41,6 +41,7 @@ Route::get('/the-tryp-of-your-dreams', [FrontController::class, 'dream'])->name(
 Route::get('/destinations/{destination}', [FrontController::class, 'destination'])->name('destination');
 Route::get('/countries/{country}', [FrontController::class, 'country'])->name('country');
 Route::get('/countries', [FrontController::class, 'countries'])->name('countries');
+Route::get('/travelstate', [FrontController::class, 'travelState'])->name('travelstate');
 Route::get('/search/{q}', [FrontController::class, 'search'])->name('search');
 Route::get('/blogs', [FrontController::class, 'allblogs'])->name('blogs');
 Route::get('/sights', [FrontController::class, 'allsights'])->name('sights');
