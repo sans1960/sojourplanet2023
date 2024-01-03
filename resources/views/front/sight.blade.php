@@ -27,7 +27,7 @@
                 <img src="{{ Storage::url($sight->image) }}" class="figure-img img-fluid  d-block mx-auto" alt="...">
                 <figcaption class="figure-caption text-center">{{ $sight->caption }}</figcaption>
             </figure>
-            <h3 class="text-center patua"> {{ $sight->title }}</h3>
+            <h4 class="text-center patua"> {{ $sight->title }}</h4>
             <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
                 <a class="nav-link " href="{{ route('destinationsights', $sight->destination) }}">
                     <h4 class="patua ">{{ $sight->destination->name }}</h4>

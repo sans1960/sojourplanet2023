@@ -9,13 +9,13 @@
 <div class="container-fluid  d-flex justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($destination->image) }});height:300px; background-size:cover;background-position:center center;">
 
-    <h1 class="text-white patua">{{ $destination->title }}</h1>
+    <h4 class="text-white patua text-center">{{ $destination->title }}</h4>
 
 </div>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-10 mx-auto d-flex justify-content-center align-items-center">
-            <h3 class="patua text-center">{{ $destination->subtitle }}</h3>
+            <h4 class="patua text-center">{{ $destination->subtitle }}</h4>
         </div>
     </div>
 </div>
@@ -55,8 +55,8 @@
     <h4 class="text-center patua mt-2"> Countries of {{ $destination->name }}</h4>
     <div class="row">
         <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
-            @foreach ($destination->country as $country)
-            <a href="{{route('country',$country)}}" class="nav-link me-3">{{ $country->name }}</a>
+            @foreach ($destination->country->sortBy('name') as $country)
+            <a href="{{route('country',$country)}}" class="nav-link me-3 ">{{ $country->name }}</a>
 
             @endforeach
         </div>
@@ -64,7 +64,7 @@
 
 </div>
 <div class="container mt-5">
-    <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-3">Lasts
+    <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-4">Lasts
         Sights from {{ $destination->name }} published</a>
 
     <div class="row mt-5 ">

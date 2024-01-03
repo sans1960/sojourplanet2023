@@ -8,7 +8,7 @@
 <div class="container-fluid  d-flex flex-column justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:400px; background-size:cover;background-position:center center;">
 
-    <h1 class="text-white patua">{{$country->intro}} {{ $country->name }}</h1>
+    <h1 class="text-white patua text-center">{{$country->intro}} {{ $country->name }}</h1>
     <a href="" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to
         plan
         my
@@ -23,10 +23,14 @@
     <div class="row">
         <div class="col-md-6 p-5">
             <h3 class="patua mt-3">Overview</h3>
-            <div class="texto fs-5 open">
+            <div class="texto  open p-4">
                 {!! \Illuminate\Support\Str::limit( $country->description, 1000 );!!}
-                <a href="" class="nav-link fw-bold text-success" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">Read more</a>
+                <div class="d-flex justify-content-end">
+                    <a href="" class="nav-link patua text-success " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Read
+                        more</a>
+                </div>
+
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -104,8 +108,7 @@
                 </div>
                 @endif
             </div>
-            <div id="map" class="" style="width:100%;height:400px">
-            </div>
+
             <div class="row">
 
             </div>
@@ -122,20 +125,24 @@
                     <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             @if ($country->advisory->level == 1)
-                            <div style="background-color:#003875;" class="p-2">
-                                <p class="text-white fw-bold">{{$country->advisory->legend}}</p>
+                            <div style="background-color:#003875;"
+                                class="p-2 d-flex justify-content-center align-items-center ">
+                                <h6 class="text-white patua">{{$country->advisory->legend}}</h6>
                             </div>
                             @elseif ($country->advisory->level == 2)
-                            <div style="background-color:#FFCC66;" class="p-2">
-                                <p class=" fw-bold">{{$country->advisory->legend}}</p>
+                            <div style="background-color:#FFCC66;"
+                                class="p-2 d-flex justify-content-center align-items-center">
+                                <h6 class="patua ">{{$country->advisory->legend}}</h6>
                             </div>
                             @elseif ($country->advisory->level == 3)
-                            <div style="background-color:#FF9900;" class="p-2">
-                                <p class=" text-white fw-bold">{{$country->advisory->legend}}</p>
+                            <div style="background-color:#FF9900;"
+                                class="p-2 d-flex justify-content-center align-items-center">
+                                <h6 class=" text-white patua">{{$country->advisory->legend}}</h6>
                             </div>
                             @elseif ($country->advisory->level == 4)
-                            <div style="background-color:#FF0000;" class="p-2">
-                                <p class=" text-white fw-bold">{{$country->advisory->legend}}</p>
+                            <div style="background-color:#FF0000;"
+                                class="p-2 d-flex justify-content-center align-items-center">
+                                <h6 class="patua text-white">{{$country->advisory->legend}}</h6>
                             </div>
                             @endif
                             <div>
@@ -175,6 +182,12 @@
                 <a href="" class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">Start to
                     plan my
                     trip</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div id="map" class="" style="width:100%;height:400px">
             </div>
         </div>
     </div>

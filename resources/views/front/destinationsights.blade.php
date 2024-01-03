@@ -27,13 +27,13 @@
     @include('front.layouts.navbardestinations', [
     'destinations' => ($destinations = App\Models\Destination::all())
     ])
-    <h1 class="text-center patua mt-2"> Sights around {{ $destination->name }}</h1>
+    <h4 class="text-center patua mt-2"> Sights around {{ $destination->name }}</h4>
 
     <div class="row">
         <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
             @foreach ($countries->sortBy('name') as $country)
             @if (count($country->sight))
-            <a href="{{ route('countrysights', $country) }}" class="nav-link me-3">{{ $country->name }}</a>
+            <a href="{{ route('countrysights', $country) }}" class="nav-link me-3 ">{{ $country->name }}</a>
             @endif
 
             @endforeach

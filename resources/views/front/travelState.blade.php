@@ -5,7 +5,7 @@
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-white">Travel.State.Gov recommendations</h4>
+    <h4 class="patua text-center text-white">Travel.State.Gov recommendations</h4>
 
 </div>
 <div class="container">
@@ -43,7 +43,8 @@
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color: #003875" class="patua p-2 text-white">Level 1 - Exercise Normal Precautions.
+            <h4 style="background-color: #003875" class="patua p-2 text-white text-center">Level 1 - Exercise Normal
+                Precautions.
             </h4>
             <p class="open texto">This is the lowest warning level for safety risks. Any international travel carries
                 some risk. Conditions in other
@@ -60,7 +61,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color:#FFCC66" class="patua p-2 ">Level 2 - Exercise Increased Caution.
+            <h4 style="background-color:#FFCC66" class="patua p-2 text-center">Level 2 - Exercise Increased Caution.
             </h4>
             <p class="open texto">Be aware of heightened security risks. The State Department offers additional advice
                 for travelers in these areas in the
@@ -77,7 +78,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color:#FF9900" class="patua p-2 text-white">Level 3 - Reconsider Travel.
+            <h4 style="background-color:#FF9900" class="patua p-2 text-white text-center">Level 3 - Reconsider Travel.
             </h4>
             <p class="open texto">Avoid travel due to serious security risks. The Department of State offers additional
                 advice for travelers in these
@@ -94,7 +95,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color:#FF0000" class="patua p-2 text-white">Level 4 - Do not travel.
+            <h4 style="background-color:#FF0000" class="patua p-2 text-white text-center">Level 4 - Do not travel.
             </h4>
             <p class="open texto">This is the highest level of warning due to the increased likelihood of
                 life-threatening hazards. During an emergency,

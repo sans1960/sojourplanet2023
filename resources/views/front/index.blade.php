@@ -9,7 +9,7 @@ Home
 <div class=" owl-carousel owl-theme text-center">
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/estatuas.jpg')}});height: 500px;background-position:center;">
-        <h1 class="patua text-white display-2">The world is yours.</h1>
+        <h4 class="patua text-white display-2">The world is yours.</h4>
         <h3 class="open text-white p-3">We are specialists in tailor-made trips around the world.</h3>
         <a href="{{route('contactos.general.create')}}"
             class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan
@@ -18,7 +18,7 @@ Home
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/flamencos.jpg')}});height: 500px;background-position:center;">
-        <h1 class="patua text-white display-2">We create unique trips.</h1>
+        <h4 class="patua text-white display-2">We create unique trips.</h4>
         <h3 class="open text-white p-3">We design travel experiences that provide you with special moments that generate
             fond memories for life.</h3>
         <a href="{{route('contactos.general.create')}}"
@@ -28,7 +28,7 @@ Home
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/moais.jpg')}});height: 500px;background-position:center;">
-        <h1 class="patua text-white display-2">Local knowledge.</h1>
+        <h4 class="patua text-white display-2">Local knowledge.</h4>
         <h3 class="open text-white p-3">Our experts will create unique, authentic and engaging itineraries specifically
             for you. In any destination in the world.</h3>
         <a href="{{route('contactos.general.create')}}"
@@ -38,7 +38,7 @@ Home
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/pariss.jpg')}});height: 500px;background-position:center;">
-        <h1 class="patua text-white display-2">Planning is our business.</h1>
+        <h4 class="patua text-white display-2">Planning is our business.</h4>
         <h3 class="open text-white p-3">We create unique itineraries for demanding clients who want advice and guidance
             in planning their vacations.</h3>
         <a href="{{route('contactos.general.create')}}"
@@ -48,7 +48,7 @@ Home
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
         style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/salar-uyuni.jpg')}});height: 500px;background-position:center;">
-        <h1 class="patua text-white display-2">PREMIUM experience.</h1>
+        <h4 class="patua text-white display-2">PREMIUM experience.</h4>
         <h3 class="open text-white p-3">Our specialists guarantee all services with a PREMIUM and quality standard.</h3>
         <a href="{{route('contactos.general.create')}}"
             class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to plan
@@ -158,7 +158,7 @@ Home
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-8 text-center p-3">
-            <h1 class="patua mt-3">Welcome to Sojournplanet</h1>
+            <h4 class="patua text-center mt-3">Welcome to Sojournplanet</h4>
             <p class="open fs-5 mt-3">We believe that trips should be as individual as you, where every detail counts
                 for a unique experience. This is the essence of our business.</p>
             <a href="{{route('contactos.general.create')}}"
@@ -222,7 +222,7 @@ Home
 
         </div>
         <div class="col-md-8 mx-auto mt-2">
-            <h1 class="text-center patua">Subscribe</h1>
+            <h4 class="text-center patua">Subscribe</h4>
             <p class="text-center open">Sign up to hear from us about specials, news and promotions.</p>
             <form action="{{ route('contactos.list.store') }}" method="post">
                 <x-honeypot />

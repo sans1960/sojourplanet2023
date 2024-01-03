@@ -25,7 +25,7 @@
 @section('content')
 <div class="container-fluid d-flex justify-content-center align-items-end"
     style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover;height:300px; background-position:center;">
-    <h1 class="text-white patua text-center">{{ $tour->name }}</h1>
+    <h4 class="text-white patua text-center">{{ $tour->name }}</h4>
 </div>
 <div class="container-fluid" style="background-color: #D8D8D8;">
     <div class="row ">
@@ -136,7 +136,7 @@
     <div class="row">
         <div class="col-md-8 d-flex flex-column mt-3 mx-auto">
 
-            <h2 class="patua mt-3 ">{{ $tour->title }}</h2>
+            <h4 class="patua mt-3 ">{{ $tour->title }}</h4>
             <h4 class="open fw-bold fs-5 mt-3 ">{{ $tour->subtitle }}</h4>
             <div class="open texto fs-5">
                 {!! $tour->description !!}

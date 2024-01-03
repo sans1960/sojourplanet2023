@@ -12,6 +12,7 @@
     <li>
       <hr class="dropdown-divider">
     </li>
+    <li><a class="dropdown-item" href="{{url('countries')}}">All Desinations A to Z</a></li>
     <li><a class="dropdown-item" href="{{url('countries/antarctica')}}">Antarctica</a></li>
   </ul>
 </li>
