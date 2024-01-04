@@ -3,6 +3,7 @@
     Destinations
   </a>
   <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="{{url('countries/antarctica')}}">Antarctica</a></li>
     @foreach ($destinations as $destination)
     @if ($destination->name != 'Antarctica')
     <li><a class="dropdown-item fs-6" href="{{route('destination',$destination)}}">{{$destination->name}}</a></li>
@@ -12,7 +13,7 @@
     <li>
       <hr class="dropdown-divider">
     </li>
-    <li><a class="dropdown-item" href="{{url('countries')}}">All Desinations A to Z</a></li>
-    <li><a class="dropdown-item" href="{{url('countries/antarctica')}}">Antarctica</a></li>
+    <li><a class="dropdown-item" href="{{url('countries')}}">Desinations A to Z</a></li>
+
   </ul>
 </li>

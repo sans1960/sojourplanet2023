@@ -71,14 +71,6 @@ Home
     @endif
 
 </div>
-<div class="container mt-3">
-    <div class="row">
-        <div class="col-md-12">
-            <a href="{{route('countries')}}">All countries</a>
-        </div>
-    </div>
-
-</div>
 
 
 

@@ -1,6 +1,6 @@
 @extends('front.layouts.base')
 @section('title')
-{{ $country->name }}
+{{$country->intro}} {{ $country->name }}
 
 
 @endsection
@@ -21,12 +21,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 p-5">
-            <h3 class="patua mt-3">Overview</h3>
-            <div class="texto  open p-4">
-                {!! \Illuminate\Support\Str::limit( $country->description, 1000 );!!}
+        <div class="col-md-6 py-2 ">
+            <h4 class="patua ">Overview</h4>
+            <div class="texto  open py-4">
+
+                {!! \Illuminate\Support\Str::limit( $country->description, 500 );!!}
                 <div class="d-flex justify-content-end">
-                    <a href="" class="nav-link patua text-success " data-bs-toggle="modal"
+                    <a href="" class="nav-link patua text-secondary me-2" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">Read
                         more</a>
                 </div>
@@ -37,12 +38,16 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">{{$country->name}}</h1>
+                                <h1 class="modal-title fs-5 patua" id="exampleModalLabel">{{$country->intro}} {{
+                                    $country->name }}</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                {!!$country->description!!}
+                                <div class="open texto p-2">
+                                    {!!$country->description!!}
+                                </div>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -53,9 +58,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 p-5">
-            <h3 class="patua mt-3">Key facts</h3>
-            <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6 py-2 ">
+
+            <div class="row d-flex justify-content-center align-items-center px-2">
+                <h4 class="patua">Key facts</h4>
                 @if ($country->population !=null)
                 <div class="col d-flex flex-column justify-content-center align-items-center p-2">
                     <i class="bi bi-people" style="font-size: 1.5em;"></i>
@@ -157,24 +163,7 @@
 
             </div>
             @endif
-            <!--@if ($country->information !=null)-->
-            <!--<div class="accordion mt-3 mb-3" id="accordionExample1">-->
-            <!--    <div class="accordion-item">-->
-            <!--        <h2 class="accordion-header">-->
-            <!--            <button class="accordion-button collapsed patua" type="button" data-bs-toggle="collapse"-->
-            <!--                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">-->
-            <!--                Travel information {{$country->name}}-->
-            <!--            </button>-->
-            <!--        </h2>-->
-            <!--        <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionExample1">-->
-            <!--            <div class="accordion-body">-->
-            <!--                {!!$country->information!!}-->
-            <!--            </div>-->
-            <!--        </div>-->
-            <!--    </div>-->
 
-            <!--</div>-->
-            <!--@endif-->
             <div class="patua p-3">
                 {!!$country->sidebody!!}
             </div>
@@ -187,8 +176,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <div id="map" class="" style="width:100%;height:400px">
-            </div>
+
         </div>
     </div>
 </div>
@@ -380,6 +368,14 @@
 
 
 
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map" class="" style="width:100%;height:400px">
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="row">

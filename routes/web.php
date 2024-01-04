@@ -37,7 +37,7 @@ use App\Http\Controllers\UserController;
 Route::get('/', [FrontController::class, 'index'])->name('index');
 Route::get('/about-us', [FrontController::class, 'about'])->name('about');
 Route::get('/tailor-made-trips', [FrontController::class, 'taylor'])->name('taylor');
-Route::get('/the-tryp-of-your-dreams', [FrontController::class, 'dream'])->name('dream');
+Route::get('/the-trip-of-your-dreams', [FrontController::class, 'dream'])->name('dream');
 Route::get('/destinations/{destination}', [FrontController::class, 'destination'])->name('destination');
 Route::get('/countries/{country}', [FrontController::class, 'country'])->name('country');
 Route::get('/countries', [FrontController::class, 'countries'])->name('countries');
