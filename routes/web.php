@@ -42,6 +42,12 @@ Route::get('/destinations/{destination}', [FrontController::class, 'destination'
 Route::get('/countries/{country}', [FrontController::class, 'country'])->name('country');
 Route::get('/countries', [FrontController::class, 'countries'])->name('countries');
 Route::get('/travelstate', [FrontController::class, 'travelState'])->name('travelstate');
+Route::get('/images-copyright', [FrontController::class, 'imagesCopy'])->name('imagescopy');
+Route::get('/terms-conditions', [FrontController::class, 'terms'])->name('terms');
+Route::get('/privacy-policy', [FrontController::class, 'private'])->name('private');
+Route::get('/faqs', [FrontController::class, 'faqs'])->name('faqs');
+
+
 Route::get('/search/{q}', [FrontController::class, 'search'])->name('search');
 Route::get('/blogs', [FrontController::class, 'allblogs'])->name('blogs');
 Route::get('/sights', [FrontController::class, 'allsights'])->name('sights');
