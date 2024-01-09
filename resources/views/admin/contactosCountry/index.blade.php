@@ -1,0 +1,102 @@
+@extends('layouts.admin')
+@section('title')
+{{ __('Contactos') }}
+@endsection
+@section('content')
+<div class="container">
+    <div class="row ">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header">{{ __('All Contactos Countries') }}</div>
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+
+                        <th class="">Fecha</th>
+                        <th class="">Name</th>
+                        <th class="">Surname</th>
+                        <th class="">Country</th>
+                        <th class="">Email</th>
+                        <th class="">Phone</th>
+                        <th class="">IP</th>
+
+
+
+
+                        <th colspan="2" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach ($contacts as $contact)
+                    <tr>
+                        <td>{{ $contact->created_at }}</td>
+                        <td>{{ $contact->name }}</td>
+                        <td>{{ $contact->surname }}</td>
+                        <td>{{ $contact->country->name }}</td>
+                        <td>{{ $contact->email}}</td>
+                        <td>+{{$contact->country_code->phone_code.$contact->phone}}</td>
+                        <td>{{$contact->ipAdress}}</td>
+
+                        <td>
+                            <a href="{{ route('contactos.country.show', $contact->id) }}"
+                                class="btn btn-success btn-sm">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                        </td>
+
+                        <td>
+                            <form action="{{ route('contactos.country.destroy', $contact->id) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger btn-sm show_confirm">
+                                    <i class="bi bi-trash3"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@endsection
+@section('js')
+<script type="text/javascript">
+    $('.show_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Are you sure you want to delete this record?`,
+                    text: "If you delete this, it will be gone forever.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    }
+                });
+        });
+</script>
+@endsection

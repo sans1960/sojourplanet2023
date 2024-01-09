@@ -23,6 +23,7 @@ use App\Http\Controllers\Admin\ListContactController;
 use App\Http\Controllers\Admin\GeneralContactController;
 use App\Http\Controllers\Admin\SightContactController;
 use App\Http\Controllers\Admin\DestinationContactController;
+use App\Http\Controllers\Admin\CountryContactController;
 use App\Http\Controllers\Admin\TourContactController;
 use App\Http\Controllers\Admin\LocationController;
 use App\Http\Controllers\Admin\ExperienceController;
@@ -66,6 +67,7 @@ Route::get('tag/{tag}', [FrontController::class, 'tag'])->name('tagsights');
 Route::get('contact/sight/{sight}', [FrontController::class, 'contactSight'])->name('contactsight');
 Route::get('contact/destination/{destination}', [FrontController::class, 'contactDestination'])->name('contactdestination');
 Route::get('contact/tour/{tour}', [FrontController::class, 'contactTour'])->name('contacttour');
+Route::get('contact/country/{country}', [FrontController::class, 'contactCountry'])->name('contactcountry');
 
 Auth::routes(['verify' => true]);
 
@@ -104,6 +106,7 @@ Route::group(['middleware' => 'admin'], function () {
   Route::resource('admin/contactos-destinations', DestinationContactController::class)->names('contactos.destination');
   Route::resource('admin/contactos-sight', SightContactController::class)->names('contactos.sight');
   Route::resource('admin/contactos-tour', TourContactController::class)->names('contactos.tour');
+  Route::resource('admin/contactos-country', CountryContactController::class)->names('contactos.country');
 });
 
 

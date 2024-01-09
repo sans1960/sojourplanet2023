@@ -45,6 +45,10 @@ class Country extends Model
     {
         return $this->hasMany(Acommodation::class);
     }
+    public function countrycontact(): HasMany
+    {
+        return $this->hasMany(CountryContact::class);
+    }
     protected $casts = [
         'nearby' => 'array'
     ];

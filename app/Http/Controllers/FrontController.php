@@ -169,6 +169,11 @@ class FrontController extends Controller
         $countrycodes = CountryCode::all();
         return view('forms.tour', compact('tour', 'countrycodes'));
     }
+    public function contactCountry(Country $country)
+    {
+        $countrycodes = CountryCode::all();
+        return view('forms.country', compact('country', 'countrycodes'));
+    }
     public function search($q)
     {
 

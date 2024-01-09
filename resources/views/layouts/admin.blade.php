@@ -167,6 +167,11 @@
                                         {{ __('Tour Contacts') }}
                                     </a>
                                 </li>
+                                <li>
+                                    <a class="nav-link text-dark" href="{{ route('contactos.country.index') }}">
+                                        {{ __('Country Contacts') }}
+                                    </a>
+                                </li>
 
 
 

@@ -9,7 +9,8 @@
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:400px; background-size:cover;background-position:center center;">
 
     <h1 class="text-white patua text-center">{{$country->intro}} {{ $country->name }}</h1>
-    <a href="" class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to
+    <a href="{{route('contactcountry',$country)}}"
+        class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to
         plan
         my
         trip</a>
@@ -168,7 +169,8 @@
                 {!!$country->sidebody!!}
             </div>
             <div class="d-flex justify-content-center">
-                <a href="" class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">Start to
+                <a href="{{route('contactcountry',$country)}}"
+                    class="btn btn-outline-dark border border-dark mt-5 patua px-3 py-2 rounded-pill">Start to
                     plan my
                     trip</a>
             </div>
@@ -380,7 +382,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto d-flex justify-content-center">
-            <a href="" class="btn btn-outline-dark border border-dark mt-5 mb-5 patua px-3 py-2 rounded-pill">Start to
+            <a href="{{route('contactcountry',$country)}}"
+                class="btn btn-outline-dark border border-dark mt-5 mb-5 patua px-3 py-2 rounded-pill">Start to
                 plan my
                 trip</a>
 
