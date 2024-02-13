@@ -51,7 +51,7 @@ All countries
 
         <p class="open">{{count($countries)}} results</p>
         <div class="d-flex flex-row flex-wrap p-2 justify-content-center mb-5">
-            @foreach ($countries->sortBy('name') as $country)
+            @foreach ($countries->sortBy('slug') as $country)
             <a href="{{route('country',$country)}}" class="ms-3 nav-link patua">{{$country->name}}</a>
             @endforeach
         </div>

@@ -6,17 +6,19 @@ Tailor-made trip to {{$destination->name}}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
 <style>
     .hide {
-  display: none;
-}
-#valid-msg {
-  color: #00c900;
-}
-    </style>     
+        display: none;
+    }
+
+    #valid-msg {
+        color: #00c900;
+    }
+</style>
 @endsection
 @section('content')
-<div class="container-fluid  d-flex justify-content-center align-items-center"  style=" background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($destination->image)}});height:300px; background-size:cover;background-position:center center;" >
-       
-    <h1 class="text-white">{{$destination->name}}</h1>
+<div class="container-fluid  d-flex justify-content-center align-items-center"
+    style=" background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($destination->image)}});height:300px; background-size:cover;background-position:center center;">
+
+    <h4 class="text-white patua">{{$destination->name}}</h4>
 
 </div>
 <div class="container">
@@ -32,243 +34,281 @@ Tailor-made trip to {{$destination->name}}
                         <div class="col-md-4 mb-2 open">
                             <label for="name" class="form-label">Trait</label>
                             <select class="form-select form-select" name="trait" aria-label="Default select example">
-                              <option ></option>
-                              <option value=""></option>
-                              <option value="Dr" {{ "Dr" === old('trait') ? 'selected' : '' }}>Dr</option>
-                              <option value="Mr" {{ "Mr" === old('trait') ? 'selected' : '' }}>Mr</option>
-                              <option value="Mrs" {{ "Mrs" === old('trait') ? 'selected' : '' }}>Mrs</option>
-                              <option value="Ms" {{ "Ms" === old('trait') ? 'selected' : '' }}>Ms</option>
-                              <option value="Mss" {{ "Mss" === old('trait') ? 'selected' : '' }}>Mss</option>
+                                <option></option>
+                                <option value=""></option>
+                                <option value="Dr" {{ "Dr"===old('trait') ? 'selected' : '' }}>Dr</option>
+                                <option value="Mr" {{ "Mr"===old('trait') ? 'selected' : '' }}>Mr</option>
+                                <option value="Mrs" {{ "Mrs"===old('trait') ? 'selected' : '' }}>Mrs</option>
+                                <option value="Ms" {{ "Ms"===old('trait') ? 'selected' : '' }}>Ms</option>
+                                <option value="Mss" {{ "Mss"===old('trait') ? 'selected' : '' }}>Mss</option>
                             </select>
-                          </div>
-                          <div class="col-md-4 mb-2 open">
-                            
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" name="name" class="form-control"  id="name" placeholder="Name*" value="{{old('name')}}">
-                                @if ($errors->has('name'))
-                                <span class="text-danger">{{ $errors->first('name') }}</span>
-                                @endif
-                              
-                          </div>
+                        </div>
+                        <div class="col-md-4 mb-2 open">
+
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Name*"
+                                value="{{old('name')}}">
+                            @if ($errors->has('name'))
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                            @endif
+
+                        </div>
                         <div class="col-md-4 mb-2 open">
                             <label for="surname" class="form-label">Surname</label>
-                            <input type="text" name="surname" value="{{old('surname')}}" class="form-control"  id="name" placeholder="Surname*">
+                            <input type="text" name="surname" value="{{old('surname')}}" class="form-control" id="name"
+                                placeholder="Surname*">
                             @if ($errors->has('surname'))
                             <span class="text-danger">{{ $errors->first('surname') }}</span>
                             @endif
-                          </div>
-                          
+                        </div>
+
                     </div>
                     <div class="row mt-2">
-                         <div class="col-md-6 mb-2 open">
+                        <div class="col-md-6 mb-2 open">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" value="{{old('email')}}" class="form-control"  id="email" placeholder="Email*">
+                            <input type="email" name="email" value="{{old('email')}}" class="form-control" id="email"
+                                placeholder="Email*">
                             @if ($errors->has('email'))
                             <span class="text-danger">{{ $errors->first('email') }}</span>
                             @endif
-                         </div>
-                         <div class="col-md-6 mb-2">
+                        </div>
+                        <div class="col-md-6 mb-2">
                             <h6 class="card-title">Phone Number:</h6>
-                            <input id="phone" type="tel" name="phone" value="{{old('phone')}}"class="form-control">
+                            <input id="phone" type="tel" name="phone" value="{{old('phone')}}" class="form-control">
                             <span id="valid-msg" class="hide">✓ Valid</span>
                             <span id="error-msg" class="hide"></span>
                             @if ($errors->has('phone'))
                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                             @endif
-                         </div>
+                        </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-4 mb-2 open">
                             <label for="" class="form-label">Country</label>
                             <select class="form-select " name="country_code_id" aria-label="Default select example">
-                              <option ></option>
-                              @foreach ($countrycodes as $countrycode)
-                              <option value="{{$countrycode->id}}" {{ old('country_code_id') == $countrycode->id ? 'selected' : '' }} >{{$countrycode->country}}</option>
-                          @endforeach
+                                <option></option>
+                                @foreach ($countrycodes as $countrycode)
+                                <option value="{{$countrycode->id}}" {{ old('country_code_id')==$countrycode->id ?
+                                    'selected' : '' }} >{{$countrycode->country}}</option>
+                                @endforeach
                             </select>
                             @if ($errors->has('country_code_id'))
                             <span class="text-danger">{{ $errors->first('country_code_id') }}</span>
                             @endif
-                          </div>
-                       
-                       <div class="col-md-4 mb-2 open">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" value="{{old('city')}}" name="city" class="form-control"  id="city" placeholder="City">
-                       
-                       </div>
-                       <div class="col-md-4 mb-2">
-                        <label for="zipcode" class="form-label">Zipcode</label>
-                        <input type="text"  value="{{old('zipcode')}}" name="zipcode" class="form-control"  id="zipcode" placeholder="Zipcode">
-                        @if ($errors->has('zipcode'))
-                        <span class="text-danger">{{ $errors->first('zipcode') }}</span>
-                        @endif
-                       </div>
-                       
+                        </div>
+
+                        <div class="col-md-4 mb-2 open">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" value="{{old('city')}}" name="city" class="form-control" id="city"
+                                placeholder="City">
+
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <label for="zipcode" class="form-label">Zipcode</label>
+                            <input type="text" value="{{old('zipcode')}}" name="zipcode" class="form-control"
+                                id="zipcode" placeholder="Zipcode">
+                            @if ($errors->has('zipcode'))
+                            <span class="text-danger">{{ $errors->first('zipcode') }}</span>
+                            @endif
+                        </div>
+
                     </div>
                     <div class="row mt-2">
                         <h5 class="patua">Your travel plans</h5>
                         <p>Later will define the departure date.</p>
-                       <div class="col-md-4 open">
-                        <label for="" class="form-label">Duration</label>
-                        <select class="form-select mb-3"  name="duration">
-                            <option > </option>
-                            <option value=""></option>
-                            <option value="About a week" {{ "About a week" === old('duration') ? 'selected' : '' }} >About a week</option>
-                            <option value="Two or three weeks"  {{ "Two or three weeks" === old('duration') ? 'selected' : '' }} >Two or three weeks</option>
-                            <option value="One month or more"  {{ "One month or more" === old('duration') ? 'selected' : '' }}  >One month or more</option>
-                          </select>
-                       </div>
-                       <div class="col-md-4 open">
-                        <label for="" class="form-label">Season</label>
-                        <select class="form-select  mb-3" name="season" >
-                            <option ></option>
-                            <option value=""></option>
-                            <option value="Spring" {{ "Spring" === old('season') ? 'selected' : '' }} >Spring</option>
-                            <option value="Summer" {{ "Summer" === old('season') ? 'selected' : '' }} >Summer</option>
-                            <option value="Winter" {{ "Winter" === old('season') ? 'selected' : '' }}>Winter</option>
-                            <option value="Autumm" {{ "Autumm" === old('season') ? 'selected' : '' }} >Autumm</option>
-                          </select>
-                       </div>
-                       <div class="col-md-4 open">
-                        <label for="" class="form-label">Travelers</label>
-                        <select id="travel" class="form-select mb-3" name="travelers">
-                            <option ></option>
-                            <option value=""></option>
-                            <option value="Individual" {{ "Individual" === old('travelers') ? 'selected' : '' }}>Individual</option>
-                            <option value="Couple" {{ "Couple" === old('travelers') ? 'selected' : '' }} >Couple</option>
-                            <option value="Family" {{ "Family" === old('travelers') ? 'selected' : '' }}>Family</option>
-                            <option value="Group" {{ "Group" === old('travelers') ? 'selected' : '' }}>Group</option>
-                          </select>
-                          <div class="form-check" id="child" style="display: none;">
-                            <input class="form-check-input" type="radio" name="children" value="Travel with children" {{ (old('children') == 'Travel with children') ? 'checked' : ''}} id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Travel with children
-                            </label>
-                          </div>
-                       </div>
+                        <div class="col-md-4 open">
+                            <label for="" class="form-label">Duration</label>
+                            <select class="form-select mb-3" name="duration">
+                                <option> </option>
+                                <option value=""></option>
+                                <option value="About a week" {{ "About a week"===old('duration') ? 'selected' : '' }}>
+                                    About a week</option>
+                                <option value="Two or three weeks" {{ "Two or three weeks"===old('duration')
+                                    ? 'selected' : '' }}>Two or three weeks</option>
+                                <option value="One month or more" {{ "One month or more"===old('duration') ? 'selected'
+                                    : '' }}>One month or more</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 open">
+                            <label for="" class="form-label">Season</label>
+                            <select class="form-select  mb-3" name="season">
+                                <option></option>
+                                <option value=""></option>
+                                <option value="Spring" {{ "Spring"===old('season') ? 'selected' : '' }}>Spring</option>
+                                <option value="Summer" {{ "Summer"===old('season') ? 'selected' : '' }}>Summer</option>
+                                <option value="Winter" {{ "Winter"===old('season') ? 'selected' : '' }}>Winter</option>
+                                <option value="Autumm" {{ "Autumm"===old('season') ? 'selected' : '' }}>Autumm</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 open">
+                            <label for="" class="form-label">Travelers</label>
+                            <select id="travel" class="form-select mb-3" name="travelers">
+                                <option></option>
+                                <option value=""></option>
+                                <option value="Individual" {{ "Individual"===old('travelers') ? 'selected' : '' }}>
+                                    Individual</option>
+                                <option value="Couple" {{ "Couple"===old('travelers') ? 'selected' : '' }}>Couple
+                                </option>
+                                <option value="Family" {{ "Family"===old('travelers') ? 'selected' : '' }}>Family
+                                </option>
+                                <option value="Group" {{ "Group"===old('travelers') ? 'selected' : '' }}>Group</option>
+                            </select>
+                            <div class="form-check" id="child" style="display: none;">
+                                <input class="form-check-input" type="radio" name="children"
+                                    value="Travel with children" {{ (old('children')=='Travel with children' )
+                                    ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Travel with children
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div class="row mt-2">
                         <h5 class="patua"> Trip type </h5>
                         <div class="col-md-3 open">
                             <div class="form-check mt-2">
-                                <input class="form-check-input " type="radio" name="type" value="Leisure" {{ (old('type') == 'Leisure') ? 'checked' : ''}} id="flexRadioDefault1">
-                                <label class="form-check-label  "  data-bs-toggle="tooltip" title="A leisure attractions trip with some cultural and gourmet attractions" for="flexRadioDefault1">
+                                <input class="form-check-input " type="radio" name="type" value="Leisure" {{
+                                    (old('type')=='Leisure' ) ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label  " data-bs-toggle="tooltip"
+                                    title="A leisure attractions trip with some cultural and gourmet attractions"
+                                    for="flexRadioDefault1">
                                     Mostly leisure</label>
-                                   {{-- <p></p> --}}
-                                
-                              </div>
+                                {{-- <p></p> --}}
+
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check mt-2">
-                                <input class="form-check-input " type="radio" name="type" value="Patrimonial" {{ (old('type') == 'Patrimonial') ? 'checked' : ''}} id="flexRadioDefault1">
-                                <label class="form-check-label open "  data-bs-toggle="tooltip" title="A cultural attractions trip with some leisure and gourmet attraction" for="flexRadioDefault1">
+                                <input class="form-check-input " type="radio" name="type" value="Patrimonial" {{
+                                    (old('type')=='Patrimonial' ) ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label open " data-bs-toggle="tooltip"
+                                    title="A cultural attractions trip with some leisure and gourmet attraction"
+                                    for="flexRadioDefault1">
                                     Mostly patrimonial</label>
-                                   
-                                
-                              </div>
+
+
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check mt-2">
-                                <input class="form-check-input " type="radio" name="type" value="Gourmet" {{ (old('type') == 'Gourmet') ? 'checked' : ''}} id="flexRadioDefault1">
-                                <label class="form-check-label open "  data-bs-toggle="tooltip" title="A gourmet attractions trip with some cultural and leisure attractions" for="flexRadioDefault1">
+                                <input class="form-check-input " type="radio" name="type" value="Gourmet" {{
+                                    (old('type')=='Gourmet' ) ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label open " data-bs-toggle="tooltip"
+                                    title="A gourmet attractions trip with some cultural and leisure attractions"
+                                    for="flexRadioDefault1">
                                     Mostly gourmet</label>
-                                   
-                                
-                              </div>
+
+
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check mt-2">
-                                <input class="form-check-input " type="radio" name="type" value="Adventure" {{ (old('type') == 'Adventure') ? 'checked' : ''}} id="flexRadioDefault1">
-                                <label class="form-check-label open "  data-bs-toggle="tooltip" title="With some cultural and gourmet attraction" for="flexRadioDefault1">
+                                <input class="form-check-input " type="radio" name="type" value="Adventure" {{
+                                    (old('type')=='Adventure' ) ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label open " data-bs-toggle="tooltip"
+                                    title="With some cultural and gourmet attraction" for="flexRadioDefault1">
                                     Mostly adventure</label>
-                                   {{-- <p></p> --}}
-                                
-                              </div>
+                                {{-- <p></p> --}}
+
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check mt-2">
-                                <input class="form-check-input " type="radio" name="type" value="Wellness" {{ (old('type') == 'Wellness') ? 'checked' : ''}} id="flexRadioDefault1">
-                                <label class="form-check-label open "  data-bs-toggle="tooltip" title="With some cultural and gourmet attractions" for="flexRadioDefault1">
+                                <input class="form-check-input " type="radio" name="type" value="Wellness" {{
+                                    (old('type')=='Wellness' ) ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label open " data-bs-toggle="tooltip"
+                                    title="With some cultural and gourmet attractions" for="flexRadioDefault1">
                                     Wellness trip</label>
-                                   {{-- <p></p> --}}
-                                
-                              </div>
+                                {{-- <p></p> --}}
+
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-check mt-2">
-                                <input class="form-check-input " type="radio" name="type" value="Traditional" {{ (old('type') == 'Traditional') ? 'checked' : ''}} id="flexRadioDefault1">
-                                <label class="form-check-label open "  data-bs-toggle="tooltip" title="With some cultural and gourmet attractions" for="flexRadioDefault1">
+                                <input class="form-check-input " type="radio" name="type" value="Traditional" {{
+                                    (old('type')=='Traditional' ) ? 'checked' : '' }} id="flexRadioDefault1">
+                                <label class="form-check-label open " data-bs-toggle="tooltip"
+                                    title="With some cultural and gourmet attractions" for="flexRadioDefault1">
                                     Traditional trip</label>
-                                   {{-- <p></p> --}}
-                                
-                              </div>
+                                {{-- <p></p> --}}
+
+                            </div>
                         </div>
 
                     </div>
                     <div class="row mt-2 mb-3">
                         <h5 class="patua">Other specifications</h5>
-                       <div class="col-md-4 open">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" {{ (old('romantic') == 'Romantic trip') ? 'checked' : ''}} name="romantic" value="Romantic trip">
-                            <label class="form-check-label" for="inlineCheckbox1">Romantic trip</label>
-                          </div>
-                       </div>
-                       <div class="col-md-4 open">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" {{ (old('mobility') == 'Reduced mobility') ? 'checked' : ''}} name="mobility" value="Reduced mobility">
-                            <label class="form-check-label" for="inlineCheckbox2">Reduced mobility</label>
-                          </div>
-                       </div>
+                        <div class="col-md-4 open">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" {{
+                                    (old('romantic')=='Romantic trip' ) ? 'checked' : '' }} name="romantic"
+                                    value="Romantic trip">
+                                <label class="form-check-label" for="inlineCheckbox1">Romantic trip</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 open">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" {{
+                                    (old('mobility')=='Reduced mobility' ) ? 'checked' : '' }} name="mobility"
+                                    value="Reduced mobility">
+                                <label class="form-check-label" for="inlineCheckbox2">Reduced mobility</label>
+                            </div>
+                        </div>
                     </div>
                     <input type="hidden" name="destination_id" value="{{ $destination->id }}">
                     <div class="row mb-3">
                         <h5 class="patua">Countries of {{$destination->name}}</h5>
                         <p class="open">Mark the countries of your interst</p>
                         <div class="col-md-12 d-flex flex-wrap mt-3">
-                         @foreach ($destination->country->sortBy('name') as $country)
-                         <div class="form-check me-4">
-                            <input class="form-check-input" type="checkbox" name="countries[]" value="{{$country->name}}"  {{ ( is_array(old('countries')) && in_array($country->name, old('countries')) ) ? 'checked ' : '' }}  id="">
-                            <label class="form-check-label" for="">
-                              {{$country->name}}
-                            </label>
-                          </div>
-                         @endforeach
+                            @foreach ($destination->country->sortBy('name') as $country)
+                            <div class="form-check me-4">
+                                <input class="form-check-input" type="checkbox" name="countries[]"
+                                    value="{{$country->name}}" {{ ( is_array(old('countries')) &&
+                                    in_array($country->name, old('countries')) ) ? 'checked ' : '' }} id="">
+                                <label class="form-check-label" for="">
+                                    {{$country->name}}
+                                </label>
+                            </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-12">
                             <h5 class="patua">Tell us about your plans</h5>
                             <div class="mb-3 open">
-                                <label for="exampleFormControlTextarea1" class="form-label">Countries, places or things you are interested</label>
+                                <label for="exampleFormControlTextarea1" class="form-label">Countries, places or things
+                                    you are interested</label>
                                 <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3">
                                     {{old('message')}}
                                 </textarea>
-                              </div>
+                            </div>
                         </div>
-                
-                     </div>
-                     <div class="d-flex justify-content-center align-items-center flex-column open">
+
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center flex-column open">
                         <div class="form-check">
-                            <input class="form-check-input" {{ (old('legal') == 'on') ? 'checked' : ''}} type="radio" name="legal" value="on" id="flexRadioDefault1">
+                            <input class="form-check-input" {{ (old('legal')=='on' ) ? 'checked' : '' }} type="radio"
+                                name="legal" value="on" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
-                                I aprove the <span><a href="https://sojournplanet.com/privacy-policy"
-                                    target="_blank" style="text-decoration: underline;"><b>Privacy Policy</b></a></span>,
-                                    and the <span><a href="https://sojournplanet.com/terms-and-conditions" target="_blank" 
-                                    style="text-decoration: underline;"><b>Terms and Conditions</b></a></span>
+                                I aprove the <span><a href="https://sojournplanet.com/privacy-policy" target="_blank"
+                                        style="text-decoration: underline;"><b>Privacy Policy</b></a></span>,
+                                and the <span><a href="https://sojournplanet.com/terms-and-conditions" target="_blank"
+                                        style="text-decoration: underline;"><b>Terms and Conditions</b></a></span>
                             </label>
                             @if ($errors->has('legal'))
                             <span class="text-danger">{{ $errors->first('legal') }}</span>
                             @endif
-                          </div>
-                          <button type="submit" class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Send</button>
-                    
-                     </div>
+                        </div>
+                        <button type="submit"
+                            class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Send</button>
+
+                    </div>
 
                 </form>
             </div>
         </div>
     </div>
-    </div> 
+</div>
 @endsection
 @section('js')
 <script>
@@ -322,11 +362,11 @@ input.addEventListener('blur', () => {
 // on keyup / change flag: reset
 input.addEventListener('change', reset);
 input.addEventListener('keyup', reset);
-</script> 
+</script>
 <script>
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
-    </script>  
+</script>
 @endsection

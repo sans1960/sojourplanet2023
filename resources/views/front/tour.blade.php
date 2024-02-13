@@ -32,12 +32,17 @@
 
         <div class="d-flex p-2 col-md-4 justify-content-center align-items-end">
             <p class="patua me-3">Days</p>
+
             <p>{{ $tour->duration }}</p>
         </div>
         <div class="d-flex p-2 col-md-4 justify-content-center align-items-end">
-            <p class="patua me-3">Countries</p>
-            <p>{{ $tour->countries }}</p>
+            <p class="patua me-3">Countries: </p>
+            @foreach ($tour->countries as $country)
+            <p class="open me-3">{{$country->name}}</p>
+            @endforeach
+
         </div>
+
         <div class="d-flex p-2 col-md-4 justify-content-center align-items-end">
             {{-- @foreach ($type as $item)
             <img src="{{ Storage::url($item->icon) }}" alt="" width="50">

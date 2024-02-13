@@ -36,9 +36,9 @@ class StoreRequest extends FormRequest
             'conclusion' => 'required|string',
             'duration' => 'nullable|integer',
             'price' => 'nullable',
-            'countries'=> 'required',
+
             'date' => 'required|date',
-            'type_id'=>'required',
+            'type_id' => 'required',
             'maplatitud' => 'string',
             'maplongitud' => 'string',
             'mapzoom' => 'integer',

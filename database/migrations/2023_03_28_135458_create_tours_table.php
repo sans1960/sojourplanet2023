@@ -26,8 +26,8 @@ return new class extends Migration
             $table->string('city_first');
             $table->string('city_last');
             $table->integer('duration')->nullable();
-            $table->decimal('price',10,2)->nullable();
-            $table->string('countries');
+            $table->decimal('price', 10, 2)->nullable();
+
             $table->date('date');
             $table->timestamps();
         });

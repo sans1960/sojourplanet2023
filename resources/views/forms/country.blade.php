@@ -172,7 +172,7 @@ Tailor-made trip to {{$country->name}}
                                 <label class="form-check-label  " data-bs-toggle="tooltip"
                                     title="A leisure attractions trip with some cultural and gourmet attractions"
                                     for="flexRadioDefault1">
-                                    Mostly leisure</label>
+                                    Mostly leisure trip</label>
                                 {{-- <p></p> --}}
 
                             </div>
@@ -184,7 +184,7 @@ Tailor-made trip to {{$country->name}}
                                 <label class="form-check-label open " data-bs-toggle="tooltip"
                                     title="A cultural attractions trip with some leisure and gourmet attraction"
                                     for="flexRadioDefault1">
-                                    Mostly patrimonial</label>
+                                    Mostly patrimonial trip</label>
 
 
                             </div>
@@ -196,7 +196,7 @@ Tailor-made trip to {{$country->name}}
                                 <label class="form-check-label open " data-bs-toggle="tooltip"
                                     title="A gourmet attractions trip with some cultural and leisure attractions"
                                     for="flexRadioDefault1">
-                                    Mostly gourmet</label>
+                                    Mostly gourmet trip</label>
 
 
                             </div>
@@ -207,7 +207,7 @@ Tailor-made trip to {{$country->name}}
                                     (old('type')=='Adventure' ) ? 'checked' : '' }} id="flexRadioDefault1">
                                 <label class="form-check-label open " data-bs-toggle="tooltip"
                                     title="With some cultural and gourmet attraction" for="flexRadioDefault1">
-                                    Mostly adventure</label>
+                                    Mostly adventure trip</label>
                                 {{-- <p></p> --}}
 
                             </div>
@@ -218,7 +218,7 @@ Tailor-made trip to {{$country->name}}
                                     (old('type')=='Wellness' ) ? 'checked' : '' }} id="flexRadioDefault1">
                                 <label class="form-check-label open " data-bs-toggle="tooltip"
                                     title="With some cultural and gourmet attractions" for="flexRadioDefault1">
-                                    Wellness trip</label>
+                                    Mostly wellness trip</label>
                                 {{-- <p></p> --}}
 
                             </div>
@@ -229,7 +229,7 @@ Tailor-made trip to {{$country->name}}
                                     (old('type')=='Traditional' ) ? 'checked' : '' }} id="flexRadioDefault1">
                                 <label class="form-check-label open " data-bs-toggle="tooltip"
                                     title="With some cultural and gourmet attractions" for="flexRadioDefault1">
-                                    Traditional trip</label>
+                                    Mostly traditions trip</label>
                                 {{-- <p></p> --}}
 
                             </div>

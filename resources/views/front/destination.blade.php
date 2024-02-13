@@ -34,7 +34,18 @@
 
 
 </div>
+<div class="container mt-5">
+    <h4 class="text-center patua mt-2"> Destinations of {{ $destination->name }}</h4>
+    <div class="row">
+        <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
+            @foreach ($destination->country->sortBy('slug') as $country)
+            <a href="{{route('country',$country)}}" class="nav-link me-3 fw-bold">{{ $country->name }}</a>
 
+            @endforeach
+        </div>
+    </div>
+
+</div>
 <div class="container mt-5
 ">
     <div class="row ">
@@ -51,38 +62,29 @@
         </div>
     </div>
 </div>
-<div class="container mt-5">
-    <h4 class="text-center patua mt-2"> Destinations of {{ $destination->name }}</h4>
-    <div class="row">
-        <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
-            @foreach ($destination->country->sortBy('name') as $country)
-            <a href="{{route('country',$country)}}" class="nav-link me-3 fw-bold">{{ $country->name }}</a>
 
-            @endforeach
-        </div>
-    </div>
-
-</div>
 <div class="container mt-5">
     <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-4">Latest
         sights from {{ $destination->name }} published</a>
 
-    <div class="row mt-5 ">
+    <div class=" owl-carousel owl-theme mt-5">
+
         @foreach ($sights->take(6) as $sight)
-        <div class="col-md-4 mb-2">
-            <a href="{{ route('sight', $sight) }}" class="nav-link " target="_blank">
-                <div class="d-flex flex-column justify-content-between text-white p-2 img-responsive"
-                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover;height:250px; ">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <p class="open">{{ $sight->country->name }}</p>
-                        {{-- <p class="open">{{$sight->categorysight->name}}</p> --}}
-                    </div>
-                    <h5 class="fs-4 patua  text-center text-white">{{ $sight->title }}</h3>
 
+
+        <a href="{{ route('sight', $sight) }}" class="nav-link " target="_blank">
+            <div class="d-flex flex-column justify-content-between text-white p-2 img-responsive"
+                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover;height:250px; ">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="open">{{ $sight->country->name }}</p>
+                    {{-- <p class="open">{{$sight->categorysight->name}}</p> --}}
                 </div>
-            </a>
+                <h5 class="fs-4 patua  text-center text-white">{{ $sight->title }}</h3>
 
-        </div>
+            </div>
+        </a>
+
+
         @endforeach
 
 
@@ -100,4 +102,27 @@
 @endsection
 @section('js')
 <script src="{{ asset('js/lightbox.js') }}"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay:true,
+            responsive: {
+             
+                900: {
+                items: 3,
+                nav: false
+                },
+                0: {
+                items: 1,
+                nav: false
+                },
+
+
+            }
+        });
+   
+
+</script>
 @endsection

@@ -22,7 +22,7 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-           'name' => 'required|string|max:250',
+            'name' => 'required|string|max:250',
             'title' => 'required|string|max:250',
             'subtitle' => 'required|string|max:250',
             'accommodation' => 'required|string',
@@ -35,10 +35,10 @@ class UpdateRequest extends FormRequest
             'description' => 'required|string',
             'conclusion' => 'required|string',
             'duration' => 'nullable|integer',
-            'price' => 'nullable',
-            'countries'=> 'required',
+
+
             'date' => 'required|date',
-            'type_id'=>'required',
+            'type_id' => 'required',
             'maplatitud' => 'string',
             'longitud' => 'string',
             'mapzoom' => 'integer',

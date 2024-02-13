@@ -184,9 +184,47 @@
 </div>
 
 <div class="container mt-3">
-    @if($country->tour)
+    @if (count($country->tours))
     <h3 class="patua mt-3">Inspiring itineraris in {{$country->name}}</h3>
-    @endif
+    @if (count($country->tours) <= 4) <div class="row">
+        @foreach ($country->tours as $tour)
+        <div class="col-md-3 mb-3">
+            <a href="{{route('tour',$tour)}}" class="nav-link  ">
+                <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover; height:250px;">
+
+                    <h5 class="fs-4 patua text-center text-white">{{ $tour->title }}</h5>
+
+                </div>
+            </a>
+
+        </div>
+        @endforeach
+</div>
+
+@else
+<div class="container">
+    <div class="owl-carousel owl-theme mb-3">
+        @foreach ($country->tours as $tour)
+
+        <a href="{{route('tour',$tour)}}" class="nav-link  ">
+            <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover; height:250px;">
+
+                <h5 class="fs-4 patua text-center text-white">{{ $tour->title }}</h5>
+
+            </div>
+        </a>
+
+
+        @endforeach
+    </div>
+
+
+</div>
+@endif
+@endif
+
 </div>
 <div class="container mt-3">
 
@@ -281,6 +319,21 @@
     </div>
 </div>
 <div class="container mt-3">
+    {{-- @if (count($country->sights))
+    @foreach ($country->sights as $sight)
+    <div class="col-md-3 mb-3">
+        <a href="{{route('sight',$sight)}}" class="nav-link  ">
+            <div class="d-flex flex-column justify-content-between align-items-center p-2 "
+                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
+
+                <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
+
+            </div>
+        </a>
+
+    </div>
+    @endforeach
+    @endif --}}
     @if (count($country->sight))
     <h3 class="patua mt-3">Essential sights in {{$country->name}}</h3>
 

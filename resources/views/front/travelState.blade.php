@@ -1,6 +1,6 @@
 @extends('front.layouts.base')
 @section('title')
-
+Travel.State.Gov recommendations
 @endsection
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
@@ -52,7 +52,7 @@
                 destinations are
                 classified at this level:</p>
             <div class="d-flex flex-row flex-wrap p-2 justify-content-center mb-5">
-                @foreach ($countries1->sortBy('name') as $country)
+                @foreach ($countries1->sortBy('slug') as $country)
                 <a href="{{route('country',$country)}}" class="ms-3 nav-link patua">{{$country->name}}</a>
                 @endforeach
             </div>
@@ -69,7 +69,7 @@
                 classified at this
                 level:</p>
             <div class="d-flex flex-row flex-wrap p-2 justify-content-center mb-5">
-                @foreach ($countries1->sortBy('name') as $country)
+                @foreach ($countries2->sortBy('slug') as $country)
                 <a href="{{route('country',$country)}}" class="ms-3 nav-link patua">{{$country->name}}</a>
                 @endforeach
             </div>
@@ -86,7 +86,7 @@
                 destinations are
                 classified at this level:</p>
             <div class="d-flex flex-row flex-wrap p-2 justify-content-center mb-5">
-                @foreach ($countries1->sortBy('name') as $country)
+                @foreach ($countries3->sortBy('slug') as $country)
                 <a href="{{route('country',$country)}}" class="ms-3 nav-link patua">{{$country->name}}</a>
                 @endforeach
             </div>
@@ -107,7 +107,7 @@
                 change at any
                 time. The following destinations are classified at this level:</p>
             <div class="d-flex flex-row flex-wrap p-2 justify-content-center mb-5">
-                @foreach ($countries1->sortBy('name') as $country)
+                @foreach ($countries4->sortBy('slug') as $country)
                 <a href="{{route('country',$country)}}" class="ms-3 nav-link patua">{{$country->name}}</a>
                 @endforeach
             </div>

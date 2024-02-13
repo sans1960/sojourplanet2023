@@ -21,6 +21,9 @@ class FrontController extends Controller
 {
     public function index(): Response
     {
+        // if (config('app.debug')) {
+        //     return response()->view('front.maintenance');
+        // }
         $blogs = Blog::latest()->take(3)->get();
         $sights = Sight::latest()->take(10)->get();
         $tours = Tour::latest()->take(3)->get();
@@ -66,7 +69,10 @@ class FrontController extends Controller
     public function travelState()
     {
         $countries1 = Country::where('advisory_id', 1)->get();
-        return view('front.travelState', compact('countries1'));
+        $countries2 = Country::where('advisory_id', 2)->get();
+        $countries3 = Country::where('advisory_id', 3)->get();
+        $countries4 = Country::where('advisory_id', 4)->get();
+        return view('front.travelState', compact('countries1', 'countries2', 'countries3', 'countries4'));
     }
     public function blog(Blog $blog): Response
     {
@@ -90,7 +96,7 @@ class FrontController extends Controller
     }
     public function destinationSights(Destination $destination): Response
     {
-        $sights = Sight::where('destination_id', $destination->id)->orderBy('date', 'DESC')->paginate(20);
+        $sights = Sight::where('destination_id', $destination->id)->orderBy('date', 'DESC')->paginate(15);
         $countries = Country::where('destination_id', $destination->id)->get();
 
         return response()->view('front.destinationsights', compact('sights', 'destination', 'countries'));
@@ -104,19 +110,19 @@ class FrontController extends Controller
     }
     public function countrySights(Country $country): Response
     {
-        $sights = Sight::where('country_id', $country->id)->orderBy('date', 'DESC')->paginate(20);
+        $sights = Sight::where('country_id', $country->id)->orderBy('date', 'DESC')->paginate(15);
 
         return response()->view('front.countrysights', compact('sights', 'country'));
     }
     public function categorySights(CategorySight $categorysight): Response
     {
-        $sights = Sight::where('categorysight_id', $categorysight->id)->orderBy('date', 'DESC')->paginate(20);
+        $sights = Sight::where('categorysight_id', $categorysight->id)->orderBy('date', 'DESC')->paginate(15);
 
         return response()->view('front.categorysights', compact('sights', 'categorysight'));
     }
     public function tag(Tag $tag)
     {
-        $sights = $tag->sights()->paginate(20);
+        $sights = $tag->sights()->paginate(15);
         return view('front.tagsights', compact('sights', 'tag'));
     }
 

@@ -94,6 +94,38 @@ Edit {{ $sight->title }}
               </div>
 
             </div>
+            <div class="row mb-3">
+              <h6>Countries</h6>
+
+
+              @foreach ($sight->countries as $country)
+              <div class="col-md-4 mt-2">
+                <div class="form-check">
+                  <input class="form-check-input" checked name="countries[]" type="checkbox" value="{{$country->id}}"
+                    id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    {{$country->name}}
+                  </label>
+                </div>
+              </div>
+
+              @endforeach
+
+
+              @foreach ($diffcountries->sortBy('name') as $country)
+              <div class="col-md-4 mt-2">
+                <div class="form-check">
+                  <input class="form-check-input" name="countries[]" type="checkbox" value="{{$country->id}}"
+                    id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    {{$country->name}}
+                  </label>
+                </div>
+              </div>
+
+              @endforeach
+
+            </div>
             <div class=" row mb-3">
               <div class="col">
 

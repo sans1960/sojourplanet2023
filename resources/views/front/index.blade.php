@@ -8,7 +8,7 @@ Home
 
 <div class=" owl-carousel owl-theme text-center">
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
-        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/estatuas.jpg')}});height: 500px;background-position:center;">
+        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/templo01.jpg')}});height: 500px;background-position:center;">
         <h4 class="patua text-white display-2">The world is yours.</h4>
         <h3 class="open text-white p-3">We are specialists in tailor-made trips around the world.</h3>
         <a href="{{route('contactos.general.create')}}"
@@ -27,7 +27,7 @@ Home
             trip</a>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
-        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/moais.jpg')}});height: 500px;background-position:center;">
+        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/moai01.jpg')}});height: 500px;background-position:center;">
         <h4 class="patua text-white display-2">Local knowledge.</h4>
         <h3 class="open text-white p-3">Our experts will create unique, authentic and engaging itineraries specifically
             for you. In any destination in the world.</h3>
@@ -37,7 +37,7 @@ Home
             trip</a>
     </div>
     <div class="d-flex flex-column justify-content-center align-items-center p-2"
-        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/pariss.jpg')}});height: 500px;background-position:center;">
+        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/paris01.jpg')}});height: 500px;background-position:center;">
         <h4 class="patua text-white display-2">Planning is our business.</h4>
         <h3 class="open text-white p-3">We create unique itineraries for demanding clients who want advice and guidance
             in planning their vacations.</h3>

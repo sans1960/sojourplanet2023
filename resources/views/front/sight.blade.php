@@ -33,9 +33,21 @@
                     <h4 class="patua ">{{ $sight->destination->name }}</h4>
                 </a>
                 <p class="ms-2">|</p>
+                {{-- @if (count($sight->countries))
+                <p class="ms-2">|</p>
+                @foreach ($sight->countries as $country)
+                <a class="nav-link ms-2" href="{{ route('countrysights', $country) }}">
+                    <h4 class="patua ">{{ $country->name }}</h4>
+                </a>
+                <p class="ms-2">|</p>
+                @endforeach
+                @else --}}
                 <a class="nav-link ms-2" href="{{ route('countrysights', $sight->country) }}">
                     <h4 class="patua ">{{ $sight->country->name }}</h4>
                 </a>
+                {{-- @endif --}}
+
+
                 <p class="ms-2">|</p>
                 <a class="nav-link " href="{{ route('categorysights', $sight->categorysight) }}">
                     <h5 class="ms-2 open">{{ $sight->categorysight->name }}</h5>
@@ -57,21 +69,23 @@
             <div class=" fs-5 open texto">
                 {!! $sight->introduction !!}
             </div>
-            <div class=" p-2 fw-bold fs-3 fst-italic text-center texto">
 
+            <div class="open fw-bold fst-italic special text-center">
                 {!! $sight->highlight !!}
-
-
             </div>
+
+
+
             @if ($sight->imagesight)
             @foreach ($sight->imagesight as $item)
 
             <figure class="figure mt-3">
-                <img src="{{Storage::url($item->image)}}" class="figure-img img-fluid rounded d-block mx-auto"
-                    alt="...">
-                <h5 class="patua">{{$item->title}}</h5>
+                <img src="{{Storage::url($item->image)}}" class="figure-img img-fluid  d-block mx-auto" alt="...">
                 <figcaption class="figure-caption text-center">{{ $item->caption}}</figcaption>
+
+
             </figure>
+            <p class="open text-center">{{$item->title}}</p>
             @endforeach
             @endif
             <div class=" fs-5 open texto">

@@ -11,39 +11,42 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Sight extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','slug','extract','introduction','highlight','final','image','extract','latitud','longitud','caption','zoom','destination_id','subregion_id','country_id','categorysight_id','date','site'];
+    protected $fillable = ['title', 'slug', 'extract', 'introduction', 'highlight', 'final', 'image', 'extract', 'latitud', 'longitud', 'caption', 'zoom', 'destination_id', 'subregion_id', 'country_id', 'categorysight_id', 'date', 'site'];
 
     public function getRouteKeyName()
     {
         return 'slug';
     }
-    public function destination():BelongsTo
+    public function destination(): BelongsTo
     {
         return $this->belongsTo(Destination::class);
     }
-    public function subregion():BelongsTo
+    public function subregion(): BelongsTo
     {
         return $this->belongsTo(SubRegion::class);
     }
-    public function country():BelongsTo
+    public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
     }
-    public function categorysight():BelongsTo
+    public function categorysight(): BelongsTo
     {
         return $this->belongsTo(CategorySight::class);
     }
-    public function tags():BelongsToMany
+    public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);
     }
-    public function sightncontact():HasMany
+    public function countries(): BelongsToMany
+    {
+        return $this->belongsToMany(Country::class);
+    }
+    public function sightncontact(): HasMany
     {
         return $this->hasMany(SightContact::class);
     }
-    public function imagesight():HasMany
+    public function imagesight(): HasMany
     {
         return $this->hasMany(ImageSight::class);
     }
-
 }
