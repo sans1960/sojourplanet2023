@@ -319,27 +319,13 @@
     </div>
 </div>
 <div class="container mt-3">
-    {{-- @if (count($country->sights))
-    @foreach ($country->sights as $sight)
-    <div class="col-md-3 mb-3">
-        <a href="{{route('sight',$sight)}}" class="nav-link  ">
-            <div class="d-flex flex-column justify-content-between align-items-center p-2 "
-                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
 
-                <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
-
-            </div>
-        </a>
-
-    </div>
-    @endforeach
-    @endif --}}
-    @if (count($country->sight))
+    @if (count($country->sights))
     <h3 class="patua mt-3">Essential sights in {{$country->name}}</h3>
 
 
-    @if (count($country->sight) <= 4) <div class="row">
-        @foreach ($country->sight as $sight)
+    @if (count($country->sights) <= 4) <div class="row">
+        @foreach ($country->sights as $sight)
         <div class="col-md-3 mb-3">
             <a href="{{route('sight',$sight)}}" class="nav-link  ">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
@@ -357,7 +343,7 @@
 @else
 <div class="container">
     <div class="owl-carousel owl-theme mb-3">
-        @foreach ($country->sight as $sight)
+        @foreach ($country->sights as $sight)
 
         <a href="{{route('sight',$sight)}}" class="nav-link  ">
             <div class="d-flex flex-column justify-content-between align-items-center p-2 "
@@ -373,9 +359,10 @@
     </div>
     @endif
 
-    @endif
+
 
 </div>
+@endif
 <div class="container mt-3">
 
     <div class="row mb-3">

@@ -28,30 +28,34 @@
                 <figcaption class="figure-caption text-center">{{ $sight->caption }}</figcaption>
             </figure>
             <h4 class="text-center patua"> {{ $sight->title }}</h4>
-            <div class=" mt-4 d-flex flex-row justify-content-center align-items-center">
+            <div class="  d-flex flex-row justify-content-center align-items-center">
                 <a class="nav-link " href="{{ route('destinationsights', $sight->destination) }}">
                     <h4 class="patua ">{{ $sight->destination->name }}</h4>
                 </a>
-                <p class="ms-2">|</p>
-                {{-- @if (count($sight->countries))
-                <p class="ms-2">|</p>
-                @foreach ($sight->countries as $country)
-                <a class="nav-link ms-2" href="{{ route('countrysights', $country) }}">
-                    <h4 class="patua ">{{ $country->name }}</h4>
-                </a>
-                <p class="ms-2">|</p>
-                @endforeach
-                @else --}}
-                <a class="nav-link ms-2" href="{{ route('countrysights', $sight->country) }}">
-                    <h4 class="patua ">{{ $sight->country->name }}</h4>
-                </a>
-                {{-- @endif --}}
+
 
 
                 <p class="ms-2">|</p>
                 <a class="nav-link " href="{{ route('categorysights', $sight->categorysight) }}">
                     <h5 class="ms-2 open">{{ $sight->categorysight->name }}</h5>
                 </a>
+            </div>
+            <div class="  d-flex flex-column justify-content-center align-items-center">
+
+                @if (count($sight->countries))
+
+                @foreach ($sight->countries as $country)
+                <a class="nav-link" href="{{ route('country', $country) }}" target="_blank">
+                    <h4 class="patua ">{{ $country->name }} </h4>
+
+                </a>
+
+                @endforeach
+
+                @endif
+
+
+
             </div>
             <div class=" mt-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
                 @if (count($sight->tags))
