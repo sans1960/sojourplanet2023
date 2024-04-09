@@ -28,7 +28,7 @@ class UpdateRequest extends FormRequest
             'introduction' => 'required|string',
             'highlight' => 'required|string',
             'final' => 'required|string',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
+            // 'image' => 'nullable|image|mimes:jpg,jpeg,png,webp,avif',
             'caption' => 'required|string|max:250',
             'longitud' => 'required|string',
             'latitud' => 'required|string',

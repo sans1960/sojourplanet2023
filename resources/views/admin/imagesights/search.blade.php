@@ -1,74 +1,65 @@
 @extends('layouts.admin')
 @section('title')
-{{ __(' Sights') }}
+{{ __(' Search Image Sights') }}
 
 @endsection
 @section('content')
 <div class="container">
-    <div class="row ">
-        <div class="col-md-8 mx-auto">
-            <div class="card">
-                <div class="card-header">{{ __('All Sights') }}</div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <form action="" method="post">
+                @csrf
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Enter Sight ID" name="search"
+                        aria-describedby="basic-addon1">
 
-                @if(Session::has('notif.success'))
-                <div class="alert alert-info alert-dismissible fade show" role="alert">
-                    <strong>{{ Session::get('notif.success') }}</strong>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+
                 </div>
-                @endif
-
-
-
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-12 d-flex justify-content-around">
-            <a href="{{ route('admin.sights.create')}}" class="btn btn-success mt-5 mb-5">
-                <i class="bi bi-plus-square"></i>
-            </a>
-
-            <a href="{{ route('findsight')}}" class="btn btn-success mt-5 mb-5">
-                <i class="bi bi-search"></i>
-            </a>
+            </form>
         </div>
     </div>
-
 </div>
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-8 mx-auto">
+    <div class="row mt-4">
+        <div class="col-md-12">
             <table class="table table-stripped">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Date</th>
+                        <th>Title Image</th>
+                        <th>Title Sight</th>
+
                         <th>Acciones</th>
 
 
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($sights as $sight)
+                    @if (isset($imagesights))
+                    @foreach ($imagesights as $imagesight)
                     <tr>
-                        <td>{{ $sight->id}}</td>
-                        <td>{{ $sight->title}}</td>
-                        <td>{{ $sight->date}}</td>
+
+                        <td>{{ $imagesight->title}}</td>
+                        <td>{{ $imagesight->sight->title}}</td>
 
                         <td>
-                            <a href="{{ route('admin.sights.show',$sight)}}" class="btn btn-success btn-sm">
+                            <a href="" class="btn btn-success btn-sm">
                                 <i class="bi bi-eye"></i>
                             </a>
                         </td>
                         <td>
-                            <a href="{{ route('admin.sights.edit',$sight)}}" class="btn btn-warning btn-sm">
+                            <a href="{{ route('admin.imagesights.edit',$imagesight)}}" class="btn btn-warning btn-sm">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
                         </td>
                         <td>
-                            <form action="{{ route('admin.sights.destroy',$sight)}}" method="post">
+                            <form action="" method="post">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-danger btn-sm show_confirm">
@@ -79,16 +70,18 @@
                     </tr>
 
                     @endforeach
+                    @endif
+
+
                 </tbody>
             </table>
 
 
         </div>
     </div>
-
-    {!! $sights->links() !!}
-
 </div>
+</div>
+
 @endsection
 @section('js')
 <script type="text/javascript">

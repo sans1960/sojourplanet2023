@@ -99,6 +99,8 @@ Route::group(['middleware' => 'admin'], function () {
   Route::resource('admin/days', DayController::class)->middleware('auth')->names('admin.days');
   Route::get('admin/findsight', [SightController::class, 'findSight'])->name('findsight');
   Route::post('admin/searchsight', [SightController::class, 'searchSight'])->name('searchsight');
+  Route::get('admin/findimagesight', [ImageSightController::class, 'findImageSight'])->name('findimagesight');
+  Route::post('admin/findimagesight', [ImageSightController::class, 'searchImageSight'])->name('searchimagesight');
   Route::get('admin/findcontry', [CountryController::class, 'findCountry'])->name('findcountry');
   Route::post('admin/searchcountry', [CountryController::class, 'searchCountry'])->name('searchcountry');
   Route::resource('admin/contactos-list', ListContactController::class)->names('contactos.list');

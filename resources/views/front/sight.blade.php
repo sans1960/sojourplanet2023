@@ -25,7 +25,7 @@
 
             <figure class="figure mt-3">
                 <img src="{{ Storage::url($sight->image) }}" class="figure-img img-fluid  d-block mx-auto" alt="...">
-                <figcaption class="figure-caption text-center">{{ $sight->caption }}</figcaption>
+                <figcaption class="figure-caption text-center mini">{{ $sight->caption }}</figcaption>
             </figure>
             <h4 class="text-center patua"> {{ $sight->title }}</h4>
             <div class="  d-flex flex-row justify-content-center align-items-center">
@@ -85,7 +85,7 @@
 
             <figure class="figure mt-3">
                 <img src="{{Storage::url($item->image)}}" class="figure-img img-fluid  d-block mx-auto" alt="...">
-                <figcaption class="figure-caption text-center">{{ $item->caption}}</figcaption>
+                <figcaption class="figure-caption text-center mini">{{ $item->caption}}</figcaption>
 
 
             </figure>
@@ -101,14 +101,70 @@
             </div>
             <div id="map" class="mb-5" style="width:100%;height:400px">
             </div>
-            <div id="social-links" class="d-flex justify-content-center social-share">
-                <p>Share this Sight with: {!! Share::currentPage('Share')->facebook()->twitter() !!}</p>
-            </div>
-
         </div>
-
     </div>
 
+    @if (count($proxims)>1)
+    <h4 class=" patua">Another interest sights</h4>
+    @if (count($proxims)>=4)
+    <div class="owl-carousel owl-theme mt-5">
+
+
+        @foreach ($proxims as $item)
+        @if ($item->id != $sight->id)
+        <a href="{{route('sight',$item)}}" target="_blank" class="nav-link">
+            <div class="d-flex flex-column justify-content-between text-white p-2 img-responsive"
+                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($item->image) }});background-size:cover;height:250px; ">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="open">{{ $item->country->name }}</p>
+
+                </div>
+                <h5 class="fs-4 patua  text-center text-white">{{ $item->title }}</h3>
+            </div>
+        </a>
+        @endif
+        @endforeach
+        @else
+        <div class="row">
+            @foreach ($proxims as $item)
+
+            @if ($item->id != $sight->id)
+            <div class="col-md-4">
+                <a href="{{route('sight',$item)}}" target="_blank" class="nav-link">
+                    <div class="d-flex flex-column justify-content-between text-white p-2 img-responsive"
+                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($item->image) }});background-size:cover;height:250px; ">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="open">{{ $item->country->name }}</p>
+
+                        </div>
+                        <h5 class="fs-4 patua  text-center text-white">{{ $item->title }}</h3>
+                    </div>
+                </a>
+            </div>
+            @endif
+
+            @endforeach
+        </div>
+        @endif
+
+
+
+
+
+        @endif
+
+
+    </div>
+    <div class="row mt-5">
+        <div id="social-links" class="d-flex justify-content-center social-share">
+            <p>Share this Sight with: {!! Share::currentPage('Share')->facebook()->twitter() !!}</p>
+        </div>
+
+
+
+
+
+    </div>
 </div>
 @endsection
 @section('js')
@@ -126,5 +182,28 @@
         L.marker([{{ $sight->latitud }}, {{ $sight->longitud }}]).addTo(map);
         // .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
         // .openPopup();
+</script>
+<script>
+    $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay:true,
+            responsive: {
+             
+                900: {
+                items: 3,
+                nav: false
+                },
+                0: {
+                items: 1,
+                nav: false
+                },
+
+
+            }
+        });
+   
+
 </script>
 @endsection

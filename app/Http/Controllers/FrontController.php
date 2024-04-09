@@ -14,6 +14,7 @@ use App\Models\SubRegion;
 use App\Models\CategorySight;
 use App\Models\Type;
 use App\Models\CountryCode;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 
@@ -91,8 +92,12 @@ class FrontController extends Controller
     }
     public function sight(Sight $sight): Response
     {
+        $proxims = Sight::select(DB::raw('*, ( 6367 * acos( cos( radians(' . $sight->latitud . ') ) * cos( radians( latitud ) ) * cos( radians( longitud ) - radians(' . $sight->longitud . ') ) + sin( radians(' . $sight->latitud . ') ) * sin( radians( latitud ) ) ) ) AS distance'))
+            ->having('distance', '<', 500)
+            ->orderBy('distance')
+            ->get();
 
-        return response()->view('front.sight', compact('sight'));
+        return response()->view('front.sight', compact('sight', 'proxims'));
     }
     public function destinationSights(Destination $destination): Response
     {
