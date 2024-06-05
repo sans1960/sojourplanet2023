@@ -47,6 +47,9 @@ Route::get('/images-copyright', [FrontController::class, 'imagesCopy'])->name('i
 Route::get('/terms-conditions', [FrontController::class, 'terms'])->name('terms');
 Route::get('/privacy-policy', [FrontController::class, 'private'])->name('private');
 Route::get('/faqs', [FrontController::class, 'faqs'])->name('faqs');
+Route::get('/booking-conditions', [FrontController::class, 'bookingConditions'])->name('booking');
+Route::get('/cookie-policy', [FrontController::class, 'cookiePolicy'])->name('cookie');
+Route::get('/our-services', [FrontController::class, 'ourServices'])->name('services');
 
 
 Route::get('/search/{q}', [FrontController::class, 'search'])->name('search');

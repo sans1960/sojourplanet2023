@@ -67,6 +67,18 @@ class FrontController extends Controller
     {
         return view('front.imagescopyright');
     }
+    public function bookingConditions()
+    {
+        return view('front.booking');
+    }
+    public function cookiePolicy()
+    {
+        return view('front.cookie');
+    }
+    public function ourServices()
+    {
+        return view('front.services');
+    }
     public function travelState()
     {
         $countries1 = Country::where('advisory_id', 1)->get();

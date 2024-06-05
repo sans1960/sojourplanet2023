@@ -102,6 +102,10 @@
                     <a href="{{route('faqs')}}" target="_blank" class="text-white nav-link">FAQs</a>
                 </div>
                 <div class="col-md-3 d-flex justify-content-center align-items-center">
+                    <a href="{{route('booking')}}" target="_blank" class="nav-link text-white" target="_blank">Booking
+                        Conditions</a>
+                </div>
+                <div class="col-md-3 d-flex justify-content-center align-items-center">
 
                     <a href="{{route('terms')}}" target="_blank" class="text-white nav-link">Terms and Conditions</a>
                 </div>
@@ -110,9 +114,19 @@
                     <a href="{{route('private')}}" target="_blank" class="nav-link text-white" target="_blank">Privacy
                         Policy</a>
                 </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
+            </div>
+            <div class="row mt-5 patua mb-3">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
                     <a href="{{route('travelstate')}}" target="_blank" class="nav-link text-white"
                         target="_blank">Travel Security</a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <a href="{{route('cookie')}}" target="_blank" class="nav-link text-white" target="_blank">Cookie
+                        Policy</a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <a href="{{route('services')}}" target="_blank" class="nav-link text-white" target="_blank">Our
+                        Services</a>
                 </div>
 
             </div>
