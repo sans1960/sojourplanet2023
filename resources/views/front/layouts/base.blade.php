@@ -77,59 +77,53 @@
 
     @yield('content')
     <footer class="bg-dark">
-        <div class="container p-2">
-            <div class="row">
+        <div class="container mt-2 p-3">
+            <div class="row mt-2">
                 <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a class="text-white nav-link">Copyright © 2023 Sojournplanet</a>
+                    <img src="{{asset('img/logo-sojournplanet-h.png')}}" alt="" class="img-fluid w-75">
                 </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <a href="{{route('contactos.general.create')}}" target="_blank"
+                        class="text-white nav-link open">Start planning</a>
+                    <a href="{{url('countries')}}" class="text-white nav-link open">Destinations A to Z</a>
+                    <a href="{{ route('dream') }}" class="text-white nav-link open">The trip of your dreams</a>
+                    <a href="{{route('faqs')}}" class="text-white nav-link open">FAQs</a>
+                </div>
+                <div class=" col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <a href="{{route('booking')}}" class="nav-link text-white open" target="_blank">Booking
+                        Conditions</a>
+                    <a href="{{route('services')}}" class="nav-link text-white open">Our
+                        Services</a>
+                    <a href="{{route('travelstate')}}" class="nav-link text-white open">Travel Security</a>
+                    <a class="nav-link text-white open" href="{{ route('about') }}">About us</a>
+                </div>
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <a href="{{route('terms')}}" class="text-white nav-link open">Terms and Conditions</a>
+                    <a href="{{route('private')}}" class="nav-link text-white open">Privacy
+                        Policy</a>
+                    <a href="{{route('cookie')}}" class="nav-link text-white open">Cookie
+                        Policy</a>
+                    <a href="https://sojournplanet.com/sitemap.xml" target="_blank"
+                        class="nav-link text-white open">Sitemap</a>
+                </div>
 
-                    <a class="text-white nav-link">All rights reserved</a>
-                </div>
-
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a href="{{route('imagescopy')}}" class="nav-link text-white" target="_blank">Images Copyright</a>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
+            </div>
+            <div class="row mt-2 ">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
                     <a target="_blank" href="https://www.facebook.com/sojournplanet" class="text-white">
-                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-facebook" style="font-size: 1.2em;"></i>
 
                     </a>
                 </div>
-            </div>
-            <div class="row mt-5 patua">
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a href="{{route('faqs')}}" target="_blank" class="text-white nav-link">FAQs</a>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a href="{{route('booking')}}" target="_blank" class="nav-link text-white" target="_blank">Booking
-                        Conditions</a>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
 
-                    <a href="{{route('terms')}}" target="_blank" class="text-white nav-link">Terms and Conditions</a>
-                </div>
-
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a href="{{route('private')}}" target="_blank" class="nav-link text-white" target="_blank">Privacy
-                        Policy</a>
-                </div>
             </div>
-            <div class="row mt-5 patua mb-3">
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <a href="{{route('travelstate')}}" target="_blank" class="nav-link text-white"
-                        target="_blank">Travel Security</a>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <a href="{{route('cookie')}}" target="_blank" class="nav-link text-white" target="_blank">Cookie
-                        Policy</a>
-                </div>
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <a href="{{route('services')}}" target="_blank" class="nav-link text-white" target="_blank">Our
-                        Services</a>
+            <div class="row mt-2 ">
+                <div class="col-md-12 d-flex justify-content-center align-items-center">
+                    <a class="text-white nav-link">Copyright © 2024 Sojournplanet LLC-All rights reserved</a>
                 </div>
 
             </div>
+
 
 
         </div>
