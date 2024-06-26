@@ -282,6 +282,13 @@ Tailor-made trips
                             <span class="text-danger">{{ $errors->first('legal') }}</span>
                             @endif
                         </div>
+                        <div class="mb-3 mt-3 d-flex justify-content-center flex-column align-items-center">
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            @error ('g-recaptcha-response')
+                            <div class="text text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                         <button type="submit"
                             class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Send</button>
 

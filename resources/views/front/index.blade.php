@@ -227,6 +227,13 @@ Home
                 @error('email')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
+                <div class="mb-3 d-flex justify-content-center flex-column align-items-center">
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                    @error ('g-recaptcha-response')
+                    <div class="text text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit"
                         class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Sign

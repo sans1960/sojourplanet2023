@@ -14,15 +14,13 @@ class SightContactController extends Controller
     public function __construct()
     {
         $this->middleware('admin')->except('store');
- 
-       
     }
 
 
     public function index()
     {
         $contacts = SightContact::all();
-        return view('admin.contactosSight.index',compact('contacts'));
+        return view('admin.contactosSight.index', compact('contacts'));
     }
 
     /**
@@ -38,16 +36,17 @@ class SightContactController extends Controller
      */
     public function store(Request $request)
     {
-       $validated = $request->validate([
-        'name'=>'required|max:20',
-        'sight_id'=>'required',
-        'legal'=>'required',
-        'surname'=>'required|max:20',
-        'phone'=>'required|max:12',
-        'email'=>'required|email:dns,rfc,spoof',
-        'country_code_id' => 'required',  
-             ]);
-        
+        $validated = $request->validate([
+            'name' => 'required|max:20',
+            'sight_id' => 'required',
+            'legal' => 'required',
+            'surname' => 'required|max:20',
+            'phone' => 'required|max:12',
+            'email' => 'required|email:dns,rfc,spoof',
+            'g-recaptcha-response' => 'required|captcha',
+            'country_code_id' => 'required',
+        ]);
+
         $contact = new SightContact;
         $contact->trait = $request->trait;
         $contact->name = $request->name;
@@ -72,7 +71,7 @@ class SightContactController extends Controller
         $ipAdress = request()->ip();
         $contact->ipAdress = $ipAdress;
         $contact->save();
-        return view('forms.respuestasight',compact('contact'));
+        return view('forms.respuestasight', compact('contact'));
     }
 
     /**
@@ -81,7 +80,7 @@ class SightContactController extends Controller
     public function show(string $id)
     {
         $contact = SightContact::find($id);
-        return view('admin.contactosSight.show',compact('contact'));
+        return view('admin.contactosSight.show', compact('contact'));
     }
 
     /**

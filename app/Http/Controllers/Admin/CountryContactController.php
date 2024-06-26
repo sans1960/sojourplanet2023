@@ -42,7 +42,9 @@ class CountryContactController extends Controller
             'surname' => 'required|max:20',
             'phone' => 'required|max:12',
             'email' => 'required|email:dns,rfc,spoof',
+            'g-recaptcha-response' => 'required|captcha',
             'country_code_id' => 'required',
+
         ]);
         $contact = new CountryContact;
         $contact->trait = $request->trait;

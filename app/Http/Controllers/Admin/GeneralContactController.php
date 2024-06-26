@@ -9,16 +9,17 @@ use App\Models\CountryCode;
 
 class GeneralContactController extends Controller
 {
-        public function __construct() {
-            $this->middleware('admin')->except('create','store');
-        }
+    public function __construct()
+    {
+        $this->middleware('admin')->except('create', 'store');
+    }
 
 
-     
+
     public function index()
     {
         $contactos = GeneralContact::all();
-        return view('admin.contactosGeneral.index',compact('contactos'));
+        return view('admin.contactosGeneral.index', compact('contactos'));
     }
 
     /**
@@ -27,7 +28,7 @@ class GeneralContactController extends Controller
     public function create()
     {
         $countrycodes = CountryCode::all();
-        return view('admin.contactosGeneral.create',compact('countrycodes'));
+        return view('admin.contactosGeneral.create', compact('countrycodes'));
     }
 
     /**
@@ -35,18 +36,19 @@ class GeneralContactController extends Controller
      */
     public function store(Request $request)
     {
-         $request->validate([
-            'name'=>'required|max:20',
-             'surname'=>'required|max:20',
-             'legal' =>'required',
+        $request->validate([
+            'name' => 'required|max:20',
+            'surname' => 'required|max:20',
+            'legal' => 'required',
 
-             'phone'=>'required|max:12',
-             'email'=>'required|email:dns,rfc,spoof',
-            
-             'country_code_id'=>'required',
-          
-         ]);
-        
+            'phone' => 'required|max:12',
+            'email' => 'required|email:dns,rfc,spoof',
+            'g-recaptcha-response' => 'required|captcha',
+
+            'country_code_id' => 'required',
+
+        ]);
+
         $contact = new GeneralContact;
         $contact->trait = $request->trait;
         $contact->name = $request->name;
@@ -68,9 +70,9 @@ class GeneralContactController extends Controller
         $ipAdress = request()->ip();
         $contact->ipAdress = $ipAdress;
         $contact->save();
-        
 
-        return view('forms.respuestageneral',compact('contact'));
+
+        return view('forms.respuestageneral', compact('contact'));
     }
 
     /**
@@ -78,8 +80,8 @@ class GeneralContactController extends Controller
      */
     public function show(string $id)
     {
-        $contact = GeneralContact::where('id',$id)->get();
-        return view('admin.contactosGeneral.show',compact('contact'));
+        $contact = GeneralContact::where('id', $id)->get();
+        return view('admin.contactosGeneral.show', compact('contact'));
     }
 
     /**

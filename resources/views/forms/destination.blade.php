@@ -285,6 +285,13 @@ Tailor-made trip to {{$destination->name}}
                         </div>
 
                     </div>
+                    <div class="mb-3 mt-3 d-flex justify-content-center flex-column align-items-center">
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::display() !!}
+                        @error ('g-recaptcha-response')
+                        <div class="text text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                     <div class="d-flex justify-content-center align-items-center flex-column open">
                         <div class="form-check">
                             <input class="form-check-input" {{ (old('legal')=='on' ) ? 'checked' : '' }} type="radio"

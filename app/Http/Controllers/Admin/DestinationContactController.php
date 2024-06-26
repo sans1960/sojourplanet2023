@@ -14,8 +14,6 @@ class DestinationContactController extends Controller
     public function __construct()
     {
         $this->middleware('admin')->except('store');
- 
-       
     }
 
 
@@ -25,8 +23,8 @@ class DestinationContactController extends Controller
      */
     public function index()
     {
-        $contacts=DestinationContact::all();
-        return view('admin.contactosDestination.index',compact('contacts'));
+        $contacts = DestinationContact::all();
+        return view('admin.contactosDestination.index', compact('contacts'));
     }
 
     /**
@@ -43,14 +41,15 @@ class DestinationContactController extends Controller
      */
     public function store(Request $request)
     {
-      $validated =  $request->validate([
-            'name'=>'required|max:20',
-            'destination_id'=>'required',
-            'legal'=>'required',
-            'surname'=>'required|max:20',
-            'phone'=>'required|max:12',
-            'email'=>'required|email:dns,rfc,spoof',
-            'country_code_id' => 'required',    
+        $validated =  $request->validate([
+            'name' => 'required|max:20',
+            'destination_id' => 'required',
+            'legal' => 'required',
+            'surname' => 'required|max:20',
+            'phone' => 'required|max:12',
+            'email' => 'required|email:dns,rfc,spoof',
+            'g-recaptcha-response' => 'required|captcha',
+            'country_code_id' => 'required',
         ]);
         $contact = new DestinationContact;
         $contact->trait = $request->trait;
@@ -75,9 +74,9 @@ class DestinationContactController extends Controller
         $ipAdress = request()->ip();
         $contact->ipAdress = $ipAdress;
         $contact->save();
-       
-      
-        return view('forms.respuestadestination')->with('contact',$contact);
+
+
+        return view('forms.respuestadestination')->with('contact', $contact);
     }
 
     /**
@@ -86,7 +85,7 @@ class DestinationContactController extends Controller
     public function show($id)
     {
         $contact = DestinationContact::find($id);
-        return view('admin.contactosDestination.show',compact('contact'));
+        return view('admin.contactosDestination.show', compact('contact'));
     }
 
     /**
@@ -108,7 +107,7 @@ class DestinationContactController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($id)
     {
         $contact = DestinationContact::find($id);
         $contact->delete();

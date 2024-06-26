@@ -19,7 +19,7 @@ class ListContactController extends Controller
     public function index()
     {
         $listcontacts = ListContact::all();
-        return view('admin.listcontact.index',compact('listcontacts'));
+        return view('admin.listcontact.index', compact('listcontacts'));
     }
 
     /**
@@ -36,10 +36,11 @@ class ListContactController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-           
-            'email'=>'required|email:dns,rfc,spoof|unique:list_contacts',
-            
-           
+
+            'email' => 'required|email:dns,rfc,spoof|unique:list_contacts',
+            'g-recaptcha-response' => 'required|captcha',
+
+
         ]);
         $listcontact = new ListContact;
         $listcontact->email = $request->email;
@@ -81,7 +82,7 @@ class ListContactController extends Controller
      */
     public function destroy($id)
     {
-        $res=ListContact::where('id',$id)->delete();
+        $res = ListContact::where('id', $id)->delete();
         return redirect()->route('contactos.list.index');
     }
 }
