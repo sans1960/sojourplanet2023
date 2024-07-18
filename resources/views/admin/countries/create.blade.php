@@ -162,12 +162,23 @@
 </div>
 @endsection
 @section('js')
-<script>
+{{-- <script>
   CKEDITOR.replace( 'description' );
 CKEDITOR.replace( 'sidebody' );
 CKEDITOR.replace( 'information' );
 
 
+</script> --}}
+<script src="{{asset('tinymce/tinymce.min.js')}}"></script>
+<script>
+  tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons  link lists  searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link  table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+            branding: false,
+            menubar: false,
+            language: 'ca',
+        });
 </script>
 <script>
   $(document).ready(function(){

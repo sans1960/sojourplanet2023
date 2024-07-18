@@ -17,7 +17,7 @@ class CountryContact extends Model
     {
         return $this->belongsTo(Country::class);
     }
-    public function country_code()
+    public function country_code(): BelongsTo
     {
         return $this->belongsTo(CountryCode::class);
     }

@@ -60,7 +60,7 @@ What’s the trip of your dreams?
   <div class="row">
     <div class="col-md-8 open ">
       <p class="texto">As part of the methodology to provide you with the best possible trips, exclusively designed and
-        adapted to your tastes and interests, we have divided the type of trip possible into five different typologies;
+        adapted to your tastes and interests, we have divided the type of trip possible into six different typologies;
         patrimonial, leisure, gourmet, adventure and wellness. Each of these typologies aims to explore the personalized
         concept of the trip of your dreams, based on what satisfies you the most. Of course, any classification will
         always be subject to your rhythms, tastes and interests, whose limit is imposed by you. </p>

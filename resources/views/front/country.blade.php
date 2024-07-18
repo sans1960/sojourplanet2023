@@ -183,7 +183,7 @@
     </div>
 </div>
 
-<div class="container mt-3">
+{{-- <div class="container mt-3">
     @if (count($country->tours))
     <h3 class="patua mt-3">Inspiring itineraris in {{$country->name}}</h3>
     @if (count($country->tours) <= 4) <div class="row">
@@ -200,9 +200,9 @@
 
         </div>
         @endforeach
-</div>
+</div> --}}
 
-@else
+{{-- @else
 <div class="container">
     <div class="owl-carousel owl-theme mb-3">
         @foreach ($country->tours as $tour)
@@ -223,9 +223,9 @@
 
 </div>
 @endif
-@endif
+@endif --}}
 
-</div>
+{{-- </div> --}}
 <div class="container mt-3">
 
     <div class="row">

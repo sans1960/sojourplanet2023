@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\DayController;
 use App\Http\Controllers\Admin\LocationTourController;
 use App\Http\Controllers\Admin\ListContactController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GeneralContactController;
 use App\Http\Controllers\Admin\SightContactController;
 use App\Http\Controllers\Admin\DestinationContactController;
@@ -107,6 +108,7 @@ Route::group(['middleware' => 'admin'], function () {
   Route::get('admin/findcontry', [CountryController::class, 'findCountry'])->name('findcountry');
   Route::post('admin/searchcountry', [CountryController::class, 'searchCountry'])->name('searchcountry');
   Route::resource('admin/contactos-list', ListContactController::class)->names('contactos.list');
+  Route::resource('admin/contactos', ContactController::class)->names('contactos');
   Route::resource('admin/contactos-general', GeneralContactController::class)->names('contactos.general');
   Route::resource('admin/contactos-destinations', DestinationContactController::class)->names('contactos.destination');
   Route::resource('admin/contactos-sight', SightContactController::class)->names('contactos.sight');

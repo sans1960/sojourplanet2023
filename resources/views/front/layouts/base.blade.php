@@ -39,30 +39,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav align-items-center mx-auto">
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About us</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('taylor') }}">Tailor-made trips</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dream') }}">The trip of your dreams</a>
-                    </li>
+                    @include('front.layouts.destinations', [
+                    'destinations' => ($destinations = App\Models\Destination::all())])
+
 
                     <a class="navbar-brand d-none d-md-block" href="/">
                         <img src="{{ asset('img/ll.png') }}" alt="">
                     </a>
-                    @include('front.layouts.destinations', [
-                    'destinations' => ($destinations = App\Models\Destination::all())
-                    ])
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('dream') }}">The trip of your dreams</a>
+                    </li>
+
 
                     <li class="nav-item ms-5">
                         <a class="nav-link" href="{{ route('sights') }}"> Sights</a>
                     </li>
 
-                    <li class="nav-item ms-5">
+                    {{-- <li class="nav-item ms-5">
                         <a class="nav-link" href="{{ route('alltours') }}">Tours</a>
-                    </li>
+                    </li> --}}
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blogs') }}">Travel Blog</a>
                     </li> --}}
@@ -118,8 +119,16 @@
 
             </div>
             <div class="row mt-2 ">
-                <div class="col-md-12 d-flex justify-content-center align-items-center">
-                    <a class="text-white nav-link">Copyright © 2024 Sojournplanet LLC-All rights reserved</a>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <a class="text-white nav-link">Copyright © 2024 Sojournplanet LLC
+                    </a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <a class="text-white nav-link">
+                        All rights reserved</a>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <a href="" class="text-white nav-link">Contact us</a>
                 </div>
 
             </div>

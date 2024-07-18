@@ -65,7 +65,7 @@
 
 <div class="container mt-5">
     <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-4">Latest
-        sights from {{ $destination->name }} published</a>
+        inspiring sights from {{ $destination->name }} published</a>
 
     <div class=" owl-carousel owl-theme mt-5">
 

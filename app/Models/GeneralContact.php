@@ -9,12 +9,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class GeneralContact extends Model
 {
     use HasFactory;
-    protected $fillable = ['trait','name','surname','phone','email'
-    ,'city','legal','country_code_id','zipcode','duration','season','travelers',
-    'children','type','romantic','mobility','message','ipAdress'];
+    protected $fillable = [
+        'trait', 'name', 'surname', 'phone', 'email', 'city', 'legal', 'country_code_id', 'zipcode', 'duration', 'season', 'travelers',
+        'children', 'type', 'romantic', 'mobility', 'message', 'ipAdress'
+    ];
 
-    public function country_code(){
+    public function country_code(): BelongsTo
+    {
         return $this->belongsTo(CountryCode::class);
     }
 }
-

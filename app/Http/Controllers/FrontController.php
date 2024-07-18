@@ -25,12 +25,13 @@ class FrontController extends Controller
         // if (config('app.debug')) {
         //     return response()->view('front.maintenance');
         // }
-        $blogs = Blog::latest()->take(3)->get();
-        $sights = Sight::latest()->take(10)->get();
-        $tours = Tour::latest()->take(3)->get();
+        // $blogs = Blog::latest()->take(3)->get();
+        $sights = Sight::latest()->take(3)->get();
+        // $tours = Tour::latest()->take(3)->get();
         $destinations = Destination::all();
+        $antartida = Destination::where('name', 'Antarctica')->get();
 
-        return response()->view('front.index', compact('destinations', 'blogs', 'sights', 'tours'));
+        return response()->view('front.index', compact('destinations', 'sights', 'antartida'));
     }
     public function destination(Destination $destination): Response
     {

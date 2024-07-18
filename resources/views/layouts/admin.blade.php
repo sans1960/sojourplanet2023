@@ -149,6 +149,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('contactos.list.index') }}">
                                         {{ __('List Contacts') }}
                                     </a></li>
+                                <li><a class="nav-link text-dark" href="{{ route('contactos.index') }}">
+                                        {{ __('Contacts') }}
+                                    </a></li>
                                 <li><a class="nav-link text-dark" href="{{ route('contactos.general.index') }}">
                                         {{ __('General Contacts') }}
                                     </a></li>
@@ -229,6 +232,7 @@
     </div>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/sweetalert2.js') }}"></script>

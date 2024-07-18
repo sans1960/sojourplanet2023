@@ -1,4 +1,4 @@
-@extends('front.layouts.sights')
+@extends('front.layouts.base')
 @section('meta_title')
 {{ $sight->title }}
 @endsection
@@ -157,7 +157,7 @@
     </div>
     <div class="row mt-5">
         <div id="social-links" class="d-flex justify-content-center social-share">
-            <p>Share this Sight with: {!! Share::currentPage('Share')->facebook()->twitter() !!}</p>
+            <p>Share this Sight with: {!! Share::currentPage('Share')->facebook() !!}</p>
         </div>
 
 

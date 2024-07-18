@@ -23,7 +23,7 @@
 </style>
 @endsection
 @section('content')
-<div class="container py-5">
+<div class="container">
     @include('front.layouts.navbardestinations', [
     'destinations' => ($destinations = App\Models\Destination::all())
     ])
@@ -33,7 +33,7 @@
         <div class="col-md-4 mb-4">
             <a href="{{ route('sight', $sight) }}" class="nav-link  ">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
-                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:200px;">
+                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
                     <p class="text-white open">{{$sight->categorysight->name}}</p>
                     <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
 
