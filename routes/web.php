@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\LocationTourController;
 use App\Http\Controllers\Admin\ListContactController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GeneralContactController;
+use App\Http\Controllers\Admin\LandingContactController;
 use App\Http\Controllers\Admin\SightContactController;
 use App\Http\Controllers\Admin\DestinationContactController;
 use App\Http\Controllers\Admin\CountryContactController;
@@ -56,6 +57,7 @@ Route::get('/our-services', [FrontController::class, 'ourServices'])->name('serv
 Route::get('/search/{q}', [FrontController::class, 'search'])->name('search');
 Route::get('/blogs', [FrontController::class, 'allblogs'])->name('blogs');
 Route::get('/sights', [FrontController::class, 'allsights'])->name('sights');
+Route::get('/travel', [FrontController::class, 'travel'])->name('travel');
 Route::get('/blogs/{blog}', [FrontController::class, 'blog'])->name('blog');
 Route::get('/sights/{sight}', [FrontController::class, 'sight'])->name('sight');
 Route::get('/tours/{tour}', [FrontController::class, 'tour'])->name('tour');
@@ -110,6 +112,7 @@ Route::group(['middleware' => 'admin'], function () {
   Route::resource('admin/contactos-list', ListContactController::class)->names('contactos.list');
   Route::resource('admin/contactos', ContactController::class)->names('contactos');
   Route::resource('admin/contactos-general', GeneralContactController::class)->names('contactos.general');
+  Route::resource('admin/contactos-landing', LandingContactController::class)->names('contactos.landing');
   Route::resource('admin/contactos-destinations', DestinationContactController::class)->names('contactos.destination');
   Route::resource('admin/contactos-sight', SightContactController::class)->names('contactos.sight');
   Route::resource('admin/contactos-tour', TourContactController::class)->names('contactos.tour');

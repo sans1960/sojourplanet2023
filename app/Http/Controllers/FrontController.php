@@ -164,6 +164,10 @@ class FrontController extends Controller
     {
         return response()->view('front.about');
     }
+    public function travel(): Response
+    {
+        return response()->view('front.travel');
+    }
     public function taylor(): Response
     {
         return response()->view('front.taylor');

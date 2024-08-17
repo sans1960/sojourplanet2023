@@ -155,6 +155,9 @@
                                 <li><a class="nav-link text-dark" href="{{ route('contactos.general.index') }}">
                                         {{ __('General Contacts') }}
                                     </a></li>
+                                    <li><a class="nav-link text-dark" href="{{ route('contactos.landing.index') }}">
+                                        {{ __('Landing Contacts') }}
+                                    </a></li>
                                 <li>
                                     <a class="nav-link text-dark" href="{{ route('contactos.sight.index') }}">
                                         {{ __('Sights Contacts') }}
