@@ -128,7 +128,7 @@
                         All rights reserved</a>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <a href="" class="text-white nav-link">Contact us</a>
+                    <a href="{{ route('contactos.create') }}" class="text-white nav-link">Contact us</a>
                 </div>
 
             </div>

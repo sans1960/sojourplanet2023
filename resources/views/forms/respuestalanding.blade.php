@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/front.css') }}">
 </head>
 <body>
-    <div class="header vh-100" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{ asset('img/bosque.jpg') }});height: 500px;background-position:center;">
+    <div class="header vh-100" style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{ asset('img/bosque.jpg') }});height: 500px;background-position:center;background-size:cover;">
         <nav class="navbar navbar-expand-lg bg-dark " data-bs-theme="dark" style="background-color: transparent !important;">
             <div class="container-fluid">
               <a class="navbar-brand" href="{{ route('index') }}">
