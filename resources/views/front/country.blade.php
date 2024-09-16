@@ -8,7 +8,7 @@
 <div class="container-fluid  d-flex flex-column justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:400px; background-size:cover;background-position:center center;">
 
-    <h1 class="text-white patua text-center">{{$country->intro}} {{ $country->name }}</h1>
+    <h1 class="text-white patua text-center fs-4">{{$country->intro}} {{ $country->name }}</h1>
     <a href="{{route('contactcountry',$country)}}"
         class="btn btn-outline-dark border border-white mt-3 patua px-3 py-2 text-white rounded-pill">Start to
         plan
@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 py-2 ">
-            <h4 class="patua ">Overview</h4>
+            <h2 class="patua fs-4">Overview</h2>
             <div class="texto  open py-4">
 
                 {!! \Illuminate\Support\Str::limit( $country->description, 500 );!!}
@@ -62,7 +62,7 @@
         <div class="col-md-6 py-2 ">
 
             <div class="row d-flex justify-content-center align-items-center px-2">
-                <h4 class="patua">Key facts</h4>
+                <h2 class="patua fs-4">Key facts</h2>
                 @if ($country->population !=null)
                 <div class="col d-flex flex-column justify-content-center align-items-center p-2">
                     <i class="bi bi-people" style="font-size: 1.5em;"></i>
@@ -134,22 +134,22 @@
                             @if ($country->advisory->level == 1)
                             <div style="background-color:#003875;"
                                 class="p-2 d-flex justify-content-center align-items-center ">
-                                <h6 class="text-white patua">{{$country->advisory->legend}}</h6>
+                                <h3 class="text-white patua fs-6">{{$country->advisory->legend}}</h3>
                             </div>
                             @elseif ($country->advisory->level == 2)
                             <div style="background-color:#FFCC66;"
                                 class="p-2 d-flex justify-content-center align-items-center">
-                                <h6 class="patua ">{{$country->advisory->legend}}</h6>
+                                <h3 class="patua fs-6">{{$country->advisory->legend}}</h3>
                             </div>
                             @elseif ($country->advisory->level == 3)
                             <div style="background-color:#FF9900;"
                                 class="p-2 d-flex justify-content-center align-items-center">
-                                <h6 class=" text-white patua">{{$country->advisory->legend}}</h6>
+                                <h3 class=" text-white patua fs-6">{{$country->advisory->legend}}</h3>
                             </div>
                             @elseif ($country->advisory->level == 4)
                             <div style="background-color:#FF0000;"
                                 class="p-2 d-flex justify-content-center align-items-center">
-                                <h6 class="patua text-white">{{$country->advisory->legend}}</h6>
+                                <h3 class="patua text-white fs-6">{{$country->advisory->legend}}</h3>
                             </div>
                             @endif
                             <div>
@@ -183,54 +183,14 @@
     </div>
 </div>
 
-{{-- <div class="container mt-3">
-    @if (count($country->tours))
-    <h3 class="patua mt-3">Inspiring itineraris in {{$country->name}}</h3>
-    @if (count($country->tours) <= 4) <div class="row">
-        @foreach ($country->tours as $tour)
-        <div class="col-md-3 mb-3">
-            <a href="{{route('tour',$tour)}}" class="nav-link  ">
-                <div class="d-flex flex-column justify-content-between align-items-center p-2 "
-                    style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover; height:250px;">
-
-                    <h5 class="fs-4 patua text-center text-white">{{ $tour->title }}</h5>
-
-                </div>
-            </a>
-
-        </div>
-        @endforeach
-</div> --}}
-
-{{-- @else
-<div class="container">
-    <div class="owl-carousel owl-theme mb-3">
-        @foreach ($country->tours as $tour)
-
-        <a href="{{route('tour',$tour)}}" class="nav-link  ">
-            <div class="d-flex flex-column justify-content-between align-items-center p-2 "
-                style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($tour->image) }});background-size:cover; height:250px;">
-
-                <h5 class="fs-4 patua text-center text-white">{{ $tour->title }}</h5>
-
-            </div>
-        </a>
 
 
-        @endforeach
-    </div>
 
-
-</div>
-@endif
-@endif --}}
-
-{{-- </div> --}}
 <div class="container mt-3">
 
     <div class="row">
         @if(count($country->location))
-        <h3 class="patua mt-3">Insteresting locations in {{$country->name}}</h3>
+        <h2 class="patua mt-3 fs-4">Insteresting locations in {{$country->name}}</h2>
 
         @foreach ($country->location as $item)
         <div class="col-md-3">
@@ -238,7 +198,7 @@
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($item->image) }});background-size:cover; height:250px;">
 
-                    <h5 class="fs-4 patua text-center text-white">{{ $item->name }}</h5>
+                    <h3 class="fs-4 patua text-center text-white">{{ $item->name }}</h3>
 
                 </div>
             </a>
@@ -247,7 +207,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h1>
+                            <h2 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -277,14 +237,14 @@
 
     <div class="row">
         @if (count($country->experience))
-        <h3 class="patua mt-3">Experiences and atractions in {{$country->name}}</h3>
+        <h2 class="patua mt-3 fs-4">Experiences and atractions in {{$country->name}}</h2>
         @foreach ($country->experience as $item)
         <div class="col-md-3">
             <a href="" class="nav-link  " data-bs-toggle="modal" data-bs-target="#Modalo{{$item->id}}">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($item->image) }});background-size:cover; height:250px;">
 
-                    <h5 class="fs-4 patua text-center text-white">{{ $item->name }}</h5>
+                    <h3 class="fs-4 patua text-center text-white">{{ $item->name }}</h3>
 
                 </div>
             </a>
@@ -293,7 +253,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h1>
+                            <h2 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -321,7 +281,7 @@
 <div class="container mt-3">
 
     @if (count($country->sights))
-    <h3 class="patua mt-3">Essential sights in {{$country->name}}</h3>
+    <h2 class="patua mt-3 fs-4">Essential sights in {{$country->name}}</h2>
 
 
     @if (count($country->sights) <= 4) <div class="row">
@@ -331,7 +291,7 @@
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
 
-                    <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
+                    <h3 class="fs-4 patua text-center text-white">{{ $sight->title }}</h3>
 
                 </div>
             </a>
@@ -349,7 +309,7 @@
             <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                 style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
 
-                <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
+                <h2 class="fs-4 patua text-center text-white">{{ $sight->title }}</h2>
 
             </div>
         </a>
@@ -367,14 +327,14 @@
 
     <div class="row mb-3">
         @if (count($country->acommodation))
-        <h3 class="patua mt-3">Luxury acomodations in {{$country->name}}</h3>
+        <h2 class="patua mt-3 fs-4">Luxury acomodations in {{$country->name}}</h2>
         @foreach ($country->acommodation as $item)
         <div class="col-md-3">
             <a href="" class="nav-link  " data-bs-toggle="modal" data-bs-target="#Modale{{$item->id}}">
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($item->image) }});background-size:cover; height:250px;">
 
-                    <h5 class="fs-4 patua text-center text-white">{{ $item->name }}</h5>
+                    <h3 class="fs-4 patua text-center text-white">{{ $item->name }}</h3>
 
                 </div>
             </a>
@@ -383,7 +343,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h1>
+                            <h2 class="modal-title fs-5" id="exampleModalLabel">{{ $item->name }}</h2>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -436,7 +396,7 @@
 
 <div class="container">
     @if ($country->nearby)
-    <h3 class="patua mt-3">Other nearby destinations</h3>
+    <h2 class="patua mt-3 fs-4">Other nearby destinations</h2>
     @if (count($country->nearby)<=4) <div class="row mb-3">
 
 
@@ -450,7 +410,7 @@
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($it->image) }});background-size:cover; height:250px;">
 
-                    <h5 class="fs-4 patua text-center text-white">{{$it->name}}</h5>
+                    <h3 class="fs-4 patua text-center text-white">{{$it->name}}</h3>
                 </div>
             </a>
         </div>
@@ -477,7 +437,7 @@
         <div class="d-flex flex-column justify-content-between align-items-center p-2 "
             style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($it->image) }});background-size:cover; height:250px;">
 
-            <h5 class="fs-4 patua text-center text-white">{{$it->name}}</h5>
+            <h2 class="fs-4 patua text-center text-white">{{$it->name}}</h2>
         </div>
     </a>
 

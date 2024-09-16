@@ -5,21 +5,21 @@ FAQs
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-center text-white">Frequently Asked Questions (FAQs)</h4>
+    <h1 class="patua text-center text-white fs-4">Frequently Asked Questions (FAQs)</h1>
 
 </div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto mt-5 mb-5">
-            <h4 class="patua mb-5 ">About Sojournplanet</h4>
+            <h2 class="patua mb-5 fs-4">About Sojournplanet</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header ">
+                    <h3 class="accordion-header ">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                             What services does Sojournplanet offer for luxury travel?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapseOne" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body texto">
@@ -34,12 +34,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                             What makes Sojournplanet different from other luxury travel agencies?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body texto">
@@ -54,13 +54,13 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseThree" aria-expanded="false"
                             aria-controls="flush-collapseThree ">
                             Is Sojournplanet committed to sustainable tourism?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body texto">
@@ -72,15 +72,15 @@ FAQs
                     </div>
                 </div>
             </div>
-            <h4 class="patua mt-5 mb-5">Tailor-made trips</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">Tailor-made trips</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample2">
                 <div class="accordion-item">
-                    <h2 class="accordion-header ">
+                    <h3 class="accordion-header ">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
                             Can I fully customize my travel itinerary?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse2" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample2">
                         <div class="accordion-body texto">
@@ -93,12 +93,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                             What types of custom trips do you offer?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse3" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample2">
                         <div class="accordion-body texto">
@@ -110,12 +110,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4 ">
                             How can I customize my trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse4" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample2">
                         <div class="accordion-body texto">
@@ -126,12 +126,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5 ">
                             What level of flexibility do you offer in itineraries?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse5" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample2">
                         <div class="accordion-body texto">
@@ -142,15 +142,15 @@ FAQs
                     </div>
                 </div>
             </div>
-            <h4 class="patua mt-5 mb-5">Planning my vacations</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">Planning my vacations</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample3">
                 <div class="accordion-item">
-                    <h2 class="accordion-header ">
+                    <h3 class="accordion-header ">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
                             How does Sojournplanet website work?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse6" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -172,12 +172,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
                             How can I start planning my luxury travel with Sojournplanet?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse7" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -190,12 +190,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8 ">
                             What information do you need from me to start planning my trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse8" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -207,12 +207,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9 ">
                             Do you plan short getaways, or do you only specialize in extended vacations?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse9" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -225,12 +225,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10 ">
                             What types of activities can I expect on my trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse10" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -242,12 +242,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11 ">
                             What do travel packages include?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse11" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -259,12 +259,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12 ">
                             How do you ensure exclusive travel experiences?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse12" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -276,12 +276,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13 ">
                             How much time does it take to organize a trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse13" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -300,13 +300,13 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14 ">
                             Can you organize trips for large groups or families?
 
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse14" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -319,12 +319,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapse15 ">
                             How do you handle special travel needs for seniors?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse15" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -337,12 +337,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapse16 ">
                             Are Sojournplanet holidays suitable for children?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse16" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample3">
                         <div class="accordion-body texto">
@@ -357,15 +357,15 @@ FAQs
                 </div>
 
             </div>
-            <h4 class="patua mt-5 mb-5">Booking my journeys</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">Booking my journeys</h2>
             <div class="accordion accordion-flush" id="accordion4">
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse17" aria-expanded="false" aria-controls="flush-collapse17">
                             What occurs once I've booked?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse17" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             Once you're satisfied with your final itinerary and have booked your trip, we'll confirm all
@@ -381,12 +381,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse18" aria-expanded="false" aria-controls="flush-collapse18">
                             Can you help me with my visa?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse18" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             Yes, we can provide comprehensive assistance with the visa application process, including
@@ -398,12 +398,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse19" aria-expanded="false" aria-controls="flush-collapse19">
                             How do you select accommodations?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse19" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             We choose accommodations based on their comfort, luxury, and quality, ensuring they are
@@ -413,12 +413,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse20" aria-expanded="false" aria-controls="flush-collapse20">
                             Do you handle flight reservations?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse20" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             It's totally your choice. We can take care of everything and save you the hassle, but if you
@@ -429,12 +429,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse21" aria-expanded="false" aria-controls="flush-collapse21">
                             Will I be part of a group?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse21" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             All of our trips are private, so you won’t be joining a group unless you’re traveling with
@@ -448,12 +448,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse22" aria-expanded="false" aria-controls="flush-collapse22">
                             Do you offer travel insurance?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse22" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             All our reservations include travel insurance, because we believe that it is a fundamental
@@ -463,12 +463,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse23" aria-expanded="false" aria-controls="flush-collapse23">
                             Do I need vaccines for my trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse23" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             Although it is your responsibility to ensure you have all necessary vaccinations for your
@@ -482,12 +482,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse24" aria-expanded="false" aria-controls="flush-collapse24">
                             Can I add extra services after I've booked and paid?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse24" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             Yes, definitely. Many of our clients do. We’re very flexible and understand that new ideas
@@ -497,12 +497,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse25" aria-expanded="false" aria-controls="flush-collapse25">
                             Can you accommodate specific dietary needs?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse25" class="accordion-collapse collapse" data-bs-parent="#accordion4">
                         <div class="accordion-body texto">
                             Yes, we make sure all your dietary requirements are communicated to hotels and restaurants
@@ -511,15 +511,15 @@ FAQs
                     </div>
                 </div>
             </div>
-            <h4 class="patua mt-5 mb-5">Payments</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">Payments</h2>
             <div class="accordion accordion-flush" id="accordion5">
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse26" aria-expanded="false" aria-controls="flush-collapse26">
                             When is the full payment for my trip due?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse26" class="accordion-collapse collapse" data-bs-parent="#accordion5">
                         <div class="accordion-body texto">
                             The balance payment is required 12 weeks before your intended departure date. If you book
@@ -535,12 +535,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse27" aria-expanded="false" aria-controls="flush-collapse27">
                             How can I make a payment to Sojournplanet?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse27" class="accordion-collapse collapse" data-bs-parent="#accordion5">
                         <div class="accordion-body texto">
                             You can pay for your trip using a credit card or by bank transfer to our account. We don't
@@ -553,15 +553,15 @@ FAQs
                 </div>
 
             </div>
-            <h4 class="patua mt-5 mb-5">Cancellations</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">Cancellations</h2>
             <div class="accordion accordion-flush" id="accordion6">
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse28" aria-expanded="false" aria-controls="flush-collapse28">
                             What happens if I need to change or cancel my trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse28" class="accordion-collapse collapse" data-bs-parent="#accordion6">
                         <div class="accordion-body texto">
                             We understand that plans can change. Modifications are subject to availability and may incur
@@ -578,16 +578,16 @@ FAQs
 
 
             </div>
-            <h4 class="patua mt-5 mb-5">During the holidays</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">During the holidays</h2>
             <div class="accordion accordion-flush" id="accordion7">
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse29" aria-expanded="false" aria-controls="flush-collapse29">
                             Do you provide assistance during the trip?
 
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse29" class="accordion-collapse collapse" data-bs-parent="#accordion7">
                         <div class="accordion-body texto">
                             Yes, we offer 24/7 assistance during your trip. You can contact us at any time for any need
@@ -597,12 +597,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse30" aria-expanded="false" aria-controls="flush-collapse30">
                             Who do I contact in case of an emergency?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse30" class="accordion-collapse collapse" data-bs-parent="#accordion7">
                         <div class="accordion-body texto">
                             If you need to reach us in an emergency while traveling, you'll find the contact details in
@@ -614,13 +614,13 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse31" aria-expanded="false" aria-controls="flush-collapse31">
                             I’ve already booked some elements of my trip. Can you organize just my activities or
                             experiences?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse31" class="accordion-collapse collapse" data-bs-parent="#accordion7">
                         <div class="accordion-body texto">
                             Unfortunately, we cannot. We can only add certain experiences if we're also booking the
@@ -630,12 +630,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse32" aria-expanded="false" aria-controls="flush-collapse32">
                             How do you handle medical emergencies during the trip?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse32" class="accordion-collapse collapse" data-bs-parent="#accordion7">
                         <div class="accordion-body texto">
                             We have protocols in place to handle medical emergencies quickly, including contacts with
@@ -644,15 +644,15 @@ FAQs
                     </div>
                 </div>
             </div>
-            <h4 class="patua mt-5 mb-5">After the trip</h4>
+            <h2 class="patua mt-5 mb-5 fs-4">After the trip</h2>
             <div class="accordion accordion-flush" id="accordion8">
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse33" aria-expanded="false" aria-controls="flush-collapse33">
                             How can I provide feedback on my travel experience?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse33" class="accordion-collapse collapse" data-bs-parent="#accordion8">
                         <div class="accordion-body texto">
                             We highly value your feedback. After your trip, we will invite you to complete a survey to
@@ -664,12 +664,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse34" aria-expanded="false" aria-controls="flush-collapse34">
                             I took some great photos on my trip. How can I share them with you?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse34" class="accordion-collapse collapse" data-bs-parent="#accordion8">
                         <div class="accordion-body texto">
                             We genuinely love other people’s travel photos. Send them to your Travel Expert or, if
@@ -679,12 +679,12 @@ FAQs
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header">
+                    <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapse35" aria-expanded="false" aria-controls="flush-collapse35">
                             I’m not ready to book another trip yet, but how do I stay in touch?
                         </button>
-                    </h2>
+                    </h3>
                     <div id="flush-collapse35" class="accordion-collapse collapse" data-bs-parent="#accordion8">
                         <div class="accordion-body texto">
                             No problem, we understand that choosing your next destination and arranging time off work

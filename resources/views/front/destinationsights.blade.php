@@ -2,7 +2,7 @@
 
 
 @section('title')
-{{ $destination->name }}
+Inspiring sights around {{ $destination->name }}
 @endsection
 @section('css')
 <style>
@@ -27,7 +27,7 @@
     @include('front.layouts.navbardestinations', [
     'destinations' => ($destinations = App\Models\Destination::all())
     ])
-    <h4 class="text-center patua mt-2"> Sights around {{ $destination->name }}</h4>
+    <h1 class="text-center patua mt-2 fs-4">Inspiring sights around {{ $destination->name }}</h1>
 
     <div class="row">
         <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
@@ -46,7 +46,7 @@
                 <div class="d-flex flex-column justify-content-between align-items-center p-2 "
                     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->image) }});background-size:cover; height:250px;">
                     <p class="text-white open">{{$sight->country->name}}</p>
-                    <h5 class="fs-4 patua text-center text-white">{{ $sight->title }}</h5>
+                    <h2 class="fs-4 patua text-center text-white">{{ $sight->title }}</h2>
 
                 </div>
             </a>

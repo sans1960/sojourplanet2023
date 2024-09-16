@@ -5,26 +5,26 @@ Booking Conditions
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-center text-white">Booking Conditions</h4>
+    <h1 class="patua text-center text-white fs-4">Booking Conditions</h1>
 
 </div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto mb-5">
-            <h4 class="patua mt-5 mb-3">Welcome to Sojournplanet LLC</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">Welcome to Sojournplanet LLC</h2>
             <p class="open texto">Thank you for visiting www.sojournplanet.com. This site is owned and operated by
                 Sojournplanet LLC, located at 2222 W.
                 Grand River Ave Ste A, Okemos, MI 48864 (“Sojournplanet”). By using our services, you agree to these
                 Terms of Service
                 and Booking Conditions. If you do not agree with any of these terms, please do not use our services.</p>
-            <h4 class="patua mt-5 mb-3">SECTION 1. INTRODUCTION</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 1. INTRODUCTION</h2>
             <p class="open texto"> <span class="fw-bold">1.1.</span>These terms and conditions apply to all bookings and
                 contracted services made through Sojournplanet LLC. By making a
                 booking or taking our services, you agree to be legally bound by these terms and conditions.</p>
             <p class="open texto"><span class="fw-bold">1.2.</span>We reserve the right to modify these terms and
                 conditions at any time. Any changes will take effect immediately upon
                 posting on our website. It is your responsibility to review these terms and conditions regularly.</p>
-            <h4 class="patua mt-5 mb-3">SECTION 2. DEFINITIONS</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 2. DEFINITIONS</h2>
             <p class="open texto"><span class="fw-bold">2.1."We "</span>or <span class="fw-bold">" the Company
                     "</span>or
                 any
@@ -42,7 +42,7 @@ Booking Conditions
                 deposit and expressly declare your agreement through the means provided for this purpose by us.</p>
             <p class="open texto"> <span class="fw-bold">2.5. "Supplier"</span> refers to third parties providing
                 transportation, accommodation, and other services related to your travel.</p>
-            <h4 class="patua mt-5 mb-3">SECTION 3. CONTRACT</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 3. CONTRACT</h2>
             <p class="open texto"> <span class="fw-bold">3.1</span> A legally binding contract between you and us is
                 established only when we send you our booking confirmation after
                 receiving your payment in released funds of the necessary deposit, the total price of your holiday or
@@ -57,7 +57,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">3.4.</span> Sojournplanet can as well design your ideal trip or
                 book Travel services on your behalf. Specific conditions will be
                 shared with you before completing payment.</p>
-            <h4 class="patua mt-5 mb-3">4. INFORMATION</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 4. INFORMATION</h2>
             <p class="open texto"> <span class="fw-bold">4.1</span> While we strive to ensure that the information on
                 our website is accurate and not misleading, please be aware that it
                 may have been published many months before your travel experience and could be subject to change.</p>
@@ -66,7 +66,7 @@ Booking Conditions
                 experience will be confirmed in your booking confirmation. For any changes that we might make after
                 issuing your booking
                 confirmation, please refer to Section 7.</p>
-            <h4 class="patua mt-5 mb-3">5. PRICE AND PAYMENT</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 5. PRICE AND PAYMENT</h2>
             <p class="open texto"> <span class="fw-bold">5.1.</span> We reserve the right to adjust trip prices on our
                 website or in written proposals before booking confirmation. The
                 current price will be communicated before confirmation. Prices are quoted in USD and based on the
@@ -87,7 +87,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">5.5.</span> The final payment must be made before departure as
                 per the terms of each travel supplier. Failure to pay by the due date
                 may result in cancellation and forfeiture of deposits.</p>
-            <h4 class="patua mt-5 mb-3">6. CANCELLATION AND AMENDMENTS BY THE CLIENT</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 6. CANCELLATION AND AMENDMENTS BY THE CLIENT</h2>
             <p class="open texto"> <span class="fw-bold">6.1.</span> Any request to cancel or amend your booking must be
                 sent in writing to our postal address or via email to
                 contact@sojournplanet.com.</p>
@@ -104,7 +104,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">6.6.</span> Please review the coverage of the travel insurance
                 included with your booking and consider obtaining additional coverage
                 if necessary to protect your investment against unforeseen circumstances.</p>
-            <h4 class="patua mt-5 mb-3">7. CANCELLATION AND AMENDMENTS BY SOJOURNPLANET</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 7. CANCELLATION AND AMENDMENTS BY SOJOURNPLANET</h2>
             <p class="open texto"> <span class="fw-bold">7.1.</span> If we are forced to make significant changes, we
                 will notify you as soon as possible and give you the option to accept
                 the changes or cancel the contract without cancellation charges.</p>
@@ -114,7 +114,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">7.3.</span> We will not be responsible for any additional
                 expenses incurred by you as a result of changes or cancellations, except
                 as specifically stated in these terms and conditions.</p>
-            <h4 class="patua mt-5 mb-3">8. INSURANCE AND LIABILITY</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 8. INSURANCE AND LIABILITY</h2>
             <p class="open texto"> <span class="fw-bold">8.1.</span> All our reservations include travel insurance to
                 ensure adequate protection. Please review the details of included
                 coverage to understand what is provided.</p>
@@ -149,7 +149,7 @@ Booking Conditions
                 bid,Sojournplanet LLC
                 cannot be held responsible for actions of vendors or unforeseen events that affect the customers
                 satisfaction.</p>
-            <h4 class="patua mt-5 mb-3">9. PASSPORTS, VISAS, AND HEALTH</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 9. PASSPORTS, VISAS, AND HEALTH</h2>
             <p class="open texto"> <span class="fw-bold">9.1.</span> We will provide U.S. citizens with general
                 information on passport, visa, and health requirements for your trip
                 destinations, including estimated time frames for obtaining visas.</p>
@@ -186,7 +186,7 @@ Booking Conditions
                 available for a fee
                 as outlined in <a href="{{route('services')}}" target="_blank" rel="noopener noreferrer">Our
                     Services.</a> </p>
-            <h4 class="patua mt-5 mb-3">10. SAFETY AND RISKS</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 10. SAFETY AND RISKS</h2>
             <p class="open texto"> <span class="fw-bold">10.1.</span> Traveling to certain destinations can present
                 higher risks compared to others. Sojournplanet advises customers to stay
                 updated with daily news and to review travel restrictions, alerts, and advisories issued by the U.S.
@@ -229,7 +229,7 @@ Booking Conditions
                 be aware of current travel advisories and recommendations through reliable sources such as the U.S.
                 Department of State
                 website.</p>
-            <h4 class="patua mt-5 mb-3">11. ASSISTANCE</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 11. ASSISTANCE</h2>
             <p class="open texto"> <span class="fw-bold">11.1.</span> Regardless of our liability for compensation, we
                 are committed to providing you with prompt and appropriate assistance
                 should you encounter difficulties during your trip.</p>
@@ -245,7 +245,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">11.4.</span> This approach ensures that we can offer help when
                 it's needed, while also encouraging responsible behavior from our
                 travelers.</p>
-            <h4 class="patua mt-5 mb-3">12. SPECIAL REQUESTS</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 12. SPECIAL REQUESTS</h2>
             <p class="open texto"> <span class="fw-bold">12.1.</span> While we will make every effort to accommodate any
                 special requests you may have—such as specific airline seating,
                 dietary requirements, or particular room preferences—and will pass these requests on to the relevant
@@ -258,7 +258,7 @@ Booking Conditions
                 appreciate your understanding and will do our best to ensure your needs are communicated clearly to
                 those providing your
                 travel services.</p>
-            <h4 class="patua mt-5 mb-3">13. EXCURSIONS AND ACTIVITIES</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 13. EXCURSIONS AND ACTIVITIES</h2>
             <p class="open texto"> <span class="fw-bold">13.1.</span> When excursions and/or activities are booked and
                 paid for in advance as part of your trip price and detailed in our
                 booking confirmation, they are considered part of your package contract with us.</p>
@@ -272,7 +272,7 @@ Booking Conditions
                 liable for the performance, quality, or safety of these independently arranged activities. Exercise
                 caution and consider
                 the provider's reputation when booking additional services.</p>
-            <h4 class="patua mt-5 mb-3">14. DATA PROTECTION</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 14. DATA PROTECTION</h2>
             <p class="open texto"> <span class="fw-bold">14.1.</span> To process your booking, we need to collect
                 personal information, including your name, address, email, phone number, and
                 details of your travel companions. We also require information about any special needs, health, medical,
@@ -304,7 +304,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">14.6.</span> For more details on how we use your personal
                 information and your rights concerning your personal data, please consult
                 our <a href="{{route('private')}}" target="_blank" rel="noopener noreferrer">Privacy Policy.</a> </p>
-            <h4 class="patua mt-5 mb-3">15. JURISDICTION</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 15. JURISDICTION</h2>
             <p class="open texto"> <span class="fw-bold">15.1.</span> This contract is governed by the laws of the state
                 of Michigan, and any disputes will be resolved in the appropriate
                 courts in Michigan.</p>
@@ -313,7 +313,7 @@ Booking Conditions
             <p class="open texto"> <span class="fw-bold">15.3.</span> If any provision of these terms and conditions is
                 found to be invalid or unenforceable, the remaining provisions will
                 remain valid and enforceable.</p>
-            <h4 class="patua mt-5 mb-3">16. CONTACT</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 16. CONTACT</h2>
             <p class="open texto"> <span class="fw-bold">16.1.</span> For any inquiries or assistance, you can contact
                 us at contact@sojournplanet.com or at our postal address: 2222 W. Grand
                 River Ave Ste A, Okemos, MI 48864. Our office hours are from 9:00 am to 5:00 pm EST, Monday to Friday.
@@ -322,7 +322,7 @@ Booking Conditions
                 during your trip.</p>
             <p class="open texto"> <span class="fw-bold">16.3.</span> For assistance before your trip, you can reach our
                 customer service team during office hours.</p>
-            <h4 class="patua mt-5 mb-3">17. IF YOU HAVE A COMPLAINT</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">SECTION 17. IF YOU HAVE A COMPLAINT</h2>
             <p class="open texto"> <span class="fw-bold">17.1.</span> If you encounter any issues during your trip that
                 you believe constitute a lack of conformity with the agreed travel
                 services, it's crucial to report these immediately. Please inform our representatives or the relevant

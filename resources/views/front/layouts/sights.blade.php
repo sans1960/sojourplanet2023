@@ -2,6 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3D9JX1BFT0"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3D9JX1BFT0');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="@yield('meta_title')" />
@@ -79,7 +82,7 @@
 
 
     @yield('content')
-    <footer class="bg-dark">
+      <footer class="bg-dark">
         <div class="container mt-2 p-3">
             <div class="row mt-2">
                 <div class="col-md-3 d-flex justify-content-center align-items-center">

@@ -5,15 +5,15 @@ What’s the trip of your dreams?
 @section('content')
 <div class="container-fluid d-flex justify-content-center align-items-center"
   style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/safari-jeep.jpg')}});background-size:cover;height:300px;background-position:center;">
-  <h4 class="text-white patua text-center">Discovering the world with us</h4>
+  <h1 class="text-white patua text-center fs-4">Discovering the world with us</h1>
 </div>
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-md-8 mx-auto  ">
-      <h4 class="patua text-center">
+      <h2 class="patua text-center fs-4">
         Let us take you on the journey of your dreams, a tailor-made trip that will awaken your senses, enrich your soul
         and transform you forever.
-      </h4>
+      </h2>
 
     </div>
 
@@ -54,7 +54,7 @@ What’s the trip of your dreams?
 </div>
 <div class="container-fluid d-flex justify-content-center align-items-center"
   style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(https://cdn.pixabay.com/photo/2016/11/13/21/45/airport-1822133_1280.jpg);background-size:cover;height:300px;background-position:center;">
-  <h4 class="text-white patua text-center">Adapting the trip to you</h4>
+  <h2 class="text-white patua text-center fs-4">Adapting the trip to you</h2>
 </div>
 <div class="container mt-5 mb-5">
   <div class="row">

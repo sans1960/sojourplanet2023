@@ -5,14 +5,14 @@ Travel.State.Gov recommendations
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-center text-white">Travel.State.Gov recommendations</h4>
+    <h1 class="patua text-center text-white fs-4">Travel.State.Gov recommendations</h1>
 
 </div>
 <div class="container">
     <div class="row">
 
         <div class="col-md-8  mx-auto mt-5">
-            <h4 class="patua">Travel safe and informed</h4>
+            <h2 class="patua fs-4">Travel safe and informed</h2>
             <p class="open texto">Your safety comes first, especially when it comes to such a rewarding activity as
                 traveling.
                 To travel
@@ -43,9 +43,9 @@ Travel.State.Gov recommendations
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color: #003875" class="patua p-2 text-white text-center">Level 1 - Exercise Normal
+            <h2 style="background-color: #003875" class="patua p-2 text-white text-center fs-4">Level 1 - Exercise Normal
                 Precautions.
-            </h4>
+            </h2>
             <p class="open texto">This is the lowest warning level for safety risks. Any international travel carries
                 some risk. Conditions in other
                 destinations may differ from those in the United States and may change at any time. The following
@@ -61,8 +61,8 @@ Travel.State.Gov recommendations
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color:#FFCC66" class="patua p-2 text-center">Level 2 - Exercise Increased Caution.
-            </h4>
+            <h2 style="background-color:#FFCC66" class="patua p-2 text-center fs-4">Level 2 - Exercise Increased Caution.
+            </h2>
             <p class="open texto">Be aware of heightened security risks. The State Department offers additional advice
                 for travelers in these areas in the
                 Travel Advisory. Conditions in any destination may change at any time. The following destinations are
@@ -78,8 +78,8 @@ Travel.State.Gov recommendations
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color:#FF9900" class="patua p-2 text-white text-center">Level 3 - Reconsider Travel.
-            </h4>
+            <h2 style="background-color:#FF9900" class="patua p-2 text-white text-center fs-4">Level 3 - Reconsider Travel.
+            </h2>
             <p class="open texto">Avoid travel due to serious security risks. The Department of State offers additional
                 advice for travelers in these
                 areas in the Travel Advisory. Conditions in any destination may change at any time. The following
@@ -95,8 +95,8 @@ Travel.State.Gov recommendations
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 style="background-color:#FF0000" class="patua p-2 text-white text-center">Level 4 - Do not travel.
-            </h4>
+            <h2 style="background-color:#FF0000" class="patua p-2 text-white text-center fs-4">Level 4 - Do not travel.
+            </h2>
             <p class="open texto">This is the highest level of warning due to the increased likelihood of
                 life-threatening hazards. During an emergency,
                 the U.S. government may have very limited ability to provide assistance. The State Department advises
@@ -116,8 +116,8 @@ Travel.State.Gov recommendations
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto mt-5">
-            <h4 class="patua ">Varying Levels
-            </h4>
+            <h2 class="patua fs-4">Varying Levels
+            </h2>
             <p class="open texto">The Department of State issues a general level of travel advice for a destination, but
                 levels of advice may vary for
                 specific locations or areas within a destination. For example, we may advise U.S. citizens to "exercise

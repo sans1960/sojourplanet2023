@@ -5,14 +5,14 @@ Website Terms and Conditions
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-center text-white">Website Terms and Conditions</h4>
+    <h1 class="patua text-center text-white fs-4">Website Terms and Conditions</h1>
 
 </div>
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto mb-5">
 
-            <h4 class="patua mt-5 mb-3">Your use of our website</h4>
+            <h2 class="patua mt-5 mb-3 fs-4">Your use of our website</h2>
             <p class="open texto">This page outlines the terms of use for our website. By using our website, you confirm
                 that you accept these terms and
                 agree to comply with them. If you do not agree to these terms, you will not be permitted to access or
@@ -55,7 +55,7 @@ Website Terms and Conditions
                 enhance your experience on our website. It's important to review these documents to understand our
                 practices and your
                 options regarding your information.</p>
-            <h4 class="patua mt-3 mb-3">Intellectual property</h4>
+            <h2 class="patua mt-3 mb-3 fs-4">Intellectual property</h2>
             <p class="open texto">All rights are reserved. The materials on this website—including, but not limited to,
                 all articles, text, images,
                 design, logos, as well as the appearance, organization, and layout of the website, the underlying
@@ -90,7 +90,7 @@ Website Terms and Conditions
                 the integrity and proprietary rights of our content and technical assets is crucial, and we enforce
                 these restrictions
                 to protect our intellectual property.</p>
-            <h4 class="patua mt-3 mb-3">Website changes</h4>
+            <h2 class="patua mt-3 mb-3 fs-4">Website changes</h2>
             <p class="open texto">We reserve the right to make changes to our website, including updates or
                 modifications to the information, services,
                 products, or website terms, at any time without prior notice. Your continued use of the website after
@@ -100,7 +100,7 @@ Website Terms and Conditions
                 terms and any posted updates to ensure you remain informed of any changes affecting your use of our
                 services and
                 content.</p>
-            <h4 class="patua mt-3 mb-3">Governing law</h4>
+            <h2 class="patua mt-3 mb-3 fs-4">Governing law</h2>
             <p class="open texto">This website is designed for use within the United States of America. By accessing
                 this website, you agree that any
                 disputes which may arise between you and us will be handled by the Supreme Court of the United States,
@@ -110,7 +110,7 @@ Website Terms and Conditions
                 framework provide a clear basis for resolving any legal matters, ensuring both parties understand the
                 applicable laws
                 and legal processes.</p>
-            <h4 class="patua mt-3 mb-3">Email disclaimer</h4>
+            <h2 class="patua mt-3 mb-3 fs-4">Email disclaimer</h2>
             <p class="open texto">Our emails are confidential and intended solely for the use of the recipient(s) named
                 in the message. If you are not the
                 intended recipient, please inform the sender immediately and refrain from disclosing the contents to

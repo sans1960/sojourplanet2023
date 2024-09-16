@@ -2,10 +2,17 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3D9JX1BFT0"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3D9JX1BFT0');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
+        <meta property="og:title" content="@yield('meta_title')" />
+    <meta property="og:description" content="@yield('meta_description')" />
+    <meta property="og:url" content="@yield('meta_url')" />
+    <meta property="og:image" content="@yield('meta_image')" />
     <link rel="shortcut icon" href="{{ asset('img/index.ico') }}" type="image/ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -39,31 +46,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav align-items-center mx-auto">
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">About us</a>
-                    </li> --}}
+                    <!--<li class="nav-item">-->
+                    <!--    <a class="nav-link" href="{{ route('about') }}">About us</a>-->
+                    <!--</li>-->
+                
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('taylor') }}">Tailor-made trips</a>
+                        <a class="nav-link" href="{{ route('dream') }}">The trip of your dreams</a>
                     </li>
-                    @include('front.layouts.destinations', [
-                    'destinations' => ($destinations = App\Models\Destination::all())])
-
+                        @include('front.layouts.destinations', [
+                    'destinations' => ($destinations = App\Models\Destination::all())
+                    ])
 
                     <a class="navbar-brand d-none d-md-block" href="/">
                         <img src="{{ asset('img/ll.png') }}" alt="">
                     </a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dream') }}">The trip of your dreams</a>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('taylor') }}">Tailor-made trips</a>
                     </li>
-
+                
 
                     <li class="nav-item ms-5">
                         <a class="nav-link" href="{{ route('sights') }}"> Sights</a>
                     </li>
 
-                    {{-- <li class="nav-item ms-5">
-                        <a class="nav-link" href="{{ route('alltours') }}">Tours</a>
-                    </li> --}}
+                    <!--<li class="nav-item ms-5">-->
+                    <!--    <a class="nav-link" href="{{ route('alltours') }}">Tours</a>-->
+                    <!--</li>-->
                     {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('blogs') }}">Travel Blog</a>
                     </li> --}}
@@ -77,7 +85,7 @@
 
 
     @yield('content')
-    <footer class="bg-dark">
+      <footer class="bg-dark">
         <div class="container mt-2 p-3">
             <div class="row mt-2">
                 <div class="col-md-3 d-flex justify-content-center align-items-center">
@@ -119,7 +127,7 @@
 
             </div>
             <div class="row mt-2 ">
-                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                   <div class="col-md-4 d-flex justify-content-center align-items-center">
                     <a class="text-white nav-link">Copyright © 2024 Sojournplanet LLC
                     </a>
                 </div>
@@ -128,7 +136,7 @@
                         All rights reserved</a>
                 </div>
                 <div class="col-md-4 d-flex justify-content-center align-items-center">
-                    <a href="{{ route('contactos.create') }}" class="text-white nav-link">Contact us</a>
+                    <a href="{{route('contactos.create')}}" class="text-white nav-link">Contact us</a>
                 </div>
 
             </div>

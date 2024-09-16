@@ -5,14 +5,14 @@ About us
 @section('content')
 <div class="container-fluid d-flex justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg);background-size:cover;height:300px;background-position:center;">
-    <h4 class="text-white text-center patua">Welcome to Sojournplanet!</h4>
+    <h1 class="text-white text-center patua fs-4">Welcome to Sojournplanet!</h1>
 </div>
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-md-6 mx-auto">
-            <h4 class="text-center patua">
+            <h2 class="text-center patua fs-4">
                 We are a premium online travel agency that makes your dreams come true
-            </h4>
+            </h2>
 
         </div>
     </div>

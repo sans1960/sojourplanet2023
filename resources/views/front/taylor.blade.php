@@ -5,13 +5,13 @@ Tailor-made trips
 @section('content')
 <div class="container-fluid d-flex justify-content-center align-items-center"
   style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/barca.jpg')}});background-size:cover;height:300px;background-position:center;">
-  <h4 class="text-white patua text-center">Our tailor-made trips</h4>
+  <h1 class="text-white patua text-center fs-4">Our tailor-made trips</h1>
 </div>
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-md-8 mx-auto ">
-      <h4 class=" patua text-center">We offer tailor-made trips around the world, with a PREMIUM quality standard for a
-        complete experience, adapted to your tastes, desires, and needs.</h4>
+      <h2 class="patua text-center fs-4">We offer tailor-made trips around the world, with a PREMIUM quality standard for a
+        complete experience, adapted to your tastes, desires, and needs.</h2>
     </div>
   </div>
 
@@ -23,7 +23,7 @@ Tailor-made trips
       <p class="fw-bold">We provide you with all aspects of the trip booked in advance to ensure a stress-free vacation.
       </p>
       <p>We start the process with our questionnaire, where through a few simple questions you can define us what your
-        idea of ​​travel is. In this survey we will try to define the essential features of your desired trip; the
+        idea of travel is. In this survey we will try to define the essential features of your desired trip; the
         duration of the trip and at what time of year or date, the type of companions (partner, family, friends), if
         children are traveling or perhaps it is a romantic trip, if there is someone with reduced mobility among the
         passengers and, most importantly, the essence of your trip.</p>
@@ -51,7 +51,7 @@ Tailor-made trips
 </div>
 <div class="container-fluid d-flex justify-content-center align-items-center"
   style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url({{asset('img/bosque.jpg')}});background-size:cover;height:300px;background-position:center;">
-  <h4 class="text-white patua">Do you want to know more?</h4>
+  <h2 class="text-white patua fs-4">Do you want to know more?</h2>
 </div>
 <div class="container mt-5 mb-5">
   <div class="row">
@@ -78,7 +78,7 @@ Tailor-made trips
 </div>
 <div class="container-fluid d-flex justify-content-center align-items-center"
   style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/edificios.jpg')}});background-size:cover;height:300px;background-position:center;">
-  <h4 class="text-white patua text-center">Our goal is to offer you the perfect trip for you.</h4>
+  <h2 class="text-white patua text-center fs-4">Our goal is to offer you the perfect trip for you.</h2>
 </div>
 <div class="container mt-5 mb-5">
   <div class="row">

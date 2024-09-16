@@ -1,6 +1,6 @@
 @extends('front.layouts.base')
 @section('title')
-{{ $destination->name }}
+Luxury & Bespoke vacations in {{ $destination->name }}
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
@@ -9,13 +9,13 @@
 <div class="container-fluid  d-flex justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($destination->image) }});height:300px; background-size:cover;background-position:center center;">
 
-    <h4 class="text-white patua text-center">{{ $destination->title }}</h4>
+    <h1 class="text-white patua text-center fs-4">{{ $destination->title }}</h1>
 
 </div>
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-10 mx-auto d-flex justify-content-center align-items-center">
-            <h4 class="patua text-center">{{ $destination->subtitle }}</h4>
+            <h2 class="patua text-center fs-4">{{ $destination->subtitle }}</h2>
         </div>
     </div>
 </div>
@@ -35,7 +35,7 @@
 
 </div>
 <div class="container mt-5">
-    <h4 class="text-center patua mt-2"> Destinations of {{ $destination->name }}</h4>
+    <h2 class="text-center patua mt-2 fs-4"> Destinations of {{ $destination->name }}</h2>
     <div class="row">
         <div class="col-md-12 mx-auto d-flex flex-wrap p-2 justify-content-center">
             @foreach ($destination->country->sortBy('slug') as $country)
@@ -64,12 +64,12 @@
 </div>
 
 <div class="container mt-5">
-    <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua fs-4">Latest
-        inspiring sights from {{ $destination->name }} published</a>
+    <a href="{{ route('destinationsights', $destination) }}" class="text-center nav-link text-dark patua"><h2 class="fs-4">View inspiring
+        sights from {{ $destination->name }}</h2></a>
 
     <div class=" owl-carousel owl-theme mt-5">
 
-        @foreach ($sights->take(6) as $sight)
+        @foreach ($sights->take(20) as $sight)
 
 
         <a href="{{ route('sight', $sight) }}" class="nav-link " target="_blank">
@@ -79,7 +79,7 @@
                     <p class="open">{{ $sight->country->name }}</p>
                     {{-- <p class="open">{{$sight->categorysight->name}}</p> --}}
                 </div>
-                <h5 class="fs-4 patua  text-center text-white">{{ $sight->title }}</h3>
+                <h3 class="fs-4 patua  text-center text-white">{{ $sight->title }}</h3>
 
             </div>
         </a>

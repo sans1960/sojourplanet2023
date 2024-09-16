@@ -27,26 +27,14 @@
                 <img src="{{ Storage::url($sight->image) }}" class="figure-img img-fluid  d-block mx-auto" alt="...">
                 <figcaption class="figure-caption text-center mini">{{ $sight->caption }}</figcaption>
             </figure>
-            <h4 class="text-center patua"> {{ $sight->title }}</h4>
-            <div class="  d-flex flex-row justify-content-center align-items-center">
-                <a class="nav-link " href="{{ route('destinationsights', $sight->destination) }}">
-                    <h4 class="patua ">{{ $sight->destination->name }}</h4>
-                </a>
-
-
-
-                <p class="ms-2">|</p>
-                <a class="nav-link " href="{{ route('categorysights', $sight->categorysight) }}">
-                    <h5 class="ms-2 open">{{ $sight->categorysight->name }}</h5>
-                </a>
-            </div>
-            <div class="  d-flex flex-column justify-content-center align-items-center">
+            <h1 class="text-center patua fs-2"> {{ $sight->title }}</h1>
+                        <div class="  d-flex flex-column justify-content-center align-items-center">
 
                 @if (count($sight->countries))
 
                 @foreach ($sight->countries as $country)
                 <a class="nav-link" href="{{ route('country', $country) }}" target="_blank">
-                    <h4 class="patua ">{{ $country->name }} </h4>
+                    <h2 class="patua fs-5">{{ $country->name }} </h2>
 
                 </a>
 
@@ -57,11 +45,24 @@
 
 
             </div>
-            <div class=" mt-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
+            <div class="  d-flex flex-row justify-content-center align-items-center">
+                <a class="nav-link " href="{{ route('destinationsights', $sight->destination) }}">
+                    <h3 class="patua fs-6">{{ $sight->destination->name }}</h3>
+                </a>
+
+
+
+                <p class="ms-2">|</p>
+                <a class="nav-link " href="{{ route('categorysights', $sight->categorysight) }}">
+                    <h3 class="ms-2 open fs-6">{{ $sight->categorysight->name }}</h3>
+                </a>
+            </div>
+
+            <div class="mt-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
                 @if (count($sight->tags))
-                <a class="open nav-link me-2">Related tags |</a>
+                <a class="open nav-link me-2 fs-6">Keywords |</a>
                 @foreach ($sight->tags as $tag)
-                <a href="{{ route('tagsights', $tag) }}" class="me-2 nav-link text-dark patua">{{ $tag->name }} |</a>
+                <a href="{{ route('tagsights', $tag) }}" class="me-2 nav-link fst-italic patua fs-6">{{ $tag->name }} |</a>
                 @endforeach
                 @endif
 
@@ -105,7 +106,7 @@
     </div>
 
     @if (count($proxims)>1)
-    <h4 class=" patua">Another interest sights</h4>
+    <h3 class="patua fs-4">Another inspiring sights</h3>
     @if (count($proxims)>=4)
     <div class="owl-carousel owl-theme mt-5">
 
@@ -119,7 +120,7 @@
                     <p class="open">{{ $item->country->name }}</p>
 
                 </div>
-                <h5 class="fs-4 patua  text-center text-white">{{ $item->title }}</h3>
+                <h4 class="fs-4 patua  text-center text-white">{{ $item->title }}</h4>
             </div>
         </a>
         @endif
@@ -137,7 +138,7 @@
                             <p class="open">{{ $item->country->name }}</p>
 
                         </div>
-                        <h5 class="fs-4 patua  text-center text-white">{{ $item->title }}</h3>
+                        <h4 class="fs-4 patua  text-center text-white">{{ $item->title }}</h4>
                     </div>
                 </a>
             </div>
@@ -157,7 +158,7 @@
     </div>
     <div class="row mt-5">
         <div id="social-links" class="d-flex justify-content-center social-share">
-            <p>Share this Sight with: {!! Share::currentPage('Share')->facebook() !!}</p>
+            <p>Share this sight with: {!! Share::currentPage('Share')->facebook() !!}</p>
         </div>
 
 

@@ -5,7 +5,7 @@ Our Services
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-center text-white">Our Services</h4>
+    <h1 class="patua text-center text-white fs-4">Our Services</h1>
 
 </div>
 <div class="container">
@@ -17,9 +17,9 @@ Our Services
                 provide a complete
                 list of fares that cover every situation. Below is a general guideline.</p>
             <div class="card open">
-                <div class="card-header bg-white fw-bold text-uppercase">
-                    TAILOR-MADE TRIPS/ BESPOKE TRIPS
-                </div>
+                <h2 class="patua card-header bg-white fs-4">
+                    Tailor-Made / Bespoke Trips & Vacations
+                </h2>
                 <div class="card-body">
                     <p>Once we receive your request and your preferences and payment, we will send you a proposal in
                         three business days.</p>
@@ -51,9 +51,9 @@ Our Services
                 </div>
             </div>
             <div class="card open mt-5">
-                <div class="card-header bg-white fw-bold text-uppercase">
-                    CRUISES AND ESCORTED TOURS RESEARCH AND PROPOSAL
-                </div>
+                <h2 class="patua card-header bg-white fs-4">
+                    Cruises and Escorted Tours - Research and Proposal
+                </h2>
                 <div class="card-body">
 
 
@@ -75,9 +75,9 @@ Our Services
                 </div>
             </div>
             <div class="card open mt-5">
-                <div class="card-header bg-white fw-bold text-uppercase">
-                    HOTEL RESEARCH AND PROPOSAL
-                </div>
+                <h2 class="patua card-header bg-white fs-4">
+                    Hotels - Research and Proposal
+                </h2>
                 <div class="card-body">
 
 
@@ -97,9 +97,9 @@ Our Services
                 </div>
             </div>
             <div class="card open mt-5">
-                <div class="card-header bg-white fw-bold text-uppercase">
-                    DOMESTIC AND INTERNATIONAL FLIGHTS
-                </div>
+                <h2 class="patua card-header bg-white fs-4">
+                    Domestic and International Flights
+                </h2>
                 <div class="card-body">
 
 
@@ -119,9 +119,9 @@ Our Services
                 </div>
             </div>
             <div class="card open mt-5">
-                <div class="card-header bg-white fw-bold text-uppercase">
-                    VISA MANAGEMENT SERVICE
-                </div>
+                <h2 class="patua card-header bg-white fs-4">
+                    Visa Management Service
+                </h2>
                 <div class="card-body">
 
 
@@ -138,9 +138,9 @@ Our Services
 
             </div>
             <div class="card open mt-5">
-                <div class="card-header bg-white fw-bold text-uppercase">
-                    HEALTH REQUIREMENTS, VACCINATIONS AND OTHER MEDICAL PRECAUTIONS MANAGEMENT SERVICE
-                </div>
+                <h2 class="patua card-header bg-white fs-4">
+                    Health Requirements, Vaccinations and Other Medical Precautions Management Service
+                </h2>
                 <div class="card-body">
 
 

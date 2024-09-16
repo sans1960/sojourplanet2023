@@ -5,7 +5,7 @@ Privacy Policy
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">
-    <h4 class="patua text-center text-white">Privacy Policy</h4>
+    <h1 class="patua text-center text-white fs-4">Privacy Policy</h1>
 
 </div>
 <div class="container">
@@ -58,7 +58,7 @@ Privacy Policy
             <p class="open texto">These practices are part of our commitment to ensuring a seamless, enjoyable, and
                 customized travel experience while
                 respecting your privacy and adhering to data protection standards.</p>
-            <p class="open fw-bold">How we share your personal information</p>
+            <h2 class="patua fs-4 mt-4">How we share your personal information</h2>
             <p class="open texto">We collect your personal information either directly from you or, with your explicit
                 permission, by tracking your
                 interactions with our digital channels, such as our websites or mobile apps. This approach ensures that
@@ -76,7 +76,7 @@ Privacy Policy
                 information might be shared, who it might be shared with, and the steps we take to ensure its security.
                 We're committed
                 to transparency and protecting your privacy throughout this process.</p>
-            <p class="open fw-bold">Safeguarding your personal information</p>
+            <h2 class="patua fs-4 mt-4">Safeguarding your personal information</h2>
             <p class="open texto">We take the security of your personal information very seriously. When processing and
                 storing your data, we employ
                 robust security measures to prevent unauthorized access, disclosure, alteration, or destruction. We are
@@ -91,7 +91,7 @@ Privacy Policy
                 ensure it is securely disposed of or anonymized. This approach is part of our commitment to respecting
                 your privacy and
                 protecting your data while providing you with the services you need.</p>
-            <p class="open fw-bold">Your rights to your personal information</p>
+            <h2 class="patua fs-4 mt-4">Your rights to your personal information</h2>
             <p class="open texto">You have several options for managing your personal information with us:</p>
             <p class="open texto"><span class="fw-bold">1-For Questions or Concerns:</span> If you have any questions,
                 concerns, comments, requests, or complaints about our privacy policy or how we handle your
@@ -108,7 +108,7 @@ Privacy Policy
             <p class="open texto">We are committed to ensuring the privacy and accuracy of your personal information and
                 providing you with control over
                 how it is used.</p>
-            <p class="open fw-bold">Changes to our privacy policy</p>
+            <h2 class="patua fs-4 mt-4">Changes to our privacy policy</h2>
             <p class="open texto">We regularly review our privacy policy to ensure it remains up-to-date and reflects
                 how we use your personal
                 information. Should we make any changes to the policy, we will prominently highlight these updates on
@@ -118,9 +118,9 @@ Privacy Policy
                 of how we protect your personal information and your rights regarding its use. We encourage you to
                 review our privacy
                 policy periodically to stay informed about how we are safeguarding your data.</p>
-            <p class="open fw-bold">Our privacy policy in full</p>
-            <p class="open fw-bold">Section 1: Who We Are</p>
-            <p class="open fw-bold">1.1 Commitment to Your Privacy:</p>
+            <h2 class="patua fs-4 mt-4">Our privacy policy in full</h2>
+            <h3 class="patua fs-5 mt-4">Section 1: Who We Are</h3>
+            <h4 class="patua fs-6 mt-4">1.1 Commitment to Your Privacy:</h4>
             <p class="open texto">At Sojournplanet LLC, we prioritize the protection and respect of your privacy while
                 aiming to provide the best possible
                 experience when you are inquiring, booking, and traveling with us. We are committed to maintaining the
@@ -129,7 +129,7 @@ Privacy Policy
                 information we
                 handle is minimal, accurate, and accessed only by authorized personnel who need it for legitimate
                 business purposes.</p>
-            <p class="open fw-bold">1.2 Our Privacy Practices:</p>
+            <h4 class="patua fs-6 mt-4">1.2 Our Privacy Practices:</h4>
             <p class="open texto">This privacy policy, along with any documents referenced herein, outlines how we
                 process and utilize personal
                 information about our clients, potential clients, website visitors, and users of our mobile and/or
@@ -141,14 +141,14 @@ Privacy Policy
                 is essential for ensuring you are informed about the ways in which your information is used and
                 protected at
                 Sojournplanet LLC.</p>
-            <p class="open fw-bold">Section 2: Personal Information We Collect, How We Use It, and Our Lawful Basis for
-                Processing</p>
-            <p class="open fw-bold">2.1 Types of Personal Information and Usage:</p>
+            <h3 class="patua fs-5 mt-4">Section 2: Personal Information We Collect, How We Use It, and Our Lawful Basis for
+                Processing</h3>
+            <h4 class="patua fs-6 mt-4">2.1 Types of Personal Information and Usage:</h4>
             <p class="open texto">We collect various types of personal information about you. Below, you will find
                 details about the types of information
                 we collect, how we use this information, and the lawful basis for processing in each scenario:</p>
-            <p class="open fw-bold">Enquiries and bookings</p>
-            <p class="open fw-bold">Section 2.1 (a)</p>
+            <h5 class="patua fs-6 mt-4">Enquiries and bookings</h5>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (a)</h5>
             <p class="open texto">When you interact with us by making an inquiry or requesting a brochure, we collect
                 various types of personal
                 information to respond effectively to your needs. Here's a detailed breakdown of the information we
@@ -172,13 +172,13 @@ Privacy Policy
             <p class="open texto"><span class="fw-bold">7-Partner Information:</span> If you approach us through one of
                 our partners, agencies, or affiliates, we also record this connection to manage our
                 relationships and understand the effectiveness of our networks.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">We use this information to provide you with the requested information, such as sending
                 brochures, and to contact you as
                 you have indicated an interest in hearing from us. For instance, we might call to discuss the details of
                 a brochure we
                 sent you or to help refine your travel plans.</p>
-            <p class="open fw-bold">Legitimate Interest:</p>
+            <h5 class="patua fs-6 mt-4">Legitimate Interest:</h5>
             <p class="open texto">We process this information based on our legitimate interest in providing effective
                 service and maintaining a
                 relationship with you. This approach helps us ensure that we can assist you in finding the right travel
@@ -189,7 +189,7 @@ Privacy Policy
             <p class="open texto">This approach not only helps us respond effectively to your initial inquiry but also
                 supports ongoing communication and
                 service improvement, making your interaction with us as productive and enjoyable as possible.</p>
-            <p class="open fw-bold">Section 2.1 (b)</p>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (b)</h5>
             <p class="open texto">When you or someone in your party books travel with us, we require detailed
                 information to manage your travel
                 arrangements effectively. Here’s what we typically collect:</p>
@@ -205,13 +205,13 @@ Privacy Policy
                 To facilitate travel perks and ensure all legal travel requirements are met.</p>
             <p class="open texto"><span class="fw-bold">6-Independent Flight Details:</span> If you arrange your own
                 flights, we need details to coordinate these with other parts of your travel.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">This information is essential for us to organize your trip, make bookings, and ensure
                 that all services in your
                 itinerary are provided without issue. Additionally, we may use this information to contact you directly
                 via phone or
                 instant message if any issues or queries arise while you are traveling with us.</p>
-            <p class="open fw-bold">Legal and Legitimate Interests:</p>
+            <h5 class="patua fs-6 mt-4">Legal and Legitimate Interests:</h5>
             <p class="open texto"> <span class="fw-bold">1-Contractual Necessity:</span> We collect and use this
                 information to enter into and fulfill our contract with you, ensuring that we can provide the
                 services you have booked with us.</p>
@@ -220,7 +220,7 @@ Privacy Policy
                 ensure we can fulfill our contract with the booking party. This also helps in providing high-quality
                 service and, where
                 necessary, enables us to contact you efficiently during the travel.</p>
-            <p class="open fw-bold">Data Retention for Future Bookings:</p>
+            <h5 class="patua fs-6 mt-4">Data Retention for Future Bookings:</h5>
             <p class="open texto">We may retain your personal information to simplify future bookings, as part of our
                 legitimate interest in improving the
                 client journey and providing seamless service. This helps us manage repeat client interactions more
@@ -231,8 +231,8 @@ Privacy Policy
                 personalized and smooth travel experience while respecting your privacy and ensuring compliance with
                 data protection
                 regulations.</p>
-            <p class="open fw-bold">Websites, apps, marketing, and advertising</p>
-            <p class="open fw-bold">Section 2.1 (c)</p>
+            <h5 class="patua fs-6 mt-4">Websites, apps, marketing, and advertising</h5>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (c)</h5>
             <p class="open texto">When you visit our website, we collect various types of technical data to enhance your
                 experience and ensure our site's
                 functionality. Here is a breakdown of the types of information we typically collect:</p>
@@ -245,14 +245,14 @@ Privacy Policy
             <p class="open texto"><span class="fw-bold">3-Interaction Data:</span> Details of the products or services
                 you viewed on our website and the duration of your visits to certain pages are also
                 collected.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">This information is primarily used for:</p>
             <p class="open texto"> <span class="fw-bold">1-Site Management and Security:</span> To ensure the website is
                 functioning correctly, to troubleshoot problems, and to conduct testing and security checks.</p>
             <p class="open texto"> <span class="fw-bold">2-Website Improvement:</span> To enhance the usability and
                 performance of our website, ensuring that content is displayed effectively and is relevant
                 to our users' interests.</p>
-            <p class="open fw-bold">Legal and Legitimate Interests:</p>
+            <h5 class="patua fs-6 mt-4">Legal and Legitimate Interests:</h5>
             <p class="open texto"> <span class="fw-bold">1-Business Necessity:</span> We collect this technical
                 information as part of our legitimate interests to maintain a website that is secure,
                 functional, and capable of effectively promoting our services. This includes optimizing the site layout,
@@ -269,7 +269,7 @@ Privacy Policy
                 our online presence to better meet the needs of our clients. For more detailed information on how
                 cookies are used to
                 collect this data, please refer to our cookie policy.</p>
-            <p class="open fw-bold">Section 2.1 (d)</p>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (d)</h5>
             <p class="open texto">In promoting our services, we gather information from various sources. This includes:
             </p>
             <p class="open texto"> <span class="fw-bold">1-Contact Details and Preferences:</span> We collect your
@@ -282,14 +282,14 @@ Privacy Policy
                 our website or advertisements. This helps us measure the effectiveness of our advertising and understand
                 your interests,
                 tailoring our marketing to better suit your preferences.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">This information is used to:</p>
             <p class="open texto"> <span class="fw-bold">1-Engage and Inform:</span> Keep you updated with relevant
                 information about our services, which we believe will enhance your experience and
                 possibly interest you in new travel opportunities.</p>
             <p class="open texto"> <span class="fw-bold">2-Optimize Marketing Efforts:</span> Improve the relevance and
                 impact of our advertising by understanding what attracts and engages our customers.</p>
-            <p class="open fw-bold">Legal Basis for Processing:</p>
+            <h5 class="patua fs-6 mt-4">Legal Basis for Processing:</h5>
 
             <p class="open texto"> <span class="fw-bold">1-Consent:</span> Where required by law, particularly in
                 regards to direct marketing communications via email, SMS, or telephone, we rely
@@ -299,7 +299,7 @@ Privacy Policy
                 effective and meaningful marketing. We balance our business interests against your rights and privacy to
                 ensure that our
                 marketing efforts do not infringe upon your personal space or data rights.</p>
-            <p class="open fw-bold">Your Rights and Choices:</p>
+            <h5 class="patua fs-6 mt-4">Your Rights and Choices:</h5>
             <p class="open texto">You have the right to withdraw your consent or opt-out of our marketing communications
                 at any time. You can do this by:</p>
             <p class="open texto">1- Clicking the 'unsubscribe' link in any marketing email.</p>
@@ -311,12 +311,12 @@ Privacy Policy
                 purposes, and we remain transparent about our processes. This approach respects your privacy while
                 allowing us to keep
                 you informed about opportunities that may genuinely interest you.</p>
-            <p class="open fw-bold">Section 2.1 (e)</p>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (e)</h5>
             <p class="open texto">When you participate in competitions, promotions, or complete surveys, we collect your
                 contact details. This allows us
                 to manage these activities effectively and communicate with you regarding the outcomes or follow-up
                 actions.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">The information gathered is used for:</p>
             <p class="open texto"> <span class="fw-bold">1-Administration of Activities:</span> To administer the
                 competition or promotion and to notify winners and distribute prizes.</p>
@@ -324,7 +324,7 @@ Privacy Policy
                 from surveys that help us improve our services and offerings.</p>
             <p class="open texto"> <span class="fw-bold">3-Marketing Communications:</span> If you agree, to send you
                 promotional materials that might interest you based on your participation in these activities.</p>
-            <p class="open fw-bold">Legal Basis for Processing:</p>
+            <h5 class="patua fs-6 mt-4">Legal Basis for Processing:</h5>
             <p class="open texto"> <span class="fw-bold">1-Consent:</span> We often rely on your consent to process your
                 personal data when you participate in these activities, particularly for
                 sending marketing communications related to the competition, promotion, or survey results.</p>
@@ -335,7 +335,7 @@ Privacy Policy
                 balance our interests against your rights and freedoms to ensure that your privacy remains protected.
             </p>
 
-            <p class="open fw-bold">Protecting Your Rights:</p>
+            <h5 class="patua fs-6 mt-4">Protecting Your Rights:</h5>
             <p class="open texto">We are committed to protecting your rights throughout this process. You always have
                 the option to:</p>
 
@@ -350,13 +350,13 @@ Privacy Policy
                 transparency and maintain your trust
                 while engaging you in competitions, promotions, and surveys that enhance your experience with our
                 services.</p>
-            <p class="open fw-bold">Section 2.1 (f)</p>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (f)</h5>
             <p class="open texto">When you engage with us on social media, such as by mentioning or tagging us in a post
                 or contacting us directly, we may
                 collect your username and any other pertinent information you provide. This enables us to see and
                 respond to your
                 comments and queries effectively.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">The information collected from social media is used primarily to:</p>
             <p class="open texto"> <span class="fw-bold">1-Respond to Interactions:</span> We aim to provide timely and
                 relevant responses to your social media interactions, whether they are questions, comments,
@@ -364,7 +364,7 @@ Privacy Policy
             <p class="open texto"> <span class="fw-bold">2-Enhance Service Delivery:</span> By interacting with you on
                 social media, we can offer assistance, celebrate special occasions with you, and ensure that
                 any part of our service facilitated through social media meets your expectations.</p>
-            <p class="open fw-bold">Legal Basis for Processing:</p>
+            <h5 class="patua fs-6 mt-4">Legal Basis for Processing:</h5>
             <p class="open texto"> <span class="fw-bold">1-Legitimate Interests:</span> We process this information
                 based on our legitimate interests in engaging with you directly on social media platforms.
                 This interaction helps us provide better service, understand your needs, and improve our offerings based
@@ -375,7 +375,7 @@ Privacy Policy
                 you're coordinating aspects of a service we provide via social media), we process this information to
                 fulfill our
                 contractual obligations to you.</p>
-            <p class="open fw-bold">Protecting Your Rights:</p>
+            <h5 class="patua fs-6 mt-4">Protecting Your Rights:</h5>
             <p class="open texto">We are committed to respecting your privacy and ensuring that your personal data is
                 handled in compliance with
                 applicable laws. We ensure that:</p>
@@ -390,14 +390,13 @@ Privacy Policy
             <p class="open texto">By utilizing social media responsibly, we aim to enhance our service offerings and
                 engage with you in a meaningful and
                 positive way while respecting your data privacy.</p>
-            <p class="open fw-bold">Administrative or other business purposes</p>
-            <p class="open fw-bold">Section 2.1 (g)</p>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (g)</h5>
             <p class="open texto">When we communicate with you through various channels such as telephone, email, video
                 conferencing, LiveChat, or instant
                 messaging, we may collect and store information related to these interactions. This includes recording
                 both inbound and
                 outbound calls and logging chats or messages.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">The information collected through these communication channels is used to:</p>
             <p class="open texto"> <span class="fw-bold">1-Enhance Customer Support:</span> Monitor and improve the
                 quality of support provided by our specialists. This includes training and performance
@@ -406,13 +405,13 @@ Privacy Policy
                 specialists give you the best possible travel advice, tailored to your needs and preferences.</p>
             <p class="open texto"> <span class="fw-bold">3-Resolve Queries:</span> Effectively address and resolve any
                 inquiries or issues you may have, improving our responsiveness and service quality.</p>
-            <p class="open texto"> <span class="fw-bold">Legal Basis for Processing:</span></p>
+            <h5 class="patua fs-6 mt-4">Legal Basis for Processing:</h5>
             <p class="open texto"> <span class="fw-bold">1-Legitimate Interests:</span> We process this information
                 based on our legitimate interest in ensuring that our services are delivered at a high
                 standard. Recording and reviewing interactions help us to train our staff better, refine our service
                 offerings, and
                 ensure that our clients receive the very best in travel planning and support.</p>
-            <p class="open texto"> <span class="fw-bold">Protecting Your Rights:</span></p>
+            <h5 class="patua fs-6 mt-4">Protecting Your Rights:</h5>
             <p class="open texto">We are committed to protecting your privacy while handling this data. We ensure that:
             </p>
             <p class="open texto"> <span class="fw-bold">1-Transparency:</span> We inform you when calls are being
@@ -428,13 +427,13 @@ Privacy Policy
             <p class="open texto">By maintaining high standards in data collection and processing during correspondence,
                 we aim to uphold our commitment
                 to delivering exceptional travel services while respecting and protecting your privacy.</p>
-            <p class="open fw-bold">Section 2.1 (h)</p>
+            <h5 class="patua fs-6 mt-4">Section 2.1 (h)</h5>
             <p class="open texto">In addition to the regular collection methods described previously, we may also gather
                 information that you voluntarily
                 provide for specific reasons, such as when you contact us to report problems with our website or other
                 service-related
                 issues.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">The information you provide under these circumstances is used to:</p>
             <p class="open texto"> <span class="fw-bold">1-Resolve Issues:</span> Quickly address and rectify any
                 problems you encounter, particularly those affecting the functionality and
@@ -442,7 +441,7 @@ Privacy Policy
             <p class="open texto"> <span class="fw-bold">2-Improve Services:</span> Utilize your feedback to enhance our
                 offerings, ensuring that all aspects of our service meet high standards and user
                 expectations.</p>
-            <p class="open texto"> <span class="fw-bold">Legal Basis for Processing:</span></p>
+            <h5 class="patua fs-6 mt-4">Legal Basis for Processing:</h5>
             <p class="open texto"> <span class="fw-bold">1-Legitimate Interests:</span> We process this information
                 based on our legitimate interest in maintaining and improving our services and operational
                 efficiency. This includes ensuring that our website and other services function properly, which is
@@ -451,7 +450,7 @@ Privacy Policy
             <p class="open texto"> <span class="fw-bold">2-Problem Resolution:</span> Addressing and solving issues you
                 bring to our attention directly impacts our ability to serve you and others
                 effectively.</p>
-            <p class="open fw-bold">Protecting Your Rights:</p>
+            <h5 class="patua fs-6 mt-4">Protecting Your Rights:</h5>
             <p class="open texto">We are committed to protecting your rights while handling your data. We ensure that:
             </p>
             <p class="open texto"> <span class="fw-bold">1-Data Handling Practices:</span> We handle your information
@@ -467,8 +466,8 @@ Privacy Policy
                 while enhancing the overall quality and reliability of our services, always ensuring that we balance our
                 business needs
                 with your rights to privacy and data protection.</p>
-            <p class="open fw-bold">2.2: Collection and Use of Sensitive Personal Information</p>
-            <p class="open fw-bold">Types of Sensitive Information Collected:</p>
+            <h4 class="patua fs-6 mt-4">2.2: Collection and Use of Sensitive Personal Information</h4>
+            <h5 class="patua fs-6 mt-4">Types of Sensitive Information Collected:</h5>
             <p class="open texto">We may collect sensitive or special category personal information about you, which can
                 include:</p>
             <p class="open texto"> <span class="fw-bold">1-Health Conditions:</span> Information relevant to your
@@ -478,16 +477,16 @@ Privacy Policy
             </p>
             <p class="open texto"> <span class="fw-bold">3-Dietary Requirements:</span> Specific dietary needs or
                 allergies to ensure suitable meal arrangements are made.</p>
-            <p class="open fw-bold">Purpose of Processing:</p>
+            <h5 class="patua fs-6 mt-4">Purpose of Processing:</h5>
             <p class="open texto">This sensitive information is collected:</p>
             <p class="open texto"> <span class="fw-bold">1-To Plan Your Trip:</span> To ensure that your travel
                 arrangements are suitable for your needs and that you can travel safely and comfortably.</p>
             <p class="open texto"> <span class="fw-bold">2-Operational Safety:</span> To make necessary accommodations
                 and adjustments that consider your health and mobility requirements.</p>
-            <p class="open fw-bold">Sharing of Information:</p>
+            <h5 class="patua fs-6 mt-4">Sharing of Information:</h5>
             <p class="open texto">This information may be shared with our suppliers overseas as necessary to fulfill
                 your travel requirements.</p>
-            <p class="open fw-bold">Legal Basis for Processing:</p>
+            <h5 class="patua fs-6 mt-4">Legal Basis for Processing:</h5>
 
             <p class="open texto"> <span class="fw-bold">1-Vital Interests:</span> In emergency situations, we may
                 process this information to protect your vital interests or those of others,
@@ -495,8 +494,8 @@ Privacy Policy
             <p class="open texto"> <span class="fw-bold">2-Legal Claims:</span> We reserve the right to retain and
                 process this information where necessary for the establishment, exercise, or defense
                 of legal claims.</p>
-            <p class="open fw-bold">2.3: Information about Third Parties</p>
-            <p class="open fw-bold">Third Party Information:</p>
+            <h4 class="patua fs-6 mt-4">2.3: Information about Third Parties</h4>
+            <h5 class="patua fs-6 mt-4">Third Party Information:</h5>
             <p class="open texto">When you provide us with information about other individuals (such as fellow
                 travelers):</p>
             <p class="open texto"> <span class="fw-bold">1-Consent:</span> We ask that you confirm you have obtained the
@@ -505,11 +504,11 @@ Privacy Policy
             <p class="open texto"> <span class="fw-bold">2-Informing Third Parties:</span> Please inform these
                 individuals about our privacy policy and provide them with our contact details should they have any
                 questions or concerns.</p>
-            <p class="open fw-bold">Purpose and Use:</p>
+            <h5 class="patua fs-6 mt-4">Purpose and Use:</h5>
             <p class="open texto"> <span class="fw-bold">-Communication and Planning:</span> This information is
                 essential for us to manage and arrange
                 travel plans for all parties involved.</p>
-            <p class="open fw-bold">Responsibilities:</p>
+            <h5 class="patua fs-6 mt-4">Responsibilities:</h5>
             <p class="open texto"> <span class="fw-bold">-Communication:</span> Ensure that third parties are aware that
                 their information is being used as part of your travel arrangements and that
                 they can contact us directly to discuss their personal data or the trip itself.</p>
@@ -518,62 +517,62 @@ Privacy Policy
                 aligning with legal standards and ethical practices while focusing on the safety and customization of
                 your travel
                 experience.</p>
-            <p class="open fw-bold">Section 3. How we share personal information</p>
-            <p class="open fw-bold">3.1: Sharing of Personal Information</p>
+            <h3 class="patua fs-5 mt-4">Section 3. How we share personal information</h3>
+            <h4 class="patua fs-6 mt-4">3.1: Sharing of Personal Information</h4>
             <p class="open texto">To ensure the efficient operation of our business and to provide you with the expected
                 level of service, we occasionally
                 need to share your personal information with various third parties. The scenarios under which we share
                 this information
                 include:</p>
-            <p class="open fw-bold">Section 3.1 (a) Group Members:</p>
+            <h5 class="patua fs-6 mt-4">Section 3.1 (a) Group Members:</h5>
             <p class="open texto"> <span class="fw-bold">Entities Involved:</span> We share your personal information
                 within our corporate group, which includes subsidiaries, our ultimate holding
                 companies, and their subsidiaries. This internal sharing supports streamlined operations and service
                 delivery.</p>
-            <p class="open fw-bold">Section 3.1 (b) Trusted Third-Party Business Partners:</p>
+            <h5 class="patua fs-6 mt-4">Section 3.1 (b) Trusted Third-Party Business Partners:</h5>
             <p class="open texto"> <span class="fw-bold">Entities Involved:</span> This includes local businesses in the
                 destinations where our clients travel, as well as providers of gifts and
                 technology services that assist in fulfilling the contracts we enter into with you.</p>
             <p class="open texto"> <span class="fw-bold">Purpose:</span> These third parties help us provide specific
                 parts of your travel package, enhance your travel experience, and support
                 our service offerings.</p>
-            <p class="open fw-bold">Section 3.1 (c) Prospective Buyers:</p>
+            <h5 class="patua fs-6 mt-4">Section 3.1 (c) Prospective Buyers:</h5>
             <p class="open texto"> <span class="fw-bold">Entities Involved:</span> In the event of a sale, merger, or
                 acquisition of all or a part of our business, your personal information may be shared
                 with prospective buyers.</p>
             <p class="open texto"> <span class="fw-bold">Purpose:</span> To facilitate the transaction process and
                 ensure continuity of service.</p>
-            <p class="open fw-bold">Section 3.1 (d) Legal Compliance and Enforcement:</p>
+            <h5 class="patua fs-6 mt-4">Section 3.1 (d) Legal Compliance and Enforcement:</h5>
             <p class="open texto"> <span class="fw-bold">Entities Involved:</span> Airlines, law enforcement, or other
                 government entities.</p>
             <p class="open texto"> <span class="fw-bold">Purpose:</span> We share necessary details to comply with legal
                 obligations, such as providing contact information to airlines as
                 required by IATA Resolution 830d for operational communications.</p>
-            <p class="open fw-bold">Section 3.1 (e) Protection of Rights and Safety:</p>
+            <h5 class="patua fs-6 mt-4">Section 3.1 (e) Protection of Rights and Safety:</h5>
             <p class="open texto"> <span class="fw-bold">Entities Involved:</span> Legal authorities or other third
                 parties.</p>
             <p class="open texto"> <span class="fw-bold">Purpose:</span> To protect the rights, property, or safety of
                 our company, our customers, or others. This may include exchanging
                 information for fraud protection and credit risk reduction.</p>
-            <p class="open fw-bold">Section 3.1 (f) Referral Partners:</p>
+            <h5 class="patua fs-6 mt-4">Section 3.1 (f) Referral Partners:</h5>
             <p class="open texto"> <span class="fw-bold">Entities Involved:</span> Partners, affiliates, or agents who
                 referred you to us.</p>
             <p class="open texto"> <span class="fw-bold">Purpose:</span> To share details of your inquiries and/or
                 bookings with the entity that referred you to us, which helps in managing our
                 business relationships and providing you with tailored offers.</p>
-            <p class="open fw-bold">Use of Third-Party Technologies:</p>
+            <h5 class="patua fs-6 mt-4">Use of Third-Party Technologies:</h5>
             <p class="open texto">As detailed in our Cookie Policy, we utilize third-party technologies on our website
                 to enhance user experience, gather
                 analytics, and support marketing efforts. These technologies may collect certain types of data about
                 your visit to our
                 website.</p>
-            <p class="open fw-bold">Security and Privacy:</p>
+            <h5 class="patua fs-6 mt-4">Security and Privacy:</h5>
             <p class="open texto">In all instances of data sharing, we ensure that your personal information is handled
                 securely and in accordance with
                 relevant privacy laws. We implement appropriate safeguards to protect your data and maintain
                 transparency in our data
                 sharing practices.</p>
-            <p class="open fw-bold">Your Rights:</p>
+            <h5 class="patua fs-6 mt-4">Your Rights:</h5>
             <p class="open texto">You have the right to know how your data is being used and shared. You can request
                 details about the specific third
                 parties with whom your data is shared and the purposes for such sharing. If you have concerns or wish to
@@ -583,8 +582,8 @@ Privacy Policy
                 trust and ensure the continued
                 integrity of our services while complying with legal requirements and enhancing your overall travel
                 experience.</p>
-            <p class="open fw-bold">Section 4: Automated Decisions and Profiling</p>
-            <p class="open fw-bold">4.1 Automated Decision-Making:</p>
+            <h3 class="patua fs-5 mt-4">Section 4: Automated Decisions and Profiling</h3>
+            <h4 class="patua fs-6 mt-4">4.1 Automated Decision-Making:</h4>
             <p class="open texto">We utilize technology that enables automatic and instantaneous decision-making based
                 on predefined criteria and the
                 personal information you provide when making an inquiry or requesting a brochure. This technology helps
@@ -592,14 +591,14 @@ Privacy Policy
                 processes and enhance the efficiency of our services. To ensure fairness and accuracy, we regularly test
                 and update our
                 decision-making software to eliminate unintended biases and improve decision quality.</p>
-            <p class="open fw-bold">4.2 Data Segmentation and Profiling:</p>
+             <h4 class="patua fs-6 mt-4">4.2 Data Segmentation and Profiling:</h4>
             <p class="open texto">To better understand our clients and tailor our communications effectively, we may
                 share your details with third-party
                 data services. These services assist us in segmenting and profiling our client base, enabling us to send
                 you
                 communications that are most relevant to your interests and needs.</p>
-            <p class="open fw-bold">Section 5: Security of Your Personal Information</p>
-            <p class="open fw-bold">5.1 Security Measures:</p>
+            <h3 class="patua fs-5 mt-4">Section 5: Security of Your Personal Information</h3>
+            <h4 class="patua fs-6 mt-4">5.1 Security Measures:</h4>
             <p class="open texto">We prioritize the security of your personal information and implement comprehensive
                 measures to protect it from
                 unauthorized access, use, or disclosure. These measures include physical, technical, operational, and
@@ -607,8 +606,8 @@ Privacy Policy
                 strategies that conform to legal requirements and industry best practices. We continuously review and
                 update our
                 security practices to ensure they remain effective and appropriate for protecting your data.</p>
-            <p class="open fw-bold">Section 6: Retention of Personal Information</p>
-            <p class="open fw-bold">6.1 Retention Policy:</p>
+            <h3 class="patua fs-5 mt-4">Section 6: Retention of Personal Information</h3>
+            <h4 class="patua fs-6 mt-4">6.1 Retention Policy:</h4>
             <p class="open texto">We retain your personal information only for as long as necessary to fulfill the
                 purposes for which it was collected.
                 The retention period varies depending on the type of information and our operational or legal
@@ -628,12 +627,12 @@ Privacy Policy
                 and retained only for as long as needed to provide you with high-quality services while complying with
                 legal
                 obligations.</p>
-            <p class="open fw-bold">Section 7: Your Rights in Your Personal Information</p>
-            <p class="open fw-bold">7.1 Overview of Rights:</p>
+            <h3 class="patua fs-5 mt-4">Section 7: Your Rights in Your Personal Information</h3>
+            <h4 class="patua fs-6 mt-4">7.1 Overview of Rights:</h4>
             <p class="open texto">You hold specific rights concerning the personal information that we hold about you.
                 These rights are designed to ensure
                 you have significant control over your data.</p>
-            <p class="open fw-bold">7.2 Detailed Rights:</p>
+            <h4 class="patua fs-6 mt-4">7.2 Detailed Rights:</h4>
             <p class="open texto"> <span class="fw-bold">-(a) Access:</span> You can request to know whether we are
                 processing your personal information, and if we are, you can access that
                 information and receive a copy of it.</p>
@@ -661,20 +660,20 @@ Privacy Policy
             <p class="open texto"> <span class="fw-bold">-(i) Targeted Advertising:</span> You can opt-out of targeted
                 advertising and request that we do not sell or share your personal information for such
                 purposes.</p>
-            <p class="open texto"> <span class="fw-bold">7.3 How to Exercise Your Rights:</span></p>
+            <h4 class="patua fs-6 mt-4">7.3 How to Exercise Your Rights:</h4>
             <p class="open texto">To exercise any of these rights, please contact us via email at <a
                     href="mailto:dataprotection@sojournplanet.com">dataprotection@sojournplanet.com</a> or call us at
-                XXX.
+                +1 517 721 7020.
                 Please note that these rights are not absolute, and certain exceptions may apply. We will respond to
                 your request within
                 the timeframe stipulated by applicable law.</p>
-            <p class="open fw-bold">Verification Process:</p>
+            <h5 class="patua fs-6 mt-4">Verification Process:</h5>
             <p class="open texto">For requests involving your personal data, we will verify your identity by matching
                 information you've previously
                 provided us. For sensitive requests, we may require additional verification. If you use an authorized
                 agent, written
                 proof of authorization will be necessary.</p>
-            <p class="open fw-bold">Non-Discrimination Policy:</p>
+            <h5 class="patua fs-6 mt-4">Non-Discrimination Policy:</h5>
             <p class="open texto">We assure you that exercising any of these rights will not result in discriminatory
                 treatment. However, please note that
                 some services may become unavailable if specific necessary personal information is removed or restricted
@@ -683,8 +682,8 @@ Privacy Policy
             <p class="open texto">This section of our privacy policy is designed to give you comprehensive control over
                 your personal information while
                 ensuring our compliance with privacy laws and regulations.</p>
-            <p class="open fw-bold">Section 8: Changes to Our Policy</p>
-            <p class="open fw-bold">8.1 Policy Updates:</p>
+            <h3 class="patua fs-5 mt-4">Section 8: Changes to Our Policy</h3>
+            <h4 class="patua fs-6 mt-4">8.1 Policy Updates:</h4>
             <p class="open texto">We may update this privacy policy periodically to reflect changes in how we handle
                 your personal information or changes
                 in data protection laws. Whenever we make changes to the policy, we will post the updates on this page
@@ -692,8 +691,8 @@ Privacy Policy
                 significant changes are made, we will notify you by email. It is important that you check this page
                 regularly to stay
                 informed about any changes to our privacy policy.</p>
-            <p class="open texto"> <span class="fw-bold">Section 9: Contact and Complaints</span></p>
-            <p class="open texto"> <span class="fw-bold">9.1 Reaching Out:</span></p>
+            <h3 class="patua fs-5 mt-4">Section 9: Contact and Complaints</h3>
+            <h4 class="patua fs-6 mt-4">9.1 Reaching Out:</h4>
             <p class="open texto">If you have any questions, concerns, comments, requests, or complaints regarding this
                 privacy policy, how we handle your
                 information, or your interactions with our website, please do not hesitate to reach out to us at <a
