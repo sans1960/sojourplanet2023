@@ -39,6 +39,9 @@ class StoreRequest extends FormRequest
             'categorysight_id' => 'required',
             'date' => 'required|date',
             'site' => 'required|string',
+            'meta_title' => 'string',
+            'meta_description' => 'string'
+
 
         ];
     }

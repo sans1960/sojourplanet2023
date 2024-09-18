@@ -6,6 +6,13 @@
 {!! $sight->extract !!}
 
 @endsection
+@section('meta_title2')
+{{ $sight->meta_title }}
+@endsection
+@section('meta_description2')
+{{ $sight->meta_description }}
+
+@endsection
 @section('meta_url')
 {{url('sights/'.$sight->slug)}}
 @endsection

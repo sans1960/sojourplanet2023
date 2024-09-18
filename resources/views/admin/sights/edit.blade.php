@@ -21,6 +21,14 @@ Edit {{ $sight->title }}
               <input type="text" class="form-control" id="title" value="{{$sight->title}}" name="title">
             </div>
             <div class="mb-3">
+              <label for="title" class="form-label">Meta Title</label>
+              <input type="text" class="form-control" id="meta_title" value="{{$sight->meta_title}}" name="meta_title">
+            </div>
+            <div class="mb-3">
+              <label for="title" class="form-label">Meta Description</label>
+              <input type="text" class="form-control" id="meta_description" value="{{$sight->meta_description}}" name="meta_description">
+            </div>
+            <div class="mb-3">
               <label for="slug" class="form-label">Slug</label>
               <input type="text" class="form-control" id="slug" value="{{$sight->slug}}" name="slug">
             </div>
