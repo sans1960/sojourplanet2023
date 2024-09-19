@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title')
+@section('title') 
 Edit {{ $destination->name }}
 
 @endsection
@@ -19,6 +19,14 @@ Edit {{ $destination->name }}
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name"  name="name" value="{{ $destination->name}}">
+                          </div>
+                          <div class="mb-3">
+                            <label for="title" class="form-label">Meta Title</label>
+                            <input type="text" class="form-control" id="meta_title" value="{{$destination->meta_title}}" name="meta_title">
+                          </div>
+                          <div class="mb-3">
+                            <label for="title" class="form-label">Meta Description</label>
+                            <input type="text" class="form-control" id="meta_description" value="{{$destination->meta_description}}" name="meta_description">
                           </div>
                           <div class="mb-3">
                             <label for="slug" class="form-label">Slug</label>
@@ -74,9 +82,23 @@ Edit {{ $destination->name }}
 
     </div>
 
-</div
+</div>
 @endsection
 @section('js')
+<script src="{{asset('tinymce/tinymce.min.js')}}"></script>
+<script src="{{asset('tinymce/code/plugin.min.js')}}"></script>
+<script>
+  tinymce.init({
+            selector: 'textarea',
+            advcode_inline: true,
+            plugins: 'anchor autolink charmap codesample code emoticons  link lists  searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link  table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat | code',
+            branding: false,
+            menubar: false,
+            language: 'ca',
+            advcode_inline: true,
+        });
+</script>
 <script>
     $('#name').change(function(e) {
       $.get('{{ route('pages.check_slug') }}',
@@ -98,8 +120,5 @@ Edit {{ $destination->name }}
        });
     });
  </script>
-    <script>
-      CKEDITOR.replace( 'body' );
-          CKEDITOR.replace( 'sidebody' );
-    </script>
+ 
 @endsection

@@ -2,6 +2,13 @@
 @section('title')
 Tailor-made trips
 @endsection
+@section('meta_title2')
+//
+@endsection
+@section('meta_description2')
+//
+
+@endsection
 @section('content')
 <div class="container-fluid d-flex justify-content-center align-items-center"
   style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{asset('img/barca.jpg')}});background-size:cover;height:300px;background-position:center;">

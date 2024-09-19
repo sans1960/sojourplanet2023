@@ -22,6 +22,13 @@ Inspiring {{ $categorysight->name }} around the world
     }
 </style>
 @endsection
+@section('meta_title2')
+Inspiring {{ $categorysight->name }} around the world
+@endsection
+@section('meta_description2')
+Inspiring {{ $categorysight->name }} around the world
+
+@endsection
 @section('content')
 <div class="container">
     @include('front.layouts.navbardestinations', [

@@ -2,6 +2,13 @@
 @section('title')
 Luxury Travel and Tailor-Made Vacations | Sojournplanet
 @endsection
+@section('meta_title2')
+//
+@endsection
+@section('meta_description2')
+//
+
+@endsection
 @section('css')
 @endsection
 @section('content')

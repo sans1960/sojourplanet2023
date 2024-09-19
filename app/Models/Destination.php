@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Destination extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','slug','title','subtitle','body','sidebody','image','caption'];
+    protected $fillable = ['name','slug','title','subtitle','body','sidebody','image','caption', 'meta_description','meta_title'];
 
     public function getRouteKeyName()
     {

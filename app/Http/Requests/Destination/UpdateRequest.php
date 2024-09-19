@@ -30,6 +30,8 @@ class UpdateRequest extends FormRequest
             'sidebody' => 'required|string',
              'image' => 'nullable|image|mimes:jpg,jpeg,png,webp',
             'caption' => 'required|string|max:250',
+            'meta_title' => 'string',
+            'meta_description' => 'string'
         ];
     }
 }

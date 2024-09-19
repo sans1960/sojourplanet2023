@@ -23,9 +23,18 @@
               <input type="text" class="form-control" id="name" placeholder="Name" name="name" autofocus required>
             </div>
             <div class="mb-3">
+              <label for="title" class="form-label">Meta Title</label>
+              <input type="text" class="form-control" id="meta_title" placeholder="Meta Title" name="meta_title">
+            </div>
+            <div class="mb-3">
+              <label for="title" class="form-label">Meta Description</label>
+              <input type="text" class="form-control" id="meta_description" placeholder="Meta Description" name="meta_description">
+            </div>
+            <div class="mb-3">
               <label for="slug" class="form-label">Slug</label>
               <input type="text" class="form-control" id="slug" name="slug">
             </div>
+
             <div class="row mb-3">
               <div class="col">
                 <select class="form-select " name="destination_id" id="dest">

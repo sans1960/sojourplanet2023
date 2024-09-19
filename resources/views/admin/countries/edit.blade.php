@@ -24,6 +24,14 @@ Edit {{ $country->name }}
               <input type="text" class="form-control" id="name" value="{{ $country->name}}" name="name" required>
             </div>
             <div class="mb-3">
+              <label for="title" class="form-label">Meta Title</label>
+              <input type="text" class="form-control" id="meta_title" value="{{$country->meta_title}}" name="meta_title">
+            </div>
+            <div class="mb-3">
+              <label for="title" class="form-label">Meta Description</label>
+              <input type="text" class="form-control" id="meta_description" value="{{$country->meta_description}}" name="meta_description">
+            </div>
+            <div class="mb-3">
               <label for="slug" class="form-label">Slug</label>
               <input type="text" class="form-control" id="slug" name="slug" value="{{$country->slug}}">
             </div>
@@ -198,11 +206,12 @@ CKEDITOR.replace( 'information' );
 <script>
   tinymce.init({
             selector: 'textarea',
-            plugins: 'anchor autolink charmap codesample emoticons  link lists  searchreplace table visualblocks wordcount',
-            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link  table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+            plugins: 'anchor autolink charmap codesample code emoticons  link lists  searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link  table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat | code',
             branding: false,
             menubar: false,
             language: 'ca',
+
         });
 </script>
 <script>

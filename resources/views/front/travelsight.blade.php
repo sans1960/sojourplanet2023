@@ -2,6 +2,13 @@
 @section('title')
 Inspiring sights around the world
 @endsection
+@section('meta_title2')
+Inspiring sights around the world
+@endsection
+@section('meta_description2')
+Inspiring sights around the world
+
+@endsection
 @section('css')
 <style>
     .pagination>li>a,

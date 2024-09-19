@@ -4,6 +4,13 @@
 @section('title')
 {{ $tag->name }}  inspiring sights
 @endsection
+@section('meta_title2')
+{{ $tag->name }}  inspiring sights
+@endsection
+@section('meta_description2')
+{{ $tag->name }}  inspiring sights
+
+@endsection
 @section('css')
 <style>
     .pagination>li>a,

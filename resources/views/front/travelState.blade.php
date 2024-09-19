@@ -2,6 +2,13 @@
 @section('title')
 Travel.State.Gov recommendations
 @endsection
+@section('meta_title2')
+Inspiring sights around the world
+@endsection
+@section('meta_description2')
+Inspiring sights around the world
+
+@endsection
 @section('content')
 <div class="container-fluid d-flex  justify-content-center align-items-center p-2"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ asset('img/bosque.jpg') }});background-size:cover; height:250px;background-position:center;">

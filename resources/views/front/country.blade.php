@@ -4,6 +4,13 @@
 
 
 @endsection
+@section('meta_title2')
+{{ $country->meta_title }}
+@endsection
+@section('meta_description2')
+{{ $country->meta_description }}
+
+@endsection
 @section('content')
 <div class="container-fluid  d-flex flex-column justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image) }});height:400px; background-size:cover;background-position:center center;">

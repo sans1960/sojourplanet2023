@@ -2,6 +2,13 @@
 @section('title')
 Luxury & Bespoke vacations in {{ $destination->name }}
 @endsection
+@section('meta_title2')
+{{ $destination->meta_title }}
+@endsection
+@section('meta_description2')
+{{ $destination->meta_description }}
+
+@endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
 @endsection

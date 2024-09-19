@@ -4,6 +4,13 @@
 @section('title')
 Inspiring sights around {{ $destination->name }}
 @endsection
+@section('meta_title2')
+Inspiring sights around {{ $destination->name }}
+@endsection
+@section('meta_description2')
+Inspiring sights around {{ $destination->name }}
+
+@endsection
 @section('css')
 <style>
     .pagination>li>a,
