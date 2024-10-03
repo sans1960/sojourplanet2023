@@ -240,6 +240,8 @@
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/sweetalert2.js') }}"></script>
     <script src="https://unpkg.com/huebee@2/dist/huebee.pkgd.min.js"></script>
+    <script src="{{asset('tinymce/tinymce.min.js')}}"></script>
+<script src="{{asset('tinymce/code/plugin.min.js')}}"></script>
     @yield('js')
 </body>
 

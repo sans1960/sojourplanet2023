@@ -171,15 +171,8 @@
 </div>
 @endsection
 @section('js')
-{{-- <script>
-  CKEDITOR.replace( 'description' );
-CKEDITOR.replace( 'sidebody' );
-CKEDITOR.replace( 'information' );
 
 
-</script> --}}
-<script src="{{asset('tinymce/tinymce.min.js')}}"></script>
-<script src="{{asset('tinymce/code/plugin.min.js')}}"></script>
 <script>
   tinymce.init({
             selector: 'textarea',

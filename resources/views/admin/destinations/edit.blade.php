@@ -85,8 +85,7 @@ Edit {{ $destination->name }}
 </div>
 @endsection
 @section('js')
-<script src="{{asset('tinymce/tinymce.min.js')}}"></script>
-<script src="{{asset('tinymce/code/plugin.min.js')}}"></script>
+
 <script>
   tinymce.init({
             selector: 'textarea',
