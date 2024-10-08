@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Our Services
+Explore Our Premium Travel Services | Tailor-Made Luxury Journeys with Sojournplanet
 @endsection
 @section('meta_title2')
-//
+Explore Our Premium Travel Services | Tailor-Made Luxury Journeys by Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Explore Our Premium Travel Services | Tailor-Made Luxury Journeys by Sojournplanet
 
 @endsection
 @section('content')

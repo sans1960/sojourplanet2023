@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Privacy Policy
+Privacy Policy | Sojournplanet Luxury Tailor-Made Travel
 @endsection
 @section('meta_title2')
-//
+Privacy Policy | Sojournplanet Luxury Tailor-Made Travel
 @endsection
 @section('meta_description2')
-//
+Learn how Sojournplanet protects your personal information. We prioritize transparency and security in all data collection and usage for your custom luxury trips. Read our full privacy policy here.
 
 @endsection
 @section('content')

@@ -20,7 +20,7 @@
 {{url(Storage::url($sight->image))}}
 @endsection
 @section('title')
-{{ $sight->title }}
+{{ $sight->meta_title }}
 @endsection
 @section('css')
 @endsection

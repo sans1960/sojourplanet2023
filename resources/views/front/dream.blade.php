@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-What’s the trip of your dreams?
+What’s the trip of your dreams? | Luxury Tailor-Made Travel with Sojournplanet
 @endsection
 @section('meta_title2')
-//
+Plan the trip of your dreams | Luxury Tailor-Made Travel with Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Create the perfect trip with Sojournplanet's luxury tailor-made experiences. Explore breathtaking destinations with personalized itineraries designed for your desires. Plan your journey today.
 
 @endsection
 @section('content')

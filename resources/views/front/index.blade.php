@@ -2,14 +2,14 @@
 @section('title')
 Luxury Travel and Tailor-Made Vacations | Sojournplanet
 @endsection
+@section('css')
+@endsection
 @section('meta_title2')
-//
+Tailor-Made Luxury Travel | Bespoke Journeys with Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Discover luxury tailor-made trips worldwide with Sojournplanet. Experience personalized travel planning and premium services for unforgettable journeys. Start designing your bespoke vacation today.
 
-@endsection
-@section('css')
 @endsection
 @section('content')
 

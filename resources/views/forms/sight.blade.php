@@ -1,6 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Contact for {{ $sight->title }}
+Explore {{ $sight->site }} | Luxury Tailor-Made Tours in {{ $sight->country->name }}
+@endsection
+@section('meta_title2')
+Explore {{ $sight->site }} | Luxury Tailor-Made Tours in {{ $sight->country->name }}
+@endsection
+@section('meta_description2')
+Plan your visit to {{ $sight->site }} with Sojournplanet. Design your bespoke journey today for an unforgettable travel experience!
 @endsection
 @section('css')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
@@ -18,15 +24,15 @@ Contact for {{ $sight->title }}
 <div class="container-fluid  d-flex justify-content-center align-items-center"
     style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($sight->country->image) }});height:300px; background-size:cover;background-position:center center;">
 
-    <h4 class="text-white patua">Planning your trip by {{ $sight->country->name }}</h4>
+    <h1 class="text-white patua fs-4">Planning your trip across {{ $sight->country->name }}</h1>
 
 </div>
 <div class="container">
-    <h5 class="text-center mt-4">Prepare a tailor-made trip with us visiting {{ $sight->site }} </h5>
+    <h2 class="text-center mt-4 fs-4 patua">Prepare a tailor-made trip with us visiting {{ $sight->site }}</h2>
     <form action="{{route('contactos.sight.store')}}" method="post">
         <x-honeypot />
         @csrf
-        <h5 class="patua">Your details</h5>
+        <h3 class="patua fs-5">Your details</h3>
         <div class="row mt-2">
             <div class="col-md-4 mb-2 open">
                 <label for="name" class="form-label">Trait</label>
@@ -112,7 +118,7 @@ Contact for {{ $sight->title }}
 
         </div>
         <div class="row mt-2">
-            <h5 class="patua">Your travel plans</h5>
+            <h3 class="patua fs-5">Your travel plans</h3>
             <p>Later will define the departure date.</p>
             <div class="col-md-4 open">
                 <label for="" class="form-label">Duration</label>
@@ -159,7 +165,7 @@ Contact for {{ $sight->title }}
             </div>
         </div>
         <div class="row mt-2">
-            <h5 class="patua"> Trip type </h5>
+            <h3 class="patua fs-5"> Trip type </h3>
             <div class="col-md-3 open">
                 <div class="form-check mt-2">
                     <input class="form-check-input " type="radio" name="type" value="Leisure" {{ (old('type')=='Leisure'
@@ -232,7 +238,7 @@ Contact for {{ $sight->title }}
 
         </div>
         <div class="row mt-2 mb-3">
-            <h5 class="patua">Other specifications</h5>
+            <h3 class="patua fs-5">Other specifications</h3>
             <div class="col-md-4 open">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" {{
@@ -250,13 +256,13 @@ Contact for {{ $sight->title }}
             </div>
         </div>
         <div class="row mt-5">
-            <h5 class="mt-3 mb-3 patua">Your interests</h5>
+            <h3 class="mt-3 mb-3 patua fs-5">Your interests</h3>
             <div class="col-md-12">
                 <div class="form-check">
-                    <input class="form-check-input" checked type="checkbox" name="sight" value="{{ $sight->title }}"
+                    <input class="form-check-input" checked type="checkbox" name="sight" value="{{ $sight->site }}"
                         id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                        {{ $sight->title }}
+                        {{ $sight->site }}
                     </label>
                 </div>
             </div>
@@ -265,8 +271,8 @@ Contact for {{ $sight->title }}
 
                 <div class="col-md-12  mt-3 mb-3">
                     @if (count($items))
-                    <h5 class="patua">More sites related</h5>
-                    <p class="open">Mark the sites of your interst</p>
+                    <h3 class="patua fs-5">More sites related</h3>
+                    <p class="open">Mark the sites of your interest</p>
                     @foreach ($items as $item)
                     <div class="form-check mt-3">
                         <input class="form-check-input" name="sights[]" type="checkbox" value="{{ $item->site }}" {{ (
@@ -281,7 +287,7 @@ Contact for {{ $sight->title }}
                 </div>
             </div>
             <div class="row mb-3 mt-3">
-                <h5 class="patua">Another countries of {{$sight->subregion->name}}</h5>
+                <h3 class="patua fs-5">Another countries of {{$sight->subregion->name}}</h3>
                 <p class="open">Mark the countries of your interst</p>
                 <div class="col-md-12 d-flex flex-wrap mt-3">
                     @foreach ($countries->sortBy('name') as $country)
@@ -298,7 +304,7 @@ Contact for {{ $sight->title }}
             </div>
             <div class="row mt-3">
                 <div class="col-md-12">
-                    <h5 class="patua">Tell us about your plans</h5>
+                    <h3 class="patua fs-5">Tell us about your plans</h3>
                     <div class="mb-3 open">
                         <label for="exampleFormControlTextarea1" class="form-label">Countries, places or things you are
                             interested</label>
@@ -308,13 +314,6 @@ Contact for {{ $sight->title }}
                     </div>
                 </div>
 
-            </div>
-            <div class="mb-3 mt-3 d-flex justify-content-center flex-column align-items-center">
-                {!! NoCaptcha::renderJs() !!}
-                {!! NoCaptcha::display() !!}
-                @error ('g-recaptcha-response')
-                <div class="text text-danger">{{ $message }}</div>
-                @enderror
             </div>
             <div class="d-flex justify-content-center align-items-center flex-column open">
                 <div class="form-check">
@@ -330,6 +329,13 @@ Contact for {{ $sight->title }}
                     <span class="text-danger">{{ $errors->first('legal') }}</span>
                     @endif
                 </div>
+                      <div class="mb-3 mt-3 d-flex justify-content-center flex-column align-items-center">
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            @error ('g-recaptcha-response')
+                            <div class="text text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                 <button type="submit"
                     class="btn btn-outline-dark border border-dark mt-3 mb-5 patua px-3 py-2 rounded-pill">Send</button>
 

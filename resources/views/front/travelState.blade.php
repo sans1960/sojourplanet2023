@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Travel.State.Gov recommendations
+Travel.State.Gov recommendations | Stay Safe with Travel Advisory Info | Tailor-Made Trips with Sojournplanet
 @endsection
 @section('meta_title2')
-Inspiring sights around the world
+Stay Safe with Travel Advisory Info | Tailor-Made Trips by Sojournplanet
 @endsection
 @section('meta_description2')
-Inspiring sights around the world
+Travel safely with Sojournplanet. Stay informed with up-to-date travel advisories from Travel.State.Gov, ensuring your luxury journey is secure and well-prepared. Plan your custom trip today.
 
 @endsection
 @section('content')

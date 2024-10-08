@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Booking Conditions
+Booking Conditions | Luxury Tailor-Made Trips by Sojournplanet
 @endsection
 @section('meta_title2')
-//
+Booking Conditions | Luxury Tailor-Made Trips by Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Review Sojournplanet's booking terms for tailor-made luxury trips. Learn about our policies on payments, cancellations, amendments, and travel requirements. Plan your customized journey with confidence.
 
 @endsection
 @section('content')

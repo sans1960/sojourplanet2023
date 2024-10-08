@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-About us
+About Us | Luxury Tailor-Made Travel Experts at Sojournplanet
 @endsection
 @section('meta_title2')
-//
+About Us | Luxury Tailor-Made Travel Experts at Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Learn about Sojournplanet's commitment to creating personalized, luxury travel experiences. Our tailor-made journeys focus on exclusivity, sustainability, and unforgettable adventures. Start your journey today.
 
 @endsection
 @section('content')

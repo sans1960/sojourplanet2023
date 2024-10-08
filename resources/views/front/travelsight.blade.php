@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Inspiring sights around the world
+Explore Inspiring Sights Around the World | Luxury Tailor-Made Journeys with Sojournplanet
 @endsection
 @section('meta_title2')
-Inspiring sights around the world
+Explore Inspiring Sights Around the World | Luxury Tailor-Made Journeys with Sojournplanet
 @endsection
 @section('meta_description2')
-Inspiring sights around the world
+Discover breathtaking sights worldwide with Sojournplanet. From iconic landmarks to hidden treasures, enjoy personalized luxury travel experiences. Start planning your bespoke adventure today.
 
 @endsection
 @section('css')

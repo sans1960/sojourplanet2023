@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-FAQs
+Luxury Travel FAQs | Tailor-Made Trips with Sojournplanet
 @endsection
 @section('meta_title2')
-//
+Luxury Travel FAQs | Tailor-Made Trips with Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Find answers to your luxury travel questions at Sojournplanet. Learn about custom trips, exclusive services, planning, and more. Start designing your bespoke vacation today.
 
 @endsection
 @section('content')

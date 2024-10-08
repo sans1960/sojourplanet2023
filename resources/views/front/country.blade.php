@@ -1,6 +1,6 @@
 @extends('front.layouts.base')
 @section('title')
-{{$country->intro}} {{ $country->name }}
+{{ $country->meta_title }}
 
 
 @endsection

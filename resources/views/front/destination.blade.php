@@ -1,6 +1,6 @@
 @extends('front.layouts.base')
 @section('title')
-Luxury & Bespoke vacations in {{ $destination->name }}
+{{ $destination->meta_title }}
 @endsection
 @section('meta_title2')
 {{ $destination->meta_title }}

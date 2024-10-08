@@ -7,8 +7,9 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="description" content="@yield('meta_description2')" />
-    <meta property="title" content="@yield('meta_title2')" />
+     <meta name="description" content="@yield('meta_description2')" />
+    <meta name="title" content="@yield('meta_title2')" />
+
     <title>@yield('title')</title>
         <meta property="og:title" content="@yield('meta_title')" />
     <meta property="og:description" content="@yield('meta_description')" />

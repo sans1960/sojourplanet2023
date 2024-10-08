@@ -1,12 +1,13 @@
 @extends('front.layouts.base')
 @section('title')
-Tailor-made trips
+Tailor-made trips | Luxury Custom Travel with Sojournplanet
 @endsection
+
 @section('meta_title2')
-//
+Plan Your Tailor-Made Adventure | Luxury Custom Travel with Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Discover luxury tailor-made trips with Sojournplanet. Enjoy fully customized travel experiences crafted to your desires. Start planning your bespoke vacation today for a stress-free journey.
 
 @endsection
 @section('content')

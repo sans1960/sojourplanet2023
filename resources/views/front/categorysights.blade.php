@@ -1,8 +1,14 @@
 @extends('front.layouts.base')
 
-
 @section('title')
-Inspiring {{ $categorysight->name }} around the world
+Explore Inspiring {{ $categorysight->name }} Around the World | Luxury Tailor-Made Journeys with Sojournplanet
+@endsection
+@section('meta_title2')
+Explore Inspiring {{ $categorysight->name }} Around the World | Luxury Tailor-Made Journeys with Sojournplanet
+@endsection
+@section('meta_description2')
+Discover Inspiring {{ $categorysight->name }} With Sojournplanet. Explore Personalized Luxury Travel Experiences in {{ $categorysight->name }}, Designed to Fit Your Unique Preferences. Start Planning Your Adventure Today.
+
 @endsection
 @section('css')
 <style>
@@ -21,13 +27,6 @@ Inspiring {{ $categorysight->name }} around the world
         /* border-color: green; */
     }
 </style>
-@endsection
-@section('meta_title2')
-Inspiring {{ $categorysight->name }} around the world
-@endsection
-@section('meta_description2')
-Inspiring {{ $categorysight->name }} around the world
-
 @endsection
 @section('content')
 <div class="container">

@@ -1,12 +1,13 @@
 @extends('front.layouts.base')
 @section('title')
-Website Terms and Conditions
+Terms and Conditions | Sojournplanet Luxury Tailor-Made Trips
 @endsection
+
 @section('meta_title2')
-//
+Terms and Conditions | Sojournplanet Luxury Tailor-Made Trips
 @endsection
 @section('meta_description2')
-//
+Review the terms and conditions for using Sojournplanet’s website and services. Understand your rights, policies, and responsibilities when planning your tailor-made luxury journey with us.
 
 @endsection
 @section('content')

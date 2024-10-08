@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Destinations A to Z
+Destinations A to Z | Luxury Tailor-Made Trips with Sojournplanet
 @endsection
 @section('meta_title2')
-//
+Explore Global Destinations | Luxury Tailor-Made Trips with Sojournplanet
 @endsection
 @section('meta_description2')
-//
+Discover luxury travel destinations worldwide with Sojournplanet. Plan your bespoke journey with customized experiences across continents. Start exploring today for the trip of your dreams.
 
 @endsection
 @section('content')

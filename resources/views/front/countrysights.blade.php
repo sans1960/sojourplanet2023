@@ -2,13 +2,13 @@
 
 
 @section('title')
-Inspiring sights from {{ $country->name }}
+Discover {{ $country->name }}’s Inspiring Sights | Luxury Tailor-Made Travel with Sojournplanet
 @endsection
 @section('meta_title2')
-Inspiring sights from {{ $country->name }}
+Discover {{ $country->name }}’s Inspiring Sights | Luxury Tailor-Made Travel with Sojournplanet
 @endsection
 @section('meta_description2')
-Inspiring sights from {{ $country->name }}
+Explore the beauty of {{ $country->name }} with Sojournplanet. From iconic places to hidden gems, enjoy personalized luxury journeys tailored to your preferences. Start planning your bespoke adventure today.
 
 @endsection
 @section('css')

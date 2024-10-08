@@ -1,6 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Tailor-made trip to {{$country->name}}
+Start Planning a Luxury Tailor-Made Trip to {{$country->name}} | Bespoke Journeys in {{$country->name}}
+@endsection
+@section('meta_title2')
+Start Planning a Luxury Tailor-Made Trip to {{$country->name}} | Bespoke Journeys in {{$country->name}}
+@endsection
+@section('meta_description2')
+Plan your luxury tailor-made trip to {{$country->name}} with Sojournplanet. Explore rich culture, stunning landscapes, and adventure. Design your bespoke journey today for an unforgettable travel experience!
 @endsection
 @section('css')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
@@ -18,18 +24,18 @@ Tailor-made trip to {{$country->name}}
 <div class="container-fluid  d-flex justify-content-center align-items-center"
     style=" background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url({{ Storage::url($country->image)}});height:300px; background-size:cover;background-position:center center;">
 
-    <h1 class="text-white">{{$country->name}}</h1>
+    <h1 class="text-white fs-4 patua">Planning a trip to {{$country->name}}</h1>
 
 </div>
 <div class="container">
-    <h4 class="text-center mt-4 mb-4 patua">Inquire about a tailor-made trip for {{$country->name}}</h4>
+    <h2 class="text-center mt-4 mb-4 patua fs-4">Inquire about a tailor-made trip to {{$country->name}}</h2>
     <div class="row">
         <div class="col-md-12">
             <div class="card p-3">
                 <form action="{{route('contactos.country.store')}}" method="post">
                     <x-honeypot />
                     @csrf
-                    <h5 class="patua">Your details</h5>
+                    <h3 class="patua fs-5">Your details</h3>
                     <div class="row mt-2">
                         <div class="col-md-4 mb-2 open">
                             <label for="name" class="form-label">Trait</label>
@@ -114,7 +120,7 @@ Tailor-made trip to {{$country->name}}
 
                     </div>
                     <div class="row mt-2">
-                        <h5 class="patua">Your travel plans</h5>
+                        <h3 class="patua fs-5">Your travel plans</h3>
                         <p>Later will define the departure date.</p>
                         <div class="col-md-4 open">
                             <label for="" class="form-label">Duration</label>
@@ -164,7 +170,7 @@ Tailor-made trip to {{$country->name}}
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <h5 class="patua"> Trip type </h5>
+                        <h3 class="patua fs-5"> Trip type </h3>
                         <div class="col-md-3 open">
                             <div class="form-check mt-2">
                                 <input class="form-check-input " type="radio" name="type" value="Leisure" {{
@@ -237,7 +243,7 @@ Tailor-made trip to {{$country->name}}
 
                     </div>
                     <div class="row mt-2 mb-3">
-                        <h5 class="patua">Other specifications</h5>
+                        <h3 class="patua fs-5">Other specifications</h3>
                         <div class="col-md-4 open">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" {{
@@ -258,7 +264,7 @@ Tailor-made trip to {{$country->name}}
                     <input type="hidden" name="country_id" value="{{ $country->id }}">
                     <div class="row mb-3">
                         @if ($country->nearby !=null)
-                        <h5 class="patua">Countries nearby </h5>
+                        <h3 class="patua fs-5">Countries nearby </h3>
                         <p class="open">Mark the countries of your interst</p>
                         @endif
 
@@ -277,7 +283,7 @@ Tailor-made trip to {{$country->name}}
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-12">
-                            <h5 class="patua">Tell us about your plans</h5>
+                            <h3 class="patua fs-5">Tell us about your plans</h3>
                             <div class="mb-3 open">
                                 <label for="exampleFormControlTextarea1" class="form-label">Countries, places or things
                                     you are interested</label>
@@ -287,13 +293,6 @@ Tailor-made trip to {{$country->name}}
                             </div>
                         </div>
 
-                    </div>
-                    <div class="mb-3 mt-3 d-flex justify-content-center flex-column align-items-center">
-                        {!! NoCaptcha::renderJs() !!}
-                        {!! NoCaptcha::display() !!}
-                        @error ('g-recaptcha-response')
-                        <div class="text text-danger">{{ $message }}</div>
-                        @enderror
                     </div>
                     <div class="d-flex justify-content-center align-items-center flex-column open">
                         <div class="form-check">
@@ -308,6 +307,13 @@ Tailor-made trip to {{$country->name}}
                             @if ($errors->has('legal'))
                             <span class="text-danger">{{ $errors->first('legal') }}</span>
                             @endif
+                        </div>
+                              <div class="mb-3 mt-3 d-flex justify-content-center flex-column align-items-center">
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            @error ('g-recaptcha-response')
+                            <div class="text text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <button type="submit"
                             class="btn btn-outline-dark border border-dark mt-3 patua px-3 py-2 rounded-pill">Send</button>

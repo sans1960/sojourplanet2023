@@ -1,12 +1,12 @@
 @extends('front.layouts.base')
 @section('title')
-Cookie Policy
+Cookie Policy | Sojournplanet Luxury Tailor-Made Travel
 @endsection
 @section('meta_title2')
-//
+Cookie Policy | Sojournplanet Luxury Tailor-Made Travel
 @endsection
 @section('meta_description2')
-//
+Understand how Sojournplanet uses cookies to enhance your luxury travel experience. Learn about data collection, cookie types, and how to manage your preferences. Explore our full cookie policy here.
 
 @endsection
 @section('content')
