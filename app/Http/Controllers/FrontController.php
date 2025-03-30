@@ -26,7 +26,7 @@ class FrontController extends Controller
         //     return response()->view('front.maintenance');
         // }
         // $blogs = Blog::latest()->take(3)->get();
-        $sights = Sight::latest()->take(3)->get();
+        $sights = Sight::orderBy('date', 'desc')->take(3)->get();
         // $tours = Tour::latest()->take(3)->get();
         $destinations = Destination::all();
         $antartida = Destination::where('name', 'Antarctica')->get();

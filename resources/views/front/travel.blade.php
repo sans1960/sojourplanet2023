@@ -63,9 +63,10 @@
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
-                      <div class="modal-header">
-                        <h3 class="modal-title fs-5 patua" id="exampleModalLabel" >Bespoke & exclusive travel</h3>
+                      <div class="modal-header d-flex flex-column " style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(https://sojournplanet.com/img/boat.webp);height: 200px;background-size:cover">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h3 class="modal-title fs-5 patua mt-5" id="exampleModalLabel" >Bespoke & exclusive travel</h3>
+                      
                       </div>
                       <div class="modal-body">
                         <p class="fw-bold">Discover a world where your travels are crafted with precision and exclusivity.</p> 
