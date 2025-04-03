@@ -10,6 +10,12 @@ use App\Models\ListContact;
 use App\Observers\ListContactObserver;
 use App\Models\GeneralContact;
 use App\Observers\GeneralContactObserver;
+use App\Models\Contact;
+use App\Observers\ContactObserver;
+use App\Models\LandingContact;
+use App\Observers\LandingContactObserver;
+use App\Models\CountryContact;
+use App\Observers\CountryContactObserver;
 use App\Models\SightContact;
 use App\Observers\SightContactObserver;
 use App\Models\DestinationContact;
@@ -37,6 +43,9 @@ class EventServiceProvider extends ServiceProvider
     {
         ListContact::observe(ListContactObserver::class);
         GeneralContact::observe(GeneralContactObserver::class);
+        CountryContact::observe(CountryContactObserver::class);
+        Contact::observe(ContactObserver::class);
+        LandingContact::observe(LandingContactObserver::class);
         SightContact::observe(SightContactObserver::class);
         DestinationContact::observe(DestinationContactObserver::class);
         TourContact::observe(TourContactObserver::class);
